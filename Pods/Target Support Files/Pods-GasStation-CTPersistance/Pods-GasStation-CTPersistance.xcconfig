@@ -1,0 +1,1 @@
+PODS_GASSTATION_CTPERSISTANCE_OTHER_LDFLAGS = -l"sqlite3" -framework "UIKit"

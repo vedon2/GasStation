@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSSearchViewController">
+            <connections>
+                <outlet property="backBtn" destination="cow-f6-DSi" id="Glu-tm-40c"/>
+                <outlet property="contentTable" destination="Rno-4r-imM" id="0Dg-K1-khA"/>
+                <outlet property="searchBar" destination="ldR-og-Dp6" id="I9D-cE-R1B"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZAE-2F-DaU">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Rno-4r-imM">
+                            <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="Bb8-UY-uOg"/>
+                                <outlet property="delegate" destination="-1" id="4PA-HT-1BG"/>
+                            </connections>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="toC-8M-MQ6">
+                            <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ldR-og-Dp6">
+                                    <rect key="frame" x="50" y="0.0" width="269" height="44"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cow-f6-DSi">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="44"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="backAction:" destination="-1" eventType="touchUpInside" id="hjM-QA-yX9"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="44" id="pjk-Dt-8VQ"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="toC-8M-MQ6" firstAttribute="leading" secondItem="ZAE-2F-DaU" secondAttribute="leading" id="0SW-ZY-kIS"/>
+                        <constraint firstAttribute="bottom" secondItem="Rno-4r-imM" secondAttribute="bottom" id="6JE-zR-0b0"/>
+                        <constraint firstAttribute="trailing" secondItem="toC-8M-MQ6" secondAttribute="trailing" id="HfF-K9-kyO"/>
+                        <constraint firstItem="toC-8M-MQ6" firstAttribute="top" secondItem="ZAE-2F-DaU" secondAttribute="top" constant="20" id="LJZ-3V-dQn"/>
+                        <constraint firstItem="Rno-4r-imM" firstAttribute="leading" secondItem="ZAE-2F-DaU" secondAttribute="leading" id="SeV-lE-OwH"/>
+                        <constraint firstItem="Rno-4r-imM" firstAttribute="top" secondItem="toC-8M-MQ6" secondAttribute="bottom" id="ZjH-z8-xPr"/>
+                        <constraint firstAttribute="trailing" secondItem="Rno-4r-imM" secondAttribute="trailing" id="uow-pA-v7Z"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="ZAE-2F-DaU" secondAttribute="trailing" id="Nkp-Fr-zKB"/>
+                <constraint firstItem="ZAE-2F-DaU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WOC-lq-zRJ"/>
+                <constraint firstAttribute="bottom" secondItem="ZAE-2F-DaU" secondAttribute="bottom" id="wXK-pT-WSp"/>
+                <constraint firstItem="ZAE-2F-DaU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="y2l-nv-8wt"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

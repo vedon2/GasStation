@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "BAD0F166CAD7AFC526B4B732AB08C6CC21D29C0B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CEB99BD688533D2E311FA898E26FB7440B65AF94" : 0,
+    "BAD0F166CAD7AFC526B4B732AB08C6CC21D29C0B" : 0,
+    "2762D5787196CBC3B779C6887171FBD71AEC28E1" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B31AAFFC-05A1-40A6-9198-FE531F9FB489",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CEB99BD688533D2E311FA898E26FB7440B65AF94" : "GS\/GasStation\/",
+    "BAD0F166CAD7AFC526B4B732AB08C6CC21D29C0B" : "GasStation\/",
+    "2762D5787196CBC3B779C6887171FBD71AEC28E1" : "GS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "GasStation",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "GasStation.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vedon2\/GS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2762D5787196CBC3B779C6887171FBD71AEC28E1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vedon2\/GasStation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "BAD0F166CAD7AFC526B4B732AB08C6CC21D29C0B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/vedon\/GasStation.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CEB99BD688533D2E311FA898E26FB7440B65AF94"
+    }
+  ]
+}
