@@ -8,12 +8,17 @@
 
 #import "AppDelegateExt+initProcess.h"
 #import "GSMapManager.h"
+#import "UMSocial.h"
+#import "GSAccountDefine.h"
+
 
 @implementation AppDelegateExt (initProcess)
 
 - (void)initProcessBeforeMainUI
 {
     [[GSMapManager shareManager] initialize];
+    
+    [UMSocialData setAppKey:kUmengkey];
 }
 
 @end

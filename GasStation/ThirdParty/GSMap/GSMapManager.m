@@ -6,12 +6,12 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#define kMapAppKey @"i78vhnHPZ0GiwfADx30YwYhQ"
 
 #import "GSMapManager.h"
 #import "GSMapMacro.h"
 #import <BaiduMapAPI_Location/BMKLocationComponent.h>
 #import "ObserverContainer.h"
+#import "GSAccountDefine.h"
 
 @interface GSMapManager ()<BMKGeneralDelegate,BMKMapViewDelegate,BMKLocationServiceDelegate>
 @property (nonatomic,strong) BMKMapManager *mapManager;

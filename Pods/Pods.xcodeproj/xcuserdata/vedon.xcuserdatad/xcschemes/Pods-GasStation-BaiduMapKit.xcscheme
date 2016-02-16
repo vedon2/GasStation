@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A574A758ABA320E7F6C034B3"
+               BlueprintIdentifier = "19F52FB8AB27F88CED09D3F1"
                BuildableName = "libPods-GasStation-BaiduMapKit.a"
                BlueprintName = "Pods-GasStation-BaiduMapKit"
                ReferencedContainer = "container:Pods.xcodeproj">
