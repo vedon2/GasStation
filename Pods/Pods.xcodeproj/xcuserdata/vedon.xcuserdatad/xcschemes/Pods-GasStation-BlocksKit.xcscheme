@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7AABDE17C94635846B550E62"
+               BlueprintIdentifier = "D9F740D06754408E0E4D1D7E"
                BuildableName = "libPods-GasStation-BlocksKit.a"
                BlueprintName = "Pods-GasStation-BlocksKit"
                ReferencedContainer = "container:Pods.xcodeproj">

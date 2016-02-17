@@ -33,6 +33,7 @@ PODS:
   - CTPersistance (1.1.4)
   - MJExtension (3.0.10)
   - PureLayout (3.0.1)
+  - RDVTabBarController (1.1.9)
   - UITableView+FDTemplateLayoutCell (1.4)
 
 DEPENDENCIES:
@@ -42,6 +43,7 @@ DEPENDENCIES:
   - CTPersistance
   - MJExtension
   - PureLayout
+  - RDVTabBarController
   - UITableView+FDTemplateLayoutCell (~> 1.4)
 
 SPEC CHECKSUMS:
@@ -51,6 +53,7 @@ SPEC CHECKSUMS:
   CTPersistance: 77aabe915f6546f18ec2594d04bd8adbe6829b75
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
+  RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 
 COCOAPODS: 0.35.0

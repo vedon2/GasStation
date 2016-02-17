@@ -15,6 +15,7 @@ end
 
 target 'GasStationManager' do
 #    pod 'EaseMobSDK'
+pod 'RDVTabBarController'
 pod 'MJExtension'
 pod 'CTPersistance'
 pod 'AFNetworking', '~> 3.0.4'

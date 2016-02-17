@@ -102,6 +102,12 @@
 #define COCOAPODS_VERSION_MINOR_PureLayout 0
 #define COCOAPODS_VERSION_PATCH_PureLayout 1
 
+// RDVTabBarController
+#define COCOAPODS_POD_AVAILABLE_RDVTabBarController
+#define COCOAPODS_VERSION_MAJOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_MINOR_RDVTabBarController 1
+#define COCOAPODS_VERSION_PATCH_RDVTabBarController 9
+
 // UITableView+FDTemplateLayoutCell
 #define COCOAPODS_POD_AVAILABLE_UITableView_FDTemplateLayoutCell
 #define COCOAPODS_VERSION_MAJOR_UITableView_FDTemplateLayoutCell 1

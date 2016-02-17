@@ -74,6 +74,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GasStationManager-RDVTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GasStationManager-UITableView+FDTemplateLayoutCell.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -87,82 +92,87 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>182FEFD2842A48AF87BF7BDB</key>
+		<key>074B74BE7FB69BACB6F95441</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1AB45C31A1553AE8BBF109D7</key>
+		<key>23A6968F9CF7F3E223A0F6EE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>256FC7656D871A7709760C3A</key>
+		<key>27D93047471C239DDA4252A9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>26889725C6BCFA67F2AD5EB3</key>
+		<key>28FB74682412F7AD52111A31</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>47E18A117E939595B6815C57</key>
+		<key>4014F7220D0CAADF0A7255BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5DCE3E5D66FF6468A6B3D973</key>
+		<key>437E88D573CF85D349C4D0D3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7AABDE17C94635846B550E62</key>
+		<key>571974615827E82BFF5AF056</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>874DF308A15905A288BF4DEA</key>
+		<key>622E51A350C6C1BD94CE61DA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9219E60ED303F48639544B9A</key>
+		<key>6A58E1043954E19CA1DC73BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B8F6ADA6A9E746DDC496F6D4</key>
+		<key>AD9361631EE2F2AE1BDC7738</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C7D692EE5207D1128642BD05</key>
+		<key>B0E9647CF55370D372746808</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CAFAA60A9DC85BF10CFE297F</key>
+		<key>B8BBA5DEA5742CA386C3D9C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D02CA3952198A5E0B8811210</key>
+		<key>BB78A662F7C056948ED46781</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DC24AE6F89861653F27F4B59</key>
+		<key>C1F484209C9B76322E36F142</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E7B230A2059C3ECA3BF949F7</key>
+		<key>D9F740D06754408E0E4D1D7E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F7516834410B0EE89A6DD1FF</key>
+		<key>E25E0BBC18EFE84CE4888639</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F4353903F246F8740BC3622E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
