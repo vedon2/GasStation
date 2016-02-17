@@ -8,9 +8,21 @@
 
 #ifndef GSAccountDefine_h
 #define GSAccountDefine_h
-
-
-#define kUmengkey @"56c32d8267e58efee0000bd0"
 #define kMapAppKey @"i78vhnHPZ0GiwfADx30YwYhQ"
+
+
+typedef NS_ENUM(NSInteger,UserType)
+{
+    UserType_User = 0,
+    UserType_Admin = 2,
+};
+
+
+typedef NS_ENUM(NSInteger,UserGender)
+{
+    UserGender_male = 0,
+    UserGender_female = 1,
+};
+
 
 #endif /* GSAccountDefine_h */

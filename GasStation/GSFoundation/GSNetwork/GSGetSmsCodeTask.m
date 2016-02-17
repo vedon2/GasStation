@@ -7,12 +7,20 @@
 //
 
 #import "GSGetSmsCodeTask.h"
+#import <SMS_SDK/SMSSDK.h>
 
 @implementation GSGetSmsCodeTask
 
 
 - (instancetype)initWithPhone:(NSString *)phone delegate:(id<GSRequestBaseTaskDelegate>)delegate;
 {
+    
+//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"15018492358" zone:@"86" customIdentifier:nil result:^(NSError *error) {
+//        ;
+//    }];
+    
+    
+    
     assert(phone);
     
     NSURLRequest *request = nil;
