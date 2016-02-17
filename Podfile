@@ -4,6 +4,7 @@
 
 target 'GasStation' do
 #pod 'EaseMobSDK'
+pod 'MJExtension'
 pod 'CTPersistance'
 pod 'AFNetworking', '~> 3.0.4'
 pod 'BlocksKit', '~> 2.2.5'
@@ -14,6 +15,7 @@ end
 
 target 'GasStationManager' do
 #    pod 'EaseMobSDK'
+pod 'MJExtension'
 pod 'CTPersistance'
 pod 'AFNetworking', '~> 3.0.4'
 pod 'BlocksKit', '~> 2.2.5'

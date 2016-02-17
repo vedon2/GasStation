@@ -31,6 +31,7 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - CTPersistance (1.1.4)
+  - MJExtension (3.0.10)
   - PureLayout (3.0.1)
   - UITableView+FDTemplateLayoutCell (1.4)
 
@@ -39,6 +40,7 @@ DEPENDENCIES:
   - BaiduMapKit
   - BlocksKit (~> 2.2.5)
   - CTPersistance
+  - MJExtension
   - PureLayout
   - UITableView+FDTemplateLayoutCell (~> 1.4)
 
@@ -47,6 +49,7 @@ SPEC CHECKSUMS:
   BaiduMapKit: 5df028c6b455d29e68e89694adbcf9d37a4bcc99
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   CTPersistance: 77aabe915f6546f18ec2594d04bd8adbe6829b75
+  MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
 

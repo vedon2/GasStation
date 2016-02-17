@@ -24,6 +24,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GasStation-MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GasStation-PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -59,6 +64,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GasStationManager-MJExtension.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-GasStationManager-PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -77,72 +87,82 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>19F52FB8AB27F88CED09D3F1</key>
+		<key>182FEFD2842A48AF87BF7BDB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A26E9063974DABC10F430DD</key>
+		<key>1AB45C31A1553AE8BBF109D7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>21F3BB400C79F03925365A11</key>
+		<key>256FC7656D871A7709760C3A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>29F9E65A6DF1C9A8CA516663</key>
+		<key>26889725C6BCFA67F2AD5EB3</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>64CF9042B40718DF1BD0FB77</key>
+		<key>47E18A117E939595B6815C57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>693245EBC5A60F207EF6D469</key>
+		<key>5DCE3E5D66FF6468A6B3D973</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6A03B6A70F3AA2904DB5CEFB</key>
+		<key>7AABDE17C94635846B550E62</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6B43C979C2D6FE5923DAA90E</key>
+		<key>874DF308A15905A288BF4DEA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>76EFE44CD1DEF4711784CEDC</key>
+		<key>9219E60ED303F48639544B9A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A02E4F2441CF8C20B6750CE1</key>
+		<key>B8F6ADA6A9E746DDC496F6D4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC0A733218A068C706B0BAAF</key>
+		<key>C7D692EE5207D1128642BD05</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BFF43357C78AC37C89A4DB45</key>
+		<key>CAFAA60A9DC85BF10CFE297F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C2C8E9D06C952870BFA907DE</key>
+		<key>D02CA3952198A5E0B8811210</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB4D81E5177804907D7483CD</key>
+		<key>DC24AE6F89861653F27F4B59</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E7B230A2059C3ECA3BF949F7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F7516834410B0EE89A6DD1FF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

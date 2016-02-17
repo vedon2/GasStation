@@ -90,6 +90,12 @@
 #define COCOAPODS_VERSION_MINOR_CTPersistance 1
 #define COCOAPODS_VERSION_PATCH_CTPersistance 4
 
+// MJExtension
+#define COCOAPODS_POD_AVAILABLE_MJExtension
+#define COCOAPODS_VERSION_MAJOR_MJExtension 3
+#define COCOAPODS_VERSION_MINOR_MJExtension 0
+#define COCOAPODS_VERSION_PATCH_MJExtension 10
+
 // PureLayout
 #define COCOAPODS_POD_AVAILABLE_PureLayout
 #define COCOAPODS_VERSION_MAJOR_PureLayout 3
