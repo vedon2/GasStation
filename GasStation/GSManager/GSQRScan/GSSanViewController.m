@@ -7,22 +7,52 @@
 //
 
 #import "GSSanViewController.h"
+#import "GSScanner.h"
 
-@interface GSSanViewController ()
 
+@interface GSSanViewController ()<GSScannetDelegate>
+@property (weak, nonatomic) IBOutlet UIView *sannerContainer;
+@property (strong ,nonatomic) GSScanner *scanner;
 @end
 
 @implementation GSSanViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.scanner = [[GSScanner alloc] initWithFrame:self.sannerContainer.bounds delegate:self];
+    [self.sannerContainer addSubview:self.scanner.scannerView];
+    
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self.scanner start];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.scanner stop];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+#pragma mark - GSScannetDelegate
+
+- (void)didGetResult:(NSString *)result
+{
+    
+}
+
+#pragma mark - Getter & Setter
+
 
 /*
 #pragma mark - Navigation

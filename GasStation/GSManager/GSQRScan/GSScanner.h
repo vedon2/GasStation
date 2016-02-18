@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GSScanner : UIView
+@protocol GSScannetDelegate <NSObject>
+
+- (void)didGetResult:(NSString *)result;
+
+@end
+
+@interface GSScanner : NSObject
+@property (nonatomic,weak) id<GSScannetDelegate>delegate;
+@property (nonatomic,strong,readonly) UIView *scannerView;
+
+- (instancetype)initWithFrame:(CGRect)frame delegate:(id<GSScannetDelegate>)delegate;
+
+- (void)start;
+
+- (void)stop;
 
 @end

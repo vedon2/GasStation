@@ -1368,7 +1368,6 @@
 					};
 					4E4D998E1C6C7E4C00E8A017 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 8QH5EM85GC;
 					};
 					4E4D99A61C6C7E4C00E8A017 = {
 						CreatedOnToolsVersion = 7.2;

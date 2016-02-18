@@ -1,19 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9531"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSSanViewController">
             <connections>
+                <outlet property="sannerContainer" destination="DzG-x3-aJF" id="JNP-80-BVi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EDK-ox-llm">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DzG-x3-aJF">
+                            <rect key="frame" x="40" y="53" width="242" height="242"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="242" id="1tF-k8-4TS"/>
+                                <constraint firstAttribute="width" constant="242" id="ebW-Vk-YSU"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="DzG-x3-aJF" firstAttribute="leading" secondItem="EDK-ox-llm" secondAttribute="leading" constant="40" id="GNb-ej-imh"/>
+                        <constraint firstItem="DzG-x3-aJF" firstAttribute="top" secondItem="EDK-ox-llm" secondAttribute="top" constant="53" id="fNB-T9-ZQr"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="EDK-ox-llm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="WFx-fM-3Uf"/>
+                <constraint firstAttribute="bottom" secondItem="EDK-ox-llm" secondAttribute="bottom" id="ZBc-O5-zwZ"/>
+                <constraint firstAttribute="trailing" secondItem="EDK-ox-llm" secondAttribute="trailing" id="hbf-14-pMZ"/>
+                <constraint firstItem="EDK-ox-llm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xnF-mb-h3k"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
 </document>

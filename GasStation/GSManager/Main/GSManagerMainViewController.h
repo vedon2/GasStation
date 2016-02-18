@@ -6,8 +6,8 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "RDVTabBarController.h"
+#import <UIKit/UIKit.h>
 
-@interface GSManagerMainViewController : RDVTabBarController
+@interface GSManagerMainViewController : UIViewController
 
 @end

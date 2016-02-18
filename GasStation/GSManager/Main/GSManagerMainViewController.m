@@ -11,9 +11,10 @@
 #import "GSManagerAccountViewController.h"
 #import "GSSanViewController.h"
 #import "RDVTabBarItem.h"
+#import "RDVTabBarController.h"
 
-@interface GSManagerMainViewController ()
-
+@interface GSManagerMainViewController ()<RDVTabBarControllerDelegate>
+@property (strong,nonatomic) RDVTabBarController *mainTabBarController;
 @end
 
 @implementation GSManagerMainViewController
@@ -25,18 +26,24 @@
     UIViewController *firstNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:firstViewController];
     
-    UIViewController *secondViewController = [[GSManagerAccountViewController alloc] initWithNibName:@"GSManagerAccountViewController" bundle:nil];
+    UIViewController *secondViewController = [[GSSanViewController alloc] initWithNibName:@"GSSanViewController" bundle:nil];
     UIViewController *secondNavigationController = [[UINavigationController alloc]
                                                     initWithRootViewController:secondViewController];
     
-    UIViewController *thirdViewController = [[GSSanViewController alloc] initWithNibName:@"GSSanViewController" bundle:nil];
+    UIViewController *thirdViewController = [[GSManagerAccountViewController alloc] initWithNibName:@"GSManagerAccountViewController" bundle:nil];
     UIViewController *thirdNavigationController = [[UINavigationController alloc]
                                                    initWithRootViewController:thirdViewController];
     
-    self.viewControllers = @[firstNavigationController,secondNavigationController,thirdNavigationController];
+    self.mainTabBarController = [[RDVTabBarController alloc] init];
+    self.mainTabBarController.delegate = self;
+    self.mainTabBarController.viewControllers = @[firstNavigationController,secondNavigationController,thirdNavigationController];
+    
+    [self.view addSubview:self.mainTabBarController.view];
     
     [self customizeTabBarForController];
     [self customizeInterface];
+    
+    
     // Do any additional setup after loading the view.
 }
 
@@ -49,7 +56,7 @@
     NSArray *tabBarItemImages = @[@"first", @"second", @"third"];
     
     NSInteger index = 0;
-    for (RDVTabBarItem *item in [[self tabBar] items]) {
+    for (RDVTabBarItem *item in [[self.mainTabBarController tabBar] items]) {
         [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
         UIImage *selectedimage = [UIImage imageNamed:[NSString stringWithFormat:@"%@_selected",
                                                       [tabBarItemImages objectAtIndex:index]]];
@@ -95,6 +102,19 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - RDVTabBarControllerDelegate
+
+
+- (BOOL)tabBarController:(RDVTabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    return YES;
+}
+
+- (void)tabBarController:(RDVTabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+{
+    
 }
 
 /*
