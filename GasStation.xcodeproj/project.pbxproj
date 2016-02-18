@@ -15,6 +15,16 @@
 		4E1711C41C75F836006CA3E5 /* GSBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711C21C75F836006CA3E5 /* GSBaseViewController.m */; };
 		4E1711C71C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711C61C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m */; };
 		4E1711C81C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711C61C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m */; };
+		4E1711DA1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711D81C760524006CA3E5 /* GSManagerUserViewController.m */; };
+		4E1711DB1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711D81C760524006CA3E5 /* GSManagerUserViewController.m */; };
+		4E1711DC1C760524006CA3E5 /* GSManagerUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711D91C760524006CA3E5 /* GSManagerUserViewController.xib */; };
+		4E1711DD1C760524006CA3E5 /* GSManagerUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711D91C760524006CA3E5 /* GSManagerUserViewController.xib */; };
+		4E1711E71C7605DA006CA3E5 /* GSManagerAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711E51C7605DA006CA3E5 /* GSManagerAccountViewController.m */; };
+		4E1711E81C7605DA006CA3E5 /* GSManagerAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711E61C7605DA006CA3E5 /* GSManagerAccountViewController.xib */; };
+		4E1711ED1C7608F4006CA3E5 /* GSSanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711EB1C7608F4006CA3E5 /* GSSanViewController.m */; };
+		4E1711EE1C7608F4006CA3E5 /* GSSanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711EC1C7608F4006CA3E5 /* GSSanViewController.xib */; };
+		4E1711F11C760F8F006CA3E5 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711F01C760F8F006CA3E5 /* GSScanner.m */; };
+		4E1711F21C760F8F006CA3E5 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711F01C760F8F006CA3E5 /* GSScanner.m */; };
 		4E2B3CAA1C6DD22100B460F7 /* GSMapNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CA91C6DD22100B460F7 /* GSMapNavView.m */; };
 		4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CAC1C6DEA7D00B460F7 /* GSMapSearchBtn.m */; };
 		4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CB31C6E02F700B460F7 /* GSSearchViewController.m */; };
@@ -275,6 +285,17 @@
 		4E1711C51C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPrensentViewControllerToBar.h; sourceTree = "<group>"; };
 		4E1711C61C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPrensentViewControllerToBar.m; sourceTree = "<group>"; };
 		4E1711C91C75FFD3006CA3E5 /* GSPresentViewControllerTopBarProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSPresentViewControllerTopBarProtocol.h; sourceTree = "<group>"; };
+		4E1711D71C760524006CA3E5 /* GSManagerUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSManagerUserViewController.h; sourceTree = "<group>"; };
+		4E1711D81C760524006CA3E5 /* GSManagerUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSManagerUserViewController.m; sourceTree = "<group>"; };
+		4E1711D91C760524006CA3E5 /* GSManagerUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSManagerUserViewController.xib; sourceTree = "<group>"; };
+		4E1711E41C7605DA006CA3E5 /* GSManagerAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSManagerAccountViewController.h; sourceTree = "<group>"; };
+		4E1711E51C7605DA006CA3E5 /* GSManagerAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSManagerAccountViewController.m; sourceTree = "<group>"; };
+		4E1711E61C7605DA006CA3E5 /* GSManagerAccountViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSManagerAccountViewController.xib; sourceTree = "<group>"; };
+		4E1711EA1C7608F4006CA3E5 /* GSSanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSanViewController.h; sourceTree = "<group>"; };
+		4E1711EB1C7608F4006CA3E5 /* GSSanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSanViewController.m; sourceTree = "<group>"; };
+		4E1711EC1C7608F4006CA3E5 /* GSSanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSSanViewController.xib; sourceTree = "<group>"; };
+		4E1711EF1C760F8F006CA3E5 /* GSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSScanner.h; sourceTree = "<group>"; };
+		4E1711F01C760F8F006CA3E5 /* GSScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSScanner.m; sourceTree = "<group>"; };
 		4E2B3CA81C6DD22100B460F7 /* GSMapNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapNavView.h; sourceTree = "<group>"; };
 		4E2B3CA91C6DD22100B460F7 /* GSMapNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapNavView.m; sourceTree = "<group>"; };
 		4E2B3CAB1C6DEA7D00B460F7 /* GSMapSearchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapSearchBtn.h; sourceTree = "<group>"; };
@@ -622,6 +643,38 @@
 			path = GSTransition;
 			sourceTree = "<group>";
 		};
+		4E1711D61C760513006CA3E5 /* GSManagerUser */ = {
+			isa = PBXGroup;
+			children = (
+				4E1711D71C760524006CA3E5 /* GSManagerUserViewController.h */,
+				4E1711D81C760524006CA3E5 /* GSManagerUserViewController.m */,
+				4E1711D91C760524006CA3E5 /* GSManagerUserViewController.xib */,
+			);
+			path = GSManagerUser;
+			sourceTree = "<group>";
+		};
+		4E1711DE1C760553006CA3E5 /* GSAccount */ = {
+			isa = PBXGroup;
+			children = (
+				4E1711E41C7605DA006CA3E5 /* GSManagerAccountViewController.h */,
+				4E1711E51C7605DA006CA3E5 /* GSManagerAccountViewController.m */,
+				4E1711E61C7605DA006CA3E5 /* GSManagerAccountViewController.xib */,
+			);
+			path = GSAccount;
+			sourceTree = "<group>";
+		};
+		4E1711E91C7607FA006CA3E5 /* GSQRScan */ = {
+			isa = PBXGroup;
+			children = (
+				4E1711EA1C7608F4006CA3E5 /* GSSanViewController.h */,
+				4E1711EB1C7608F4006CA3E5 /* GSSanViewController.m */,
+				4E1711EC1C7608F4006CA3E5 /* GSSanViewController.xib */,
+				4E1711EF1C760F8F006CA3E5 /* GSScanner.h */,
+				4E1711F01C760F8F006CA3E5 /* GSScanner.m */,
+			);
+			path = GSQRScan;
+			sourceTree = "<group>";
+		};
 		4E2B3CAE1C6E01E500B460F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -902,6 +955,9 @@
 		4E4D99C21C6C855B00E8A017 /* GSManager */ = {
 			isa = PBXGroup;
 			children = (
+				4E1711E91C7607FA006CA3E5 /* GSQRScan */,
+				4E1711DE1C760553006CA3E5 /* GSAccount */,
+				4E1711D61C760513006CA3E5 /* GSManagerUser */,
 				4E4D99D41C6C8C6D00E8A017 /* Main */,
 				4E4D99C91C6C861500E8A017 /* GSManagerResource */,
 			);
@@ -1376,6 +1432,7 @@
 				4E2B3D4D1C7206C800B460F7 /* GSForgetPwdViewController.xib in Resources */,
 				4EA6722E1C74C5E0004A5163 /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				4EA6721E1C74C5DF004A5163 /* UMSnsAccountViewController.xib in Resources */,
+				4E1711DC1C760524006CA3E5 /* GSManagerUserViewController.xib in Resources */,
 				4EA672181C74C5DF004A5163 /* UMSShareListController.xib in Resources */,
 				4EA672221C74C5DF004A5163 /* UMSocialLocalizable.strings in Resources */,
 				4EA672141C74C5DF004A5163 /* UMSCommentInputControlleriPad.xib in Resources */,
@@ -1443,12 +1500,14 @@
 				4EA6723B1C74C5E0004A5163 /* ios-social-sdk-comment-detail.html in Resources */,
 				4EA671CA1C74C41D004A5163 /* SMS_SDKLocalizable.strings in Resources */,
 				4EA672191C74C5DF004A5163 /* UMSShareListController.xib in Resources */,
+				4E1711EE1C7608F4006CA3E5 /* GSSanViewController.xib in Resources */,
 				4EA672171C74C5DF004A5163 /* UMSLoginViewController.xib in Resources */,
 				4EA672271C74C5DF004A5163 /* WeiboSDK.bundle in Resources */,
 				4EA6723F1C74C5E0004A5163 /* ios-social-sdk-like.html in Resources */,
 				4EA672431C74C5E0004A5163 /* ios-social-sdk-login-quick.html in Resources */,
 				4EA6724D1C74C5E0004A5163 /* markdown.css in Resources */,
 				4EA6724B1C74C5E0004A5163 /* ios-social-sdk-socialbar.html in Resources */,
+				4E1711E81C7605DA006CA3E5 /* GSManagerAccountViewController.xib in Resources */,
 				4E9D1ADA1C735E960048869E /* GSMyCardsViewController.xib in Resources */,
 				4E4D99CB1C6C862B00E8A017 /* GSManagerScreen.storyboard in Resources */,
 				4EA672111C74C5DF004A5163 /* UMSCommentDetailController.xib in Resources */,
@@ -1458,6 +1517,7 @@
 				4EA6721B1C74C5DF004A5163 /* UMShareEditViewController.xib in Resources */,
 				4EA672371C74C5E0004A5163 /* iOS-social-analytics-releasenote.html in Resources */,
 				4E2B3D551C72071400B460F7 /* GSEditUserProfileViewController.xib in Resources */,
+				4E1711DD1C760524006CA3E5 /* GSManagerUserViewController.xib in Resources */,
 				4E9D1AE81C735F6D0048869E /* GSFeedbackViewController.xib in Resources */,
 				4EA672411C74C5E0004A5163 /* ios-social-sdk-login-detail.html in Resources */,
 				4E2B3D5C1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */,
@@ -1552,6 +1612,7 @@
 				4E4D99DA1C6C8CA200E8A017 /* GSUserMainViewController.m in Sources */,
 				4E2B3D2C1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E1711C31C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
+				4E1711F11C760F8F006CA3E5 /* GSScanner.m in Sources */,
 				4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */,
 				4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */,
 				4E2B3D591C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
@@ -1600,6 +1661,7 @@
 				4E2B3CE01C6EB8C200B460F7 /* GSGiftCouponTableViewCell.m in Sources */,
 				4E2B3CE51C6EB8DE00B460F7 /* GSStationShortCommentsTableViewCell.m in Sources */,
 				4E2B3D201C6F75E600B460F7 /* GSRegisterTask.m in Sources */,
+				4E1711DA1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */,
 				4E43832C1C5F9ED600885A33 /* main.m in Sources */,
 				4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */,
 				4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,
@@ -1627,7 +1689,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E1711ED1C7608F4006CA3E5 /* GSSanViewController.m in Sources */,
 				4E2B3D371C70B4D300B460F7 /* GSInputTextField.m in Sources */,
+				4E1711F21C760F8F006CA3E5 /* GSScanner.m in Sources */,
 				4E2B3D451C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4E4D99E31C6C939500E8A017 /* GSMapBaseTask.m in Sources */,
 				4EA671141C74BA02004A5163 /* GSUserRegisetResponseData.m in Sources */,
@@ -1653,6 +1717,7 @@
 				4E2B3D1C1C6F75D300B460F7 /* GSGetSmsCodeTask.m in Sources */,
 				4E2B3D4C1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
 				4E4D99E01C6C8E9B00E8A017 /* AppDelegate.m in Sources */,
+				4E1711DB1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */,
 				4E2B3D331C6F7B0C00B460F7 /* GSUserManagerRequester.m in Sources */,
 				4E4D99E91C6C981A00E8A017 /* main.m in Sources */,
 				4E2B3D531C72071400B460F7 /* GSEditUserProfileViewController.m in Sources */,
@@ -1661,6 +1726,7 @@
 				4E4D99D71C6C8C8E00E8A017 /* GSManagerMainViewController.m in Sources */,
 				4E2B3D3C1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4E9D1AE61C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
+				4E1711E71C7605DA006CA3E5 /* GSManagerAccountViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
