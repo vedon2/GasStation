@@ -6,8 +6,8 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GSBaseViewController.h"
 
-@interface GSUserMainViewController : UIViewController
+@interface GSUserMainViewController : GSBaseViewController
 
 @end

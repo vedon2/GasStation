@@ -29,9 +29,9 @@
     [SMSSDK registerApp:kSmsKey
              withSecret:kSmsSecret];
     
-    [MQManager initWithAppkey:kMeiQiaKey completion:^(NSString *clientId, NSError *error) {
-        assert(error == nil);
-    }];
+//    [MQManager initWithAppkey:kMeiQiaKey completion:^(NSString *clientId, NSError *error) {
+//        assert(error == nil);
+//    }];
     
 }
 

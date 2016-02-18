@@ -4,6 +4,9 @@
 
 target 'GasStation' do
 #pod 'EaseMobSDK'
+pod "ZFDragableModalTransition"
+pod "YYCategories"
+pod "YYKeyboardManager"
 pod 'MJExtension'
 pod 'CTPersistance'
 pod 'AFNetworking', '~> 3.0.4'
@@ -15,13 +18,16 @@ end
 
 target 'GasStationManager' do
 #    pod 'EaseMobSDK'
+pod "ZFDragableModalTransition"
+pod "YYCategories"
+pod "YYKeyboardManager"
 pod 'RDVTabBarController'
 pod 'MJExtension'
 pod 'CTPersistance'
 pod 'AFNetworking', '~> 3.0.4'
 pod 'BlocksKit', '~> 2.2.5'
-pod 'PureLayout'
 pod 'UITableView+FDTemplateLayoutCell', '~> 1.4'
+pod 'PureLayout'
 pod 'BaiduMapKit' #百度地图SDK
 end
 

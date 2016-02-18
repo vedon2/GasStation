@@ -24,6 +24,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc
+{
+    
+}
+
 - (NSString *)title
 {
     return @"我的加油卡";

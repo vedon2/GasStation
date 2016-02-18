@@ -20,7 +20,7 @@
 #import "GSUserRegisterViewController.h"
 #import "GSUserCenterViewController.h"
 #import "GSUserManager.h"
-
+#import "GSPrensentViewControllerTransition.h"
 
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
@@ -141,16 +141,22 @@
         }
         case 2:
         {
-            
-//            GSUserCenterViewController
             if ([[GSUserManager shareManager] isLogin])
             {
-                
                 GSUserCenterViewController *vc = [[GSUserCenterViewController alloc] initWithNibName:@"GSUserCenterViewController" bundle:nil];
+#ifdef kUserDragableAnimation
+                vc.modalPresentationStyle = UIModalPresentationCustom;
+                self.defaultPrensentAnimation = [GSPrensentViewControllerTransition defaultTransitionWithViewController:vc];
+                vc.transitioningDelegate = self.defaultPrensentAnimation;
+                [self presentViewController:vc animated:YES completion:nil];
+#else
                 UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
                 [self presentViewController:nav animated:YES completion:nil];
-                vc = nil;
                 nav = nil;
+#endif
+                vc = nil;
+               
+                
             }
             else
             {

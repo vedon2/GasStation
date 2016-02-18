@@ -114,3 +114,27 @@
 #define COCOAPODS_VERSION_MINOR_UITableView_FDTemplateLayoutCell 4
 #define COCOAPODS_VERSION_PATCH_UITableView_FDTemplateLayoutCell 0
 
+// YYCategories
+#define COCOAPODS_POD_AVAILABLE_YYCategories
+#define COCOAPODS_VERSION_MAJOR_YYCategories 0
+#define COCOAPODS_VERSION_MINOR_YYCategories 9
+#define COCOAPODS_VERSION_PATCH_YYCategories 4
+
+// YYCategories/no-arc
+#define COCOAPODS_POD_AVAILABLE_YYCategories_no_arc
+#define COCOAPODS_VERSION_MAJOR_YYCategories_no_arc 0
+#define COCOAPODS_VERSION_MINOR_YYCategories_no_arc 9
+#define COCOAPODS_VERSION_PATCH_YYCategories_no_arc 4
+
+// YYKeyboardManager
+#define COCOAPODS_POD_AVAILABLE_YYKeyboardManager
+#define COCOAPODS_VERSION_MAJOR_YYKeyboardManager 0
+#define COCOAPODS_VERSION_MINOR_YYKeyboardManager 9
+#define COCOAPODS_VERSION_PATCH_YYKeyboardManager 2
+
+// ZFDragableModalTransition
+#define COCOAPODS_POD_AVAILABLE_ZFDragableModalTransition
+#define COCOAPODS_VERSION_MAJOR_ZFDragableModalTransition 0
+#define COCOAPODS_VERSION_MINOR_ZFDragableModalTransition 6
+#define COCOAPODS_VERSION_PATCH_ZFDragableModalTransition 0
+

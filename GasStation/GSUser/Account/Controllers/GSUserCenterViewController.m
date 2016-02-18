@@ -42,6 +42,11 @@ static NSString *cellIdentifier = @"Cell";
     }];
 }
 
+- (void)dealloc
+{
+    NSLog(@"Dealloc");
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -82,8 +87,18 @@ static NSString *cellIdentifier = @"Cell";
     switch (indexPath.item) {
         case 0:
         {
-            GSMyCardsViewController *vc = [[GSMyCardsViewController alloc] initWithNibName:@"GSMyCardsViewController" bundle:nil];
-            [self.navigationController pushViewController:vc animated:YES];
+             GSMyCardsViewController *vc = [[GSMyCardsViewController alloc] initWithNibName:@"GSMyCardsViewController" bundle:nil];
+#ifdef kUserDragableAnimation
+            vc.modalPresentationStyle = UIModalPresentationCustom;
+            self.defaultPrensentAnimation = [GSPrensentViewControllerTransition defaultTransitionWithViewController:vc];
+            vc.transitioningDelegate = self.defaultPrensentAnimation;
+            [self presentViewController:vc animated:YES completion:nil];
+#else
+            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+            [self presentViewController:nav animated:YES completion:nil];
+            nav = nil;
+#endif
+        
             vc = nil;
         }
             break;
