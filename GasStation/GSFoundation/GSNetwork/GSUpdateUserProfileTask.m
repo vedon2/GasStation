@@ -10,4 +10,20 @@
 
 @implementation GSUpdateUserProfileTask
 
+- (NSString *)requestUrl {
+    // “http://www.yuantiku.com” 在 YTKNetworkConfig 中设置，这里只填除去域名剩余的网址信息
+    return @"/iphone/register";
+}
+
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPost;
+}
+
+- (id)requestArgument {
+    return @{
+             
+             };
+}
+
+
 @end

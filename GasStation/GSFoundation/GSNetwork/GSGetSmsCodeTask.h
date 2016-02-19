@@ -6,10 +6,12 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSRequestBaseTask.h"
+#import "GSBaseRequest.h"
 
-@interface GSGetSmsCodeTask : GSRequestBaseTask
+@interface GSGetSmsCodeTask : GSBaseRequest
+@property (nonatomic,strong,readonly) NSString *phone;
 
-- (instancetype)initWithPhone:(NSString *)phone delegate:(id<GSRequestBaseTaskDelegate>)delegate;
+- (instancetype)initWithPhone:(NSString *)phone;
+
 
 @end

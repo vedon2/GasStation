@@ -8,21 +8,42 @@
 
 #import "GSRegisterTask.h"
 
+@interface GSRegisterTask ()
+@property (nonatomic,strong) NSString *phone;
+@property (nonatomic,strong) NSString *password;
+@end
+
 @implementation GSRegisterTask
 
-- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password deleagte:(id<GSRequestBaseTaskDelegate>)delegate
+- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password
 {
     assert(phone);
     assert(password);
-    
-    NSURLRequest *request = nil;
-    self = [super initWithRequest:request delegate:delegate];
-    self.requestType = GSRequestType_Register;
+    self = [super init];
     if (self)
     {
-        
+        self.phone = phone;
+        self.password = password;
     }
     return self;
 }
+
+
+- (NSString *)requestUrl {
+    // “http://www.yuantiku.com” 在 YTKNetworkConfig 中设置，这里只填除去域名剩余的网址信息
+    return @"/iphone/register";
+}
+
+- (YTKRequestMethod)requestMethod {
+    return YTKRequestMethodPost;
+}
+
+- (id)requestArgument {
+    return @{
+             @"phone": self.phone,
+             @"password": self.password
+             };
+}
+
 
 @end

@@ -9,46 +9,43 @@
 #import "GSGetSmsCodeTask.h"
 #import <SMS_SDK/SMSSDK.h>
 
+@interface GSGetSmsCodeTask ()
+@property (nonatomic,strong) NSString *phone;
+@end
+
 @implementation GSGetSmsCodeTask
 
-
-- (instancetype)initWithPhone:(NSString *)phone delegate:(id<GSRequestBaseTaskDelegate>)delegate;
+- (instancetype)initWithPhone:(NSString *)phone
 {
     
 //    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"15018492358" zone:@"86" customIdentifier:nil result:^(NSError *error) {
 //        ;
 //    }];
-    
-    
-    
     assert(phone);
-    
-    NSURLRequest *request = nil;
-    self = [super initWithRequest:request delegate:delegate];
-    self.requestType = GSRequestType_GetSmsCode;
+    self = [super init];
     if(self)
     {
-
+        self.phone = phone;
     }
     return self;
 }
 
-#pragma mark - GSRequestTaskProtocol
-
-- (NSInteger)retryCount
-{
-    return  1;
-}
-
-- (CGFloat)requestTimeout
-{
-    return 10;
-}
-
-- (NSString *)requestTaskIdentifier
-{
-    return @"GSGetSmsCodeTask";
-}
+//
+//- (NSString *)requestUrl {
+//    // “http://www.yuantiku.com” 在 YTKNetworkConfig 中设置，这里只填除去域名剩余的网址信息
+//    return @"/iphone/register";
+//}
+//
+//- (YTKRequestMethod)requestMethod {
+//    return YTKRequestMethodPost;
+//}
+//
+//- (id)requestArgument {
+//    return @{
+//             @"phone": self.ph,
+//             @"password": _password
+//             };
+//}
 
 
 

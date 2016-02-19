@@ -4,52 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-GasStation-AFNetworking.xcscheme</key>
+		<key>AFDownloadRequestOperation.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStation-BaiduMapKit.xcscheme</key>
+		<key>AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStation-BlocksKit.xcscheme</key>
+		<key>Aspects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStation-CTPersistance.xcscheme</key>
+		<key>BlocksKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStation-MJExtension.xcscheme</key>
+		<key>CTPersistance.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStation-PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStation-UITableView+FDTemplateLayoutCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStation-YYCategories.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStation-YYKeyboardManager.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStation-ZFDragableModalTransition.xcscheme</key>
+		<key>MJExtension.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -59,62 +39,42 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GasStationManager-AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-BaiduMapKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-BlocksKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-CTPersistance.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-MJExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-PureLayout.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-RDVTabBarController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-UITableView+FDTemplateLayoutCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-YYCategories.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-YYKeyboardManager.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-GasStationManager-ZFDragableModalTransition.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-GasStationManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PureLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>RDVTabBarController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>UITableView+FDTemplateLayoutCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YTKNetwork.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYCategories.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>YYKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZFDragableModalTransition.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -122,117 +82,77 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0018E2DE118EAD6A037862CF</key>
+		<key>28EDA0AC3272A77B0575F728B99261BC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>0C730A71089456EEF4494A3C</key>
+		<key>298DFD4CDD5ABDA40C6235F0A1D7C6F7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1BF6B50612B7F081EC2600B5</key>
+		<key>374A371B343931D450DFAD863B99F42E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1CECCDC285BBB58EBFD41500</key>
+		<key>3837533AF5F27C97B6BE3166FF2C0D13</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2542B1197220E566179A8010</key>
+		<key>42C7AFE42C5E63022D4C442D28979730</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2DECCFEB7D890EDDDAB69A3A</key>
+		<key>44ABDCFC349B47DB2D4E7A898F3D39C8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2FC7D998DF9DA3385C9A263F</key>
+		<key>4D4EE26A8CC729DF4848111CC6CBB299</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>35199287C746339504DEBED9</key>
+		<key>6F7E18C983268B1EE6E0E05F5E918098</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3EE9D252C29A5C83E115551B</key>
+		<key>8453D7529DBCAE4B0088946ACACE2A29</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>48D5711F94C0EEA2D7AB04A8</key>
+		<key>9EAB3E42EF957541E6C3C76D35FD008E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E8D990655AB2AC68B43FC9A</key>
+		<key>A13FD88DFD1B8195BB377CC88E94BA93</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>504355F29F9F678774D05038</key>
+		<key>AC6C573058237B97B1BEE20322865172</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>69F548DE2B3486E977CD97FA</key>
+		<key>B3C760711B585710870482548EF04B3F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8353ED9858FCE95E623B2DFA</key>
+		<key>DA1A7295DF2A99609DA0EEBF5E83233D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8FC44F343D621C34404B75FF</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>943A3EC68B403271D55C3E45</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>94C7D75779645FB1F46BB9D0</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9ECD41AA3E2906561F9EFD67</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A988ECA8EFA6CE30EC804500</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>B89679E9A2ED1C4642864ABC</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CDD1890DE566FF15A1A2EE6D</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EE4688598EE0EE7148AFB6E1</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FC388C5B4604CC17C7F93606</key>
+		<key>DBC9A0AF6D4571D059D2AF2422F2BD6E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

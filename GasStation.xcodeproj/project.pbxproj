@@ -218,10 +218,8 @@
 		4E2B3D0D1C6F5F9800B460F7 /* GSUserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D0B1C6F5F9800B460F7 /* GSUserRegisterViewController.m */; };
 		4E2B3D0E1C6F5F9800B460F7 /* GSUserRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B3D0C1C6F5F9800B460F7 /* GSUserRegisterViewController.xib */; };
 		4E2B3D111C6F607900B460F7 /* GSAvatarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D101C6F607900B460F7 /* GSAvatarView.m */; };
-		4E2B3D181C6F628F00B460F7 /* GSRequestBaseTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D171C6F628F00B460F7 /* GSRequestBaseTask.m */; };
 		4E2B3D1B1C6F75C600B460F7 /* GSGetSmsCodeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */; };
 		4E2B3D1C1C6F75D300B460F7 /* GSGetSmsCodeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */; };
-		4E2B3D1D1C6F75D600B460F7 /* GSRequestBaseTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D171C6F628F00B460F7 /* GSRequestBaseTask.m */; };
 		4E2B3D201C6F75E600B460F7 /* GSRegisterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D1F1C6F75E600B460F7 /* GSRegisterTask.m */; };
 		4E2B3D211C6F75EA00B460F7 /* GSRegisterTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D1F1C6F75E600B460F7 /* GSRegisterTask.m */; };
 		4E2B3D241C6F776400B460F7 /* GSResetPassworkTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D231C6F776400B460F7 /* GSResetPassworkTask.m */; };
@@ -398,6 +396,8 @@
 		4EA673C81C74C946004A5163 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EA673BF1C74C7E8004A5163 /* MobileCoreServices.framework */; };
 		4ED0F34A1C6CDEDE00C290FF /* GSMapBottomBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0F3491C6CDEDE00C290FF /* GSMapBottomBar.m */; };
 		4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */; };
+		4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */; };
+		4ED31A4D1C76E9A000747467 /* GSBaseRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */; };
 		4EFD22931C7623BD00F053A0 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22921C7623BD00F053A0 /* GSScanner.m */; };
 		4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22921C7623BD00F053A0 /* GSScanner.m */; };
 		4EFD22971C7623CF00F053A0 /* GSQRGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22961C7623CF00F053A0 /* GSQRGenerator.m */; };
@@ -679,8 +679,6 @@
 		4E2B3D0F1C6F607900B460F7 /* GSAvatarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSAvatarView.h; sourceTree = "<group>"; };
 		4E2B3D101C6F607900B460F7 /* GSAvatarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSAvatarView.m; sourceTree = "<group>"; };
 		4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSRequestTaskProtocol.h; sourceTree = "<group>"; };
-		4E2B3D161C6F628F00B460F7 /* GSRequestBaseTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRequestBaseTask.h; sourceTree = "<group>"; };
-		4E2B3D171C6F628F00B460F7 /* GSRequestBaseTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRequestBaseTask.m; sourceTree = "<group>"; };
 		4E2B3D191C6F75C600B460F7 /* GSGetSmsCodeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGetSmsCodeTask.h; sourceTree = "<group>"; };
 		4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetSmsCodeTask.m; sourceTree = "<group>"; };
 		4E2B3D1E1C6F75E600B460F7 /* GSRegisterTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRegisterTask.h; sourceTree = "<group>"; };
@@ -854,6 +852,8 @@
 		4ED0F3491C6CDEDE00C290FF /* GSMapBottomBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapBottomBar.m; sourceTree = "<group>"; };
 		4ED0F34C1C6CE00400C290FF /* GSBottomButtonInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBottomButtonInfo.h; sourceTree = "<group>"; };
 		4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBottomButtonInfo.m; sourceTree = "<group>"; };
+		4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseRequest.h; sourceTree = "<group>"; };
+		4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSBaseRequest.mm; sourceTree = "<group>"; };
 		4EFD22911C7623BD00F053A0 /* GSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSScanner.h; sourceTree = "<group>"; };
 		4EFD22921C7623BD00F053A0 /* GSScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSScanner.m; sourceTree = "<group>"; };
 		4EFD22951C7623CF00F053A0 /* GSQRGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQRGenerator.h; sourceTree = "<group>"; };
@@ -1570,9 +1570,9 @@
 		4E2B3D141C6F615500B460F7 /* GSNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */,
+				4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */,
 				4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */,
-				4E2B3D161C6F628F00B460F7 /* GSRequestBaseTask.h */,
-				4E2B3D171C6F628F00B460F7 /* GSRequestBaseTask.m */,
 				4E2B3D191C6F75C600B460F7 /* GSGetSmsCodeTask.h */,
 				4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */,
 				4E2B3D1E1C6F75E600B460F7 /* GSRegisterTask.h */,
@@ -1997,6 +1997,7 @@
 				4E4383241C5F9ED600885A33 /* Frameworks */,
 				4E4383251C5F9ED600885A33 /* Resources */,
 				65B558C1A46EFE2A27E29A5D /* Copy Pods Resources */,
+				C55F8A89F1498D79DE571774 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2052,6 +2053,7 @@
 				4E4D998C1C6C7E4C00E8A017 /* Frameworks */,
 				4E4D998D1C6C7E4C00E8A017 /* Resources */,
 				EB12D637A7E16F8F2E204A4D /* Copy Pods Resources */,
+				F668D76D2FC875D62AC651AC /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2339,6 +2341,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStation/Pods-GasStation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C55F8A89F1498D79DE571774 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStation/Pods-GasStation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		EB12D637A7E16F8F2E204A4D /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2354,6 +2371,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStationManager/Pods-GasStationManager-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		F668D76D2FC875D62AC651AC /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStationManager/Pods-GasStationManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2363,6 +2395,7 @@
 			files = (
 				4E1121651C76A55000F1BC55 /* wav.mm in Sources */,
 				4E43836B1C5FB13A00885A33 /* GSMapBaseTask.m in Sources */,
+				4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
 				4E4D99DA1C6C8CA200E8A017 /* GSUserMainViewController.m in Sources */,
 				4E1121671C76A55000F1BC55 /* VoiceConverter.mm in Sources */,
 				4E1120F11C76A54F00F1BC55 /* MQTextCellModel.m in Sources */,
@@ -2455,7 +2488,6 @@
 				4E1121191C76A54F00F1BC55 /* MQImageUtil.m in Sources */,
 				4E11213D1C76A55000F1BC55 /* MLAudioMeterObserver.m in Sources */,
 				4E1121511C76A55000F1BC55 /* SDWebImagePrefetcher.m in Sources */,
-				4E2B3D181C6F628F00B460F7 /* GSRequestBaseTask.m in Sources */,
 				4E1711C71C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */,
 				4E1121491C76A55000F1BC55 /* SDWebImageDecoder.m in Sources */,
 				4E1121291C76A54F00F1BC55 /* FBSquareFont.m in Sources */,
@@ -2535,7 +2567,6 @@
 				4E1121061C76A54F00F1BC55 /* MQVoiceMessageCell.m in Sources */,
 				4E1121501C76A55000F1BC55 /* SDWebImageManager.m in Sources */,
 				4E1121341C76A54F00F1BC55 /* UIImageView+MHFacebookImageViewer.m in Sources */,
-				4E2B3D1D1C6F75D600B460F7 /* GSRequestBaseTask.m in Sources */,
 				4E2B3D5A1C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
 				4E2B3D2D1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E1121041C76A54F00F1BC55 /* MQTipsCell.m in Sources */,
@@ -2550,6 +2581,7 @@
 				4E2B3D211C6F75EA00B460F7 /* GSRegisterTask.m in Sources */,
 				4E11211C1C76A54F00F1BC55 /* MQStringSizeUtil.m in Sources */,
 				4E11215A1C76A55000F1BC55 /* UIImage+WebP.m in Sources */,
+				4ED31A4D1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
 				4E1120F61C76A54F00F1BC55 /* MQVoiceCellModel.m in Sources */,
 				4E11213C1C76A54F00F1BC55 /* CafRecordWriter.m in Sources */,
 				4E11214A1C76A55000F1BC55 /* SDWebImageDecoder.m in Sources */,

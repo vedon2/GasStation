@@ -6,10 +6,10 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSRequestBaseTask.h"
+#import "GSBaseRequest.h"
 
-@interface GSResetPassworkTask : GSRequestBaseTask
+@interface GSResetPassworkTask : GSBaseRequest
+@property (nonatomic,strong,readonly) NSString *password;
 
-- (instancetype)initWithNewPassword:(NSString *)password delegate:(id<GSRequestBaseTaskDelegate>)delegate;
-
+- (instancetype)initWithNewPassword:(NSString *)password;
 @end

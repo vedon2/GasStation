@@ -6,8 +6,8 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSRequestBaseTask.h"
+#import "GSBaseRequest.h"
 
-@interface GSUpdateUserProfileTask : GSRequestBaseTask
+@interface GSUpdateUserProfileTask : GSBaseRequest
 
 @end

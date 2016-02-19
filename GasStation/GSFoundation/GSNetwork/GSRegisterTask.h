@@ -6,10 +6,12 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSRequestBaseTask.h"
+#import "GSBaseRequest.h"
 
-@interface GSRegisterTask : GSRequestBaseTask
+@interface GSRegisterTask : GSBaseRequest
+@property (nonatomic,strong,readonly) NSString *phone;
+@property (nonatomic,strong,readonly) NSString *password;
 
-- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password deleagte:(id<GSRequestBaseTaskDelegate>)delegate;
+- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password;
 
 @end
