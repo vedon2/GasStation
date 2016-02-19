@@ -12,7 +12,7 @@
 #import "GSResetPassworkTask.h"
 #import "GSUpdateUserProfileTask.h"
 
-@interface GSUserManagerRequester ()<GSRequestBaseTaskDelegate>
+@interface GSUserManagerRequester ()
 @property (nonatomic,strong) GSGetSmsCodeTask *smsCodeTask;
 @property (nonatomic,strong) GSRegisterTask *registerTask;
 @property (nonatomic,strong) GSResetPassworkTask *resetPwdTask;
@@ -38,10 +38,10 @@
     assert(phone);
     if (self.smsCodeTask)
     {
-        [self.smsCodeTask cancel];
+        [self.smsCodeTask stop];
     }
     
-    self.smsCodeTask = [[GSGetSmsCodeTask alloc] initWithPhone:phone delegate:self];
+    self.smsCodeTask = [[GSGetSmsCodeTask alloc] initWithPhone:phone];
     [self.smsCodeTask start];
 }
 
@@ -51,12 +51,12 @@
     assert(password);
     if (self.registerTask)
     {
-        [self.registerTask cancel];
+        [self.registerTask stop];
     }
     
     if (phone.length && password.length)
     {
-        self.registerTask = [[GSRegisterTask alloc] initWithPhone:phone password:password deleagte:self];
+        self.registerTask = [[GSRegisterTask alloc] initWithPhone:phone password:password];
         [self.registerTask start];
     }
     
@@ -67,9 +67,9 @@
     assert(pwd);
     if (self.resetPwdTask)
     {
-        [self.resetPwdTask cancel];
+        [self.resetPwdTask stop];
     }
-    self.resetPwdTask = [[GSResetPassworkTask alloc] initWithNewPassword:pwd delegate:self];
+    self.resetPwdTask = [[GSResetPassworkTask alloc] initWithNewPassword:pwd];
 }
 
 - (void)updateUserProfile:(id)profileData
@@ -78,45 +78,45 @@
 }
 
 #pragma mark - GSRegisterTaskDelegate
-
-- (void)task:(GSRequestBaseTask *)task didFinishWithData:(id)responseObject
-{
-    switch (task.requestType) {
-        case GSRequestType_GetSmsCode:
-            ;
-            break;
-        case GSRequestType_Register:
-            ;
-            break;
-        case GSRequestType_ResetPwd:
-            ;
-            break;
-        case GSRequestType_UpdateProfile:
-            ;
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)task:(GSRequestBaseTask *)task didFailedWithData:(id)responseObject error:(NSError *)error
-{
-    switch (task.requestType) {
-        case GSRequestType_GetSmsCode:
-            ;
-            break;
-        case GSRequestType_Register:
-            ;
-            break;
-        case GSRequestType_ResetPwd:
-            ;
-            break;
-        case GSRequestType_UpdateProfile:
-            ;
-            break;
-        default:
-            break;
-    }
-}
+//
+//- (void)task:(GSRequestBaseTask *)task didFinishWithData:(id)responseObject
+//{
+//    switch (task.requestType) {
+//        case GSRequestType_GetSmsCode:
+//            ;
+//            break;
+//        case GSRequestType_Register:
+//            ;
+//            break;
+//        case GSRequestType_ResetPwd:
+//            ;
+//            break;
+//        case GSRequestType_UpdateProfile:
+//            ;
+//            break;
+//        default:
+//            break;
+//    }
+//}
+//
+//- (void)task:(GSRequestBaseTask *)task didFailedWithData:(id)responseObject error:(NSError *)error
+//{
+//    switch (task.requestType) {
+//        case GSRequestType_GetSmsCode:
+//            ;
+//            break;
+//        case GSRequestType_Register:
+//            ;
+//            break;
+//        case GSRequestType_ResetPwd:
+//            ;
+//            break;
+//        case GSRequestType_UpdateProfile:
+//            ;
+//            break;
+//        default:
+//            break;
+//    }
+//}
 
 @end
