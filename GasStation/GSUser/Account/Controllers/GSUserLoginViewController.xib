@@ -39,11 +39,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CPd-Ui-2tX">
                     <rect key="frame" x="0.0" y="134" width="320" height="139"/>
                     <subviews>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNA-02-Fo2" customClass="GSInputTextField">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNA-02-Fo2" customClass="GSTextField">
                             <rect key="frame" x="25" y="15" width="270" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utK-zn-i2z" customClass="GSInputTextField">
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="utK-zn-i2z" customClass="GSTextField">
                             <rect key="frame" x="25" y="54" width="270" height="38"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>

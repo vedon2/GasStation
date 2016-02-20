@@ -19,6 +19,8 @@
 #import "GSSearchViewController.h"
 #import "GSUserRegisterViewController.h"
 #import "GSUserCenterViewController.h"
+#import "GSCardViewController.h"
+#import "GSCouponViewController.h"
 #import "GSUserManager.h"
 #import "GSPrensentViewControllerTransition.h"
 
@@ -42,10 +44,10 @@
     [self.bottomBar autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.mapView withOffset:kMapViewContentXPadding];
     [self.bottomBar autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.mapView withOffset:-kMapViewContentXPadding];
     [self.bottomBar autoSetDimension:ALDimensionHeight toSize:40];
-    
+    [self.bottomBar initialize];
     
     [self.mapView addSubview:self.searchBtn];
-    [self.searchBtn autoSetDimensionsToSize:CGSizeMake(30, 30)];
+    [self.searchBtn autoSetDimensionsToSize:CGSizeMake(50, 50)];
     [self.searchBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.mapView withOffset:-kMapViewContentXPadding];
     [self.searchBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.mapView withOffset:kMapViewContentYPadding];
     
@@ -130,49 +132,63 @@
 
 - (void)didSelectButtonIndex:(NSUInteger)index
 {
+    NSString *viewControllerName = nil;
     switch (index) {
         case 0:
         {
+            //我要加油
             break;
         }
         case 1:
         {
+            //优惠
+            viewControllerName = @"GSCouponViewController";
             break;
         }
         case 2:
         {
+            //加油卡
             if ([[GSUserManager shareManager] isLogin])
             {
-                GSUserCenterViewController *vc = [[GSUserCenterViewController alloc] initWithNibName:@"GSUserCenterViewController" bundle:nil];
-#ifdef kUserDragableAnimation
-                vc.modalPresentationStyle = UIModalPresentationCustom;
-                self.defaultPrensentAnimation = [GSPrensentViewControllerTransition defaultTransitionWithViewController:vc];
-                vc.transitioningDelegate = self.defaultPrensentAnimation;
-                [self presentViewController:vc animated:YES completion:nil];
-#else
-                UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-                [self presentViewController:nav animated:YES completion:nil];
-                nav = nil;
-#endif
-                vc = nil;
-               
-                
+                viewControllerName = @"GSCardViewController";
             }
             else
             {
-                GSUserRegisterViewController *vc = [[GSUserRegisterViewController alloc] initWithNibName:@"GSUserRegisterViewController" bundle:nil];
-                [self presentViewController:vc animated:YES completion:nil];
-                vc = nil;
+                [GSUserRegisterViewController presentRegisterView];
+                return;
             }
-            
-            
             break;
         }
-            
+        case 3:
+        {
+            //我
+            if ([[GSUserManager shareManager] isLogin])
+            {
+                viewControllerName = @"GSUserCenterViewController";
+            }
+            else
+            {
+                [GSUserRegisterViewController presentRegisterView];
+                return;
+            }
+            break;
+        }
             
         default:
             break;
     }
+    
+    assert(viewControllerName.length);
+    if (viewControllerName.length)
+    {
+        UIViewController *vc = [[NSClassFromString(viewControllerName) alloc] initWithNibName:viewControllerName bundle:nil];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+        nav = nil;
+        vc = nil;
+    }
+   
+    
     NSLog(@"%lu",(unsigned long)index);
 }
 
@@ -231,12 +247,13 @@
     if (!_bottomBar)
     {
         NSMutableArray *buttonsInfos = [NSMutableArray array];
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 4; i++)
         {
-            GSBottomButtonInfo *info = [[GSBottomButtonInfo alloc] initWithTitle:[NSString stringWithFormat:@"按钮%d",i] image:nil];
+            GSBottomButtonInfo *info = [[GSBottomButtonInfo alloc] initWithTitle:[NSString stringWithFormat:@"按钮%d",i] image:[UIImage imageNamed:@"first_selected"]];
             [buttonsInfos addObject:info];
         }
         self.bottomBar = [[GSMapBottomBar alloc] initWithButtons:buttonsInfos delegate:self];
+        self.bottomBar.backgroundColor = [UIColor redColor];
     }
     return _bottomBar;
 }
@@ -254,7 +271,7 @@
 {
     if (!_searchBtn)
     {
-        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self];
+        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self image:[UIImage imageNamed:@"second_normal"] edgeInset:UIEdgeInsetsMake(8, 8, 8, 0)];
     }
     return _searchBtn;
 }

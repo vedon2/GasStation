@@ -7,15 +7,17 @@
 //
 
 #import "GSUserRegisterViewController.h"
-#import "GSInputTextField.h"
 #import "GSUserLoginViewController.h"
+#import "GSEditUserProfileViewController.h"
 #import "GSUserManager.h"
+#import "GSCounterButton.h"
+#import "GSTextField.h"
 
-@interface GSUserRegisterViewController ()<GSUserManagerDelegate>
-
-@property (weak, nonatomic) IBOutlet GSInputTextField *phoneTextField;
-@property (weak, nonatomic) IBOutlet GSInputTextField *smsCodeTextField;
-@property (weak, nonatomic) IBOutlet GSInputTextField *pwdTextField;
+@interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate>
+@property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *smsCodeTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *pwdTextField;
+@property (strong,nonatomic) GSCounterButton *counterButton;
 @end
 
 @implementation GSUserRegisterViewController
@@ -23,16 +25,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
-    [self.phoneTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] placeholderText:@"手机号" accessoryButtonTitle:nil accessoryButtonAction:nil];
-    
-    [self.smsCodeTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] placeholderText:@"验证码" accessoryButtonTitle:@"获取" accessoryButtonAction:^{
-        
-        NSLog(@"Accessory Button Action");
-        
-    }];
-    
-    [self.pwdTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] placeholderText:@"6-15 位密码" accessoryButtonTitle:nil accessoryButtonAction:nil];
+    [self.phoneTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"手机号"];
+    [self.smsCodeTextField configureWithDelegate:self];
+    [self.pwdTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"6-15 位密码"];
     
     [[GSUserManager shareManager] addObserver:self];
     // Do any additional setup after loading the view from its nib.
@@ -46,6 +41,15 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Public
+
++ (void)presentRegisterView
+{
+    GSUserRegisterViewController *vc = [[GSUserRegisterViewController alloc] initWithNibName:@"GSUserRegisterViewController" bundle:nil];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+    vc = nil;
 }
 
 #pragma mark - Gesture & Action
@@ -64,7 +68,12 @@
 
 - (IBAction)registerAction:(id)sender
 {
-    
+    //注册成功后打开编辑个人信息界面
+    GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+    nav = nil;
+    vc = nil;
 }
 
 #pragma mark - GSUserManagerDelegate
@@ -72,6 +81,52 @@
 - (void)userRegisterSuccess
 {
     
+}
+
+#pragma mark - GSTextFieldProtocol
+
+- (CGSize)accessorySize
+{
+    return CGSizeMake(80, 40);
+}
+
+- (UIView *)accessoryView
+{
+    return self.counterButton;
+}
+
+- (NSString *)placeHolderText
+{
+    return @"验证码";
+}
+
+- (UIImage *)textFieldTitleImage
+{
+    return [UIImage imageNamed:@"foregroundStar"];
+}
+
+- (NSString *)textFieldIndicatorText
+{
+    return nil;
+}
+
+#pragma mark - GSCountetButtonDelegate
+
+- (void)didTapCounterButton:(GSCounterButton *)button
+{
+    
+}
+
+#pragma mark - GSCounterButton
+
+- (GSCounterButton *)counterButton
+{
+    if (!_counterButton)
+    {
+        _counterButton = [[GSCounterButton alloc] initWithImage:nil counterText:@"获取验证码" delegate:self];
+        [_counterButton initialize];
+    }
+    return _counterButton;
 }
 
 /*

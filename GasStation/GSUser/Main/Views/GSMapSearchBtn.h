@@ -16,6 +16,6 @@
 @interface GSMapSearchBtn : UIView
 @property (nonatomic,weak) id<GSMapSearchBtnDelegate>delegate;
 
-- (instancetype)initWithDelegate:(id<GSMapSearchBtnDelegate>)delegate;
+- (instancetype)initWithDelegate:(id<GSMapSearchBtnDelegate>)delegate image:(UIImage *)image edgeInset:(UIEdgeInsets)inset;
 
 @end

@@ -8,15 +8,15 @@
 #define kCellHeight 60
 
 #import "GSForgetPwdViewController.h"
-#import "GSInputTextField.h"
+#import "GSTextField.h"
 #import "PureLayout.h"
 
 @interface GSForgetPwdViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
-@property (strong,nonatomic) GSInputTextField *phoneTextField;
-@property (strong,nonatomic) GSInputTextField *smsCodeTextField;
-@property (strong,nonatomic) GSInputTextField *resetPwdTextField;
+@property (strong,nonatomic) GSTextField *phoneTextField;
+@property (strong,nonatomic) GSTextField *smsCodeTextField;
+@property (strong,nonatomic) GSTextField *resetPwdTextField;
 @property (strong,nonatomic) UIButton *accessoryButton;
 @end
 
@@ -90,30 +90,32 @@
 
 #pragma mark - Getter & Setter
 
-- (GSInputTextField *)phoneTextField
+- (GSTextField *)phoneTextField
 {
     if (!_phoneTextField)
     {
-        _phoneTextField = [[GSInputTextField alloc] initWithFrame:[self rectForTextField] title:@"手机号:" placeholderText:@"" accessoryButtonTitle:nil accessoryButtonAction:nil];
+        _phoneTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"手机号" placeHolderText:nil];
+        
     }
     return  _phoneTextField;
 }
 
-- (GSInputTextField *)smsCodeTextField
+- (GSTextField *)smsCodeTextField
 {
     if (!_smsCodeTextField)
     {
-        _smsCodeTextField = [[GSInputTextField alloc] initWithFrame:[self rectForTextField] title:@"验证码" placeholderText:@"请输入验证码" accessoryButton:self.accessoryButton];
+        _smsCodeTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"验证码" placeHolderText:@"请输入验证码"];
 
     }
     return  _smsCodeTextField;
 }
 
-- (GSInputTextField *)resetPwdTextField
+- (GSTextField *)resetPwdTextField
 {
     if (!_resetPwdTextField)
     {
-        _resetPwdTextField = [[GSInputTextField alloc] initWithFrame:[self rectForTextField] title:@"新密码" placeholderText:@"6-15位密码" accessoryButtonTitle:nil accessoryButtonAction:nil];
+        
+        _resetPwdTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"新密码" placeHolderText:@"6-15位密码"];
     }
     return _resetPwdTextField;
 }

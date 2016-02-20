@@ -11,7 +11,7 @@
 #import <UIKit/UIKit.h>
 #import "GSPrensentViewControllerTransition.h"
 #import "GSPresentViewControllerTopBarProtocol.h"
-
+#import "BlocksKit+UIKit.h"
 
 @interface GSBaseViewController : UIViewController
 @property (nonatomic,strong) id<UIViewControllerTransitioningDelegate> defaultPrensentAnimation;

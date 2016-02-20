@@ -8,14 +8,14 @@
 //
 
 #import "GSUserLoginViewController.h"
-#import "GSInputTextField.h"
+#import "GSTextField.h"
 #import "GSUserManager.h"
 #import "GSForgetPwdViewController.h"
 
 
 @interface GSUserLoginViewController ()<GSUserManagerDelegate>
-@property (weak, nonatomic) IBOutlet GSInputTextField *phoneTextField;
-@property (weak, nonatomic) IBOutlet GSInputTextField *pwdTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *pwdTextField;
 
 @end
 
@@ -24,9 +24,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.phoneTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] placeholderText:@"手机号" accessoryButtonTitle:nil accessoryButtonAction:nil];
-    
-    [self.pwdTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] placeholderText:@"6-15 位密码" accessoryButtonTitle:nil accessoryButtonAction:nil];
+    [self.phoneTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"手机号"];
+    [self.pwdTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"6-15 位密码"];
+
     
     [[GSUserManager shareManager] addObserver:self];
     // Do any additional setup after loading the view from its nib.
@@ -41,6 +41,18 @@
 {
     [[GSUserManager shareManager] removeObserver:self];
 }
+
+#pragma mark - Public
+
++ (void)presentLoginViewController
+{
+    GSUserLoginViewController *vc = [[GSUserLoginViewController alloc] initWithNibName:@"GSUserLoginViewController" bundle:nil];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:vc animated:YES completion:nil];
+    vc = nil;
+}
+
+
+#pragma mark - Action
 
 - (IBAction)registerAction:(id)sender
 {
@@ -67,6 +79,7 @@
 
 - (void)userLoginFailed
 {
+    
 }
 /*
 #pragma mark - Navigation

@@ -10,4 +10,6 @@
 
 @interface GSUserRegisterViewController : UIViewController
 
++ (void)presentRegisterView;
+
 @end

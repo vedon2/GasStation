@@ -10,4 +10,6 @@
 
 @interface GSUserLoginViewController : UIViewController
 
++ (void)presentLoginViewController;
+
 @end

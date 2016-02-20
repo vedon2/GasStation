@@ -8,9 +8,11 @@
 
 #import "GSMapBottomBar.h"
 #import "PureLayout.h"
+#import "GSBottomBarButton.h"
 
-@interface GSMapBottomBar ()
+@interface GSMapBottomBar ()<GSBottomBarButtonDelegate>
 @property (nonatomic,strong) UIImageView *bgView;
+@property (nonatomic,strong) NSArray *buttons;
 @end
 
 @implementation GSMapBottomBar
@@ -22,46 +24,52 @@
     if (self)
     {
         self.delegate = delegate;
-        __block UIButton *tempButton = nil;
-        [buttons enumerateObjectsUsingBlock:^(GSBottomButtonInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-           
-            UIButton *button = [[UIButton alloc] initForAutoLayout];
-            [button setTitle:obj.title forState:UIControlStateNormal];
-            button.titleLabel.textAlignment = NSTextAlignmentCenter;
-            [button setBackgroundImage:obj.image forState:UIControlStateNormal];
-            button.backgroundColor = [UIColor lightGrayColor];
-            [button addTarget:self action:@selector(tap:) forControlEvents:UIControlEventTouchUpInside];
-            button.tag = idx;
-            
-            [self addSubview:button];
-            [button autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
-            [button autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self];
-            if ((buttons.count - 1) == idx)
-            {
-                [button autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self];
-            }
-            
-            if (tempButton)
-            {
-                [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:tempButton];
-            }
-            else
-            {
-                [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self];
-            }
-            tempButton = button;
-            
-        }];
+        self.buttons = buttons;
     }
     return self;
 }
 
-- (void)tap:(id)sender
+- (void)initialize
 {
-    UIButton *btn = sender;
+    __block GSBottomBarButton *tempButton = nil;
+    __weak GSMapBottomBar *weakSelf = self;
+    
+    [self setNeedsLayout];
+    [self layoutIfNeeded];
+    
+    [self.buttons enumerateObjectsUsingBlock:^(GSBottomButtonInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        GSBottomBarButton *button = [[GSBottomBarButton alloc] initWithImage:obj.image title:obj.title delegate:weakSelf];
+        [button autoSetDimensionsToSize:CGSizeMake(weakSelf.frame.size.width/weakSelf.buttons.count, weakSelf.frame.size.height)];
+        button.tag = idx;
+        [weakSelf addSubview:button];
+        [button autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
+        [button autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:weakSelf];
+        if ((weakSelf.buttons.count - 1) == idx)
+        {
+            [button autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:weakSelf];
+        }
+        
+        if (tempButton)
+        {
+            [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:tempButton];
+        }
+        else
+        {
+            [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:weakSelf];
+        }
+        tempButton = button;
+        
+    }];
+}
+
+#pragma mark - GSBottomBarButtonDelegate
+
+- (void)buttonDidClick:(GSBottomBarButton *)button
+{
     if ([self.delegate respondsToSelector:@selector(didSelectButtonIndex:)])
     {
-        [self.delegate didSelectButtonIndex:btn.tag];
+        [self.delegate didSelectButtonIndex:button.tag];
     }
 }
 

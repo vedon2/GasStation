@@ -20,4 +20,6 @@
 
 - (instancetype)initWithButtons:(NSArray <GSBottomButtonInfo *> *)buttons delegate:(id<GSMapBottomBarDelegate>)delegate;
 
+- (void)initialize;
+
 @end

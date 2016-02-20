@@ -94,9 +94,7 @@ static NSString *cellIdentifier = @"Cell";
             vc.transitioningDelegate = self.defaultPrensentAnimation;
             [self presentViewController:vc animated:YES completion:nil];
 #else
-            UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-            [self presentViewController:nav animated:YES completion:nil];
-            nav = nil;
+            [self.navigationController pushViewController:vc animated:YES];
 #endif
         
             vc = nil;
