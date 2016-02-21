@@ -46,7 +46,7 @@ static NSString *cellIdentifier = @"Cell";
     self.collectionView.backgroundColor = [GSColor userCenterBackgroundColor];
     
     self.collectionItems = [NSMutableArray array];
-    NSArray *itemsImageNames = @[@"icon_my_card",@"icon_key",@"icon_my_feedback",@"icon_my_We"];
+    NSArray *itemsImageNames = @[@"icon_my_card",@"icon_key",@"icon_my_feedback",@"icon_my_we"];
     NSArray *itemsTitles = @[@"我的油卡",@"修改密码",@"反馈投诉",@"关于我们"];
     for (int i =0; i<kCollectionItemsNumber; i++)
     {
@@ -56,6 +56,13 @@ static NSString *cellIdentifier = @"Cell";
         
         [self.collectionItems addObject:info];
     }
+    
+//    self.userAvatarImageView.image = [UIImage imageNamed:@"icon_key"];
+//    self.userAvatarImageView.contentMode = UIViewContentModeScaleAspectFit;
+//    UIImageView *tempImageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+//    tempImageview.contentMode = UIViewContentModeScaleAspectFit;
+//    tempImageview.image = [UIImage imageNamed:@"backgroundStar"];
+//    [self.userAvatarBgImageView addSubview:tempImageview];
 }
 
 - (void)dealloc
@@ -93,7 +100,8 @@ static NSString *cellIdentifier = @"Cell";
     GSUserCenterCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     GSUserCenterCollectionItemInfo *info = [self.collectionItems objectAtIndex:indexPath.item];
-    cell.cellImage.image = [UIImage imageNamed:info.imageName];
+    UIImage *image = [UIImage imageNamed:info.imageName];
+    cell.cellImage.image = image;
     cell.cellTitle.text = info.title;
     
     return cell;

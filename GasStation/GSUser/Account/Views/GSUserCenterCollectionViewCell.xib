@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,14 +14,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="93" height="93"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dpc-PV-d54">
-                        <rect key="frame" x="21" y="11" width="51" height="51"/>
+                        <rect key="frame" x="31" y="27" width="29" height="29"/>
                         <color key="backgroundColor" red="0.0" green="0.74117647060000003" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="dpc-PV-d54" secondAttribute="height" multiplier="1:1" id="Cao-46-Exf"/>
+                            <constraint firstAttribute="height" constant="29" id="MRu-fu-rxT"/>
+                            <constraint firstAttribute="width" constant="29" id="oI0-1F-oPc"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="54" placeholderIntrinsicHeight="21" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kHm-bo-Hcv">
                         <rect key="frame" x="0.0" y="66" width="93" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="zge-Ev-0M5"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
@@ -32,12 +35,11 @@
             </view>
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="kHm-bo-Hcv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Q62-aw-t8l"/>
-                <constraint firstItem="dpc-PV-d54" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="17:31" id="XWc-lW-k1e"/>
-                <constraint firstItem="dpc-PV-d54" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="21" id="cGv-2G-Yna"/>
-                <constraint firstItem="dpc-PV-d54" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="11" id="jBe-PD-js4"/>
-                <constraint firstItem="kHm-bo-Hcv" firstAttribute="top" secondItem="dpc-PV-d54" secondAttribute="bottom" constant="4" id="xY5-SH-SCu"/>
-                <constraint firstAttribute="trailing" secondItem="kHm-bo-Hcv" secondAttribute="trailing" id="zvw-uT-nw1"/>
+                <constraint firstItem="dpc-PV-d54" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" constant="-1" id="GcM-Bv-mcV"/>
+                <constraint firstItem="kHm-bo-Hcv" firstAttribute="top" secondItem="dpc-PV-d54" secondAttribute="bottom" constant="10" id="HUH-rx-7G6"/>
+                <constraint firstItem="kHm-bo-Hcv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YOS-tb-NoR"/>
+                <constraint firstItem="dpc-PV-d54" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="27" id="ZJU-z9-ET9"/>
+                <constraint firstAttribute="trailing" secondItem="kHm-bo-Hcv" secondAttribute="trailing" id="ynt-ul-GAo"/>
             </constraints>
             <size key="customSize" width="93" height="93"/>
             <connections>

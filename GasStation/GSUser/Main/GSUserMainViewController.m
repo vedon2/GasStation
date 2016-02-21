@@ -139,6 +139,7 @@
         case 0:
         {
             //我要加油
+            return;
             break;
         }
         case 1:

@@ -49,6 +49,7 @@
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dIH-Z1-YBX">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="203"/>
+                            <color key="backgroundColor" red="0.74901960779999999" green="0.74901960779999999" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
                         </imageView>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="c1y-bq-XgQ">
                             <rect key="frame" x="112" y="54" width="96" height="96"/>
@@ -59,11 +60,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C19-qh-0g1">
-                            <rect key="frame" x="10" y="18" width="39" height="37"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="37" id="LP0-dB-xSt"/>
-                                <constraint firstAttribute="width" constant="39" id="cjc-P1-Kq0"/>
-                            </constraints>
+                            <rect key="frame" x="10" y="18" width="10" height="22"/>
                             <state key="normal" image="icon_back"/>
                             <connections>
                                 <action selector="backAction:" destination="-1" eventType="touchUpInside" id="j6H-pT-08b"/>

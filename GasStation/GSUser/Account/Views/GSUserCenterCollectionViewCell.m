@@ -13,6 +13,7 @@
 
 - (void)awakeFromNib {
     
+    self.cellImage.contentMode = UIViewContentModeScaleAspectFit;
     self.cellImage.backgroundColor = [UIColor clearColor];
     self.backgroundColor = [UIColor whiteColor];
     self.cellTitle.textColor = [GSColor userCenterCollectionCellTextColor];
