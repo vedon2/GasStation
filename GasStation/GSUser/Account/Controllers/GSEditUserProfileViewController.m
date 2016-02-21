@@ -32,7 +32,7 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     cellNib = [UINib nibWithNibName:@"GSEditUserNameTableViewCell" bundle:nil];
     [self.contentTable registerNib:cellNib forCellReuseIdentifier:editUserNameCellIdentifier];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithTitle:@"返回" style:UIBarButtonItemStylePlain handler:^(id sender) {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     // Do any additional setup after loading the view from its nib.

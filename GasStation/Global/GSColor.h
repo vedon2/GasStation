@@ -13,9 +13,17 @@
 
 + (UIColor *)mainColor;
 
++ (UIColor *)registerButtonSelectedColor;
+
 + (UIColor *)registerPhoneTextFieldColor;
 
 + (UIColor *)registerTextColor;
 
++ (UIColor *)forgetPwdTextFieldIndicatorTextColor;
 
+
+//用户中心
++ (UIColor *)userCenterBackgroundColor;
+
++ (UIColor *)userCenterCollectionCellTextColor;
 @end

@@ -15,6 +15,7 @@
 
 #import "GSTextField.h"
 #import "PureLayout.h"
+#import "GSColor.h"
 
 @interface GSTextField ()
 @property (nonatomic,strong) UITextField *textField;
@@ -167,6 +168,7 @@
         _textField = [[UITextField alloc] initForAutoLayout];
         _textField.backgroundColor = [UIColor clearColor];
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        _textField.font = [UIFont systemFontOfSize:14];
         if ([self.colorDelegate respondsToSelector:@selector(textFieldTextColor:)])
         {
             _textField.textColor = [self.colorDelegate textFieldTextColor:self];
@@ -192,7 +194,7 @@
     if (!_titleLabel)
     {
         _titleLabel = [[UILabel alloc] initForAutoLayout];
-        _titleLabel.font = [UIFont systemFontOfSize:17];
+        _titleLabel.font = [UIFont systemFontOfSize:14];
         _titleLabel.backgroundColor = [UIColor clearColor];
         if ([self.colorDelegate respondsToSelector:@selector(textFieldIndicatorTextColor:)])
         {
@@ -226,7 +228,7 @@
         }
         else
         {
-            _seperateLine.backgroundColor = [UIColor lightGrayColor];
+            _seperateLine.backgroundColor = [GSColor registerTextColor];
         }
         
     }

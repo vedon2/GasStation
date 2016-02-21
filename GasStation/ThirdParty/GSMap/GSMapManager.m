@@ -97,12 +97,12 @@
 
 - (void)willStartLocatingUser
 {
-    GSLog(@"开始定位");
+//    GSLog(@"开始定位");
 }
 
 - (void)didStopLocatingUser
 {
-    GSLog(@"停止定位");
+//    GSLog(@"停止定位");
 }
 
 - (void)didUpdateUserHeading:(BMKUserLocation *)userLocation
@@ -120,8 +120,8 @@
 
 - (void)didUpdateBMKUserLocation:(BMKUserLocation *)userLocation
 {
-    GSLog(@"成功定位");
-    GSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
+//    GSLog(@"成功定位");
+//    GSLog(@"didUpdateUserLocation lat %f,long %f",userLocation.location.coordinate.latitude,userLocation.location.coordinate.longitude);
     if (self.observers.observerCount)
     {
         [self.observers enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {

@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasStation/GSUser/Account/Views/GSTextField.m"
-            timestampString = "477736758.064871"
+            timestampString = "477746526.081534"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "224"
-            endingLineNumber = "224"
+            startingLineNumber = "226"
+            endingLineNumber = "226"
             landmarkName = "-seperateLine"
             landmarkType = "5">
          </BreakpointContent>

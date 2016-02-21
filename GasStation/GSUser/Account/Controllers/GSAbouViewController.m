@@ -7,7 +7,7 @@
 //
 
 #import "GSAbouViewController.h"
-
+#import "BlocksKit+UIKit.h"
 @interface GSAbouViewController ()
 
 @end
@@ -16,6 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+
     // Do any additional setup after loading the view from its nib.
 }
 

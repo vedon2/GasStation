@@ -10,13 +10,21 @@
 #import "GSForgetPwdViewController.h"
 #import "GSTextField.h"
 #import "PureLayout.h"
+#import "BlocksKit+UIKit.h"
+#import "GSColor.h"
+#import "UIImage+YYAdd.h"
+#import "GSCounterButton.h"
 
-@interface GSForgetPwdViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface GSForgetPwdViewController ()<GSTextFieldColorProtocol,GSTextFieldProtocol,GSCountetButtonDelegate>
 
-@property (weak, nonatomic) IBOutlet UITableView *contentTable;
-@property (strong,nonatomic) GSTextField *phoneTextField;
-@property (strong,nonatomic) GSTextField *smsCodeTextField;
-@property (strong,nonatomic) GSTextField *resetPwdTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *smsCodeTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *resetPwdTextField;
+@property (strong,nonatomic) GSCounterButton *counterButton;
+@property (strong,nonatomic) UIButton *clearPhoneTextFieldButton;
+@property (strong,nonatomic) UIButton *securePwdTextFieldButton;
+
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
 @property (strong,nonatomic) UIButton *accessoryButton;
 @end
 
@@ -24,7 +32,29 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.contentTable.scrollEnabled = NO;
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    self.phoneTextField.colorDelegate = self;
+    self.smsCodeTextField.colorDelegate = self;
+    self.resetPwdTextField.colorDelegate = self;
+    
+    [self.phoneTextField configureWithDelegate:self];
+    [self.smsCodeTextField configureWithDelegate:self];
+    [self.resetPwdTextField configureWithDelegate:self];
+
+    self.resetPwdTextField.textField.secureTextEntry = NO;
+    self.securePwdTextFieldButton.selected = YES;
+    
+    UIImage *strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.confirmButton.frame.size];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateNormal];
+    self.confirmButton.layer.cornerRadius = 6.0;
+    self.confirmButton.layer.masksToBounds = YES;
+    strechImage = [UIImage imageWithColor:[GSColor registerButtonSelectedColor] size:self.confirmButton.frame.size];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateSelected];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateHighlighted];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -33,114 +63,186 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (NSString *)title
 {
-    return kCellHeight;
+    return @"忘记密码";
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+#pragma mark - Action
+
+- (IBAction)confirmAction:(id)sender
 {
-    return 3;
+    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)clearPhoneTextFieldText
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
-    if (!cell)
+    self.phoneTextField.textField.text = @"";
+}
+
+- (void)securePwdTextField
+{
+    self.resetPwdTextField.textField.secureTextEntry = !self.resetPwdTextField.textField.secureTextEntry;
+    self.securePwdTextFieldButton.selected = !self.securePwdTextFieldButton.selected;
+}
+
+#pragma mark - GSTextFieldProtocol
+
+- (CGSize)textFieldAccessorySize:(GSTextField *)textField
+{
+    if ([textField isEqual:self.phoneTextField])
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+        return CGSizeMake(50, 30);
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return CGSizeMake(80, 30);
+    }
+    if ([textField isEqual:self.resetPwdTextField])
+    {
+        return CGSizeMake(50, 30);
     }
     
-    switch (indexPath.row) {
-        case 0:
-            [self.phoneTextField removeFromSuperview];
-            [cell.contentView addSubview:self.phoneTextField];
-            break;
-        case 1:
-            [self.smsCodeTextField removeFromSuperview];
-            [cell.contentView addSubview:self.smsCodeTextField];
-            break;
-        case 2:
-            [self.resetPwdTextField removeFromSuperview];
-            [cell.contentView addSubview:self.resetPwdTextField];
-            break;
-        default:
-            break;
+    return CGSizeZero;
+}
+
+- (UIView *)textFieldAccessoryView:(GSTextField *)textField
+{
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return  self.clearPhoneTextFieldButton;
     }
-    
-    return cell;
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return self.counterButton;
+    }
+    if ([textField isEqual:self.resetPwdTextField])
+    {
+        return self.securePwdTextFieldButton;
+    }
+    return nil;
 }
 
-- (void)didTapGetSmsCodeButton
+- (NSString *)textFieldPlaceHolderText:(GSTextField *)textField
+{
+    NSString *placeHolderText = nil;
+    if ([textField isEqual:self.phoneTextField])
+    {
+        placeHolderText = @"手机号";
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        placeHolderText = @"请输入验证码";
+    }
+    if ([textField isEqual:self.resetPwdTextField])
+    {
+        placeHolderText = @"6-15 位密码";
+    }
+    return placeHolderText;
+}
+
+- (UIImage *)textFieldTitleImage:(GSTextField *)textField
+{
+    return nil;
+}
+
+- (NSString *)textFieldIndicatorText:(GSTextField *)textField
 {
     
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return @"手机号";
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+       return @"验证码";
+    }
+    if ([textField isEqual:self.resetPwdTextField])
+    {
+        return @"新密码";
+    }
+    return nil;
 }
 
-- (CGRect)rectForTextField
+- (UIEdgeInsets )textFieldSeperateInsets:(GSTextField *)textField
 {
-    CGRect rect = CGRectZero;
-    rect.size = CGSizeMake(self.contentTable.frame.size.width, kCellHeight);
-    return rect;
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return UIEdgeInsetsMake(5, 0, 0, 80 + 15);
+    }
+    return UIEdgeInsetsMake(5, 0, 0, 0);
 }
 
-- (IBAction)backAction:(id)sender
+#pragma mark - GSTextFieldColorProtocol
+
+- (UIColor *)textFieldIndicatorTextColor:(GSTextField *)textField
 {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    return [GSColor forgetPwdTextFieldIndicatorTextColor];
+}
+
+- (UIColor *)textFieldPlaceHolderTextColor:(GSTextField *)textField
+{
+    return [UIColor lightGrayColor];
+}
+
+- (UIColor *)textFieldTextColor:(GSTextField *)textField
+{
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return [GSColor registerPhoneTextFieldColor];
+    }
+    else
+    {
+        return [GSColor registerTextColor];
+    }
+}
+
+#pragma mark - GSCountetButtonDelegate
+
+- (void)didTapCounterButton:(GSCounterButton *)button
+{
+    
 }
 
 #pragma mark - Getter & Setter
 
-- (GSTextField *)phoneTextField
+
+- (GSCounterButton *)counterButton
 {
-    if (!_phoneTextField)
+    if (!_counterButton)
     {
-        _phoneTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"手机号" placeHolderText:nil];
-        
+        _counterButton = [[GSCounterButton alloc] initWithImage:nil counterText:@"获取" delegate:self];
+        [_counterButton initialize];
     }
-    return  _phoneTextField;
+    return _counterButton;
 }
 
-- (GSTextField *)smsCodeTextField
+- (UIButton *)clearPhoneTextFieldButton
 {
-    if (!_smsCodeTextField)
+    if (!_clearPhoneTextFieldButton)
     {
-        _smsCodeTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"验证码" placeHolderText:@"请输入验证码"];
-
+        _clearPhoneTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_clearPhoneTextFieldButton setImage:[UIImage imageNamed:@"icon_entry_delete"] forState:UIControlStateNormal];
+        _clearPhoneTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_clearPhoneTextFieldButton addTarget:self action:@selector(clearPhoneTextFieldText) forControlEvents:UIControlEventTouchUpInside];
     }
-    return  _smsCodeTextField;
+    return _clearPhoneTextFieldButton;
 }
 
-- (GSTextField *)resetPwdTextField
+
+- (UIButton *)securePwdTextFieldButton
 {
-    if (!_resetPwdTextField)
+    if (!_securePwdTextFieldButton)
     {
-        
-        _resetPwdTextField = [[GSTextField alloc] initWithFrame:[self rectForTextField] title:@"新密码" placeHolderText:@"6-15位密码"];
+        _securePwdTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_hide"] forState:UIControlStateNormal];
+        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateSelected];
+        _securePwdTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_securePwdTextFieldButton addTarget:self action:@selector(securePwdTextField) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _resetPwdTextField;
+    return _securePwdTextFieldButton;
 }
 
-- (UIButton *)accessoryButton
-{
-    if (!_accessoryButton)
-    {
-        _accessoryButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 60, 30)];
-        _accessoryButton.backgroundColor = [UIColor clearColor];
-        [_accessoryButton setTitle:@"获取" forState:UIControlStateNormal];
-        [_accessoryButton addTarget:self action:@selector(didTapGetSmsCodeButton) forControlEvents:UIControlEventTouchUpInside];
-        
-    }
-    return  _accessoryButton;
-}
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

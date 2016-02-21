@@ -9,19 +9,49 @@
 #define kCellHeight 50
 #import "GSChangePasswordViewController.h"
 #import "GSTextField.h"
+#import "GSColor.h"
+#import "UIImage+YYAdd.h"
+#import "PureLayout.h"
+#import "BlocksKit+UIKit.h"
 
 static NSString *changePwdCellIdentifier = @"changePwdCellIdentifier";
 
-@interface GSChangePasswordViewController ()<UITableViewDelegate,UITableViewDataSource,GSTextFieldProtocol>
-@property (weak, nonatomic) IBOutlet UITableView *contentTable;
-@property (nonatomic,strong) GSTextField *originalPwdTextField;
-@property (nonatomic,strong) GSTextField *resetPwdTextField;
+@interface GSChangePasswordViewController ()<GSTextFieldProtocol,GSTextFieldColorProtocol>
+
+@property (weak, nonatomic) IBOutlet GSTextField *originalPwdTextField;
+@property (weak, nonatomic) IBOutlet GSTextField *resetPwdTextField;
+@property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (strong,nonatomic) UIButton *originalSecurePwdTextFieldButton;
+@property (strong,nonatomic) UIButton *resetSecurePwdTextFieldButton;
 @end
 
 @implementation GSChangePasswordViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.originalPwdTextField.colorDelegate = self;
+    self.resetPwdTextField.colorDelegate = self;
+    
+    [self.originalPwdTextField configureWithDelegate:self];
+    [self.resetPwdTextField configureWithDelegate:self];
+    
+    self.resetPwdTextField.textField.secureTextEntry = NO;
+    self.originalPwdTextField.textField.secureTextEntry = NO;
+    self.originalSecurePwdTextFieldButton.selected = YES;
+    self.resetSecurePwdTextFieldButton.selected = YES;
+    
+    self.confirmButton.backgroundColor = [UIColor clearColor];
+    UIImage *strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.confirmButton.frame.size];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateNormal];
+    self.confirmButton.layer.cornerRadius = 6.0;
+    self.confirmButton.layer.masksToBounds = YES;
+    strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.confirmButton.frame.size];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateSelected];
+    [self.confirmButton setBackgroundImage:strechImage forState:UIControlStateHighlighted];
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -35,64 +65,44 @@ static NSString *changePwdCellIdentifier = @"changePwdCellIdentifier";
     return @"修改密码";
 }
 
-- (CGRect)rectForTextField
+#pragma mark - Action
+
+- (IBAction)confirmAction:(id)sender
 {
-    CGRect rect = CGRectZero;
-    rect.size = CGSizeMake(self.contentTable.frame.size.width, kCellHeight);
-    return rect;
+    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+- (void)securePwdTextField:(id)sender
 {
-    return kCellHeight;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return 2;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:changePwdCellIdentifier];
-    if (!cell)
+    if ([sender isEqual:self.originalSecurePwdTextFieldButton])
     {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:changePwdCellIdentifier];
+        self.originalPwdTextField.textField.secureTextEntry = !self.originalPwdTextField.textField.secureTextEntry;
+        self.originalSecurePwdTextFieldButton.selected = !self.originalSecurePwdTextFieldButton.selected;
     }
-    switch (indexPath.row) {
-        case 0:
-            [self.originalPwdTextField removeFromSuperview];
-            [cell.contentView addSubview:self.originalPwdTextField];
-            [_originalPwdTextField configureWithImage:nil title:nil placeHolderText:nil];
-            break;
-        case 1:
-            [self.resetPwdTextField removeFromSuperview];
-            [cell.contentView addSubview:self.resetPwdTextField];
-            [_resetPwdTextField configureWithImage:nil title:nil placeHolderText:nil];
-            break;
-        default:
-            break;
+    else
+    {
+        self.resetPwdTextField.textField.secureTextEntry = !self.resetPwdTextField.textField.secureTextEntry;
+        self.resetSecurePwdTextFieldButton.selected = !self.resetSecurePwdTextFieldButton.selected;
     }
-    return cell;
-
+    
 }
 
 #pragma mark - GSTextFieldProtocol
 
 - (CGSize)textFieldAccessorySize:(GSTextField *)textField
 {
-    return CGSizeMake(80, 40);
+    return CGSizeMake(50, 40);
 }
 
 - (UIView *)textFieldAccessoryView:(GSTextField *)textField
 {
     if ([textField isEqual:_originalPwdTextField])
     {
-        
+        return self.originalSecurePwdTextFieldButton;
     }
     else
     {
-        
+        return self.resetSecurePwdTextFieldButton;
     }
     
     return nil;
@@ -128,25 +138,54 @@ static NSString *changePwdCellIdentifier = @"changePwdCellIdentifier";
     }
 }
 
-#pragma mark - Getter & Setter 
-
-- (GSTextField *)originalPwdTextField
+- (UIEdgeInsets)textFieldSeperateInsets:(GSTextField *)textField
 {
-    if (!_originalPwdTextField)
-    {
-        _originalPwdTextField = [[GSTextField alloc] initWithDelegate:self];
-        
-    }
-    return _originalPwdTextField;
-}  
-
-- (GSTextField *)resetPwdTextField
-{
-    if (!_resetPwdTextField)
-    {
-        _resetPwdTextField = [[GSTextField alloc] initWithDelegate:self];
-    }
-    return _resetPwdTextField;
+    return UIEdgeInsetsMake(5, 0, 5, 0);
 }
 
+#pragma mark - GSTextFieldColorProtocol
+
+- (UIColor *)textFieldIndicatorTextColor:(GSTextField *)textField
+{
+    return [GSColor registerTextColor];
+}
+
+- (UIColor *)textFieldPlaceHolderTextColor:(GSTextField *)textField
+{
+    return [UIColor lightGrayColor];
+}
+
+- (UIColor *)textFieldTextColor:(GSTextField *)textField
+{
+    return [GSColor registerTextColor];
+}
+
+
+#pragma mark - Getter & Setter
+
+- (UIButton *)originalSecurePwdTextFieldButton
+{
+    if (!_originalSecurePwdTextFieldButton)
+    {
+        _originalSecurePwdTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_originalSecurePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_hide"] forState:UIControlStateNormal];
+        [_originalSecurePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateSelected];
+        _originalSecurePwdTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_originalSecurePwdTextFieldButton addTarget:self action:@selector(securePwdTextField:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _originalSecurePwdTextFieldButton;
+}
+
+- (UIButton *)resetSecurePwdTextFieldButton
+{
+    if (!_resetSecurePwdTextFieldButton)
+    {
+        _resetSecurePwdTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_resetSecurePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_hide"] forState:UIControlStateNormal];
+        [_resetSecurePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateSelected];
+        _resetSecurePwdTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_resetSecurePwdTextFieldButton addTarget:self action:@selector(securePwdTextField:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _resetSecurePwdTextFieldButton;
+}
 @end

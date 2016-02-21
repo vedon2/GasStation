@@ -23,6 +23,7 @@
 #import "GSCouponViewController.h"
 #import "GSUserManager.h"
 #import "GSPrensentViewControllerTransition.h"
+#import "CRNavigationController.h"
 
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
@@ -133,6 +134,7 @@
 - (void)didSelectButtonIndex:(NSUInteger)index
 {
     NSString *viewControllerName = nil;
+    BOOL isPresent = NO;
     switch (index) {
         case 0:
         {
@@ -165,6 +167,7 @@
             if ([[GSUserManager shareManager] isLogin])
             {
                 viewControllerName = @"GSUserCenterViewController";
+                isPresent = YES;
             }
             else
             {
@@ -182,9 +185,16 @@
     if (viewControllerName.length)
     {
         UIViewController *vc = [[NSClassFromString(viewControllerName) alloc] initWithNibName:viewControllerName bundle:nil];
-        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
-        [self presentViewController:nav animated:YES completion:nil];
-        nav = nil;
+        if (isPresent)
+        {
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+        else
+        {
+            CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+            [self presentViewController:nav animated:YES completion:nil];
+            nav = nil;
+        }
         vc = nil;
     }
    

@@ -113,6 +113,12 @@
 		4E3E67461C799234005CA5A2 /* GSKeyBoardManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */; };
 		4E3E67491C799FED005CA5A2 /* GSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67481C799FED005CA5A2 /* GSColor.m */; };
 		4E3E674A1C799FED005CA5A2 /* GSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67481C799FED005CA5A2 /* GSColor.m */; };
+		4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67511C79C4AF005CA5A2 /* CRNavigationBar.m */; };
+		4E3E67551C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67511C79C4AF005CA5A2 /* CRNavigationBar.m */; };
+		4E3E67561C79C4AF005CA5A2 /* CRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67531C79C4AF005CA5A2 /* CRNavigationController.m */; };
+		4E3E67571C79C4AF005CA5A2 /* CRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67531C79C4AF005CA5A2 /* CRNavigationController.m */; };
+		4E3E675A1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67591C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m */; };
+		4E3E675B1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67591C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m */; };
 		4E43832C1C5F9ED600885A33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43832B1C5F9ED600885A33 /* main.m */; };
 		4E43832F1C5F9ED600885A33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43832E1C5F9ED600885A33 /* AppDelegate.m */; };
 		4E4383371C5F9ED600885A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4383361C5F9ED600885A33 /* Assets.xcassets */; };
@@ -430,6 +436,12 @@
 		4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKeyBoardManger.m; sourceTree = "<group>"; };
 		4E3E67471C799FED005CA5A2 /* GSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSColor.h; sourceTree = "<group>"; };
 		4E3E67481C799FED005CA5A2 /* GSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSColor.m; sourceTree = "<group>"; };
+		4E3E67501C79C4AF005CA5A2 /* CRNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationBar.h; sourceTree = "<group>"; };
+		4E3E67511C79C4AF005CA5A2 /* CRNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRNavigationBar.m; sourceTree = "<group>"; };
+		4E3E67521C79C4AF005CA5A2 /* CRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CRNavigationController.h; sourceTree = "<group>"; };
+		4E3E67531C79C4AF005CA5A2 /* CRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CRNavigationController.m; sourceTree = "<group>"; };
+		4E3E67581C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserCenterCollectionItemInfo.h; sourceTree = "<group>"; };
+		4E3E67591C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserCenterCollectionItemInfo.m; sourceTree = "<group>"; };
 		4E4383271C5F9ED600885A33 /* GasStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E43832B1C5F9ED600885A33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E43832D1C5F9ED600885A33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -868,6 +880,8 @@
 				4EA6711C1C74BF27004A5163 /* GSUserLoginResponseData.m */,
 				4EA6711F1C74C062004A5163 /* GSUserProfileData.h */,
 				4EA671201C74C062004A5163 /* GSUserProfileData.m */,
+				4E3E67581C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.h */,
+				4E3E67591C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -921,6 +935,17 @@
 				4E3E67401C78DC6B005CA5A2 /* GSActionSheet.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4E3E674F1C79C4AF005CA5A2 /* CRNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				4E3E67501C79C4AF005CA5A2 /* CRNavigationBar.h */,
+				4E3E67511C79C4AF005CA5A2 /* CRNavigationBar.m */,
+				4E3E67521C79C4AF005CA5A2 /* CRNavigationController.h */,
+				4E3E67531C79C4AF005CA5A2 /* CRNavigationController.m */,
+			);
+			path = CRNavigationController;
 			sourceTree = "<group>";
 		};
 		4E43831E1C5F9ED600885A33 = {
@@ -995,6 +1020,7 @@
 		4E43835D1C5FA46B00885A33 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4E3E674F1C79C4AF005CA5A2 /* CRNavigationController */,
 				4E11200A1C76A54F00F1BC55 /* Meiqia-SDK-files */,
 				4EA671CB1C74C5DF004A5163 /* umeng_ios_social_sdk_5.0_arm64_custom */,
 				4EA671BF1C74C41D004A5163 /* SMS_SDK */,
@@ -1732,6 +1758,7 @@
 			files = (
 				4E43836B1C5FB13A00885A33 /* GSMapBaseTask.m in Sources */,
 				4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
+				4E3E67561C79C4AF005CA5A2 /* CRNavigationController.m in Sources */,
 				4E4D99DA1C6C8CA200E8A017 /* GSUserMainViewController.m in Sources */,
 				4E2B3D2C1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E1711C31C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
@@ -1778,12 +1805,14 @@
 				4E2B3CFD1C6F044B00B460F7 /* GSCommentsListViewController.m in Sources */,
 				4E2B3D241C6F776400B460F7 /* GSResetPassworkTask.m in Sources */,
 				4E2B3D4B1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
+				4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
 				4E4D99ED1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */,
 				4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */,
 				4E2B3CC21C6E31D800B460F7 /* GSSearchRCTableViewCell.m in Sources */,
 				4E9D1AD71C735E960048869E /* GSMyCardsViewController.m in Sources */,
 				4E1711C71C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */,
 				4E2B3CC71C6E33C800B460F7 /* GSSearchLocationTableViewCell.m in Sources */,
+				4E3E675A1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
 				4E2B3CF51C6ECAE900B460F7 /* GSCommentTypeTableViewCell.m in Sources */,
 				4E05E0F31C78967F0038CA5D /* GSCouponViewController.m in Sources */,
 				4E2B3CDB1C6EB8AD00B460F7 /* GSSubstractCouponTableViewCell.m in Sources */,
@@ -1825,6 +1854,7 @@
 				4E1711ED1C7608F4006CA3E5 /* GSSanViewController.m in Sources */,
 				4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4E05E1021C78B5600038CA5D /* GSTextField.m in Sources */,
+				4E3E675B1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
 				4E2B3D451C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4E4D99E31C6C939500E8A017 /* GSMapBaseTask.m in Sources */,
 				4EA671141C74BA02004A5163 /* GSUserRegisetResponseData.m in Sources */,
@@ -1865,6 +1895,8 @@
 				4E4D99D71C6C8C8E00E8A017 /* GSManagerMainViewController.m in Sources */,
 				4E2B3D3C1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4E9D1AE61C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
+				4E3E67551C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
+				4E3E67571C79C4AF005CA5A2 /* CRNavigationController.m in Sources */,
 				4E1711E71C7605DA006CA3E5 /* GSManagerAccountViewController.m in Sources */,
 				4E3E673E1C78DC1D005CA5A2 /* JGActionSheet.m in Sources */,
 				4E3E67371C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.m in Sources */,

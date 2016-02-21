@@ -18,6 +18,11 @@
 #import <SMS_SDK/SMSSDK.h>
 #import <MeiQiaSDK/MQManager.h>
 
+#import "CRNavigationBar.h"
+#import "GSColor.h"
+#import <UIKit/UIKit.h>
+
+
 @implementation AppDelegateExt (initProcess)
 
 - (void)initProcessBeforeMainUI
@@ -26,13 +31,19 @@
     
     [UMSocialData setAppKey:kUmengkey];
     
-    [SMSSDK registerApp:kSmsKey
-             withSecret:kSmsSecret];
+//    [SMSSDK registerApp:kSmsKey
+//             withSecret:kSmsSecret];
     
 //    [MQManager initWithAppkey:kMeiQiaKey completion:^(NSString *clientId, NSError *error) {
 //        assert(error == nil);
 //    }];
     
+    UIImage *image = [[UIImage imageNamed:@"icon_back"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
+    [[UIBarButtonItem appearance]setBackButtonBackgroundImage:image forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
+    
+    [[CRNavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName ,nil]];
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[CRNavigationBar appearance] setBarTintColor:[GSColor mainColor]];
 }
 
 @end

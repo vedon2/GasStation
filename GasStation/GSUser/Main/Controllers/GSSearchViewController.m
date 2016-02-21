@@ -12,6 +12,7 @@
 #import "GSSearchLocationTableViewCell.h"
 #import "GSStaionDetailViewController.h"
 #import "GSSearchResultMacro.h"
+#import "CRNavigationController.h"
 
 static NSString *rcCellIdentifier = @"rcCellIdentifier";
 static NSString *locationCellIdentifier = @"locationCellIdentifier";
@@ -149,7 +150,7 @@ static NSString *locationCellIdentifier = @"locationCellIdentifier";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     GSStaionDetailViewController *vc = [[GSStaionDetailViewController alloc] initWithNibName:@"GSStaionDetailViewController" bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
     
     nav = nil;

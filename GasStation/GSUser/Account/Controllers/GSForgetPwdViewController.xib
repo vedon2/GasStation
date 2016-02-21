@@ -7,7 +7,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSForgetPwdViewController">
             <connections>
-                <outlet property="contentTable" destination="imG-Cb-D6O" id="hE6-Q9-RXH"/>
+                <outlet property="confirmButton" destination="c11-m8-nTF" id="39n-wP-I40"/>
+                <outlet property="phoneTextField" destination="mzM-ns-tF9" id="pNO-FX-kIN"/>
+                <outlet property="resetPwdTextField" destination="2J3-5v-tMp" id="A0G-Zh-WUc"/>
+                <outlet property="smsCodeTextField" destination="g51-tC-Mb7" id="Y5a-5F-fVI"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -16,41 +19,75 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="imG-Cb-D6O">
-                    <rect key="frame" x="0.0" y="63" width="320" height="502"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="Yog-7S-ASa"/>
-                        <outlet property="delegate" destination="-1" id="wg1-ng-4DG"/>
-                    </connections>
-                </tableView>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dio-cE-dHL">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DSe-LJ-DIU">
+                    <rect key="frame" x="0.0" y="65" width="320" height="193"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="er1-r9-lrZ">
-                            <rect key="frame" x="17" y="17" width="46" height="30"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="backAction:" destination="-1" eventType="touchUpInside" id="8BG-cw-Pn5"/>
-                            </connections>
-                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzM-ns-tF9" customClass="GSTextField">
+                            <rect key="frame" x="15" y="21" width="291" height="55"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="ZAI-P6-KXA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g51-tC-Mb7" customClass="GSTextField">
+                            <rect key="frame" x="15" y="77" width="291" height="55"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="TEW-No-Uct"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2J3-5v-tMp" customClass="GSTextField">
+                            <rect key="frame" x="15" y="133" width="291" height="55"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="55" id="y8T-Kk-EXG"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="64" id="Rxj-QF-kCb"/>
+                        <constraint firstAttribute="trailing" secondItem="2J3-5v-tMp" secondAttribute="trailing" constant="14" id="0em-6R-CsA"/>
+                        <constraint firstItem="g51-tC-Mb7" firstAttribute="top" secondItem="mzM-ns-tF9" secondAttribute="bottom" constant="1" id="5aR-5f-zDA"/>
+                        <constraint firstItem="g51-tC-Mb7" firstAttribute="leading" secondItem="DSe-LJ-DIU" secondAttribute="leading" constant="15" id="8Pu-yn-RGj"/>
+                        <constraint firstAttribute="height" constant="193" id="8ej-Yk-0hU"/>
+                        <constraint firstItem="mzM-ns-tF9" firstAttribute="leading" secondItem="DSe-LJ-DIU" secondAttribute="leading" constant="15" id="LBv-BX-M4Y"/>
+                        <constraint firstItem="2J3-5v-tMp" firstAttribute="leading" secondItem="DSe-LJ-DIU" secondAttribute="leading" constant="15" id="Tjc-qJ-ZBV"/>
+                        <constraint firstAttribute="trailing" secondItem="mzM-ns-tF9" secondAttribute="trailing" constant="14" id="aBw-Sz-rJp"/>
+                        <constraint firstItem="2J3-5v-tMp" firstAttribute="top" secondItem="g51-tC-Mb7" secondAttribute="bottom" constant="1" id="fzH-3y-bN0"/>
+                        <constraint firstAttribute="trailing" secondItem="g51-tC-Mb7" secondAttribute="trailing" constant="14" id="hf8-fx-hpV"/>
+                        <constraint firstItem="mzM-ns-tF9" firstAttribute="top" secondItem="DSe-LJ-DIU" secondAttribute="top" constant="21" id="snB-yQ-5Gd"/>
+                        <constraint firstItem="2J3-5v-tMp" firstAttribute="top" secondItem="g51-tC-Mb7" secondAttribute="bottom" constant="1" id="tk6-xw-Bak"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="fzH-3y-bN0"/>
+                        </mask>
+                    </variation>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c11-m8-nTF">
+                    <rect key="frame" x="17" y="303" width="285" height="35"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="l1k-kv-Ucd"/>
+                    </constraints>
+                    <state key="normal" title="完成">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="confirmAction:" destination="-1" eventType="touchUpInside" id="z1x-mn-3tK"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="dio-cE-dHL" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4WU-rb-m6t"/>
-                <constraint firstItem="imG-Cb-D6O" firstAttribute="top" secondItem="dio-cE-dHL" secondAttribute="bottom" constant="-1" id="B8U-RC-sp7"/>
-                <constraint firstAttribute="trailing" secondItem="dio-cE-dHL" secondAttribute="trailing" id="NmJ-CV-ACV"/>
-                <constraint firstAttribute="bottom" secondItem="imG-Cb-D6O" secondAttribute="bottom" constant="3" id="TaB-2M-rj3"/>
-                <constraint firstItem="imG-Cb-D6O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dtz-sy-Awg"/>
-                <constraint firstAttribute="trailing" secondItem="imG-Cb-D6O" secondAttribute="trailing" id="ky1-VW-ZxE"/>
-                <constraint firstItem="dio-cE-dHL" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="r8G-fc-j8P"/>
+                <constraint firstItem="c11-m8-nTF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="17" id="E9h-yG-qMY"/>
+                <constraint firstItem="c11-m8-nTF" firstAttribute="top" secondItem="DSe-LJ-DIU" secondAttribute="bottom" constant="45" id="VTH-oI-sQf"/>
+                <constraint firstAttribute="trailing" secondItem="c11-m8-nTF" secondAttribute="trailing" constant="18" id="eNO-ez-hrT"/>
+                <constraint firstAttribute="trailing" secondItem="DSe-LJ-DIU" secondAttribute="trailing" id="kcE-b8-hWe"/>
+                <constraint firstItem="DSe-LJ-DIU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oeG-KW-J2C"/>
+                <constraint firstItem="DSe-LJ-DIU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="65" id="zJm-62-bSJ"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>

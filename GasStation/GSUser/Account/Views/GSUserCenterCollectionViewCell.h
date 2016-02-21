@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface GSUserCenterCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UIImageView *cellImage;
+@property (weak, nonatomic) IBOutlet UILabel *cellTitle;
 
 @end

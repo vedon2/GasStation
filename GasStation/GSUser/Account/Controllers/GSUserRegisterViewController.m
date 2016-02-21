@@ -16,6 +16,7 @@
 #import "UIImage+YYAdd.h"
 #import "GSKeyBoardManger.h"
 #import "PureLayout.h"
+#import "CRNavigationController.h"
 
 @interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate,GSTextFieldColorProtocol,GSKeyBoardMangerObserver>
 @property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
@@ -45,7 +46,9 @@
     [self.smsCodeTextField configureWithDelegate:self];
     [self.pwdTextField configureWithDelegate:self];
     
-    self.phoneTextField.textField.secureTextEntry = YES;
+    self.phoneTextField.textField.secureTextEntry = NO;
+    self.securePwdTextFieldButton.selected = YES;
+    
     self.registerButton.backgroundColor = [UIColor clearColor];
     UIImage *strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.registerButton.frame.size];
     [self.registerButton setBackgroundImage:strechImage forState:UIControlStateNormal];
@@ -106,7 +109,7 @@
 {
     //注册成功后打开编辑个人信息界面
     GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
     [self presentViewController:nav animated:YES completion:nil];
     nav = nil;
     vc = nil;
@@ -120,6 +123,7 @@
 - (void)securePwdTextField
 {
     self.pwdTextField.textField.secureTextEntry = !self.pwdTextField.textField.secureTextEntry;
+    self.securePwdTextFieldButton.selected = !self.securePwdTextFieldButton.selected;
 }
 
 #pragma mark - GSUserManagerDelegate
@@ -303,7 +307,8 @@
     if (!_securePwdTextFieldButton)
     {
         _securePwdTextFieldButton = [[UIButton alloc] initForAutoLayout];
-        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateNormal];
+        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_hide"] forState:UIControlStateNormal];
+        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateSelected];
         _securePwdTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
         [_securePwdTextFieldButton addTarget:self action:@selector(securePwdTextField) forControlEvents:UIControlEventTouchUpInside];
     }
