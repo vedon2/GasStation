@@ -12,12 +12,24 @@
 #import "GSUserManager.h"
 #import "GSCounterButton.h"
 #import "GSTextField.h"
+#import "GSColor.h"
+#import "UIImage+YYAdd.h"
+#import "GSKeyBoardManger.h"
+#import "PureLayout.h"
 
-@interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate>
+@interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate,GSTextFieldColorProtocol,GSKeyBoardMangerObserver>
 @property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
 @property (weak, nonatomic) IBOutlet GSTextField *smsCodeTextField;
 @property (weak, nonatomic) IBOutlet GSTextField *pwdTextField;
 @property (strong,nonatomic) GSCounterButton *counterButton;
+@property (strong,nonatomic) UIButton *clearPhoneTextFieldButton;
+@property (strong,nonatomic) UIButton *securePwdTextFieldButton;
+
+@property (weak, nonatomic) IBOutlet UIView *topView;
+@property (weak, nonatomic) IBOutlet UIButton *registerButton;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeightConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarImageViewTopConstraint;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewTopConstraint;
 @end
 
 @implementation GSUserRegisterViewController
@@ -25,17 +37,41 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.phoneTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"手机号"];
+    self.phoneTextField.colorDelegate = self;
+    self.smsCodeTextField.colorDelegate = self;
+    self.pwdTextField.colorDelegate = self;
+    
+    [self.phoneTextField configureWithDelegate:self];
     [self.smsCodeTextField configureWithDelegate:self];
-    [self.pwdTextField configureWithImage:[UIImage imageNamed:@"foregroundStar"] title:nil placeHolderText:@"6-15 位密码"];
+    [self.pwdTextField configureWithDelegate:self];
+    
+    self.phoneTextField.textField.secureTextEntry = YES;
+    self.registerButton.backgroundColor = [UIColor clearColor];
+    UIImage *strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.registerButton.frame.size];
+    [self.registerButton setBackgroundImage:strechImage forState:UIControlStateNormal];
+    self.registerButton.layer.cornerRadius = 6.0;
+    self.registerButton.layer.masksToBounds = YES;
+    strechImage = [UIImage imageWithColor:[GSColor mainColor] size:self.registerButton.frame.size];
+    [self.registerButton setBackgroundImage:strechImage forState:UIControlStateSelected];
+    [self.registerButton setBackgroundImage:strechImage forState:UIControlStateHighlighted];
+    
+    
     
     [[GSUserManager shareManager] addObserver:self];
-    // Do any additional setup after loading the view from its nib.
+    [[GSKeyBoardManger shareManager] addObserver:self toView:self.view];
+    
+    //TODO: 根据屏幕大小调整位置
+//    self.topViewHeightConstraint.constant -= 60;
+//    self.avatarImageViewTopConstraint.constant -= 60;
+
 }
+
 
 - (void)dealloc
 {
+    [[GSKeyBoardManger shareManager] removeObserver:self];
     [[GSUserManager shareManager] removeObserver:self];
+    [self.counterButton stopCounter];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,6 +112,16 @@
     vc = nil;
 }
 
+- (void)clearPhoneTextFieldText
+{
+    self.phoneTextField.textField.text = @"";
+}
+
+- (void)securePwdTextField
+{
+    self.pwdTextField.textField.secureTextEntry = !self.pwdTextField.textField.secureTextEntry;
+}
+
 #pragma mark - GSUserManagerDelegate
 
 - (void)userRegisterSuccess
@@ -87,27 +133,110 @@
 
 - (CGSize)textFieldAccessorySize:(GSTextField *)textField
 {
-    return CGSizeMake(80, 40);
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return CGSizeMake(50, 30);
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return CGSizeMake(80, 30);
+    }
+    if ([textField isEqual:self.pwdTextField])
+    {
+        return CGSizeMake(50, 30);
+    }
+    
+    return CGSizeZero;
 }
 
 - (UIView *)textFieldAccessoryView:(GSTextField *)textField
 {
-    return self.counterButton;
+    if ([textField isEqual:self.phoneTextField])
+    {
+      return  self.clearPhoneTextFieldButton;
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return self.counterButton;
+    }
+    if ([textField isEqual:self.pwdTextField])
+    {
+        return self.securePwdTextFieldButton;
+    }
+    return nil;
 }
 
 - (NSString *)textFieldPlaceHolderText:(GSTextField *)textField
 {
-    return @"验证码";
+    NSString *placeHolderText = nil;
+    if ([textField isEqual:self.phoneTextField])
+    {
+        placeHolderText = @"手机号";
+    }
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        placeHolderText = @"请输入验证码";
+    }
+    if ([textField isEqual:self.pwdTextField])
+    {
+        placeHolderText = @"6-15 位密码";
+    }
+    return placeHolderText;
 }
 
 - (UIImage *)textFieldTitleImage:(GSTextField *)textField
 {
-    return [UIImage imageNamed:@"foregroundStar"];
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return [UIImage imageNamed:@"icon_captchas"];
+    }
+    if ([textField isEqual:self.pwdTextField])
+    {
+        return [UIImage imageNamed:@"icon_key"];
+    }
+    return nil;
 }
 
 - (NSString *)textFieldIndicatorText:(GSTextField *)textField
 {
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return @"+86";
+    }
     return nil;
+}
+
+- (UIEdgeInsets )textFieldSeperateInsets:(GSTextField *)textField
+{
+    if ([textField isEqual:self.smsCodeTextField])
+    {
+        return UIEdgeInsetsMake(5, 0, 0, 80 + 15);
+    }
+    return UIEdgeInsetsMake(5, 0, 0, 0);
+}
+
+#pragma mark - GSTextFieldColorProtocol
+
+- (UIColor *)textFieldIndicatorTextColor:(GSTextField *)textField
+{
+    return [GSColor mainColor];
+}
+
+- (UIColor *)textFieldPlaceHolderTextColor:(GSTextField *)textField
+{
+    return [UIColor lightGrayColor];
+}
+
+- (UIColor *)textFieldTextColor:(GSTextField *)textField
+{
+    if ([textField isEqual:self.phoneTextField])
+    {
+        return [GSColor registerPhoneTextFieldColor];
+    }
+    else
+    {
+        return [GSColor registerTextColor];
+    }
 }
 
 #pragma mark - GSCountetButtonDelegate
@@ -117,26 +246,68 @@
     
 }
 
-#pragma mark - GSCounterButton
+#pragma mark -  GSKeyBoardMangerObserver
+
+- (void)keyBoardDidShow
+{
+    if (self.topViewTopConstraint.constant >= 0)
+    {
+         self.topViewTopConstraint.constant -= (self.topView.frame.size.height/2);
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+   
+}
+
+- (void)keyBoardDidHidden
+{
+    if (self.topViewTopConstraint.constant < 0)
+    {
+        self.topViewTopConstraint.constant += (self.topView.frame.size.height/2);
+        [UIView animateWithDuration:0.3 animations:^{
+            [self.view layoutIfNeeded];
+        }];
+    }
+    
+}
+
+
+#pragma mark - Getter & Setter
 
 - (GSCounterButton *)counterButton
 {
     if (!_counterButton)
     {
-        _counterButton = [[GSCounterButton alloc] initWithImage:nil counterText:@"获取验证码" delegate:self];
+        _counterButton = [[GSCounterButton alloc] initWithImage:nil counterText:@"获取" delegate:self];
         [_counterButton initialize];
     }
     return _counterButton;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (UIButton *)clearPhoneTextFieldButton
+{
+    if (!_clearPhoneTextFieldButton)
+    {
+        _clearPhoneTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_clearPhoneTextFieldButton setImage:[UIImage imageNamed:@"icon_entry_delete"] forState:UIControlStateNormal];
+        _clearPhoneTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_clearPhoneTextFieldButton addTarget:self action:@selector(clearPhoneTextFieldText) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _clearPhoneTextFieldButton;
 }
-*/
+
+
+- (UIButton *)securePwdTextFieldButton
+{
+    if (!_securePwdTextFieldButton)
+    {
+        _securePwdTextFieldButton = [[UIButton alloc] initForAutoLayout];
+        [_securePwdTextFieldButton setImage:[UIImage imageNamed:@"icon_see"] forState:UIControlStateNormal];
+        _securePwdTextFieldButton.imageEdgeInsets = UIEdgeInsetsMake(0, 30, 0, 0);
+        [_securePwdTextFieldButton addTarget:self action:@selector(securePwdTextField) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _securePwdTextFieldButton;
+}
 
 @end

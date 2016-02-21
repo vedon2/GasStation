@@ -11,7 +11,6 @@
 @class GSTextField;
 @protocol GSTextFieldProtocol <NSObject>
 
-@required
 - (CGSize)textFieldAccessorySize:(GSTextField *)textField;
 
 - (UIView *)textFieldAccessoryView:(GSTextField *)textField;
@@ -22,10 +21,28 @@
 
 - (NSString *)textFieldIndicatorText:(GSTextField *)textField;
 
+- (UIEdgeInsets)textFieldSeperateInsets:(GSTextField *)textField;
+
 @end
+
+@protocol GSTextFieldColorProtocol <NSObject>
+
+@optional
+
+- (UIColor *)textFieldPlaceHolderTextColor:(GSTextField *)textField;
+
+- (UIColor *)textFieldIndicatorTextColor:(GSTextField *)textField;
+
+- (UIColor *)textFieldTextColor:(GSTextField *)textField;
+
+- (UIColor *)textFieldSeperateLineColor:(GSTextField *)textField;
+@end
+
 
 @interface GSTextField : UIView
 @property (nonatomic,weak) id<GSTextFieldProtocol>delegate;
+@property (nonatomic,weak) id<GSTextFieldColorProtocol>colorDelegate;
+@property (nonatomic,strong,readonly) UITextField *textField;
 
 - (instancetype)initWithDelegate:(id<GSTextFieldProtocol>)delegate;
 

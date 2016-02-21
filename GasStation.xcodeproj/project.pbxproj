@@ -109,6 +109,10 @@
 		4E3E673E1C78DC1D005CA5A2 /* JGActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E673C1C78DC1D005CA5A2 /* JGActionSheet.m */; };
 		4E3E67411C78DC6B005CA5A2 /* GSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67401C78DC6B005CA5A2 /* GSActionSheet.m */; };
 		4E3E67421C78DC6B005CA5A2 /* GSActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67401C78DC6B005CA5A2 /* GSActionSheet.m */; };
+		4E3E67451C799234005CA5A2 /* GSKeyBoardManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */; };
+		4E3E67461C799234005CA5A2 /* GSKeyBoardManger.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */; };
+		4E3E67491C799FED005CA5A2 /* GSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67481C799FED005CA5A2 /* GSColor.m */; };
+		4E3E674A1C799FED005CA5A2 /* GSColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E67481C799FED005CA5A2 /* GSColor.m */; };
 		4E43832C1C5F9ED600885A33 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43832B1C5F9ED600885A33 /* main.m */; };
 		4E43832F1C5F9ED600885A33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43832E1C5F9ED600885A33 /* AppDelegate.m */; };
 		4E4383371C5F9ED600885A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4383361C5F9ED600885A33 /* Assets.xcassets */; };
@@ -422,6 +426,10 @@
 		4E3E673C1C78DC1D005CA5A2 /* JGActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGActionSheet.m; sourceTree = "<group>"; };
 		4E3E673F1C78DC6B005CA5A2 /* GSActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSActionSheet.h; sourceTree = "<group>"; };
 		4E3E67401C78DC6B005CA5A2 /* GSActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSActionSheet.m; sourceTree = "<group>"; };
+		4E3E67431C799234005CA5A2 /* GSKeyBoardManger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSKeyBoardManger.h; sourceTree = "<group>"; };
+		4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSKeyBoardManger.m; sourceTree = "<group>"; };
+		4E3E67471C799FED005CA5A2 /* GSColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSColor.h; sourceTree = "<group>"; };
+		4E3E67481C799FED005CA5A2 /* GSColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSColor.m; sourceTree = "<group>"; };
 		4E4383271C5F9ED600885A33 /* GasStation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasStation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E43832B1C5F9ED600885A33 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4E43832D1C5F9ED600885A33 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1099,6 +1107,10 @@
 				4EA670811C73661C004A5163 /* GSAccountDefine.h */,
 				4EFD22951C7623CF00F053A0 /* GSQRGenerator.h */,
 				4EFD22961C7623CF00F053A0 /* GSQRGenerator.m */,
+				4E3E67431C799234005CA5A2 /* GSKeyBoardManger.h */,
+				4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */,
+				4E3E67471C799FED005CA5A2 /* GSColor.h */,
+				4E3E67481C799FED005CA5A2 /* GSColor.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -1724,10 +1736,12 @@
 				4E2B3D2C1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E1711C31C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
 				4E05E0FD1C78AE640038CA5D /* GSCounterButton.m in Sources */,
+				4E3E67451C799234005CA5A2 /* GSKeyBoardManger.m in Sources */,
 				4EFD22931C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */,
 				4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */,
 				4E2B3D591C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
+				4E3E67491C799FED005CA5A2 /* GSColor.m in Sources */,
 				4E2B3D441C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4E05E1011C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E2B3CF01C6EC54C00B460F7 /* GSCommentTableViewCell.m in Sources */,
@@ -1818,6 +1832,8 @@
 				4E2B3D5A1C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
 				4E2B3D2D1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E4D99E41C6C939500E8A017 /* GSMapPOISearchTask.m in Sources */,
+				4E3E67461C799234005CA5A2 /* GSKeyBoardManger.m in Sources */,
+				4E3E674A1C799FED005CA5A2 /* GSColor.m in Sources */,
 				4E4D99F21C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */,
 				4E9D1AD81C735E960048869E /* GSMyCardsViewController.m in Sources */,
 				4E9D1AD11C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,

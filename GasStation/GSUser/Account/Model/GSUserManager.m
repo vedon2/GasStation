@@ -31,7 +31,7 @@
 
 - (BOOL)isLogin
 {
-    return YES;
+    return NO;
 }
 
 - (void)addObserver:(id<GSUserManagerDelegate>)observer

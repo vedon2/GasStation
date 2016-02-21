@@ -6,10 +6,12 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#define kImageViewPadding 5
-#define kImageViewSize 30
+#define kImageViewLeftPadding 0
+#define kImageViewRightPadding 15
+#define kImageViewSize 25
 #define kAccessoryButtonHeight 20
 #define kAccessoryButtonWidth 40
+#define kSeperateLinePadding 5
 
 #import "GSTextField.h"
 #import "PureLayout.h"
@@ -19,6 +21,7 @@
 @property (nonatomic,strong) UIImageView *imageView;
 @property (nonatomic,strong) UILabel *titleLabel;
 @property (nonatomic,strong) UIView *accessoryView;
+@property (nonatomic,strong) UIView *seperateLine;
 @end
 
 @implementation GSTextField
@@ -88,6 +91,7 @@
         self.titleLabel.text = title;
         [self addSubview:self.titleLabel];
     }
+    [self addSubview:self.seperateLine];
     [self layoutContent];
 }
 
@@ -98,14 +102,14 @@
     if (_imageView)
     {
         textFieldLeftPaddingView = _imageView;
-        [_imageView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:kImageViewPadding];
+        [_imageView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:kImageViewLeftPadding];
         [_imageView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self];
         [_imageView autoSetDimensionsToSize:CGSizeMake(kImageViewSize, kImageViewSize)];
     }
     if (_titleLabel)
     {
         textFieldLeftPaddingView = _titleLabel;
-        [_titleLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:kImageViewPadding];
+        [_titleLabel autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:kImageViewLeftPadding];
         [_titleLabel autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self];
         
         CGSize size = [_titleLabel sizeThatFits:self.frame.size];
@@ -116,19 +120,23 @@
         textFieldLeftPaddingView = self;
     }
     [_textField autoAlignAxis:ALAxisHorizontal toSameAxisOfView:self];
-    [_textField autoPinEdge:ALEdgeLeft toEdge:([textFieldLeftPaddingView isEqual:self]?ALEdgeLeft:ALEdgeRight) ofView:textFieldLeftPaddingView withOffset:kImageViewPadding];
-    [_textField autoPinEdge:ALEdgeRight toEdge:(_accessoryView != nil?ALEdgeLeft:ALEdgeRight) ofView:(_accessoryView != nil?_accessoryView:self) withOffset:-kImageViewPadding];
-    
+    [_textField autoPinEdge:ALEdgeLeft toEdge:([textFieldLeftPaddingView isEqual:self]?ALEdgeLeft:ALEdgeRight) ofView:textFieldLeftPaddingView withOffset:kImageViewRightPadding];
+    [_textField autoPinEdge:ALEdgeRight toEdge:(_accessoryView != nil?ALEdgeLeft:ALEdgeRight) ofView:(_accessoryView != nil?_accessoryView:self) withOffset:(_accessoryView != nil?-kImageViewRightPadding:0)];
     
     if (_accessoryView)
     {
         CGSize size = [self.delegate textFieldAccessorySize:self];
         [_accessoryView autoSetDimensionsToSize:size];
-        [_accessoryView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self withOffset:-kImageViewPadding];
+        [_accessoryView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self];
         [_accessoryView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_textField];
     }
     
-    self.backgroundColor = [UIColor greenColor];
+    UIEdgeInsets inset = [self.delegate textFieldSeperateInsets:self];
+    
+    [self.seperateLine autoPinEdge:ALEdgeTop toEdge:ALEdgeBottom ofView:self.textField withOffset:inset.top];
+    [self.seperateLine autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:inset.left];
+    [self.seperateLine autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self withOffset:-inset.right];
+    [self.seperateLine autoSetDimension:ALDimensionHeight toSize:1.0];
 }
 
 #pragma mark - Private
@@ -157,7 +165,12 @@
     if (!_textField)
     {
         _textField = [[UITextField alloc] initForAutoLayout];
-        _textField.backgroundColor = [UIColor redColor];
+        _textField.backgroundColor = [UIColor clearColor];
+        _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
+        if ([self.colorDelegate respondsToSelector:@selector(textFieldTextColor:)])
+        {
+            _textField.textColor = [self.colorDelegate textFieldTextColor:self];
+        }
     }
     return _textField;
 }
@@ -167,8 +180,8 @@
     if (!_imageView)
     {
         _imageView = [[UIImageView alloc] initForAutoLayout];
-        _imageView.contentMode = UIViewContentModeScaleAspectFill;
-        _imageView.backgroundColor = [UIColor yellowColor];
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.backgroundColor = [UIColor clearColor];
         _imageView.clipsToBounds = YES;
     }
     return _imageView;
@@ -180,7 +193,11 @@
     {
         _titleLabel = [[UILabel alloc] initForAutoLayout];
         _titleLabel.font = [UIFont systemFontOfSize:17];
-        _titleLabel.backgroundColor = [UIColor purpleColor];
+        _titleLabel.backgroundColor = [UIColor clearColor];
+        if ([self.colorDelegate respondsToSelector:@selector(textFieldIndicatorTextColor:)])
+        {
+            _titleLabel.textColor = [self.colorDelegate textFieldIndicatorTextColor:self];
+        }
     }
     return _titleLabel;
 }
@@ -189,13 +206,31 @@
 {
     if (!_accessoryView)
     {
-        if ([self.delegate respondsToSelector:@selector(accessoryView)])
+        if ([self.delegate respondsToSelector:@selector(textFieldAccessoryView:)])
         {
             _accessoryView = [self.delegate textFieldAccessoryView:self];
             _accessoryView.translatesAutoresizingMaskIntoConstraints = NO;
         }
     }
     return _accessoryView;
+}
+
+- (UIView *)seperateLine
+{
+    if (!_seperateLine)
+    {
+        _seperateLine = [[UIView alloc] initForAutoLayout];
+        if ([self.colorDelegate respondsToSelector:@selector(textFieldSeperateLineColor:)])
+        {
+            _seperateLine.backgroundColor = [self.colorDelegate textFieldSeperateLineColor:self];
+        }
+        else
+        {
+            _seperateLine.backgroundColor = [UIColor lightGrayColor];
+        }
+        
+    }
+    return _seperateLine;
 }
 
 @end

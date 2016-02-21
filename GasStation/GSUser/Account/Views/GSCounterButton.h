@@ -24,4 +24,6 @@
 - (instancetype)initWithImage:(UIImage *)image counterText:(NSString *)text delegate:(id<GSCountetButtonDelegate>)delegate;
 
 - (void)initialize;
+
+- (void)stopCounter;
 @end

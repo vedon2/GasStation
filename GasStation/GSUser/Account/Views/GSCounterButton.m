@@ -9,11 +9,11 @@
 
 #import "GSCounterButton.h"
 #import "PureLayout.h"
+#import "GSColor.h"
+
 
 @interface GSCounterButton ()
 @property (nonatomic,strong) UIButton *counterButton;
-@property (nonatomic,strong) UIImageView *bgImageView;
-@property (nonatomic,strong) UILabel *counterLabel;
 @property (nonatomic,strong) NSTimer *counterTimer;
 @property (nonatomic,assign) NSInteger counterLoop;
 @end
@@ -35,11 +35,6 @@
 
 - (void)initialize
 {
-//    [self addSubview:self.bgImageView];
-//    [self addSubview:self.counterLabel];
-    
-//    [self.bgImageView autoPinEdgesToSuperviewEdges];
-//    [self.counterLabel autoPinEdgesToSuperviewEdges];
     
     [self addSubview:self.counterButton];
     [self.counterButton autoPinEdgesToSuperviewEdges];
@@ -81,7 +76,7 @@
     }
     else
     {
-        counterText = [NSString stringWithFormat:@"重发 %d秒",self.counterLoop];
+        counterText = [NSString stringWithFormat:@"重发 %ld秒",(long)self.counterLoop];
         self.counterLoop -= 1;
     }
     [self.counterButton setTitle:counterText forState:UIControlStateNormal];
@@ -102,28 +97,28 @@
 
 #pragma mark - Getter & Setter
 
-- (UIImageView *)bgImageView
-{
-    if (!_bgImageView)
-    {
-        _bgImageView = [[UIImageView alloc] initForAutoLayout];
-        _bgImageView.backgroundColor = [UIColor purpleColor];
-        _bgImageView.contentMode = UIViewContentModeScaleAspectFit;
-    }
-    return _bgImageView;
-}
-
-- (UILabel *)counterLabel
-{
-    if (!_counterLabel)
-    {
-        _counterLabel = [[UILabel alloc] initForAutoLayout];
-        _counterLabel.textColor = [UIColor lightGrayColor];
-        _counterLabel.backgroundColor = [UIColor clearColor];
-        _counterLabel.font = [UIFont systemFontOfSize:14];
-    }
-    return _counterLabel;
-}
+//- (UIImageView *)bgImageView
+//{
+//    if (!_bgImageView)
+//    {
+//        _bgImageView = [[UIImageView alloc] initForAutoLayout];
+//        _bgImageView.backgroundColor = [UIColor purpleColor];
+//        _bgImageView.contentMode = UIViewContentModeScaleAspectFit;
+//    }
+//    return _bgImageView;
+//}
+//
+//- (UILabel *)counterLabel
+//{
+//    if (!_counterLabel)
+//    {
+//        _counterLabel = [[UILabel alloc] initForAutoLayout];
+//        _counterLabel.textColor = [UIColor lightGrayColor];
+//        _counterLabel.backgroundColor = [UIColor clearColor];
+//        _counterLabel.font = [UIFont systemFontOfSize:14];
+//    }
+//    return _counterLabel;
+//}
 
 - (UIButton *)counterButton
 {
@@ -131,7 +126,11 @@
     {
         _counterButton = [[UIButton alloc] initForAutoLayout];
         [_counterButton addTarget:self action:@selector(didTapCounterButton:) forControlEvents:UIControlEventTouchUpInside];
+        [_counterButton setTitleColor:[GSColor registerTextColor] forState:UIControlStateNormal];
         _counterButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        _counterButton.layer.cornerRadius = 6.0;
+        _counterButton.layer.borderColor = [[GSColor registerTextColor] CGColor];
+        _counterButton.layer.borderWidth = 1.0;
     }
     return _counterButton;
 }
