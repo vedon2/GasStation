@@ -85,27 +85,27 @@
 
 #pragma mark - GSTextFieldProtocol
 
-- (CGSize)accessorySize
+- (CGSize)textFieldAccessorySize:(GSTextField *)textField
 {
     return CGSizeMake(80, 40);
 }
 
-- (UIView *)accessoryView
+- (UIView *)textFieldAccessoryView:(GSTextField *)textField
 {
     return self.counterButton;
 }
 
-- (NSString *)placeHolderText
+- (NSString *)textFieldPlaceHolderText:(GSTextField *)textField
 {
     return @"验证码";
 }
 
-- (UIImage *)textFieldTitleImage
+- (UIImage *)textFieldTitleImage:(GSTextField *)textField
 {
     return [UIImage imageNamed:@"foregroundStar"];
 }
 
-- (NSString *)textFieldIndicatorText
+- (NSString *)textFieldIndicatorText:(GSTextField *)textField
 {
     return nil;
 }

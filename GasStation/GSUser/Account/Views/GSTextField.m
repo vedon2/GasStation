@@ -25,11 +25,10 @@
 
 - (instancetype)initWithDelegate:(id<GSTextFieldProtocol>)delegate
 {
-    self = [super init];
+    self = [super initForAutoLayout];
     if (self)
     {
         self.delegate = delegate;
-        [self configureWithImage:nil title:nil placeHolderText:nil];
     }
     return self;
 }
@@ -68,9 +67,9 @@
 {
     if (self.delegate)
     {
-        image = [self.delegate textFieldTitleImage];
-        placeHolderText = [self.delegate placeHolderText];
-        title = [self.delegate textFieldIndicatorText];
+        image = [self.delegate textFieldTitleImage:self];
+        placeHolderText = [self.delegate textFieldPlaceHolderText:self];
+        title = [self.delegate textFieldIndicatorText:self];
     }
     
     if (image)
@@ -123,7 +122,7 @@
     
     if (_accessoryView)
     {
-        CGSize size = [self.delegate accessorySize];
+        CGSize size = [self.delegate textFieldAccessorySize:self];
         [_accessoryView autoSetDimensionsToSize:size];
         [_accessoryView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self withOffset:-kImageViewPadding];
         [_accessoryView autoAlignAxis:ALAxisHorizontal toSameAxisOfView:_textField];
@@ -192,7 +191,7 @@
     {
         if ([self.delegate respondsToSelector:@selector(accessoryView)])
         {
-            _accessoryView = [self.delegate accessoryView];
+            _accessoryView = [self.delegate textFieldAccessoryView:self];
             _accessoryView.translatesAutoresizingMaskIntoConstraints = NO;
         }
     }

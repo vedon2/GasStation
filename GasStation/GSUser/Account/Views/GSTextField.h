@@ -8,18 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
+@class GSTextField;
 @protocol GSTextFieldProtocol <NSObject>
 
 @required
-- (CGSize)accessorySize;
+- (CGSize)textFieldAccessorySize:(GSTextField *)textField;
 
-- (UIView *)accessoryView;
+- (UIView *)textFieldAccessoryView:(GSTextField *)textField;
 
-- (NSString *)placeHolderText;
+- (NSString *)textFieldPlaceHolderText:(GSTextField *)textField;
 
-- (UIImage *)textFieldTitleImage;
+- (UIImage *)textFieldTitleImage:(GSTextField *)textField;
 
-- (NSString *)textFieldIndicatorText;
+- (NSString *)textFieldIndicatorText:(GSTextField *)textField;
 
 @end
 
