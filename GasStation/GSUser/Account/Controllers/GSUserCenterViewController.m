@@ -12,7 +12,7 @@
 #import "GSUserCenterCollectionViewCell.h"
 #import "BlocksKit+UIKit.h"
 #import "GSChangePasswordViewController.h"
-#import "GSMyCardsViewController.h"
+#import "GSCardsContainerViewController.h"
 #import "GSAbouViewController.h"
 #import "GSFeedbackViewController.h"
 #import "CRNavigationController.h"
@@ -123,7 +123,7 @@ static NSString *cellIdentifier = @"Cell";
     switch (indexPath.item) {
         case 0:
         {
-            vc = [[GSMyCardsViewController alloc] initWithNibName:@"GSMyCardsViewController" bundle:nil];
+            vc = [[GSCardsContainerViewController alloc] initWithNibName:@"GSCardsContainerViewController" bundle:nil];
 #ifdef kUserDragableAnimation
             vc.modalPresentationStyle = UIModalPresentationCustom;
             self.defaultPrensentAnimation = [GSPrensentViewControllerTransition defaultTransitionWithViewController:vc];
