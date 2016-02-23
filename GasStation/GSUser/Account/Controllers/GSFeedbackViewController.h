@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JSQMessagesViewController.h"
 
-@interface GSFeedbackViewController : UIViewController
+@interface GSFeedbackViewController : JSQMessagesViewController
 
 @end

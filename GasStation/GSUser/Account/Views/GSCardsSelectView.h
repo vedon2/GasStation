@@ -19,6 +19,7 @@
 
 @interface GSCardsSelectView : UIView
 @property (nonatomic,weak) id<GSCardsSelectViewProtocol>delegate;
+@property (nonatomic,assign) NSUInteger currentSelectedIndex;
 
 - (instancetype)initWithDelegate:(id<GSCardsSelectViewProtocol>)delegate numberOfButtons:(NSArray *)itemsInfo selectedIndex:(NSUInteger)index;
 

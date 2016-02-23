@@ -92,7 +92,7 @@
     [self.activityIndicatorView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self withOffset:kFailIndicatorLeftPadding];
     [self.activityIndicatorView autoSetDimensionsToSize:CGSizeMake(kActivityIndicatorView, kActivityIndicatorView)];
     
-    [self configureWithMessageStatus:GSMessageBubbleStatus_fail isUnread:YES];
+    [self configureWithMessageStatus:GSMessageBubbleStatus_finish isUnread:YES];
 }
 
 @end

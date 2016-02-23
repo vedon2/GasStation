@@ -26,4 +26,9 @@
 + (UIColor *)userCenterBackgroundColor;
 
 + (UIColor *)userCenterCollectionCellTextColor;
+
+//加油站
++ (UIColor *)cardDetailSubTitleColor;
+
++ (UIColor *)cardDetailTitleColor;
 @end

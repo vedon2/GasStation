@@ -15,7 +15,7 @@
 #import "GSMyCardsViewController.h"
 
 
-@interface GSCardsContainerViewController ()<GSCardsSelectViewProtocol>
+@interface GSCardsContainerViewController ()<GSCardsSelectViewProtocol,UIScrollViewDelegate>
 @property (nonatomic,strong) GSCardsSelectView *cardSelectView;
 @property (nonatomic,strong) UIScrollView *contentContainerView;
 @end
@@ -28,7 +28,7 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
-    
+    self.contentContainerView.delegate = self;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -43,6 +43,12 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+- (NSString *)title
+{
+    return @"我的加油卡";
+}
+
 
 #pragma mark - Private
 
@@ -111,11 +117,28 @@
     
 }
 
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGPoint offset = scrollView.contentOffset;
+    CGFloat pageWidth = self.view.frame.size.width;
+    if (offset.x > pageWidth/3) {
+        static NSInteger previousPage = 0;
+        float fractionalPage = offset.x / pageWidth;
+        NSInteger page = lround(fractionalPage);
+        if (previousPage != page) {
+            [self.cardSelectView setCurrentSelectedIndex:page];
+            previousPage = page;
+        }
+    }
+}
+
 #pragma mark - GSCardsSelectViewProtocol
 
 - (void)cardView:(GSCardsSelectView *)cardsView didSelectIndex:(NSUInteger)index
 {
-    
+    [self.contentContainerView setContentOffset:CGPointMake(self.contentContainerView.frame.size.width * index, 0) animated:YES];
 }
 
 

@@ -17,10 +17,10 @@
 
 @interface GSCardsSelectView ()
 @property (nonatomic,strong) NSArray *itemsInfo;
-@property (nonatomic,assign) NSUInteger currentSelectedIndex;
 @property (nonatomic,strong) UIView *underLine;
 @property (nonatomic,strong) UIView *underSelectedLine;
 @property (nonatomic,strong) NSLayoutConstraint *underSelectedLineLeftConstraint;
+@property (nonatomic,strong) NSMutableArray *buttons;
 @end
 
 @implementation GSCardsSelectView
@@ -33,6 +33,7 @@
         self.delegate = delegate;
         self.itemsInfo = itemsInfo;
         self.currentSelectedIndex = index;
+        self.buttons = [NSMutableArray array];
     }
     return self;
 }
@@ -73,8 +74,10 @@
         
         
         [button addTarget:self action:@selector(didTapButton:) forControlEvents:UIControlEventTouchUpInside];
+        [self.buttons addObject:button];
         tempButton = button;
         button = nil;
+        
     }
     
     
@@ -112,7 +115,9 @@
 - (void)didTapButton:(id)sender
 {
     UIButton *button = (UIButton *)sender;
-    self.underSelectedLineLeftConstraint.constant = button.tag * self.frame.size.width / self.itemsInfo.count;
+    _currentSelectedIndex = button.tag;
+    
+    self.underSelectedLineLeftConstraint.constant = self.currentSelectedIndex * self.frame.size.width / self.itemsInfo.count;
     [UIView animateWithDuration:0.3 animations:^{
         [self layoutIfNeeded];
     }completion:^(BOOL finished) {
@@ -122,6 +127,26 @@
         }
     }];
     
+}
+
+- (void)setCurrentSelectedIndex:(NSUInteger)currentSelectedIndex
+{
+    _currentSelectedIndex = currentSelectedIndex;
+    
+    [self.buttons enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        UIButton *button = obj;
+        if (button.tag == _currentSelectedIndex)
+        {
+            button.selected = YES;
+        }else
+        {
+            button.selected = NO;
+        }
+    }];
+    self.underSelectedLineLeftConstraint.constant = self.currentSelectedIndex * self.frame.size.width / self.itemsInfo.count;
+    [UIView animateWithDuration:0.3 animations:^{
+        [self layoutIfNeeded];
+    }];
 }
 
 @end

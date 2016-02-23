@@ -22,7 +22,7 @@
 {
     GSMessageBubbleStatusView *messageStatusView = [[GSMessageBubbleStatusView alloc] initForAutoLayout];
     messageStatusView.translatesAutoresizingMaskIntoConstraints = NO;
-    messageStatusView.backgroundColor = [UIColor lightGrayColor];
+    messageStatusView.backgroundColor = [UIColor clearColor];
     return messageStatusView;
 }
 

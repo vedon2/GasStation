@@ -46,4 +46,13 @@
     return [UIColor colorWithHexString:@"666666"];
 }
 
++ (UIColor *)cardDetailSubTitleColor
+{
+    return [UIColor colorWithHexString:@"999999"];
+}
+
++ (UIColor *)cardDetailTitleColor
+{
+    return [UIColor colorWithHexString:@"333333"];
+}
 @end

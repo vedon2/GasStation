@@ -113,7 +113,7 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     // NOTE: let this behavior be opt-in for now
     // [JSQMessagesCollectionViewCell registerMenuAction:@selector(delete:)];
 
-    self.showTypingIndicator = YES;
+    self.showTypingIndicator = NO;
 
     self.showLoadEarlierMessagesHeader = NO;
 
