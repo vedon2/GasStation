@@ -65,8 +65,11 @@
     [voiceButton setImage:[UIImage imageNamed:@"icon_other_voice"] forState:UIControlStateNormal];
     [voiceButton setImage:[UIImage imageNamed:@"icon_other_write"] forState:UIControlStateSelected];
     self.inputToolbar.contentView.leftBarButtonItem = voiceButton;
-//    UIButton *sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
-//    self.inputToolbar.contentView.rightBarButtonItem = sendButton;
+    UIButton *addImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [addImageButton setTitle:@"图片" forState:UIControlStateNormal];
+    [addImageButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    addImageButton.backgroundColor = [UIColor redColor];
+    self.inputToolbar.contentView.rightBarButtonItem = addImageButton;
     self.inputToolbar.contentView.textView.returnKeyType = UIReturnKeyDone;
     
     
@@ -94,10 +97,10 @@
 - (void)loadData
 {
     self.messages = [[NSMutableArray alloc] init];
-    JSQMessage *data = [[JSQMessage alloc] initWithSenderId:@"vedon"
+    JSQMessage *data = [[JSQMessage alloc] initWithSenderId:@"other"
                                           senderDisplayName:@"vedon"
                                                        date:[NSDate distantPast]
-                                                       text:@"Welcome to JSQMessages: A messaging UI framework for iOS."];
+                                                       text:@"加班咯！"];
     [self.messages addObject:data];
 }
 
@@ -128,7 +131,7 @@
     [self finishSendingMessageAnimated:YES];
 }
 
-- (void)didPressAccessoryButton:(UIButton *)sender
+- (void)didPressLeftAccessoryButton:(UIButton *)sender
 {
     [self.inputToolbar.contentView.textView resignFirstResponder];
     
@@ -148,6 +151,10 @@
 
 }
 
+- (void)didPressRightAccessoryButton:(UIButton *)sender
+{
+    
+}
 
 
 #pragma mark - JSQMessages CollectionView DataSource

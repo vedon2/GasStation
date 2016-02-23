@@ -43,9 +43,8 @@
     [self.contentView addSubview:statusView];
     [statusView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.textView];
     [statusView autoPinEdge:ALEdgeLeft toEdge:ALEdgeRight ofView:self.textView];
-    [statusView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.contentView];
     [statusView autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.textView];
-    
+    [statusView autoSetDimension:ALDimensionWidth toSize:[GSMessageBubbleStatusView mimumStatusSize].width];
     [statusView initializeInterface];
 }
 

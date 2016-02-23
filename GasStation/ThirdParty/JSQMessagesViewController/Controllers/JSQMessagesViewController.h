@@ -218,8 +218,12 @@
  *
  *  @param sender The accessory button that was pressed by the user.
  */
-- (void)didPressAccessoryButton:(UIButton *)sender;
 
+///< Modify: vedon
+- (void)didPressLeftAccessoryButton:(UIButton *)sender;
+- (void)didPressRightAccessoryButton:(UIButton *)sender;
+
+///< end
 /**
  *  Animates the sending of a new message. See `finishSendingMessageAnimated:` for more details.
  *

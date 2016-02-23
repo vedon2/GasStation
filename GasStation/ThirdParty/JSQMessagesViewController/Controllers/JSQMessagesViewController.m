@@ -298,7 +298,13 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     NSAssert(NO, @"Error! required method not implemented in subclass. Need to implement %s", __PRETTY_FUNCTION__);
 }
 
-- (void)didPressAccessoryButton:(UIButton *)sender
+- (void)didPressLeftAccessoryButton:(UIButton *)sender
+{
+    NSAssert(NO, @"Error! required method not implemented in subclass. Need to implement %s", __PRETTY_FUNCTION__);
+}
+
+
+- (void)didPressRightAccessoryButton:(UIButton *)sender
 {
     NSAssert(NO, @"Error! required method not implemented in subclass. Need to implement %s", __PRETTY_FUNCTION__);
 }
@@ -650,30 +656,32 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
 
 - (void)messagesInputToolbar:(JSQMessagesInputToolbar *)toolbar didPressLeftBarButton:(UIButton *)sender
 {
-    if (toolbar.sendButtonOnRight) {
-        [self didPressAccessoryButton:sender];
-    }
-    else {
-        [self didPressSendButton:sender
-                 withMessageText:[self jsq_currentlyComposedMessageText]
-                        senderId:self.senderId
-               senderDisplayName:self.senderDisplayName
-                            date:[NSDate date]];
-    }
+    [self didPressLeftAccessoryButton:sender];
+//    if (toolbar.sendButtonOnRight) {
+//        [self didPressLeftAccessoryButton:sender];
+//    }
+//    else {
+//        [self didPressSendButton:sender
+//                 withMessageText:[self jsq_currentlyComposedMessageText]
+//                        senderId:self.senderId
+//               senderDisplayName:self.senderDisplayName
+//                            date:[NSDate date]];
+//    }
 }
 
 - (void)messagesInputToolbar:(JSQMessagesInputToolbar *)toolbar didPressRightBarButton:(UIButton *)sender
 {
-    if (toolbar.sendButtonOnRight) {
-        [self didPressSendButton:sender
-                 withMessageText:[self jsq_currentlyComposedMessageText]
-                        senderId:self.senderId
-               senderDisplayName:self.senderDisplayName
-                            date:[NSDate date]];
-    }
-    else {
-        [self didPressAccessoryButton:sender];
-    }
+    [self didPressRightAccessoryButton:sender];
+//    if (toolbar.sendButtonOnRight) {
+//        [self didPressSendButton:sender
+//                 withMessageText:[self jsq_currentlyComposedMessageText]
+//                        senderId:self.senderId
+//               senderDisplayName:self.senderDisplayName
+//                            date:[NSDate date]];
+//    }
+//    else {
+//        [self didPressRightAccessoryButton:sender];
+//    }
 }
 
 - (NSString *)jsq_currentlyComposedMessageText
@@ -716,6 +724,22 @@ static void * kJSQMessagesKeyValueObservingContext = &kJSQMessagesKeyValueObserv
     }
 
     [textView resignFirstResponder];
+}
+
+- (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
+{
+    NSLog(@"%@",text);
+    if ([text isEqualToString:@"\n"]) {
+        
+        [self didPressSendButton:nil
+                 withMessageText:[self jsq_currentlyComposedMessageText]
+                        senderId:self.senderId
+               senderDisplayName:self.senderDisplayName
+                            date:[NSDate date]];
+        
+        return NO;
+    }
+    return YES;
 }
 
 #pragma mark - Notifications
