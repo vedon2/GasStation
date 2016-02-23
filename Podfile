@@ -4,6 +4,7 @@
 
 target 'GasStation' do
 #pod 'EaseMobSDK'
+pod 'JSQSystemSoundPlayer', '~> 2.0'
 pod 'YTKNetwork', '~> 0.6.0'
 pod "Aspects"
 pod "ZFDragableModalTransition"
@@ -19,6 +20,7 @@ end
 
 target 'GasStationManager' do
 #    pod 'EaseMobSDK
+pod 'JSQSystemSoundPlayer', '~> 2.0'
 pod 'YTKNetwork', '~> 0.6.0'
 pod "Aspects"
 pod "ZFDragableModalTransition"
