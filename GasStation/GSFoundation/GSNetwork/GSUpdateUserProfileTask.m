@@ -7,12 +7,28 @@
 //
 
 #import "GSUpdateUserProfileTask.h"
+#import "GSUserProfileData.h"
 
+@interface GSUpdateUserProfileTask ()
+@property (nonatomic,strong) GSUserProfileData *profileData;
+@property (nonatomic,strong) NSString *userId;
+@end
 @implementation GSUpdateUserProfileTask
 
+- (instancetype)initWithProfileData:(GSUserProfileData *)profileData userId:(NSString *)userId
+{
+    self = [super init];
+    if (self)
+    {
+        self.profileData = profileData;
+        self.userId = userId;
+    }
+    return self;
+}
+
+
 - (NSString *)requestUrl {
-    // “http://www.yuantiku.com” 在 YTKNetworkConfig 中设置，这里只填除去域名剩余的网址信息
-    return @"/iphone/register";
+    return @"/oil/api/users/profile";
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -21,7 +37,9 @@
 
 - (id)requestArgument {
     return @{
-             
+             @"nickname": self.profileData.nickname,
+             @"avatar": self.profileData.avatar,
+             @"gender":self.profileData.gender
              };
 }
 
@@ -29,6 +47,6 @@
 
 - (id)mockData
 {
-    return nil;
+    return @{@"statusCode":@(200)};
 }
 @end

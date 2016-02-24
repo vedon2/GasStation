@@ -7,7 +7,10 @@
 //
 
 #import "GSBaseRequest.h"
+@class GSUserProfileData;
 
 @interface GSUpdateUserProfileTask : GSBaseRequest
+
+- (instancetype)initWithProfileData:(GSUserProfileData *)profileData userId:(NSString *)userId;
 
 @end

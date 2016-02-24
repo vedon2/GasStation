@@ -13,6 +13,8 @@
 
 #import "YTKRequest.h"
 #import "GSBaseRequestMockProtocol.h"
+#import "GSNetworkStatusCode.h"
+
 @interface GSBaseRequest : YTKRequest<GSBaseRequestMockProtocol>
 
 

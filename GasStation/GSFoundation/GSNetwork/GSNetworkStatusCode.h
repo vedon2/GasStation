@@ -15,7 +15,7 @@
  13000 验证码错误
  */
 
-
+#define kRequestSuccess 200
 #define kResigterVerifiCodeInvalid 11000
 #define kResigterUseralreadyExist 12000
 #define kResigterUnknownError 13000

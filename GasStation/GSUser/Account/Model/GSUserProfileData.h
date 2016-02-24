@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface GSUserProfileData : NSObject
-
+@property (nonatomic,strong) NSString *nickname;
+@property (nonatomic,strong) NSString *avatar;
+@property (nonatomic,strong) NSNumber *gender;
 @end

@@ -69,7 +69,7 @@
     {
         [self.resetPwdTask stop];
     }
-    self.resetPwdTask = [[GSResetPassworkTask alloc] initWithNewPassword:pwd];
+//    self.resetPwdTask = [[GSResetPassworkTask alloc] initWithNewPassword:pwd];
 }
 
 - (void)updateUserProfile:(id)profileData

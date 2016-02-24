@@ -21,7 +21,9 @@
 
 @implementation GSBaseRequest
 
-#pragma mark - Public
+
+
+#pragma mark - GSBaseRequestMockProtocol
 
 - (BOOL)enableMock
 {
@@ -38,10 +40,25 @@
     assert(0);
 }
 
+- (NSInteger)responseStatusCode
+{
+    if ([self enableMock])
+    {
+        return kRequestSuccess;
+    }
+    else
+    {
+        return [super responseStatusCode];
+    }
+}
+
+#pragma mark - Override
 - (void)start
 {
     if ([self enableMock])
     {
+        NSLog(@"%@",self.requestArgument);
+        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kRequestDelayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             if (self.delegate)
             {
@@ -72,6 +89,7 @@
 {
     if ([self enableMock])
     {
+         NSLog(@"%@",self.requestArgument);
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             if ([self responseStatusCode] == kResponseSuccessStatusCode)
@@ -101,8 +119,7 @@
 {
     if ([self enableMock])
     {
-        assert(0); //Subclaass must override this function
-        return nil;
+        return [self mockData];
     }
     else
     {
@@ -110,18 +127,6 @@
     }
 }
 
-- (NSInteger)responseStatusCode
-{
-    if ([self enableMock])
-    {
-        assert(0); //Subclaass must override this function
-        return 200;
-    }
-    else
-    {
-        return [super responseStatusCode];
-    }
-}
 
 
 @end

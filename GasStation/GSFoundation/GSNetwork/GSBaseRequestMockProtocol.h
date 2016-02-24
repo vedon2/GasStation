@@ -15,6 +15,8 @@
 
 - (id)mockData;
 
+- (NSInteger)responseStatusCode;
+
 @end
 
 #endif /* GSBaseRequestMockProtocol_h */

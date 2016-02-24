@@ -18,9 +18,6 @@
 - (instancetype)initWithPhone:(NSString *)phone
 {
     
-//    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"15018492358" zone:@"86" customIdentifier:nil result:^(NSError *error) {
-//        ;
-//    }];
     assert(phone);
     self = [super init];
     if(self)
@@ -30,27 +27,55 @@
     return self;
 }
 
-//
-//- (NSString *)requestUrl {
-//    // “http://www.yuantiku.com” 在 YTKNetworkConfig 中设置，这里只填除去域名剩余的网址信息
-//    return @"/iphone/register";
-//}
-//
-//- (YTKRequestMethod)requestMethod {
-//    return YTKRequestMethodPost;
-//}
-//
-//- (id)requestArgument {
-//    return @{
-//             @"phone": self.ph,
-//             @"password": _password
-//             };
-//}
+- (void)start
+{
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phone zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        
+        if (!error)
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(requestFinished:)])
+            {
+                [self.delegate requestFinished:self];
+            }
+        }
+        else
+        {
+            if (self.delegate && [self.delegate respondsToSelector:@selector(requestFailed:)])
+            {
+                [self.delegate requestFailed:self];
+            }
+        }
+        
+    }];
+}
+
+- (void)startWithCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success failure:(YTKRequestCompletionBlock)failure
+{
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phone zone:@"86" customIdentifier:nil result:^(NSError *error) {
+        
+        if (!error)
+        {
+            if (success)
+            {
+                success(self);
+            }
+        }
+        else
+        {
+            if (failure)
+            {
+                failure(self);
+            }
+        }
+        
+    }];
+}
 
 #pragma mark - GSBaseRequestMockProtocol
 
 - (id)mockData
 {
+    //Do nothing
     return nil;
 }
 

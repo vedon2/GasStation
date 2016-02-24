@@ -151,6 +151,14 @@
 		4E4D99EE1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D99EC1C6CC38A00E8A017 /* AppDelegateExt.m */; };
 		4E4D99F11C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D99F01C6CC3A700E8A017 /* AppDelegateExt+initProcess.m */; };
 		4E4D99F21C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4D99F01C6CC3A700E8A017 /* AppDelegateExt+initProcess.m */; };
+		4E4E4C811C7DDDA50081D7A2 /* GSLoginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */; };
+		4E4E4C821C7DDDA50081D7A2 /* GSLoginTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */; };
+		4E4E4C851C7DE1790081D7A2 /* GSFetchCityGasStationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */; };
+		4E4E4C861C7DE1790081D7A2 /* GSFetchCityGasStationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */; };
+		4E4E4C891C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */; };
+		4E4E4C8A1C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */; };
+		4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */; };
+		4E4E4C8E1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
 		4E9D1ACC1C7352630048869E /* GSUserCenterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9D1ACA1C7352630048869E /* GSUserCenterCollectionViewCell.xib */; };
 		4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1ACE1C735BBF0048869E /* GSChangePasswordViewController.m */; };
@@ -585,6 +593,14 @@
 		4E4D99EC1C6CC38A00E8A017 /* AppDelegateExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegateExt.m; sourceTree = "<group>"; };
 		4E4D99EF1C6CC3A700E8A017 /* AppDelegateExt+initProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegateExt+initProcess.h"; sourceTree = "<group>"; };
 		4E4D99F01C6CC3A700E8A017 /* AppDelegateExt+initProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegateExt+initProcess.m"; sourceTree = "<group>"; };
+		4E4E4C7F1C7DDDA50081D7A2 /* GSLoginTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSLoginTask.h; sourceTree = "<group>"; };
+		4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSLoginTask.m; sourceTree = "<group>"; };
+		4E4E4C831C7DE1790081D7A2 /* GSFetchCityGasStationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCityGasStationTask.h; sourceTree = "<group>"; };
+		4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCityGasStationTask.m; sourceTree = "<group>"; };
+		4E4E4C871C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCoordinateGasStationTask.h; sourceTree = "<group>"; };
+		4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCoordinateGasStationTask.m; sourceTree = "<group>"; };
+		4E4E4C8B1C7DE3B80081D7A2 /* GSFetchCityGasStationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCityGasStationData.h; sourceTree = "<group>"; };
+		4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCityGasStationData.m; sourceTree = "<group>"; };
 		4E4FFDEB1C6CCB8200CC4450 /* GSMapMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapMacro.h; sourceTree = "<group>"; };
 		4E9D1AC81C7352630048869E /* GSUserCenterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserCenterCollectionViewCell.h; sourceTree = "<group>"; };
 		4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserCenterCollectionViewCell.m; sourceTree = "<group>"; };
@@ -1124,8 +1140,14 @@
 				4E2B3D1F1C6F75E600B460F7 /* GSRegisterTask.m */,
 				4E2B3D221C6F776400B460F7 /* GSResetPassworkTask.h */,
 				4E2B3D231C6F776400B460F7 /* GSResetPassworkTask.m */,
+				4E4E4C7F1C7DDDA50081D7A2 /* GSLoginTask.h */,
+				4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */,
 				4E2B3D261C6F777800B460F7 /* GSUpdateUserProfileTask.h */,
 				4E2B3D271C6F777800B460F7 /* GSUpdateUserProfileTask.m */,
+				4E4E4C831C7DE1790081D7A2 /* GSFetchCityGasStationTask.h */,
+				4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */,
+				4E4E4C871C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.h */,
+				4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */,
 			);
 			path = GSNetwork;
 			sourceTree = "<group>";
@@ -1523,6 +1545,8 @@
 			children = (
 				4ED0F34C1C6CE00400C290FF /* GSBottomButtonInfo.h */,
 				4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */,
+				4E4E4C8B1C7DE3B80081D7A2 /* GSFetchCityGasStationData.h */,
+				4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2171,6 +2195,7 @@
 				4E3E67491C799FED005CA5A2 /* GSColor.m in Sources */,
 				4E2B3D441C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4EFDD4501C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
+				4E4E4C811C7DDDA50081D7A2 /* GSLoginTask.m in Sources */,
 				4E05E1011C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E2B3CF01C6EC54C00B460F7 /* GSCommentTableViewCell.m in Sources */,
 				4E2B3D021C6F1D2400B460F7 /* GSPostCommentViewController.m in Sources */,
@@ -2196,11 +2221,13 @@
 				4ED0F34A1C6CDEDE00C290FF /* GSMapBottomBar.m in Sources */,
 				4EFDD3FE1C7C58DB000AAE9D /* NSString+JSQMessages.m in Sources */,
 				4EFDD40A1C7C58DB000AAE9D /* JSQMessagesViewController.m in Sources */,
+				4E4E4C851C7DE1790081D7A2 /* GSFetchCityGasStationTask.m in Sources */,
 				4E2B3CD11C6EB5BC00B460F7 /* GSStationDetailDesTableViewCell.m in Sources */,
 				4EFDD4081C7C58DB000AAE9D /* JSQMessagesKeyboardController.m in Sources */,
 				4EFDD4141C7C58DB000AAE9D /* JSQMessagesTimestampFormatter.m in Sources */,
 				4E2B3D461C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4EFD22971C7623CF00F053A0 /* GSQRGenerator.m in Sources */,
+				4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */,
 				4EFDD44C1C7C58DB000AAE9D /* JSQMessagesToolbarContentView.m in Sources */,
 				4E05E0EF1C78892A0038CA5D /* GSBottomBarButton.m in Sources */,
 				4EFDD43C1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
@@ -2211,6 +2238,7 @@
 				4EA671131C74BA02004A5163 /* GSUserRegisetResponseData.m in Sources */,
 				4EFDD42E1C7C58DB000AAE9D /* JSQPhotoMediaItem.m in Sources */,
 				4E9D1ADE1C735F060048869E /* GSAbouViewController.m in Sources */,
+				4E4E4C891C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */,
 				4E43836E1C5FB14F00885A33 /* GSMapPOISearchTask.m in Sources */,
 				4EFDD4441C7C58DB000AAE9D /* JSQMessagesLabel.m in Sources */,
 				4EA671211C74C062004A5163 /* GSUserProfileData.m in Sources */,
@@ -2305,6 +2333,7 @@
 				4E3E67461C799234005CA5A2 /* GSKeyBoardManger.m in Sources */,
 				4E3E674A1C799FED005CA5A2 /* GSColor.m in Sources */,
 				4E4D99F21C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */,
+				4E4E4C821C7DDDA50081D7A2 /* GSLoginTask.m in Sources */,
 				4E9D1AD81C735E960048869E /* GSMyCardsViewController.m in Sources */,
 				4EFDD4151C7C58DB000AAE9D /* JSQMessagesTimestampFormatter.m in Sources */,
 				4EFDD41F1C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
@@ -2321,6 +2350,7 @@
 				4EFDD4351C7C58DB000AAE9D /* JSQMessagesCollectionView.m in Sources */,
 				4E9D1ADF1C735F060048869E /* GSAbouViewController.m in Sources */,
 				4EFDD4171C7C58DB000AAE9D /* JSQMessagesToolbarButtonFactory.m in Sources */,
+				4E4E4C861C7DE1790081D7A2 /* GSFetchCityGasStationTask.m in Sources */,
 				4EA671221C74C062004A5163 /* GSUserProfileData.m in Sources */,
 				4EFDD4331C7C58DB000AAE9D /* JSQMessagesCellTextView.m in Sources */,
 				4EFDD41D1C7C58DB000AAE9D /* JSQMessagesBubblesSizeCalculator.m in Sources */,
@@ -2343,6 +2373,7 @@
 				4EFDD3FD1C7C58DB000AAE9D /* NSBundle+JSQMessages.m in Sources */,
 				4EFDD42F1C7C58DB000AAE9D /* JSQPhotoMediaItem.m in Sources */,
 				4E2B3D4C1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
+				4E4E4C8E1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */,
 				4E4D99E01C6C8E9B00E8A017 /* AppDelegate.m in Sources */,
 				4E1711DB1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */,
 				4EFD22981C7623CF00F053A0 /* GSQRGenerator.m in Sources */,
@@ -2361,6 +2392,7 @@
 				4EA671101C74B754004A5163 /* GSUserRegisterData.m in Sources */,
 				4EFDD3FB1C7C58DA000AAE9D /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				4E4D99D71C6C8C8E00E8A017 /* GSManagerMainViewController.m in Sources */,
+				4E4E4C8A1C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */,
 				4E2B3D3C1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4E9D1AE61C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
 				4EFDD4371C7C58DB000AAE9D /* JSQMessagesCollectionViewCell.m in Sources */,

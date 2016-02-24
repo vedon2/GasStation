@@ -27,8 +27,8 @@
 
 - (void)initProcessBeforeMainUI
 {
-    [[GSMapManager shareManager] initialize];
     
+    [[GSMapManager shareManager] initialize];
     [UMSocialData setAppKey:kUmengkey];
     
 //    [SMSSDK registerApp:kSmsKey

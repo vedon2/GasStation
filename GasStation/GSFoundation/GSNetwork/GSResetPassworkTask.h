@@ -9,7 +9,6 @@
 #import "GSBaseRequest.h"
 
 @interface GSResetPassworkTask : GSBaseRequest
-@property (nonatomic,strong,readonly) NSString *password;
 
-- (instancetype)initWithNewPassword:(NSString *)password;
+- (instancetype)initWithNewPassword:(NSString *)resetPassword oldPassword:(NSString *)oldPassword veriCode:(NSString *)veriCode phone:(NSString *)phone;
 @end

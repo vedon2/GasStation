@@ -1,24 +1,25 @@
 //
-//  GSRegisterTask.m
+//  GSLoginTask.m
 //  GasStation
 //
-//  Created by vedon on 2/13/16.
+//  Created by vedon on 2/24/16.
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSRegisterTask.h"
+#import "GSLoginTask.h"
 
-@interface GSRegisterTask ()
-@property (nonatomic,strong) NSString *phone;
-@property (nonatomic,strong) NSString *password;
+@interface GSLoginTask ()
+@property (strong,nonatomic) NSString *phone;
+@property (strong,nonatomic) NSString *password;
 @end
 
-@implementation GSRegisterTask
+@implementation GSLoginTask
 
 - (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password
 {
     assert(phone);
     assert(password);
+    
     self = [super init];
     if (self)
     {
@@ -30,7 +31,7 @@
 
 
 - (NSString *)requestUrl {
-    return @"/oil/api/users/register";
+    return @"/oil/api/users/login";
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -40,9 +41,10 @@
 - (id)requestArgument {
     return @{
              @"phone": self.phone,
-             @"password": self.password
+             @"password":self.password
              };
 }
+
 
 #pragma mark - GSBaseRequestMockProtocol
 
@@ -51,9 +53,11 @@
     return @{@"nickname": @"vedon",
              @"id": @"kuserId123",
              @"avatar": @"",
+             @"token": @"123",
              @"gender": @(0),
-             @"userType": @(0),
-             @"statusCode": @(10000)
+             @"phone": @(1123),
+             @"statusCode": @(200)
              };
 }
+
 @end
