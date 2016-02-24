@@ -44,7 +44,10 @@ PODS:
   - MJExtension (3.0.10)
   - PureLayout (3.0.1)
   - RDVTabBarController (1.1.9)
+  - Shimmer (1.0.2)
   - UITableView+FDTemplateLayoutCell (1.4)
+  - WSProgressHUD (1.1.0):
+    - Shimmer
   - YTKNetwork (0.6.0):
     - AFDownloadRequestOperation (~> 2.0)
     - AFNetworking (~> 2.0)
@@ -64,6 +67,7 @@ DEPENDENCIES:
   - PureLayout
   - RDVTabBarController
   - UITableView+FDTemplateLayoutCell (~> 1.4)
+  - WSProgressHUD
   - YTKNetwork (~> 0.6.0)
   - YYCategories
   - YYKeyboardManager
@@ -80,7 +84,9 @@ SPEC CHECKSUMS:
   MJExtension: d86aacb740c87519d20e3cca55b6fa4be6cc7548
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   RDVTabBarController: 67794f7a7a37f8e32f046f85ac67d06ab92d624a
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
+  WSProgressHUD: 1304d6445ca683dfc71c48a43c9e9d0d6ad021c9
   YTKNetwork: 988660d5fab310a55895239751ecfa74c3224a77
   YYCategories: 3c7e012ac4573b1fc432f9a2eac15109857391d2
   YYKeyboardManager: 185961f3df49103f2f471d1149434b78b80eaa44

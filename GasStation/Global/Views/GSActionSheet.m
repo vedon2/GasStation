@@ -14,7 +14,6 @@
 +(void)showActionWithTitles:(NSArray *)titles didClickAtIndex:(GSActionSheetClickActionBlock)block
 {
     JGActionSheetSection *actionSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:titles buttonStyle:JGActionSheetButtonStyleGreen];
-    //    JGActionSheetSection *cancelSection = [JGActionSheetSection sectionWithTitle:nil message:nil buttonTitles:@[@"取消"] buttonStyle:JGActionSheetButtonStyleCancel];
     NSArray *sections = @[actionSection];
     JGActionSheet *sheet = [JGActionSheet actionSheetWithSections:sections];
     [sheet setOutsidePressBlock:^(JGActionSheet * sheet) {

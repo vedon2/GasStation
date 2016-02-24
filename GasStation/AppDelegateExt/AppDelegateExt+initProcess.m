@@ -41,8 +41,9 @@
     UIImage *image = [[UIImage imageNamed:@"icon_back"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
     [[UIBarButtonItem appearance]setBackButtonBackgroundImage:image forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
+    [[CRNavigationBar appearance]setBarTintColor:[GSColor mainColor]];
     [[CRNavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName ,nil]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    [[CRNavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[CRNavigationBar appearance] setBarTintColor:[GSColor mainColor]];
 }
 

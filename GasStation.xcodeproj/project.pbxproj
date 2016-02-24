@@ -97,6 +97,8 @@
 		4E2B3D5A1C721F6300B460F7 /* GSUserCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3D571C721F6300B460F7 /* GSUserCenterViewController.m */; };
 		4E2B3D5B1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */; };
 		4E2B3D5C1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */; };
+		4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */; };
+		4E2BC8B41C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */; };
 		4E3E672F1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67311C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */; };
@@ -530,6 +532,8 @@
 		4E2B3D561C721F6300B460F7 /* GSUserCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserCenterViewController.h; sourceTree = "<group>"; };
 		4E2B3D571C721F6300B460F7 /* GSUserCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserCenterViewController.m; sourceTree = "<group>"; };
 		4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserCenterViewController.xib; sourceTree = "<group>"; };
+		4E2BC8B11C7E0B36002FD232 /* EPImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPImagePickerHelper.h; sourceTree = "<group>"; };
+		4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPImagePickerHelper.m; sourceTree = "<group>"; };
 		4E3E672C1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserAvatarTableViewCell.h; sourceTree = "<group>"; };
 		4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserAvatarTableViewCell.m; sourceTree = "<group>"; };
 		4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserAvatarTableViewCell.xib; sourceTree = "<group>"; };
@@ -1119,6 +1123,7 @@
 		4E2B3D131C6F611D00B460F7 /* GSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BC8B01C7E0B24002FD232 /* GSImagePicker */,
 				4E1711BC1C75F811006CA3E5 /* GSTransition */,
 				4E2B3D3F1C71FDE200B460F7 /* Observers */,
 				4E2B3D141C6F615500B460F7 /* GSNetwork */,
@@ -1161,6 +1166,15 @@
 				4E2B3D431C71FDF000B460F7 /* ObserverItem.m */,
 			);
 			path = Observers;
+			sourceTree = "<group>";
+		};
+		4E2BC8B01C7E0B24002FD232 /* GSImagePicker */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BC8B11C7E0B36002FD232 /* EPImagePickerHelper.h */,
+				4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */,
+			);
+			path = GSImagePicker;
 			sourceTree = "<group>";
 		};
 		4E3E673A1C78DBEA005CA5A2 /* Views */ = {
@@ -2255,6 +2269,7 @@
 				4E2B3D4B1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
 				4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
 				4E4D99ED1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */,
+				4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
 				4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */,
 				4E2B3CC21C6E31D800B460F7 /* GSSearchRCTableViewCell.m in Sources */,
 				4EFDD4301C7C58DB000AAE9D /* JSQVideoMediaItem.m in Sources */,
@@ -2353,6 +2368,7 @@
 				4E4E4C861C7DE1790081D7A2 /* GSFetchCityGasStationTask.m in Sources */,
 				4EA671221C74C062004A5163 /* GSUserProfileData.m in Sources */,
 				4EFDD4331C7C58DB000AAE9D /* JSQMessagesCellTextView.m in Sources */,
+				4E2BC8B41C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
 				4EFDD41D1C7C58DB000AAE9D /* JSQMessagesBubblesSizeCalculator.m in Sources */,
 				4E2B3D471C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */,

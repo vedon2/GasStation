@@ -11,12 +11,13 @@
 #import "GSEditUserNameTableViewCell.h"
 #import "BlocksKit+UIKit.h"
 #import "GSActionSheet.h"
-
+#import "MWPhotoBrowser.h"
+#import "EPImagePickerHelper.h"
 
 static NSString *userAvatarCellIdentifier = @"userAvatarCellIdentifier";
 static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
 
-@interface GSEditUserProfileViewController ()<UITableViewDataSource,UITableViewDelegate>
+@interface GSEditUserProfileViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
 @property (strong,nonatomic) NSArray *dataSource;
 
@@ -40,12 +41,20 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     
     self.dataSource = @[@"昵称",@"性别"];
     self.contentTable.scrollEnabled = NO;
+    
+    
+    
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSString *)title
+{
+    return @"创建资料";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,12 +120,10 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     switch (indexPath.row)
     {
         case 0:
-            //头像
-//            [GSActionSheet showActionWithTitles:@[@"拍照",@"相册",@"取消"] didClickAtIndex:^(NSInteger index) {
-//                
-//                NSLog(@"%d",index);
-//                
-//            }];
+        {
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从手机相册选择", nil];
+            [actionSheet showInView:self.view];
+        }
             break;
         case 1:
             //昵称
@@ -128,6 +135,38 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
             break;
     }
 }
+
+#pragma mark - ActionSheet Delegate
+
+- (void)actionSheet:(UIActionSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    NSString *buttonTitle = [actionSheet buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqualToString:@"取消"]) {
+        return;
+    }
+    ImagePickerType type = StillImage;
+    if ([buttonTitle isEqualToString:@"拍照"]) {
+        type = Camera;
+    } else {
+        type = StillImage;
+    }
+    [[EPImagePickerHelper sharedInstance] showImagePickerWithController:self andType:type finishPickingBlock:^(UIImage *image, NSError *error) {
+        if (error) {
+            assert(error);
+            
+        }
+        else
+        {
+            if (nil != image) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    
+                });
+            }
+            
+        }
+    } cancelBlock:nil];
+}
+
 
 /*
 #pragma mark - Navigation
