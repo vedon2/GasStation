@@ -792,6 +792,7 @@
 		4EFDD3F51C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQMessagesTypingIndicatorFooterView.h; sourceTree = "<group>"; };
 		4EFDD3F61C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingIndicatorFooterView.m; sourceTree = "<group>"; };
 		4EFDD3F71C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
+		4EFDD46C1C7D870C000AAE9D /* GSBaseRequestMockProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSBaseRequestMockProtocol.h; sourceTree = "<group>"; };
 		59BC93DF7534D982860FCBBE /* libPods-GasStation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF53ACF7324FA101F2648CD1 /* Pods-GasStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasStation/Pods-GasStation.release.xcconfig"; sourceTree = "<group>"; };
 		C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStationManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1112,6 +1113,8 @@
 		4E2B3D141C6F615500B460F7 /* GSNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				4EA671151C74BAC5004A5163 /* GSNetworkStatusCode.h */,
+				4EFDD46C1C7D870C000AAE9D /* GSBaseRequestMockProtocol.h */,
 				4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */,
 				4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */,
 				4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */,
@@ -1123,7 +1126,6 @@
 				4E2B3D231C6F776400B460F7 /* GSResetPassworkTask.m */,
 				4E2B3D261C6F777800B460F7 /* GSUpdateUserProfileTask.h */,
 				4E2B3D271C6F777800B460F7 /* GSUpdateUserProfileTask.m */,
-				4EA671151C74BAC5004A5163 /* GSNetworkStatusCode.h */,
 			);
 			path = GSNetwork;
 			sourceTree = "<group>";

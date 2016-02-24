@@ -47,6 +47,11 @@
 //             };
 //}
 
+#pragma mark - GSBaseRequestMockProtocol
 
+- (id)mockData
+{
+    return nil;
+}
 
 @end
