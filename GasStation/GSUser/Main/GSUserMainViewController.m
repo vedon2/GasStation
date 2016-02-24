@@ -25,6 +25,8 @@
 #import "GSPrensentViewControllerTransition.h"
 #import "CRNavigationController.h"
 
+#import "GSEditUserProfileViewController.h"
+
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
 @property (nonatomic,strong) GSMapBottomBar *bottomBar;
@@ -172,8 +174,10 @@
             }
             else
             {
-                [GSUserRegisterViewController presentRegisterView];
-                return;
+                viewControllerName = @"GSEditUserProfileViewController";
+                
+//                [GSUserRegisterViewController presentRegisterView];
+//                return;
             }
             break;
         }

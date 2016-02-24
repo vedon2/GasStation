@@ -107,12 +107,28 @@
 
 - (IBAction)registerAction:(id)sender
 {
-    //注册成功后打开编辑个人信息界面
-    GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
-    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
-    nav = nil;
-    vc = nil;
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
+    NSString *pwd = self.pwdTextField.textField.text;
+    NSString *phone = self.phoneTextField.textField.text;
+    NSString *veriCode = self.smsCodeTextField.textField.text;
+    if (pwd.length == 0)
+    {
+        
+        return;
+    }
+    
+    if (phone.length == 0)
+    {
+        return;
+    }
+    
+    if (veriCode.length == 0)
+    {
+        return;
+    }
+    
+    [[GSUserManager shareManager] registerWithPhone:phone password:pwd veriCode:veriCode];
 }
 
 - (void)clearPhoneTextFieldText
@@ -129,6 +145,19 @@
 #pragma mark - GSUserManagerDelegate
 
 - (void)userRegisterSuccess
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+    
+    
+    //注册成功后打开编辑个人信息界面
+    GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
+    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
+    nav = nil;
+    vc = nil;
+}
+
+- (void)userRegisterFail
 {
     
 }

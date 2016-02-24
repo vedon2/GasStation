@@ -11,5 +11,6 @@
 @interface GSUserAvatarTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 
+@property (weak, nonatomic) IBOutlet UILabel *contentTitle;
 
 @end

@@ -11,11 +11,12 @@
 @interface GSRegisterTask ()
 @property (nonatomic,strong) NSString *phone;
 @property (nonatomic,strong) NSString *password;
+@property (nonatomic,strong) NSString *veriCode;
 @end
 
 @implementation GSRegisterTask
 
-- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password
+- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password veriCode:(NSString *)veriCode
 {
     assert(phone);
     assert(password);
@@ -24,6 +25,7 @@
     {
         self.phone = phone;
         self.password = password;
+        self.veriCode = veriCode;
     }
     return self;
 }
@@ -40,7 +42,8 @@
 - (id)requestArgument {
     return @{
              @"phone": self.phone,
-             @"password": self.password
+             @"password": self.password,
+             @"verifiCode": self.veriCode,
              };
 }
 

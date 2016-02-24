@@ -22,11 +22,11 @@ typedef NS_ENUM(NSUInteger,GSRequestType)
 
 - (void)getSmsCodeWithPhont:(NSString *)phone;
 
-- (void)registerWithPhone:(NSString *)phone password:(NSString *)password;
+- (void)registerWithPhone:(NSString *)phone password:(NSString *)password veriCode:(NSString *)veriCode;
 
-- (void)resetPasswordWithNewPassword:(NSString *)pwd;
+- (void)resetPasswordWithNewPassword:(NSString *)pwd oldPassword:(NSString *)oldPassword veriCode:(NSString *)veriCode phone:(NSString *)phone;
 
-- (void)updateUserProfile:(id)profileData;
+- (void)updateUserProfile:(id)profileData userId:(NSString *)userId;
 
 @end
 

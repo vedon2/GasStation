@@ -31,7 +31,7 @@
 
 - (BOOL)isLogin
 {
-    return YES;
+    return NO;
 }
 
 - (void)addObserver:(id<GSUserManagerDelegate>)observer
@@ -59,31 +59,39 @@
     {
         [self.requester getSmsCodeWithPhont:phone];
     }
-    
 }
 
 
-- (void)registerWithPhone:(NSString *)phone password:(NSString *)password
+- (void)registerWithPhone:(NSString *)phone password:(NSString *)password veriCode:(NSString *)veriCode
 {
     assert(password);
-    if (password)
+    assert(veriCode);
+    assert(phone);
+    
+    if (password && phone && veriCode)
     {
-        [self.requester registerWithPhone:phone password:password];
+        [self.requester registerWithPhone:phone password:password veriCode:veriCode];
     }
 }
 
-- (void)resetPasswordWithNewPassword:(NSString *)pwd
+- (void)resetPasswordWithNewPassword:(NSString *)pwd oldPassword:(NSString *)oldPassword veriCode:(NSString *)veriCode phone:(NSString *)phone
 {
     assert(pwd);
     if (pwd)
     {
-        [self.requester resetPasswordWithNewPassword:pwd];
+        [self.requester resetPasswordWithNewPassword:pwd oldPassword:oldPassword veriCode:veriCode phone:phone];
     }
 }
 
-- (void)updateUserProfile:(id)profileData
+- (void)updateUserProfile:(id)profileData userId:(NSString *)userId
 {
+    assert(profileData);
+    assert(userId);
     
+    if (userId && profileData)
+    {
+        [self.requester updateUserProfile:profileData userId:userId];
+    }
 }
 
 #pragma mark - GSUserManagerRequesterDelegate
@@ -96,7 +104,14 @@
             ;
             break;
         case GSRequestType_Register:
-            ;
+            [self.observers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                if ([obj respondsToSelector:@selector(userRegisterSuccess)])
+                {
+                    [obj userRegisterSuccess];
+                }
+                
+            }];
             break;
         case GSRequestType_ResetPwd:
             ;
@@ -117,7 +132,14 @@
             ;
             break;
         case GSRequestType_Register:
-            ;
+            [self.observers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                if ([obj respondsToSelector:@selector(userRegisterSuccess)])
+                {
+                    [obj userRegisterSuccess];
+                }
+                
+            }];
             break;
         case GSRequestType_ResetPwd:
             ;

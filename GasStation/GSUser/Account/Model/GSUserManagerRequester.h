@@ -9,14 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "GSUserInfoBaseProtocol.h"
 
-typedef NS_ENUM(NSInteger,GSUserManagerRequestType)
-{
-    GSUserManagerRequestType_SmsCode,
-    GSUserManagerRequestType_Register,
-    GSUserManagerRequestType_ResetPassword,
-    GSUserManagerRequestType_UpdateProfile,
-    GSUserManagerRequestType_Uknown,
-};
+//typedef NS_ENUM(NSInteger,GSUserManagerRequestType)
+//{
+//    GSUserManagerRequestType_SmsCode,
+//    GSUserManagerRequestType_Register,
+//    GSUserManagerRequestType_ResetPassword,
+//    GSUserManagerRequestType_UpdateProfile,
+//    GSUserManagerRequestType_Uknown,
+//};
 
 
 @class GSUserManagerRequester;

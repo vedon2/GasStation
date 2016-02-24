@@ -19,6 +19,7 @@
 #import "GSColor.h"
 #import "GSUserCenterCollectionItemInfo.h"
 
+
 static NSString *cellIdentifier = @"Cell";
 
 @interface GSUserCenterViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>

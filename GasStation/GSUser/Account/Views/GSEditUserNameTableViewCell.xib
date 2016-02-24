@@ -16,7 +16,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-5g-0TA">
-                        <rect key="frame" x="20" y="16" width="82" height="21"/>
+                        <rect key="frame" x="15" y="16" width="82" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="82" id="CVZ-yD-VCq"/>
                         </constraints>
@@ -31,7 +31,7 @@
                             <constraint firstAttribute="width" constant="28" id="w5h-Qv-VaM"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-oy-DPg">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py1-oy-DPg">
                         <rect key="frame" x="138" y="16" width="138" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -40,11 +40,11 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="kW5-pU-M4C" firstAttribute="leading" secondItem="Py1-oy-DPg" secondAttribute="trailing" constant="8" id="7RX-aE-wWK"/>
-                    <constraint firstItem="Py1-oy-DPg" firstAttribute="leading" secondItem="Ccw-5g-0TA" secondAttribute="trailing" constant="36" id="KrS-nQ-re9"/>
+                    <constraint firstItem="Py1-oy-DPg" firstAttribute="leading" secondItem="Ccw-5g-0TA" secondAttribute="trailing" constant="41" id="KrS-nQ-re9"/>
                     <constraint firstAttribute="trailing" secondItem="kW5-pU-M4C" secondAttribute="trailing" constant="8" id="Mfv-9V-JVj"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Py1-oy-DPg" secondAttribute="bottom" constant="8" id="NbU-x8-YRp"/>
                     <constraint firstItem="Py1-oy-DPg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="aD4-Fb-Q8b"/>
-                    <constraint firstItem="Ccw-5g-0TA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="12" id="aV2-5T-f4m"/>
+                    <constraint firstItem="Ccw-5g-0TA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="aV2-5T-f4m"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Ccw-5g-0TA" secondAttribute="bottom" constant="8" id="e2V-Ig-4gn"/>
                     <constraint firstItem="Ccw-5g-0TA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="ulu-fX-sql"/>
                     <constraint firstItem="kW5-pU-M4C" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="x3h-F1-HU9"/>

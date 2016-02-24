@@ -17,8 +17,9 @@ static NSString *userAvatarCellIdentifier = @"userAvatarCellIdentifier";
 static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
 
 @interface GSEditUserProfileViewController ()<UITableViewDataSource,UITableViewDelegate>
-
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
+@property (strong,nonatomic) NSArray *dataSource;
+
 @end
 
 @implementation GSEditUserProfileViewController
@@ -31,10 +32,14 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     
     cellNib = [UINib nibWithNibName:@"GSEditUserNameTableViewCell" bundle:nil];
     [self.contentTable registerNib:cellNib forCellReuseIdentifier:editUserNameCellIdentifier];
-    
+ 
+
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
+    
+    self.dataSource = @[@"昵称",@"性别"];
+    self.contentTable.scrollEnabled = NO;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -73,19 +78,36 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
             tempCell.avatarImageView.image = nil;
             break;
         }
-        default:
+            
+        case 1:
+        {
             cell = [tableView dequeueReusableCellWithIdentifier:editUserNameCellIdentifier];
             GSEditUserNameTableViewCell *tempCell = (GSEditUserNameTableViewCell *)cell;
             tempCell.contentTitle.text = @"昵称";
             tempCell.content.text = @"小猫";
             break;
+        }
+        case 2:
+        {
+            cell = [tableView dequeueReusableCellWithIdentifier:editUserNameCellIdentifier];
+            GSEditUserNameTableViewCell *tempCell = (GSEditUserNameTableViewCell *)cell;
+            tempCell.contentTitle.text = @"性别";
+            tempCell.content.text = @"男";
+            break;
+        }
+        default:
+            break;
     }
     
+    if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
+        [cell setSeparatorInset:UIEdgeInsetsZero];
+    }
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     switch (indexPath.row)
     {
         case 0:

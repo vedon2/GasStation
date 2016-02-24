@@ -19,6 +19,8 @@
 
 - (void)userRegisterSuccess;
 
+- (void)userRegisterFail;
+
 @end
 
 #ifdef GSUser

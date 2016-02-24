@@ -12,6 +12,6 @@
 @property (nonatomic,strong,readonly) NSString *phone;
 @property (nonatomic,strong,readonly) NSString *password;
 
-- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password;
+- (instancetype)initWithPhone:(NSString *)phone password:(NSString *)password veriCode:(NSString *)veriCode;
 
 @end

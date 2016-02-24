@@ -7,11 +7,17 @@
 //
 
 #import "GSEditUserNameTableViewCell.h"
+#import "GSColor.h"
 
 @implementation GSEditUserNameTableViewCell
 
 - (void)awakeFromNib {
     // Initialization code
+    self.contentTitle.textColor = [GSColor userCenterCollectionCellTextColor];
+    self.contentTitle.font = [UIFont systemFontOfSize:14];
+    
+    self.content.textColor = [GSColor registerPhoneTextFieldColor];
+    self.content.font = [UIFont systemFontOfSize:14];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
