@@ -379,6 +379,13 @@
 		4EFDD4511C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD3F61C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.m */; };
 		4EFDD4521C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFDD3F71C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib */; };
 		4EFDD4531C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EFDD3F71C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib */; };
+		4EFDD5431C7EB074000AAE9D /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD5361C7EB074000AAE9D /* TAAbstractDotView.m */; };
+		4EFDD5441C7EB074000AAE9D /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD5381C7EB074000AAE9D /* TAAnimatedDotView.m */; };
+		4EFDD5451C7EB074000AAE9D /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD53A1C7EB074000AAE9D /* TADotView.m */; };
+		4EFDD5461C7EB074000AAE9D /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD53C1C7EB074000AAE9D /* TAPageControl.m */; };
+		4EFDD5471C7EB074000AAE9D /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD53E1C7EB074000AAE9D /* SDCollectionViewCell.m */; };
+		4EFDD5481C7EB074000AAE9D /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD5401C7EB074000AAE9D /* SDCycleScrollView.m */; };
+		4EFDD5491C7EB074000AAE9D /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD5421C7EB074000AAE9D /* UIView+SDExtension.m */; };
 		65A4A4171B36FE79DA50CF5B /* libPods-GasStation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC93DF7534D982860FCBBE /* libPods-GasStation.a */; };
 		7C27FE0625419F7D8AE90E60 /* libPods-GasStationManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */; };
 /* End PBXBuildFile section */
@@ -813,6 +820,20 @@
 		4EFDD3F61C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQMessagesTypingIndicatorFooterView.m; sourceTree = "<group>"; };
 		4EFDD3F71C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
 		4EFDD46C1C7D870C000AAE9D /* GSBaseRequestMockProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSBaseRequestMockProtocol.h; sourceTree = "<group>"; };
+		4EFDD5351C7EB074000AAE9D /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		4EFDD5361C7EB074000AAE9D /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		4EFDD5371C7EB074000AAE9D /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		4EFDD5381C7EB074000AAE9D /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		4EFDD5391C7EB074000AAE9D /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		4EFDD53A1C7EB074000AAE9D /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		4EFDD53B1C7EB074000AAE9D /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
+		4EFDD53C1C7EB074000AAE9D /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		4EFDD53D1C7EB074000AAE9D /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		4EFDD53E1C7EB074000AAE9D /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		4EFDD53F1C7EB074000AAE9D /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		4EFDD5401C7EB074000AAE9D /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		4EFDD5411C7EB074000AAE9D /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		4EFDD5421C7EB074000AAE9D /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		59BC93DF7534D982860FCBBE /* libPods-GasStation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF53ACF7324FA101F2648CD1 /* Pods-GasStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasStation/Pods-GasStation.release.xcconfig"; sourceTree = "<group>"; };
 		C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStationManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1271,6 +1292,7 @@
 		4E43835D1C5FA46B00885A33 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				4EFDD5331C7EB074000AAE9D /* SDCycleScrollView */,
 				4EFDD3931C7C58DA000AAE9D /* JSQMessagesViewController */,
 				4E3E674F1C79C4AF005CA5A2 /* CRNavigationController */,
 				4E11200A1C76A54F00F1BC55 /* Meiqia-SDK-files */,
@@ -1719,6 +1741,35 @@
 				4EFDD3F71C7C58DA000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		4EFDD5331C7EB074000AAE9D /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				4EFDD5341C7EB074000AAE9D /* PageControl */,
+				4EFDD53D1C7EB074000AAE9D /* SDCollectionViewCell.h */,
+				4EFDD53E1C7EB074000AAE9D /* SDCollectionViewCell.m */,
+				4EFDD53F1C7EB074000AAE9D /* SDCycleScrollView.h */,
+				4EFDD5401C7EB074000AAE9D /* SDCycleScrollView.m */,
+				4EFDD5411C7EB074000AAE9D /* UIView+SDExtension.h */,
+				4EFDD5421C7EB074000AAE9D /* UIView+SDExtension.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		4EFDD5341C7EB074000AAE9D /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				4EFDD5351C7EB074000AAE9D /* TAAbstractDotView.h */,
+				4EFDD5361C7EB074000AAE9D /* TAAbstractDotView.m */,
+				4EFDD5371C7EB074000AAE9D /* TAAnimatedDotView.h */,
+				4EFDD5381C7EB074000AAE9D /* TAAnimatedDotView.m */,
+				4EFDD5391C7EB074000AAE9D /* TADotView.h */,
+				4EFDD53A1C7EB074000AAE9D /* TADotView.m */,
+				4EFDD53B1C7EB074000AAE9D /* TAPageControl.h */,
+				4EFDD53C1C7EB074000AAE9D /* TAPageControl.m */,
+			);
+			path = PageControl;
 			sourceTree = "<group>";
 		};
 		CE46C63558572A25E886FEF4 /* Frameworks */ = {
@@ -2190,6 +2241,7 @@
 				4EFDD42A1C7C58DB000AAE9D /* JSQMessagesAvatarImage.m in Sources */,
 				4EFDD41A1C7C58DB000AAE9D /* GSMessageCollectionViewCell.m in Sources */,
 				4E3E67561C79C4AF005CA5A2 /* CRNavigationController.m in Sources */,
+				4EFDD5451C7EB074000AAE9D /* TADotView.m in Sources */,
 				4EFDD4461C7C58DB000AAE9D /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
 				4EFDD4161C7C58DB000AAE9D /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				4E4D99DA1C6C8CA200E8A017 /* GSUserMainViewController.m in Sources */,
@@ -2218,7 +2270,9 @@
 				4EFDD4361C7C58DB000AAE9D /* JSQMessagesCollectionViewCell.m in Sources */,
 				4E05E0F81C789DD70038CA5D /* GSCardViewController.m in Sources */,
 				4E3E672F1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */,
+				4EFDD5491C7EB074000AAE9D /* UIView+SDExtension.m in Sources */,
 				4E3E673D1C78DC1D005CA5A2 /* JGActionSheet.m in Sources */,
+				4EFDD5431C7EB074000AAE9D /* TAAbstractDotView.m in Sources */,
 				4EA671181C74BE03004A5163 /* GSUserResetPasswordData.m in Sources */,
 				4E2B3CCC1C6E36B500B460F7 /* GSStaionDetailViewController.m in Sources */,
 				4EFDD4281C7C58DB000AAE9D /* JSQMessage.m in Sources */,
@@ -2226,6 +2280,7 @@
 				4E2B3D111C6F607900B460F7 /* GSAvatarView.m in Sources */,
 				4E3E67361C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.m in Sources */,
 				4EFDD3FA1C7C58DA000AAE9D /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
+				4EFDD5461C7EB074000AAE9D /* TAPageControl.m in Sources */,
 				4E4D99F11C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */,
 				4EA6710F1C74B754004A5163 /* GSUserRegisterData.m in Sources */,
 				4E2B3D0D1C6F5F9800B460F7 /* GSUserRegisterViewController.m in Sources */,
@@ -2265,6 +2320,7 @@
 				4E2B3CFD1C6F044B00B460F7 /* GSCommentsListViewController.m in Sources */,
 				4E2B3D241C6F776400B460F7 /* GSResetPassworkTask.m in Sources */,
 				4EFDD4061C7C58DB000AAE9D /* UIView+JSQMessages.m in Sources */,
+				4EFDD5481C7EB074000AAE9D /* SDCycleScrollView.m in Sources */,
 				4EFDD4401C7C58DB000AAE9D /* JSQMessagesComposerTextView.m in Sources */,
 				4E2B3D4B1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
 				4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
@@ -2273,9 +2329,11 @@
 				4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */,
 				4E2B3CC21C6E31D800B460F7 /* GSSearchRCTableViewCell.m in Sources */,
 				4EFDD4301C7C58DB000AAE9D /* JSQVideoMediaItem.m in Sources */,
+				4EFDD5471C7EB074000AAE9D /* SDCollectionViewCell.m in Sources */,
 				4E9D1AD71C735E960048869E /* GSMyCardsViewController.m in Sources */,
 				4E1711C71C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */,
 				4EFDD41E1C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
+				4EFDD5441C7EB074000AAE9D /* TAAnimatedDotView.m in Sources */,
 				4EFDD4261C7C58DB000AAE9D /* JSQMediaItem.m in Sources */,
 				4E4CD6AB1C7B5C9600DDED4D /* GSCardsSelectView.m in Sources */,
 				4EFDD3FC1C7C58DB000AAE9D /* NSBundle+JSQMessages.m in Sources */,

@@ -11,7 +11,6 @@
 #import "GSEditUserNameTableViewCell.h"
 #import "BlocksKit+UIKit.h"
 #import "GSActionSheet.h"
-#import "MWPhotoBrowser.h"
 #import "EPImagePickerHelper.h"
 
 static NSString *userAvatarCellIdentifier = @"userAvatarCellIdentifier";
