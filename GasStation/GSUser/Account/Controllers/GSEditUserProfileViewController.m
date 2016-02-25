@@ -5,6 +5,8 @@
 //  Created by vedon on 2/15/16.
 //  Copyright © 2016 vedon. All rights reserved.
 //
+#define kChangeGenderTag 1000
+#define kTakePhotoTag 1001
 
 #import "GSEditUserProfileViewController.h"
 #import "GSUserAvatarTableViewCell.h"
@@ -12,6 +14,7 @@
 #import "BlocksKit+UIKit.h"
 #import "GSActionSheet.h"
 #import "EPImagePickerHelper.h"
+#import "GSRenameViewController.h"
 
 static NSString *userAvatarCellIdentifier = @"userAvatarCellIdentifier";
 static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
@@ -40,8 +43,7 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     
     self.dataSource = @[@"昵称",@"性别"];
     self.contentTable.scrollEnabled = NO;
-    
-    
+
     
     // Do any additional setup after loading the view from its nib.
 }
@@ -122,13 +124,26 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
         {
             UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"拍照",@"从手机相册选择", nil];
             [actionSheet showInView:self.view];
+            actionSheet.tag = kTakePhotoTag;
+            actionSheet = nil;
         }
             break;
         case 1:
             //昵称
+        {
+            GSRenameViewController *vc = [[GSRenameViewController alloc] initWithNickname:@"123"];
+            [self.navigationController pushViewController:vc animated:YES];
+            vc = nil;
+        }
             break;
         case 2:
             //性别
+        {
+            UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:nil delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"男",@"女", nil];
+            [actionSheet showInView:self.view];
+            actionSheet.tag = kChangeGenderTag;
+            actionSheet = nil;
+        }
             break;
         default:
             break;
@@ -143,27 +158,37 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     if ([buttonTitle isEqualToString:@"取消"]) {
         return;
     }
-    ImagePickerType type = StillImage;
-    if ([buttonTitle isEqualToString:@"拍照"]) {
-        type = Camera;
-    } else {
-        type = StillImage;
-    }
-    [[EPImagePickerHelper sharedInstance] showImagePickerWithController:self andType:type finishPickingBlock:^(UIImage *image, NSError *error) {
-        if (error) {
-            assert(error);
-            
+    
+    if (actionSheet.tag == kTakePhotoTag)
+    {
+        ImagePickerType type = StillImage;
+        if ([buttonTitle isEqualToString:@"拍照"]) {
+            type = Camera;
+        } else {
+            type = StillImage;
         }
-        else
-        {
-            if (nil != image) {
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    
-                });
+        [[EPImagePickerHelper sharedInstance] showImagePickerWithController:self andType:type finishPickingBlock:^(UIImage *image, NSError *error) {
+            if (error) {
+                assert(error);
+                
             }
-            
-        }
-    } cancelBlock:nil];
+            else
+            {
+                if (nil != image) {
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        
+                    });
+                }
+                
+            }
+        } cancelBlock:nil];
+    }
+    else if (actionSheet.tag == kChangeGenderTag)
+    {
+        
+    }
+    
+    
 }
 
 

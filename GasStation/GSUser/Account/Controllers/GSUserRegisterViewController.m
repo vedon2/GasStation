@@ -17,6 +17,7 @@
 #import "GSKeyBoardManger.h"
 #import "PureLayout.h"
 #import "CRNavigationController.h"
+#import "GSAccountMacro.h"
 
 @interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate,GSTextFieldColorProtocol,GSKeyBoardMangerObserver>
 @property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
@@ -148,7 +149,6 @@
 {
     [self dismissViewControllerAnimated:NO completion:nil];
     
-    
     //注册成功后打开编辑个人信息界面
     GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
     CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
@@ -159,7 +159,7 @@
 
 - (void)userRegisterFail
 {
-    
+    GSLog(@"注册失败");
 }
 
 #pragma mark - GSTextFieldProtocol

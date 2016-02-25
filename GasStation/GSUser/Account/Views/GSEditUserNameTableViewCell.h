@@ -10,6 +10,5 @@
 
 @interface GSEditUserNameTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *contentTitle;
-
 @property (weak, nonatomic) IBOutlet UILabel *content;
 @end

@@ -174,10 +174,10 @@
             }
             else
             {
-                viewControllerName = @"GSEditUserProfileViewController";
+//                viewControllerName = @"GSEditUserProfileViewController";
                 
-//                [GSUserRegisterViewController presentRegisterView];
-//                return;
+                [GSUserRegisterViewController presentRegisterView];
+                return;
             }
             break;
         }

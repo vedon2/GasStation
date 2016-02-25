@@ -169,6 +169,7 @@
         _textField.backgroundColor = [UIColor clearColor];
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.font = [UIFont systemFontOfSize:14];
+        _textField.clearButtonMode = UITextFieldViewModeNever;
         if ([self.colorDelegate respondsToSelector:@selector(textFieldTextColor:)])
         {
             _textField.textColor = [self.colorDelegate textFieldTextColor:self];

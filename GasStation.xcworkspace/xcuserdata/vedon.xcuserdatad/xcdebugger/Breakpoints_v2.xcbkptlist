@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasStation/GSUser/Account/Views/GSTextField.m"
-            timestampString = "477746526.081534"
+            timestampString = "478103233.281688"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
+            startingLineNumber = "227"
+            endingLineNumber = "227"
             landmarkName = "-seperateLine"
             landmarkType = "5">
          </BreakpointContent>
@@ -154,22 +154,6 @@
             startingLineNumber = "115"
             endingLineNumber = "115"
             landmarkName = "-setRightBarButtonItem:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasStation/GSUser/Account/Model/GSUserManager.m"
-            timestampString = "478018977.83474"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
-            landmarkName = "-requester:taskType:didFinishWithData:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

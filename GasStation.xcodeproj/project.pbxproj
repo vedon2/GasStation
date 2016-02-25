@@ -99,6 +99,16 @@
 		4E2B3D5C1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */; };
 		4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */; };
 		4E2BC8B41C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */; };
+		4E2BC8C11C7F42D9002FD232 /* GSRenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */; };
+		4E2BC8C21C7F42D9002FD232 /* GSRenameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */; };
+		4E2BC8C31C7F42D9002FD232 /* GSRenameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */; };
+		4E2BC8C41C7F42D9002FD232 /* GSRenameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */; };
+		4E2BC8C81C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8C71C7F4FAE002FD232 /* GSPersistanceConfig.m */; };
+		4E2BC8C91C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8C71C7F4FAE002FD232 /* GSPersistanceConfig.m */; };
+		4E2BC8CC1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CB1C7F500F002FD232 /* GSUserInfoRecord.m */; };
+		4E2BC8CD1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CB1C7F500F002FD232 /* GSUserInfoRecord.m */; };
+		4E2BC8D01C7F5027002FD232 /* GSUserInfoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */; };
+		4E2BC8D11C7F5027002FD232 /* GSUserInfoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */; };
 		4E3E672F1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67311C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */; };
@@ -541,6 +551,16 @@
 		4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserCenterViewController.xib; sourceTree = "<group>"; };
 		4E2BC8B11C7E0B36002FD232 /* EPImagePickerHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPImagePickerHelper.h; sourceTree = "<group>"; };
 		4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPImagePickerHelper.m; sourceTree = "<group>"; };
+		4E2BC8BE1C7F42D9002FD232 /* GSRenameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRenameViewController.h; sourceTree = "<group>"; };
+		4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRenameViewController.m; sourceTree = "<group>"; };
+		4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSRenameViewController.xib; sourceTree = "<group>"; };
+		4E2BC8C61C7F4FAE002FD232 /* GSPersistanceConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPersistanceConfig.h; sourceTree = "<group>"; };
+		4E2BC8C71C7F4FAE002FD232 /* GSPersistanceConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPersistanceConfig.m; sourceTree = "<group>"; };
+		4E2BC8CA1C7F500F002FD232 /* GSUserInfoRecord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserInfoRecord.h; sourceTree = "<group>"; };
+		4E2BC8CB1C7F500F002FD232 /* GSUserInfoRecord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserInfoRecord.m; sourceTree = "<group>"; };
+		4E2BC8CE1C7F5027002FD232 /* GSUserInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserInfoTable.h; sourceTree = "<group>"; };
+		4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserInfoTable.m; sourceTree = "<group>"; };
+		4E2BC8D21C7F5C7C002FD232 /* GSAccountMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSAccountMacro.h; sourceTree = "<group>"; };
 		4E3E672C1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserAvatarTableViewCell.h; sourceTree = "<group>"; };
 		4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserAvatarTableViewCell.m; sourceTree = "<group>"; };
 		4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserAvatarTableViewCell.xib; sourceTree = "<group>"; };
@@ -1046,6 +1066,7 @@
 				4E2B3D121C6F60B400B460F7 /* Model */,
 				4E2B3D091C6F5F7700B460F7 /* Controllers */,
 				4E2B3D081C6F5F7100B460F7 /* Views */,
+				4E2BC8D21C7F5C7C002FD232 /* GSAccountMacro.h */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -1112,6 +1133,9 @@
 				4E3E67A61C7A28E9005CA5A2 /* GSCardsContainerViewController.h */,
 				4E3E67A71C7A28E9005CA5A2 /* GSCardsContainerViewController.m */,
 				4E3E67A81C7A28E9005CA5A2 /* GSCardsContainerViewController.xib */,
+				4E2BC8BE1C7F42D9002FD232 /* GSRenameViewController.h */,
+				4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */,
+				4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1144,6 +1168,7 @@
 		4E2B3D131C6F611D00B460F7 /* GSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4E2BC8C51C7F4F9C002FD232 /* GSPersistance */,
 				4E2BC8B01C7E0B24002FD232 /* GSImagePicker */,
 				4E1711BC1C75F811006CA3E5 /* GSTransition */,
 				4E2B3D3F1C71FDE200B460F7 /* Observers */,
@@ -1196,6 +1221,19 @@
 				4E2BC8B21C7E0B36002FD232 /* EPImagePickerHelper.m */,
 			);
 			path = GSImagePicker;
+			sourceTree = "<group>";
+		};
+		4E2BC8C51C7F4F9C002FD232 /* GSPersistance */ = {
+			isa = PBXGroup;
+			children = (
+				4E2BC8C61C7F4FAE002FD232 /* GSPersistanceConfig.h */,
+				4E2BC8C71C7F4FAE002FD232 /* GSPersistanceConfig.m */,
+				4E2BC8CA1C7F500F002FD232 /* GSUserInfoRecord.h */,
+				4E2BC8CB1C7F500F002FD232 /* GSUserInfoRecord.m */,
+				4E2BC8CE1C7F5027002FD232 /* GSUserInfoTable.h */,
+				4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */,
+			);
+			path = GSPersistance;
 			sourceTree = "<group>";
 		};
 		4E3E673A1C78DBEA005CA5A2 /* Views */ = {
@@ -2022,6 +2060,7 @@
 				4EFDD43E1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
 				4EA672421C74C5E0004A5163 /* ios-social-sdk-login-quick.html in Resources */,
 				4EA672401C74C5E0004A5163 /* ios-social-sdk-login-detail.html in Resources */,
+				4E2BC8C31C7F42D9002FD232 /* GSRenameViewController.xib in Resources */,
 				4EA6723A1C74C5E0004A5163 /* ios-social-sdk-comment-detail.html in Resources */,
 				4E9D1AE01C735F060048869E /* GSAbouViewController.xib in Resources */,
 				4E9D1AD91C735E960048869E /* GSMyCardsViewController.xib in Resources */,
@@ -2076,6 +2115,7 @@
 				4E9D1AE11C735F060048869E /* GSAbouViewController.xib in Resources */,
 				4EA672491C74C5E0004A5163 /* ios-social-sdk-share-quick.html in Resources */,
 				4EA672151C74C5DF004A5163 /* UMSCommentInputControlleriPad.xib in Resources */,
+				4E2BC8C41C7F42D9002FD232 /* GSRenameViewController.xib in Resources */,
 				4E9D1AD31C735BBF0048869E /* GSChangePasswordViewController.xib in Resources */,
 				4EA672391C74C5E0004A5163 /* iOS-social-releasenote.html in Resources */,
 				4EA6723D1C74C5E0004A5163 /* ios-social-sdk-comment-quick.html in Resources */,
@@ -2323,7 +2363,9 @@
 				4EFDD5481C7EB074000AAE9D /* SDCycleScrollView.m in Sources */,
 				4EFDD4401C7C58DB000AAE9D /* JSQMessagesComposerTextView.m in Sources */,
 				4E2B3D4B1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
+				4E2BC8CC1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */,
 				4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
+				4E2BC8D01C7F5027002FD232 /* GSUserInfoTable.m in Sources */,
 				4E4D99ED1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */,
 				4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
 				4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */,
@@ -2334,6 +2376,7 @@
 				4E1711C71C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */,
 				4EFDD41E1C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				4EFDD5441C7EB074000AAE9D /* TAAnimatedDotView.m in Sources */,
+				4E2BC8C11C7F42D9002FD232 /* GSRenameViewController.m in Sources */,
 				4EFDD4261C7C58DB000AAE9D /* JSQMediaItem.m in Sources */,
 				4E4CD6AB1C7B5C9600DDED4D /* GSCardsSelectView.m in Sources */,
 				4EFDD3FC1C7C58DB000AAE9D /* NSBundle+JSQMessages.m in Sources */,
@@ -2350,6 +2393,7 @@
 				4EFDD44A1C7C58DB000AAE9D /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				4E2B3CE01C6EB8C200B460F7 /* GSGiftCouponTableViewCell.m in Sources */,
 				4E3E67411C78DC6B005CA5A2 /* GSActionSheet.m in Sources */,
+				4E2BC8C81C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */,
 				4E2B3CE51C6EB8DE00B460F7 /* GSStationShortCommentsTableViewCell.m in Sources */,
 				4E2B3D201C6F75E600B460F7 /* GSRegisterTask.m in Sources */,
 				4E1711DA1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */,
@@ -2393,6 +2437,7 @@
 				4EFDD4031C7C58DB000AAE9D /* UIDevice+JSQMessages.m in Sources */,
 				4EFDD4411C7C58DB000AAE9D /* JSQMessagesComposerTextView.m in Sources */,
 				4E3E675B1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
+				4E2BC8C21C7F42D9002FD232 /* GSRenameViewController.m in Sources */,
 				4EFDD4191C7C58DB000AAE9D /* GSMessageBubbleStatusView.m in Sources */,
 				4E2B3D451C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4EFDD4291C7C58DB000AAE9D /* JSQMessage.m in Sources */,
@@ -2416,6 +2461,7 @@
 				4E2B3D211C6F75EA00B460F7 /* GSRegisterTask.m in Sources */,
 				4ED31A4D1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
 				4EA671191C74BE03004A5163 /* GSUserResetPasswordData.m in Sources */,
+				4E2BC8C91C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */,
 				4EA6711E1C74BF27004A5163 /* GSUserLoginResponseData.m in Sources */,
 				4E1711C41C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
 				4EFDD4011C7C58DB000AAE9D /* UIColor+JSQMessages.m in Sources */,
@@ -2453,6 +2499,7 @@
 				4EFD22981C7623CF00F053A0 /* GSQRGenerator.m in Sources */,
 				4EFDD4131C7C58DB000AAE9D /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				4EFDD43D1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
+				4E2BC8CD1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */,
 				4E2B3D331C6F7B0C00B460F7 /* GSUserManagerRequester.m in Sources */,
 				4E4D99E91C6C981A00E8A017 /* main.m in Sources */,
 				4E2B3D531C72071400B460F7 /* GSEditUserProfileViewController.m in Sources */,
@@ -2462,6 +2509,7 @@
 				4EFDD40F1C7C58DB000AAE9D /* JSQMessagesAvatarImageFactory.m in Sources */,
 				4EFDD4211C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				4EFDD4071C7C58DB000AAE9D /* UIView+JSQMessages.m in Sources */,
+				4E2BC8D11C7F5027002FD232 /* GSUserInfoTable.m in Sources */,
 				4EFDD44D1C7C58DB000AAE9D /* JSQMessagesToolbarContentView.m in Sources */,
 				4EA671101C74B754004A5163 /* GSUserRegisterData.m in Sources */,
 				4EFDD3FB1C7C58DA000AAE9D /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,

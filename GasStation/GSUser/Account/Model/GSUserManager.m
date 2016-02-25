@@ -9,11 +9,16 @@
 #import "GSUserManager.h"
 #import "GSUserManagerRequester.h"
 #import "ObserverContainer.h"
-
+#import "GSUserInfoTable.h"
+#import "GSUserInfoRecord.h"
+#import "GSUserRegisetResponseData.h"
+#import "GSAccountMacro.h"
 
 @interface GSUserManager ()<GSUserManagerRequesterDelegate>
 @property (nonatomic,strong) GSUserManagerRequester *requester;
 @property (nonatomic,strong) ObserverContainer *observers;
+@property (nonatomic,strong) GSUserInfoTable *userInfoTable;
+
 @end
 
 @implementation GSUserManager
@@ -29,9 +34,23 @@
     return manager;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self)
+    {
+        self.userInfoTable = [[GSUserInfoTable alloc] init];
+    }
+    return self;
+
+}
+
 - (BOOL)isLogin
 {
-    return NO;
+    NSError *error = nil;
+    GSUserInfoRecord *record = (GSUserInfoRecord *)[self.userInfoTable findLatestRecordWithError:&error];
+
+    return (record != nil);
 }
 
 - (void)addObserver:(id<GSUserManagerDelegate>)observer
@@ -48,6 +67,32 @@
     {
         [self.observers removeObserver:observer];
     }
+}
+
+#pragma mark - Private
+
+- (void)saveUserInfo:(NSDictionary *)userInfo
+{
+    assert(userInfo);
+    if (userInfo)
+    {
+        NSError *error = nil;
+        
+        GSUserInfoRecord *record = [[GSUserInfoRecord alloc] init];
+        record.userId = [userInfo objectForKey:@"id"];
+        record.nickname = [userInfo objectForKey:@"nickname"];
+        record.avatar = [userInfo objectForKey:@"avatar"];
+        record.gender = [[userInfo objectForKey:@"gender"] integerValue];
+        record.userType = [[userInfo objectForKey:@"userType"] integerValue];
+        [self.userInfoTable insertRecord:record error:&error];
+        assert(error == nil);
+        
+#ifdef kAccountDebugMode
+        [self.userInfoTable deleteRecord:record error:&error];
+        assert(error == nil);
+#endif
+    }
+
 }
 
 #pragma mark - GSUserInfoBaseProtocol
@@ -110,8 +155,8 @@
                 {
                     [obj userRegisterSuccess];
                 }
-                
             }];
+            [self saveUserInfo:responseObject];
             break;
         case GSRequestType_ResetPwd:
             ;
@@ -122,7 +167,6 @@
         default:
             break;
     }
-
 }
 
 - (void)requester:(GSUserManagerRequester *)requester taskType:(GSRequestType)type didFailedWithData:(id)responseObject error:(NSError *)error
@@ -140,6 +184,7 @@
                 }
                 
             }];
+            
             break;
         case GSRequestType_ResetPwd:
             ;

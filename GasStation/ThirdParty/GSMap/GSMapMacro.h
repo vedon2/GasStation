@@ -10,14 +10,14 @@
 #define GSMapMacro_h
 
 #ifdef DEBUG
-#define EnableGSLog 1
+//#define EnableGSLog 1
 #endif
 
 
 #ifdef EnableGSLog
 #define GSLog NSLog
 #else
-#define GSLog NSLog(...)
+#define GSLog(...)
 #endif
 
 #endif /* GSMapMacro_h */

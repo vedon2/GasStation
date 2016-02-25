@@ -1,21 +1,20 @@
 //
-//  GSUserLoginResponseData.h
+//  GSUserInfoRecord.h
 //  GasStation
 //
-//  Created by vedon on 2/17/16.
+//  Created by vedon on 2/25/16.
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <CTPersistance/CTPersistance.h>
 #import "GSAccountDefine.h"
-#import "MJExtension.h"
 
-@interface GSUserLoginResponseData : NSObject
-
+@interface GSUserInfoRecord : CTPersistanceRecord
+@property (nonatomic,strong) NSString *identifier;
 @property (nonatomic,strong) NSString *nickname;
 @property (nonatomic,strong) NSString *userId;
 @property (nonatomic,strong) NSString *avatar;
 @property (nonatomic,assign) UserGender gender;
-@property (nonatomic,assign) UserType usersType;
+@property (nonatomic,assign) UserType userType;
 
 @end
