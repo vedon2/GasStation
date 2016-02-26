@@ -109,6 +109,8 @@
 		4E2BC8CD1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CB1C7F500F002FD232 /* GSUserInfoRecord.m */; };
 		4E2BC8D01C7F5027002FD232 /* GSUserInfoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */; };
 		4E2BC8D11C7F5027002FD232 /* GSUserInfoTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */; };
+		4E2BC8D51C8097C8002FD232 /* GSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8D41C8097C8002FD232 /* GSToast.m */; };
+		4E2BC8D61C8097C8002FD232 /* GSToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2BC8D41C8097C8002FD232 /* GSToast.m */; };
 		4E3E672F1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */; };
 		4E3E67311C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */; };
@@ -561,6 +563,8 @@
 		4E2BC8CE1C7F5027002FD232 /* GSUserInfoTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserInfoTable.h; sourceTree = "<group>"; };
 		4E2BC8CF1C7F5027002FD232 /* GSUserInfoTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserInfoTable.m; sourceTree = "<group>"; };
 		4E2BC8D21C7F5C7C002FD232 /* GSAccountMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSAccountMacro.h; sourceTree = "<group>"; };
+		4E2BC8D31C8097C8002FD232 /* GSToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSToast.h; sourceTree = "<group>"; };
+		4E2BC8D41C8097C8002FD232 /* GSToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSToast.m; sourceTree = "<group>"; };
 		4E3E672C1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserAvatarTableViewCell.h; sourceTree = "<group>"; };
 		4E3E672D1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserAvatarTableViewCell.m; sourceTree = "<group>"; };
 		4E3E672E1C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserAvatarTableViewCell.xib; sourceTree = "<group>"; };
@@ -1449,6 +1453,8 @@
 				4E3E67441C799234005CA5A2 /* GSKeyBoardManger.m */,
 				4E3E67471C799FED005CA5A2 /* GSColor.h */,
 				4E3E67481C799FED005CA5A2 /* GSColor.m */,
+				4E2BC8D31C8097C8002FD232 /* GSToast.h */,
+				4E2BC8D41C8097C8002FD232 /* GSToast.m */,
 			);
 			path = Global;
 			sourceTree = "<group>";
@@ -2339,6 +2345,7 @@
 				4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */,
 				4EFDD44C1C7C58DB000AAE9D /* JSQMessagesToolbarContentView.m in Sources */,
 				4E05E0EF1C78892A0038CA5D /* GSBottomBarButton.m in Sources */,
+				4E2BC8D51C8097C8002FD232 /* GSToast.m in Sources */,
 				4EFDD43C1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				4E3E67A21C79FD71005CA5A2 /* GSCardTableViewCell.m in Sources */,
 				4EFDD4421C7C58DB000AAE9D /* JSQMessagesInputToolbar.m in Sources */,
@@ -2526,6 +2533,7 @@
 				4EFDD3FF1C7C58DB000AAE9D /* NSString+JSQMessages.m in Sources */,
 				4E3E673E1C78DC1D005CA5A2 /* JGActionSheet.m in Sources */,
 				4E3E67371C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.m in Sources */,
+				4E2BC8D61C8097C8002FD232 /* GSToast.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

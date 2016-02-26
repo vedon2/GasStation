@@ -79,18 +79,18 @@
         if ([[YYKeyboardManager defaultManager] isKeyboardVisible])
         {
             [self.observer enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                if ([obj respondsToSelector:@selector(keyBoardDidShow)])
+                if ([obj respondsToSelector:@selector(keyBoardDidShow:)])
                 {
-                    [obj keyBoardDidShow];
+                    [obj keyBoardDidShow:transition.toFrame];
                 }
             }];
         }
         else
         {
             [self.observer enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-                if ([obj respondsToSelector:@selector(keyBoardDidHidden)])
+                if ([obj respondsToSelector:@selector(keyBoardDidHidden:)])
                 {
-                    [obj keyBoardDidHidden];
+                    [obj keyBoardDidHidden:transition.toFrame];
                 }
             }];
         }

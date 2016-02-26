@@ -10,9 +10,9 @@
 
 @protocol GSKeyBoardMangerObserver <NSObject>
 
-- (void)keyBoardDidShow;
+- (void)keyBoardDidShow:(CGRect)keyboardViewFrame;
 
-- (void)keyBoardDidHidden;
+- (void)keyBoardDidHidden:(CGRect)keyboardViewFrame;
 
 @end
 

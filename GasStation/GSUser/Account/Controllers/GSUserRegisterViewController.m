@@ -18,6 +18,7 @@
 #import "PureLayout.h"
 #import "CRNavigationController.h"
 #import "GSAccountMacro.h"
+#import "GSToast.h"
 
 @interface GSUserRegisterViewController ()<GSUserManagerDelegate,GSTextFieldProtocol,GSCountetButtonDelegate,GSTextFieldColorProtocol,GSKeyBoardMangerObserver>
 @property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
@@ -32,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewHeightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarImageViewTopConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *topViewTopConstraint;
+@property (assign,nonatomic) CGFloat keyboardAnimationOffset;
 @end
 
 @implementation GSUserRegisterViewController
@@ -113,22 +115,26 @@
     NSString *pwd = self.pwdTextField.textField.text;
     NSString *phone = self.phoneTextField.textField.text;
     NSString *veriCode = self.smsCodeTextField.textField.text;
+    
+    
     if (pwd.length == 0)
     {
-        
+        [GSToast showToastWithText:@"密码不能为空" inView:self.view];
         return;
     }
     
     if (phone.length == 0)
     {
+        [GSToast showToastWithText:@"手机号码不能为空" inView:self.view];
         return;
     }
     
     if (veriCode.length == 0)
     {
+        [GSToast showToastWithText:@"验证码不能为空" inView:self.view];
         return;
     }
-    
+    [GSToast showProgressToastInView:self.view];
     [[GSUserManager shareManager] registerWithPhone:phone password:pwd veriCode:veriCode];
 }
 
@@ -147,6 +153,8 @@
 
 - (void)userRegisterSuccess
 {
+    [GSToast hideProgressToastInView:self.view];
+    
     [self dismissViewControllerAnimated:NO completion:nil];
     
     //注册成功后打开编辑个人信息界面
@@ -159,6 +167,7 @@
 
 - (void)userRegisterFail
 {
+    [GSToast hideProgressToastInView:self.view];
     GSLog(@"注册失败");
 }
 
@@ -281,11 +290,15 @@
 
 #pragma mark -  GSKeyBoardMangerObserver
 
-- (void)keyBoardDidShow
+- (void)keyBoardDidShow:(CGRect)keyboardViewFrame
 {
     if (self.topViewTopConstraint.constant >= 0)
     {
-         self.topViewTopConstraint.constant -= (self.topView.frame.size.height/2);
+        
+        CGRect registerRect = [self.view convertRect:self.registerButton.frame fromView:self.registerButton.superview];
+        self.keyboardAnimationOffset = registerRect.origin.y + registerRect.size.height - keyboardViewFrame.origin.y ;
+        
+        self.topViewTopConstraint.constant -= self.keyboardAnimationOffset;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];
@@ -293,11 +306,11 @@
    
 }
 
-- (void)keyBoardDidHidden
+- (void)keyBoardDidHidden:(CGRect)keyboardViewFrame
 {
     if (self.topViewTopConstraint.constant < 0)
     {
-        self.topViewTopConstraint.constant += (self.topView.frame.size.height/2);
+        self.topViewTopConstraint.constant += self.keyboardAnimationOffset;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];

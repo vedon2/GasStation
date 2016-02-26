@@ -9,7 +9,7 @@
 #import "GSRenameViewController.h"
 #import "BlocksKit+UIKit.h"
 #import "GSColor.h"
-#import "WSProgressHUD.h"
+#import "MBProgressHUD.h"
 
 @interface GSRenameViewController ()
 @property (weak, nonatomic) IBOutlet UIView *textViewContainerView;
@@ -39,8 +39,11 @@
         
         if (self.textField.text.length == 0)
         {
-            
-            [WSProgressHUD showWithStatus:@"昵称不能为空"];
+            MBProgressHUD *hub = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            hub.mode = MBProgressHUDModeText;
+            hub.labelText = @"昵称不能为空";
+            [hub hide:YES afterDelay:2.f];
+
         }
         else
         {
