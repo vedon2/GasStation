@@ -24,6 +24,8 @@ typedef NS_ENUM(NSUInteger,GSRequestType)
 
 - (void)registerWithPhone:(NSString *)phone password:(NSString *)password veriCode:(NSString *)veriCode;
 
+- (void)loginWithPhone:(NSString *)phone password:(NSString *)password;
+
 - (void)resetPasswordWithNewPassword:(NSString *)pwd oldPassword:(NSString *)oldPassword veriCode:(NSString *)veriCode phone:(NSString *)phone;
 
 - (void)updateUserProfile:(id)profileData userId:(NSString *)userId;

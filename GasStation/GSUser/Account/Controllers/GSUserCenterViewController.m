@@ -57,13 +57,6 @@ static NSString *cellIdentifier = @"Cell";
         
         [self.collectionItems addObject:info];
     }
-    
-//    self.userAvatarImageView.image = [UIImage imageNamed:@"icon_key"];
-//    self.userAvatarImageView.contentMode = UIViewContentModeScaleAspectFit;
-//    UIImageView *tempImageview = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-//    tempImageview.contentMode = UIViewContentModeScaleAspectFit;
-//    tempImageview.image = [UIImage imageNamed:@"backgroundStar"];
-//    [self.userAvatarBgImageView addSubview:tempImageview];
 }
 
 - (void)dealloc

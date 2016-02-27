@@ -7,9 +7,9 @@
 //
 
 #import <CTPersistance/CTPersistance.h>
-#import "GSAccountDefine.h"
+#import "GSUserInfoProtocol.h"
 
-@interface GSUserInfoRecord : CTPersistanceRecord
+@interface GSUserInfoRecord : CTPersistanceRecord<GSUserInfoProtocol>
 @property (nonatomic,strong) NSString *identifier;
 @property (nonatomic,strong) NSString *nickname;
 @property (nonatomic,strong) NSString *userId;

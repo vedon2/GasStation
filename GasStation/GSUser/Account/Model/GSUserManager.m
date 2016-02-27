@@ -6,6 +6,8 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
+#define kQuesryUserByIdCMD @"select * from '%@' where userId = '%@'"
+
 #import "GSUserManager.h"
 #import "GSUserManagerRequester.h"
 #import "ObserverContainer.h"
@@ -13,12 +15,16 @@
 #import "GSUserInfoRecord.h"
 #import "GSUserRegisetResponseData.h"
 #import "GSAccountMacro.h"
+#import "GSUserInfoProtocol.h"
+
+#import "GSPersistanceConfig.h"
 
 @interface GSUserManager ()<GSUserManagerRequesterDelegate>
 @property (nonatomic,strong) GSUserManagerRequester *requester;
 @property (nonatomic,strong) ObserverContainer *observers;
 @property (nonatomic,strong) GSUserInfoTable *userInfoTable;
 
+@property (nonatomic,strong) id<GSUserInfoProtocol>currentUserInfo;
 @end
 
 @implementation GSUserManager
@@ -45,12 +51,22 @@
 
 }
 
+#pragma mark - Public
+
 - (BOOL)isLogin
 {
     NSError *error = nil;
-    GSUserInfoRecord *record = (GSUserInfoRecord *)[self.userInfoTable findLatestRecordWithError:&error];
-
-    return (record != nil);
+    if (self.currentUserInfo)
+    {
+        return YES;
+    }
+    else
+    {
+        GSUserInfoRecord *record = (GSUserInfoRecord *)[self.userInfoTable findLatestRecordWithError:&error];
+        self.currentUserInfo = record;
+        return (record != nil);
+    }
+   
 }
 
 - (void)addObserver:(id<GSUserManagerDelegate>)observer
@@ -69,6 +85,17 @@
     }
 }
 
+- (void)logout
+{
+    NSError *queryError = nil;
+    GSUserInfoRecord *existUserRecord = (GSUserInfoRecord *)[self.userInfoTable findFirstRowWithSQL:[NSString stringWithFormat:kQuesryUserByIdCMD,[GSPersistanceConfig userInfoTableName],[self.currentUserInfo userId]] params:nil error:&queryError];
+    assert(queryError == nil);
+    [self.userInfoTable deleteRecord:existUserRecord error:&queryError];
+    assert(queryError == nil);
+
+    self.currentUserInfo = nil;
+}
+
 #pragma mark - Private
 
 - (void)saveUserInfo:(NSDictionary *)userInfo
@@ -84,7 +111,9 @@
         record.avatar = [userInfo objectForKey:@"avatar"];
         record.gender = [[userInfo objectForKey:@"gender"] integerValue];
         record.userType = [[userInfo objectForKey:@"userType"] integerValue];
+        
         [self.userInfoTable insertRecord:record error:&error];
+        self.currentUserInfo = record;
         assert(error == nil);
         
 #ifdef kAccountDebugMode
@@ -116,6 +145,16 @@
     if (password && phone && veriCode)
     {
         [self.requester registerWithPhone:phone password:password veriCode:veriCode];
+    }
+}
+
+- (void)loginWithPhone:(NSString *)phone password:(NSString *)password
+{
+    assert(phone);
+    assert(password);
+    if (phone && password)
+    {
+        [self.requester loginWithPhone:phone password:password];
     }
 }
 

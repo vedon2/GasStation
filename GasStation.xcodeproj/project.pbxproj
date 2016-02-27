@@ -746,6 +746,7 @@
 		4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSBottomButtonInfo.m; sourceTree = "<group>"; };
 		4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseRequest.h; sourceTree = "<group>"; };
 		4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSBaseRequest.mm; sourceTree = "<group>"; };
+		4EEDFB551C81987E00FADC91 /* GSUserInfoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSUserInfoProtocol.h; sourceTree = "<group>"; };
 		4EFD22911C7623BD00F053A0 /* GSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSScanner.h; sourceTree = "<group>"; };
 		4EFD22921C7623BD00F053A0 /* GSScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSScanner.m; sourceTree = "<group>"; };
 		4EFD22951C7623CF00F053A0 /* GSQRGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQRGenerator.h; sourceTree = "<group>"; };
@@ -1107,6 +1108,9 @@
 		4E2B3D091C6F5F7700B460F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				4E2B3D561C721F6300B460F7 /* GSUserCenterViewController.h */,
+				4E2B3D571C721F6300B460F7 /* GSUserCenterViewController.m */,
+				4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */,
 				4E2B3D0A1C6F5F9800B460F7 /* GSUserRegisterViewController.h */,
 				4E2B3D0B1C6F5F9800B460F7 /* GSUserRegisterViewController.m */,
 				4E2B3D0C1C6F5F9800B460F7 /* GSUserRegisterViewController.xib */,
@@ -1119,9 +1123,6 @@
 				4E2B3D4F1C72071400B460F7 /* GSEditUserProfileViewController.h */,
 				4E2B3D501C72071400B460F7 /* GSEditUserProfileViewController.m */,
 				4E2B3D511C72071400B460F7 /* GSEditUserProfileViewController.xib */,
-				4E2B3D561C721F6300B460F7 /* GSUserCenterViewController.h */,
-				4E2B3D571C721F6300B460F7 /* GSUserCenterViewController.m */,
-				4E2B3D581C721F6300B460F7 /* GSUserCenterViewController.xib */,
 				4E9D1ACD1C735BBF0048869E /* GSChangePasswordViewController.h */,
 				4E9D1ACE1C735BBF0048869E /* GSChangePasswordViewController.m */,
 				4E9D1ACF1C735BBF0048869E /* GSChangePasswordViewController.xib */,
@@ -1147,6 +1148,7 @@
 		4E2B3D121C6F60B400B460F7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4EEDFB551C81987E00FADC91 /* GSUserInfoProtocol.h */,
 				4E2B3D2A1C6F782500B460F7 /* GSUserManager.h */,
 				4E2B3D2B1C6F782500B460F7 /* GSUserManager.m */,
 				4E2B3D2E1C6F790300B460F7 /* GSUserInfoBaseProtocol.h */,

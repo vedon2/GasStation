@@ -21,6 +21,8 @@
 
 - (void)userRegisterFail;
 
+- (void)userLogout;
+
 @end
 
 #ifdef GSUser
@@ -36,4 +38,6 @@
 - (void)removeObserver:(id<GSUserManagerDelegate>)observer;
 
 - (BOOL)isLogin;
+
+- (void)logout;
 @end

@@ -16,6 +16,7 @@
 #import "PureLayout.h"
 #import "GSKeyBoardManger.h"
 #import "CRNavigationController.h"
+#import "GSToast.h"
 
 @interface GSUserLoginViewController ()<GSUserManagerDelegate,GSTextFieldColorProtocol,GSTextFieldProtocol,GSKeyBoardMangerObserver>
 @property (weak, nonatomic) IBOutlet GSTextField *phoneTextField;
@@ -27,6 +28,8 @@
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *avatarTopConstraint;
 @property (strong,nonatomic) UIButton *clearPhoneTextFieldButton;
 @property (strong,nonatomic) UIButton *securePwdTextFieldButton;
+
+@property (assign,nonatomic) CGFloat keyboardAnimationOffset;
 @end
 
 @implementation GSUserLoginViewController
@@ -91,6 +94,23 @@
 
 - (IBAction)loginAction:(id)sender
 {
+    [[UIApplication sharedApplication].keyWindow endEditing:YES];
+    
+    NSString *pwd = self.pwdTextField.textField.text;
+    NSString *phone = self.phoneTextField.textField.text;
+    if (pwd.length == 0)
+    {
+        [GSToast showToastWithText:@"密码不能为空" inView:self.view];
+        return;
+    }
+    
+    if (phone.length == 0)
+    {
+        [GSToast showToastWithText:@"手机号码不能为空" inView:self.view];
+        return;
+    }
+    [GSToast showProgressToastInView:self.view];
+    [[GSUserManager shareManager] loginWithPhone:phone password:pwd];
     
 }
 - (IBAction)dismissAction:(id)sender
@@ -214,32 +234,36 @@
 
 - (void)userLoginOk
 {
-    
+    [GSToast hideProgressToastInView:self.view];
+    [self dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)userLoginFailed
 {
-    
+    [GSToast hideProgressToastInView:self.view];
 }
 
 #pragma mark - GSKeyBoardMangerObserver
 
-- (void)keyBoardDidHidden
+- (void)keyBoardDidHidden:(CGRect)keyboardViewFrame
 {
     if (self.topViewTopConstraint.constant < 0)
     {
-        self.topViewTopConstraint.constant += (self.topView.frame.size.height/2);
+        CGRect registerRect = [self.view convertRect:self.registerButton.frame fromView:self.registerButton.superview];
+        self.keyboardAnimationOffset = registerRect.origin.y + registerRect.size.height - keyboardViewFrame.origin.y ;
+        
+        self.topViewTopConstraint.constant -= self.keyboardAnimationOffset;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];
     }
 }
 
-- (void)keyBoardDidShow
+- (void)keyBoardDidShow:(CGRect)keyboardViewFrame
 {
     if (self.topViewTopConstraint.constant >= 0)
     {
-        self.topViewTopConstraint.constant -= (self.topView.frame.size.height/2);
+        self.topViewTopConstraint.constant += self.keyboardAnimationOffset;
         [UIView animateWithDuration:0.3 animations:^{
             [self.view layoutIfNeeded];
         }];
