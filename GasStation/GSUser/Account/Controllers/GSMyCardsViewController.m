@@ -8,7 +8,7 @@
 
 #import "GSMyCardsViewController.h"
 #import "BlocksKit+UIKit.h"
-#import "GSCardTableViewCell.h"
+#import "GSMyCardTableViewCell.h"
 
 static NSString *cellIdentifier = @"cell";
 
@@ -25,7 +25,7 @@ static NSString *cellIdentifier = @"cell";
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    UINib *nib = [UINib nibWithNibName:@"GSCardTableViewCell" bundle:nil];
+    UINib *nib = [UINib nibWithNibName:@"GSMyCardTableViewCell" bundle:nil];
     [self.contentTable registerNib:nib forCellReuseIdentifier:cellIdentifier];
     // Do any additional setup after loading the view from its nib.
 }
@@ -57,7 +57,7 @@ static NSString *cellIdentifier = @"cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    GSCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    GSMyCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     return cell;
 }

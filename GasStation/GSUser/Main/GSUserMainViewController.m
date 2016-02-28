@@ -28,6 +28,7 @@
 
 #import "GSEditUserProfileViewController.h"
 #import "SDCycleScrollView.h"
+#import "GSColor.h"
 
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate,SDCycleScrollViewDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
@@ -319,7 +320,7 @@
     if (!_topBarContainerView)
     {
         _topBarContainerView = [[UIView alloc] init];
-        _topBarContainerView.backgroundColor = [UIColor redColor];
+        _topBarContainerView.backgroundColor = [GSColor mainColor];
     }
     return _topBarContainerView;
 }

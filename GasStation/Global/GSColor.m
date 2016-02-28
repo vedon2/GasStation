@@ -55,4 +55,15 @@
 {
     return [UIColor colorWithHexString:@"333333"];
 }
+
++ (UIColor *)firstCardDetailButtonColor
+{
+    return [UIColor colorWithHexString:@"88c70a"];
+}
+
++ (UIColor *)secondCardDetailButtonColor
+{
+    return [UIColor colorWithHexString:@"d43c33"];
+}
+
 @end

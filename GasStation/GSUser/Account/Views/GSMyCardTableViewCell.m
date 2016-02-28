@@ -6,9 +6,9 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
-#import "GSCardTableViewCell.h"
+#import "GSMyCardTableViewCell.h"
 #import "GSColor.h"
-@interface GSCardTableViewCell ()
+@interface GSMyCardTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *cartTitle;
 @property (weak, nonatomic) IBOutlet UILabel *cardTitleDetailTitle;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation GSCardTableViewCell
+@implementation GSMyCardTableViewCell
 
 - (void)awakeFromNib
 {

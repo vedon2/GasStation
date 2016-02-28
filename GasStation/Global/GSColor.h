@@ -31,4 +31,9 @@
 + (UIColor *)cardDetailSubTitleColor;
 
 + (UIColor *)cardDetailTitleColor;
+
+//GSCardTableViewCell
++ (UIColor *)firstCardDetailButtonColor;
+
++ (UIColor *)secondCardDetailButtonColor;
 @end

@@ -18,3 +18,5 @@ DerivedData
 *.xccheckout
 
 #CocoaPods
+
+GasStation.xcworkspace/xcuserdata/vedon.xcuserdatad/UserInterfaceState.xcuserstate

@@ -9,6 +9,7 @@
 #import "GSCardViewController.h"
 #import "BlocksKit+UIKit.h"
 #import "GSCardTableViewCell.h"
+#import "GSRuleViewController.h"
 
 static NSString *cellIdentifier = @"cell";
 @interface GSCardViewController ()<UITableViewDataSource,UITableViewDelegate>
@@ -25,9 +26,13 @@ static NSString *cellIdentifier = @"cell";
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
-    
+    __weak GSCardViewController *weakSelf = self;
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] bk_initWithTitle:@"说明" style:UIBarButtonItemStylePlain handler:^(id sender) {
-        ;
+        
+        GSRuleViewController *vc = [[GSRuleViewController alloc] initWithNibName:@"GSRuleViewController" bundle:nil];
+        [weakSelf.navigationController pushViewController:vc animated:YES];
+        vc = nil;
+        
     }];
     
     
