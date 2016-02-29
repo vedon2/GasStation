@@ -23,14 +23,22 @@
         self.delegate = delegate;
         self.searchBtn.image = image;
         [self addSubview:self.searchBtn];
-        [self.searchBtn autoPinEdgesToSuperviewEdgesWithInsets:inset];
+        [self.searchBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self];
+        [self.searchBtn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+        
+        [self.searchBtn autoSetDimensionsToSize:CGSizeMake(20, 20)];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapSearchBtn)];
         [self addGestureRecognizer:tap];
         tap = nil;
-        
     }
     return self;
+}
+
+- (void)layoutSubviews
+{
+//    [self.searchBtn autoPinEdgesToSuperviewEdgesWithInsets:UIEdgeInsetsMake(5, 5, 5, 5)];
+    
 }
 
 - (void)didTapSearchBtn
@@ -48,8 +56,9 @@
     if (!_searchBtn)
     {
         _searchBtn = [[UIImageView alloc] initForAutoLayout];
-        _searchBtn.backgroundColor = [UIColor redColor];
+        _searchBtn.backgroundColor = [UIColor clearColor];
         _searchBtn.contentMode = UIViewContentModeScaleAspectFit;
+        
     }
     return  _searchBtn;
 }

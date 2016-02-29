@@ -310,7 +310,7 @@
 {
     if (!_searchBtn)
     {
-        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self image:[UIImage imageNamed:@"second_normal"] edgeInset:UIEdgeInsetsMake(8, 8, 8, 0)];
+        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self image:[UIImage imageNamed:@"icon_home_search"] edgeInset:UIEdgeInsetsMake(10, 10, 10, 10)];
     }
     return _searchBtn;
 }

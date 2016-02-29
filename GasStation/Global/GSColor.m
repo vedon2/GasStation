@@ -66,4 +66,9 @@
     return [UIColor colorWithHexString:@"d43c33"];
 }
 
++ (UIColor *)tapToRecordButtonColor
+{
+    return [UIColor colorWithHexString:@"c6c7ca"];
+}
+
 @end

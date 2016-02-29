@@ -10,6 +10,7 @@
 #import "BlocksKit+UIKit.h"
 #import "JSQMessages.h"
 #import "PureLayout.h"
+#import "GSColor.h"
 
 
 @interface GSFeedbackViewController ()<JSQMessagesComposerTextViewPasteDelegate>
@@ -66,9 +67,10 @@
     [voiceButton setImage:[UIImage imageNamed:@"icon_other_write"] forState:UIControlStateSelected];
     self.inputToolbar.contentView.leftBarButtonItem = voiceButton;
     UIButton *addImageButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    [addImageButton setTitle:@"图片" forState:UIControlStateNormal];
-    [addImageButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    addImageButton.backgroundColor = [UIColor redColor];
+    
+    [addImageButton setImage:[UIImage imageNamed:@"icon_other_more"] forState:UIControlStateNormal];
+    [addImageButton setImage:[UIImage imageNamed:@"icon_other_more"] forState:UIControlStateSelected];
+    addImageButton.backgroundColor = [UIColor clearColor];
     self.inputToolbar.contentView.rightBarButtonItem = addImageButton;
     self.inputToolbar.contentView.textView.returnKeyType = UIReturnKeyDone;
     
@@ -142,9 +144,11 @@
     if (button.selected)
     {
         self.voiceMessageButton.hidden = NO;
+        self.inputToolbar.contentView.textView.hidden = YES;
     }
     else
     {
+        self.inputToolbar.contentView.textView.hidden = NO;
         [self.inputToolbar.contentView.textView becomeFirstResponder];
         self.voiceMessageButton.hidden = YES;
     }
@@ -444,7 +448,9 @@
     if (!_voiceMessageButton)
     {
         _voiceMessageButton = [[UIView alloc] initForAutoLayout];
-        _voiceMessageButton.backgroundColor = [UIColor redColor];
+        _voiceMessageButton.backgroundColor = [GSColor tapToRecordButtonColor];
+        _voiceMessageButton.layer.cornerRadius = 12.0;
+        _voiceMessageButton.layer.masksToBounds = YES;
     }
     return _voiceMessageButton;
 }

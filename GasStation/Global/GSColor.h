@@ -36,4 +36,8 @@
 + (UIColor *)firstCardDetailButtonColor;
 
 + (UIColor *)secondCardDetailButtonColor;
+
+
+//聊天界面
++ (UIColor *)tapToRecordButtonColor;
 @end

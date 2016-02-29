@@ -46,6 +46,9 @@ static NSString *cellIdentifier = @"Cell";
     [self.collectionView registerNib:collectivewCellNib forCellWithReuseIdentifier:cellIdentifier];
     self.collectionView.backgroundColor = [GSColor userCenterBackgroundColor];
     
+    self.userAvatarBgImageView.image = [UIImage imageNamed:@"userCenterDefaultBgImage"];
+    self.userAvatarImageView.image = [UIImage imageNamed:@"my_def_head_man"];
+    
     self.collectionItems = [NSMutableArray array];
     NSArray *itemsImageNames = @[@"icon_my_card",@"icon_key",@"icon_my_feedback",@"icon_my_we"];
     NSArray *itemsTitles = @[@"我的油卡",@"修改密码",@"反馈投诉",@"关于我们"];
