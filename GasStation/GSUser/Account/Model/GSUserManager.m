@@ -184,9 +184,7 @@
 - (void)requester:(GSUserManagerRequester *)requester taskType:(GSRequestType)type didFinishWithData:(id)responseObject
 {
     switch (type) {
-        case GSRequestType_GetSmsCode:
-            ;
-            break;
+        
         case GSRequestType_Register:
             [self.observers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
                 
@@ -196,6 +194,20 @@
                 }
             }];
             [self saveUserInfo:responseObject];
+            break;
+        case GSRequestType_Login:
+        {
+            [self.observers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                
+                if ([obj respondsToSelector:@selector(userLoginOk)])
+                {
+                    [obj userLoginOk];
+                }
+            }];
+        }
+            break;
+        case GSRequestType_GetSmsCode:
+            ;
             break;
         case GSRequestType_ResetPwd:
             ;

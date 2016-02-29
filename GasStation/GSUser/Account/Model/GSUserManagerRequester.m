@@ -82,6 +82,32 @@
     
 }
 
+- (void)loginWithPhone:(NSString *)phone password:(NSString *)password
+{
+    assert(phone);
+    assert(password);
+    
+    if (self.loginTask)
+    {
+        [self.loginTask stop];
+    }
+    
+    if (phone && password)
+    {
+        self.loginTask = [[GSLoginTask alloc] initWithPhone:phone password:password];
+        [self.loginTask startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+            
+            [self responseWithData:request.responseJSONObject taskType:GSRequestType_Login isSuccess:YES];
+            
+        } failure:^(__kindof YTKBaseRequest *request) {
+            
+            
+            [self responseWithData:request.responseJSONObject taskType:GSRequestType_Login isSuccess:NO];
+        }];
+        
+    }
+}
+
 - (void)resetPasswordWithNewPassword:(NSString *)pwd oldPassword:(NSString *)oldPassword veriCode:(NSString *)veriCode phone:(NSString *)phone
 {
     assert(pwd);

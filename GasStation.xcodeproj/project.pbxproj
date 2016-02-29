@@ -181,6 +181,12 @@
 		4E4E4C8A1C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */; };
 		4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */; };
 		4E4E4C8E1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */; };
+		4E515F5E1C8494D300C7BF79 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F5D1C8494D300C7BF79 /* AudioToolbox.framework */; };
+		4E515F5F1C8494DA00C7BF79 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F5D1C8494D300C7BF79 /* AudioToolbox.framework */; };
+		4E515F611C84961400C7BF79 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F601C84961400C7BF79 /* libresolv.tbd */; };
+		4E515F631C84963D00C7BF79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F621C84963D00C7BF79 /* CoreMedia.framework */; };
+		4E515F641C84964400C7BF79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F621C84963D00C7BF79 /* CoreMedia.framework */; };
+		4E515F651C84965200C7BF79 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F601C84961400C7BF79 /* libresolv.tbd */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
@@ -653,6 +659,9 @@
 		4E4E4C8B1C7DE3B80081D7A2 /* GSFetchCityGasStationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCityGasStationData.h; sourceTree = "<group>"; };
 		4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCityGasStationData.m; sourceTree = "<group>"; };
 		4E4FFDEB1C6CCB8200CC4450 /* GSMapMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapMacro.h; sourceTree = "<group>"; };
+		4E515F5D1C8494D300C7BF79 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		4E515F601C84961400C7BF79 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		4E515F621C84963D00C7BF79 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -916,6 +925,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EA671B61C74C28A004A5163 /* libz.tbd in Frameworks */,
+				4E515F651C84965200C7BF79 /* libresolv.tbd in Frameworks */,
+				4E515F641C84964400C7BF79 /* CoreMedia.framework in Frameworks */,
+				4E515F5E1C8494D300C7BF79 /* AudioToolbox.framework in Frameworks */,
 				4EA673C21C74C8C3004A5163 /* UIKit.framework in Frameworks */,
 				4EA673C01C74C7E8004A5163 /* MobileCoreServices.framework in Frameworks */,
 				4EA673BE1C74C7E2004A5163 /* CoreTelephony.framework in Frameworks */,
@@ -926,7 +939,6 @@
 				4EA672341C74C5E0004A5163 /* libWeChatSDK.a in Frameworks */,
 				4EA671C71C74C41D004A5163 /* SMS_SDK.framework in Frameworks */,
 				4EA671B81C74C293004A5163 /* libstdc++.tbd in Frameworks */,
-				4EA671B61C74C28A004A5163 /* libz.tbd in Frameworks */,
 				4EA6722C1C74C5E0004A5163 /* TencentOpenAPI.framework in Frameworks */,
 				4EA671B41C74C27C004A5163 /* libicucore.tbd in Frameworks */,
 				4E1120D11C76A54F00F1BC55 /* MeiQiaSDK.framework in Frameworks */,
@@ -960,6 +972,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E515F631C84963D00C7BF79 /* CoreMedia.framework in Frameworks */,
+				4EA671BD1C74C2C5004A5163 /* libstdc++.tbd in Frameworks */,
+				4EA671BC1C74C2BE004A5163 /* libz.tbd in Frameworks */,
+				4E515F611C84961400C7BF79 /* libresolv.tbd in Frameworks */,
+				4E515F5F1C8494DA00C7BF79 /* AudioToolbox.framework in Frameworks */,
 				4EA673C81C74C946004A5163 /* MobileCoreServices.framework in Frameworks */,
 				4EA671071C736CA3004A5163 /* SystemConfiguration.framework in Frameworks */,
 				4EA673C71C74C938004A5163 /* CoreTelephony.framework in Frameworks */,
@@ -968,9 +985,7 @@
 				4EA672311C74C5E0004A5163 /* libSocialQQ.a in Frameworks */,
 				4EA672351C74C5E0004A5163 /* libWeChatSDK.a in Frameworks */,
 				4EA671BE1C74C2CC004A5163 /* JavaScriptCore.framework in Frameworks */,
-				4EA671BD1C74C2C5004A5163 /* libstdc++.tbd in Frameworks */,
 				4EA672251C74C5DF004A5163 /* libUMSocial_Sdk_5.0.a in Frameworks */,
-				4EA671BC1C74C2BE004A5163 /* libz.tbd in Frameworks */,
 				4EA671BB1C74C2B6004A5163 /* libicucore.tbd in Frameworks */,
 				4EA6722D1C74C5E0004A5163 /* TencentOpenAPI.framework in Frameworks */,
 				4E1120D21C76A54F00F1BC55 /* MeiQiaSDK.framework in Frameworks */,
@@ -1931,6 +1946,9 @@
 		CE46C63558572A25E886FEF4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4E515F621C84963D00C7BF79 /* CoreMedia.framework */,
+				4E515F601C84961400C7BF79 /* libresolv.tbd */,
+				4E515F5D1C8494D300C7BF79 /* AudioToolbox.framework */,
 				4EA673C31C74C918004A5163 /* libsqlite3.0.tbd */,
 				4EA673C11C74C8C3004A5163 /* UIKit.framework */,
 				4EA673BF1C74C7E8004A5163 /* MobileCoreServices.framework */,

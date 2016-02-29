@@ -13,6 +13,7 @@ typedef NS_ENUM(NSUInteger,GSRequestType)
 {
     GSRequestType_GetSmsCode,
     GSRequestType_Register,
+    GSRequestType_Login,
     GSRequestType_ResetPwd,
     GSRequestType_UpdateProfile,
     GSRequestType_Unknown,

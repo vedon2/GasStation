@@ -52,7 +52,7 @@
 - (id)mockData
 {
     return @{@"nickname": @"vedon",
-             @"id": @"kuserId123",
+             @"id": @"110",
              @"avatar": @"",
              @"gender": @(0),
              @"userType": @(0),

@@ -6,10 +6,17 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
+
 #import "AppDelegateExt.h"
+
+@class UIApplication;
 
 @interface AppDelegateExt (initProcess)
 
 - (void)initProcessBeforeMainUI;
+
+- (void)applicationDidEnterBackground:(UIApplication *)application;
+
+- (void)applicationWillEnterForeground:(UIApplication *)application;
 
 @end
