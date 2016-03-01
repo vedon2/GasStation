@@ -202,6 +202,12 @@
 		4E515F831C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */; };
 		4E515F861C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */; };
 		4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */; };
+		4E515F8C1C85EA0300C7BF79 /* GSStartUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F8B1C85EA0300C7BF79 /* GSStartUpTask.m */; };
+		4E515F8D1C85EA0300C7BF79 /* GSStartUpTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F8B1C85EA0300C7BF79 /* GSStartUpTask.m */; };
+		4E515F901C85F1B100C7BF79 /* GSGetMyCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F8F1C85F1B100C7BF79 /* GSGetMyCardDetailTask.m */; };
+		4E515F911C85F1B100C7BF79 /* GSGetMyCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F8F1C85F1B100C7BF79 /* GSGetMyCardDetailTask.m */; };
+		4E515F971C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */; };
+		4E515F981C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
@@ -693,6 +699,13 @@
 		4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetCardDetailTask.m; sourceTree = "<group>"; };
 		4E515F841C85E8FB00C7BF79 /* GSGetMyCardsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGetMyCardsTask.h; sourceTree = "<group>"; };
 		4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetMyCardsTask.m; sourceTree = "<group>"; };
+		4E515F8A1C85EA0300C7BF79 /* GSStartUpTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStartUpTask.h; sourceTree = "<group>"; };
+		4E515F8B1C85EA0300C7BF79 /* GSStartUpTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStartUpTask.m; sourceTree = "<group>"; };
+		4E515F8E1C85F1B100C7BF79 /* GSGetMyCardDetailTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGetMyCardDetailTask.h; sourceTree = "<group>"; };
+		4E515F8F1C85F1B100C7BF79 /* GSGetMyCardDetailTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetMyCardDetailTask.m; sourceTree = "<group>"; };
+		4E515F921C85F4D000C7BF79 /* GSNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSNetwork.h; sourceTree = "<group>"; };
+		4E515F951C85F78600C7BF79 /* GSRecordIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRecordIndicatorView.h; sourceTree = "<group>"; };
+		4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRecordIndicatorView.m; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1199,6 +1212,8 @@
 				4E4CD6AA1C7B5C9600DDED4D /* GSCardsSelectView.m */,
 				4E4CD6AC1C7B5C9600DDED4D /* GSCardsSelectViewItemInfo.h */,
 				4E4CD6AD1C7B5C9600DDED4D /* GSCardsSelectViewItemInfo.m */,
+				4E515F951C85F78600C7BF79 /* GSRecordIndicatorView.h */,
+				4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1227,6 +1242,9 @@
 				4E9D1AD41C735E960048869E /* GSMyCardsViewController.h */,
 				4E9D1AD51C735E960048869E /* GSMyCardsViewController.m */,
 				4E9D1AD61C735E960048869E /* GSMyCardsViewController.xib */,
+				4E2BC8BE1C7F42D9002FD232 /* GSRenameViewController.h */,
+				4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */,
+				4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */,
 				4E9D1ADB1C735F060048869E /* GSAbouViewController.h */,
 				4E9D1ADC1C735F060048869E /* GSAbouViewController.m */,
 				4E9D1ADD1C735F060048869E /* GSAbouViewController.xib */,
@@ -1236,9 +1254,6 @@
 				4E3E67A61C7A28E9005CA5A2 /* GSCardsContainerViewController.h */,
 				4E3E67A71C7A28E9005CA5A2 /* GSCardsContainerViewController.m */,
 				4E3E67A81C7A28E9005CA5A2 /* GSCardsContainerViewController.xib */,
-				4E2BC8BE1C7F42D9002FD232 /* GSRenameViewController.h */,
-				4E2BC8BF1C7F42D9002FD232 /* GSRenameViewController.m */,
-				4E2BC8C01C7F42D9002FD232 /* GSRenameViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1289,6 +1304,8 @@
 				4E515F6A1C85DAD200C7BF79 /* Gas Station */,
 				4E515F731C85DE9400C7BF79 /* Comments */,
 				4E515F881C85E9AB00C7BF79 /* Cards */,
+				4E515F931C85F69200C7BF79 /* StartUp */,
+				4E515F921C85F4D000C7BF79 /* GSNetwork.h */,
 			);
 			path = GSNetwork;
 			sourceTree = "<group>";
@@ -1577,6 +1594,8 @@
 				4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */,
 				4E515F841C85E8FB00C7BF79 /* GSGetMyCardsTask.h */,
 				4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */,
+				4E515F8E1C85F1B100C7BF79 /* GSGetMyCardDetailTask.h */,
+				4E515F8F1C85F1B100C7BF79 /* GSGetMyCardDetailTask.m */,
 			);
 			name = Cards;
 			sourceTree = "<group>";
@@ -1591,6 +1610,15 @@
 				4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		4E515F931C85F69200C7BF79 /* StartUp */ = {
+			isa = PBXGroup;
+			children = (
+				4E515F8A1C85EA0300C7BF79 /* GSStartUpTask.h */,
+				4E515F8B1C85EA0300C7BF79 /* GSStartUpTask.m */,
+			);
+			name = StartUp;
 			sourceTree = "<group>";
 		};
 		4E5D8CE11C83D58F00A46D27 /* HyphenateSDK */ = {
@@ -2502,6 +2530,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E43836B1C5FB13A00885A33 /* GSMapBaseTask.m in Sources */,
+				4E515F8C1C85EA0300C7BF79 /* GSStartUpTask.m in Sources */,
 				4EFDD41C1C7C58DB000AAE9D /* JSQMessagesBubblesSizeCalculator.m in Sources */,
 				4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
 				4EFDD42C1C7C58DB000AAE9D /* JSQMessagesBubbleImage.m in Sources */,
@@ -2598,6 +2627,7 @@
 				4E2B3D4B1C7206C800B460F7 /* GSForgetPwdViewController.m in Sources */,
 				4E2BC8CC1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */,
 				4E3E67541C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
+				4E515F901C85F1B100C7BF79 /* GSGetMyCardDetailTask.m in Sources */,
 				4E2BC8D01C7F5027002FD232 /* GSUserInfoTable.m in Sources */,
 				4E4D99ED1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */,
 				4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
@@ -2638,6 +2668,7 @@
 				4EFDD4201C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
 				4E43832C1C5F9ED600885A33 /* main.m in Sources */,
 				4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */,
+				4E515F971C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */,
 				4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,
 				4E515F821C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */,
 				4EFDD4121C7C58DB000AAE9D /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
@@ -2692,6 +2723,7 @@
 				4EFDD4271C7C58DB000AAE9D /* JSQMediaItem.m in Sources */,
 				4E3E67461C799234005CA5A2 /* GSKeyBoardManger.m in Sources */,
 				4E3E674A1C799FED005CA5A2 /* GSColor.m in Sources */,
+				4E515F911C85F1B100C7BF79 /* GSGetMyCardDetailTask.m in Sources */,
 				4E4D99F21C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */,
 				4E4E4C821C7DDDA50081D7A2 /* GSLoginTask.m in Sources */,
 				4E9D1AD81C735E960048869E /* GSMyCardsViewController.m in Sources */,
@@ -2721,6 +2753,7 @@
 				4E2B3D471C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */,
 				4EFDD40B1C7C58DB000AAE9D /* JSQMessagesViewController.m in Sources */,
+				4E515F8D1C85EA0300C7BF79 /* GSStartUpTask.m in Sources */,
 				4EFDD4511C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				4E4D99E51C6C939500E8A017 /* GSMapManager.m in Sources */,
 				4E1711C01C75F811006CA3E5 /* GSPrensentViewControllerTransition.m in Sources */,
@@ -2762,6 +2795,7 @@
 				4EFDD3FB1C7C58DA000AAE9D /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				4E4D99D71C6C8C8E00E8A017 /* GSManagerMainViewController.m in Sources */,
 				4E4E4C8A1C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */,
+				4E515F981C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */,
 				4E2B3D3C1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4E9D1AE61C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
 				4EFDD4371C7C58DB000AAE9D /* JSQMessagesCollectionViewCell.m in Sources */,
