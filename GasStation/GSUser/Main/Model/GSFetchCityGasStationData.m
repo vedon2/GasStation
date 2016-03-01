@@ -10,4 +10,19 @@
 
 @implementation GSFetchCityGasStationData
 
+- (instancetype)initWithRegion:(NSString *)region token:(NSString *)token sortBy:(NSString *)soryBy keyword:(NSString *)keyword pageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize
+{
+    self = [super init];
+    if (self)
+    {
+        self.region = region;
+        self.token = token;
+        self.sortBy = soryBy;
+        self.q = keyword;
+        self.pageIndex = self.pageIndex;
+        self.pageSize = pageSize;
+    }
+    return self;
+}
+
 @end

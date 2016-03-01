@@ -32,7 +32,7 @@
 
 
 - (NSString *)requestUrl {
-    return @"/oil/api/users/register";
+    return @"/api/users/register";
 }
 
 - (YTKRequestMethod)requestMethod {

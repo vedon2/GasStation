@@ -84,11 +84,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasStation/GSUser/Account/Controllers/GSFeedbackViewController.m"
-            timestampString = "477939166.167947"
+            timestampString = "478456962.387647"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "136"
-            endingLineNumber = "136"
+            startingLineNumber = "138"
+            endingLineNumber = "138"
             landmarkName = "-didPressLeftAccessoryButton:"
             landmarkType = "5">
          </BreakpointContent>
@@ -100,11 +100,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasStation/GSUser/Account/Controllers/GSFeedbackViewController.m"
-            timestampString = "477939166.167947"
+            timestampString = "478457036.564029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "156"
-            endingLineNumber = "156"
+            startingLineNumber = "160"
+            endingLineNumber = "160"
             landmarkName = "-didPressRightAccessoryButton:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,38 +122,6 @@
             startingLineNumber = "674"
             endingLineNumber = "674"
             landmarkName = "-messagesInputToolbar:didPressRightBarButton:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasStation/ThirdParty/JSQMessagesViewController/Views/JSQMessagesToolbarContentView.m"
-            timestampString = "477939257.75735"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "-setRightBarButtonItem:"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "GasStation/ThirdParty/JSQMessagesViewController/Views/JSQMessagesToolbarContentView.m"
-            timestampString = "477939378.260908"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "-setRightBarButtonItem:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

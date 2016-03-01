@@ -31,7 +31,7 @@
 
 
 - (NSString *)requestUrl {
-    return @"/oil/api/users/login";
+    return @"/api/users/login";
 }
 
 - (YTKRequestMethod)requestMethod {

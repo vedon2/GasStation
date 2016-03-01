@@ -187,6 +187,21 @@
 		4E515F631C84963D00C7BF79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F621C84963D00C7BF79 /* CoreMedia.framework */; };
 		4E515F641C84964400C7BF79 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F621C84963D00C7BF79 /* CoreMedia.framework */; };
 		4E515F651C84965200C7BF79 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E515F601C84961400C7BF79 /* libresolv.tbd */; };
+		4E515F681C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F671C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m */; };
+		4E515F6D1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F6C1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m */; };
+		4E515F6E1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F6C1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m */; };
+		4E515F711C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F701C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m */; };
+		4E515F721C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F701C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m */; };
+		4E515F761C85DF0E00C7BF79 /* GSConsumeTicketTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F751C85DF0E00C7BF79 /* GSConsumeTicketTask.m */; };
+		4E515F771C85DF0E00C7BF79 /* GSConsumeTicketTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F751C85DF0E00C7BF79 /* GSConsumeTicketTask.m */; };
+		4E515F7A1C85E18300C7BF79 /* GSConsumeTicketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F791C85E18300C7BF79 /* GSConsumeTicketData.m */; };
+		4E515F7B1C85E18300C7BF79 /* GSConsumeTicketData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F791C85E18300C7BF79 /* GSConsumeTicketData.m */; };
+		4E515F7E1C85E5CB00C7BF79 /* GSFetchCardListTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F7D1C85E5CB00C7BF79 /* GSFetchCardListTask.m */; };
+		4E515F7F1C85E5CB00C7BF79 /* GSFetchCardListTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F7D1C85E5CB00C7BF79 /* GSFetchCardListTask.m */; };
+		4E515F821C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */; };
+		4E515F831C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */; };
+		4E515F861C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */; };
+		4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
@@ -662,6 +677,22 @@
 		4E515F5D1C8494D300C7BF79 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		4E515F601C84961400C7BF79 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
 		4E515F621C84963D00C7BF79 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4E515F661C85D77100C7BF79 /* GSFetchCoordinateGasStationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCoordinateGasStationData.h; sourceTree = "<group>"; };
+		4E515F671C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCoordinateGasStationData.m; sourceTree = "<group>"; };
+		4E515F6B1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchGasStationDetailInfoTask.h; sourceTree = "<group>"; };
+		4E515F6C1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchGasStationDetailInfoTask.m; sourceTree = "<group>"; };
+		4E515F6F1C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchGasStationCommentsTask.h; sourceTree = "<group>"; };
+		4E515F701C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchGasStationCommentsTask.m; sourceTree = "<group>"; };
+		4E515F741C85DF0E00C7BF79 /* GSConsumeTicketTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSConsumeTicketTask.h; sourceTree = "<group>"; };
+		4E515F751C85DF0E00C7BF79 /* GSConsumeTicketTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSConsumeTicketTask.m; sourceTree = "<group>"; };
+		4E515F781C85E18300C7BF79 /* GSConsumeTicketData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSConsumeTicketData.h; sourceTree = "<group>"; };
+		4E515F791C85E18300C7BF79 /* GSConsumeTicketData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSConsumeTicketData.m; sourceTree = "<group>"; };
+		4E515F7C1C85E5CB00C7BF79 /* GSFetchCardListTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFetchCardListTask.h; sourceTree = "<group>"; };
+		4E515F7D1C85E5CB00C7BF79 /* GSFetchCardListTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFetchCardListTask.m; sourceTree = "<group>"; };
+		4E515F801C85E7CD00C7BF79 /* GSGetCardDetailTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGetCardDetailTask.h; sourceTree = "<group>"; };
+		4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetCardDetailTask.m; sourceTree = "<group>"; };
+		4E515F841C85E8FB00C7BF79 /* GSGetMyCardsTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGetMyCardsTask.h; sourceTree = "<group>"; };
+		4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGetMyCardsTask.m; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1253,25 +1284,11 @@
 		4E2B3D141C6F615500B460F7 /* GSNetwork */ = {
 			isa = PBXGroup;
 			children = (
-				4EA671151C74BAC5004A5163 /* GSNetworkStatusCode.h */,
-				4EFDD46C1C7D870C000AAE9D /* GSBaseRequestMockProtocol.h */,
-				4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */,
-				4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */,
-				4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */,
-				4E2B3D191C6F75C600B460F7 /* GSGetSmsCodeTask.h */,
-				4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */,
-				4E2B3D1E1C6F75E600B460F7 /* GSRegisterTask.h */,
-				4E2B3D1F1C6F75E600B460F7 /* GSRegisterTask.m */,
-				4E2B3D221C6F776400B460F7 /* GSResetPassworkTask.h */,
-				4E2B3D231C6F776400B460F7 /* GSResetPassworkTask.m */,
-				4E4E4C7F1C7DDDA50081D7A2 /* GSLoginTask.h */,
-				4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */,
-				4E2B3D261C6F777800B460F7 /* GSUpdateUserProfileTask.h */,
-				4E2B3D271C6F777800B460F7 /* GSUpdateUserProfileTask.m */,
-				4E4E4C831C7DE1790081D7A2 /* GSFetchCityGasStationTask.h */,
-				4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */,
-				4E4E4C871C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.h */,
-				4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */,
+				4E515F891C85E9B600C7BF79 /* Base */,
+				4E515F691C85DABE00C7BF79 /* User */,
+				4E515F6A1C85DAD200C7BF79 /* Gas Station */,
+				4E515F731C85DE9400C7BF79 /* Comments */,
+				4E515F881C85E9AB00C7BF79 /* Cards */,
 			);
 			path = GSNetwork;
 			sourceTree = "<group>";
@@ -1508,6 +1525,72 @@
 				4E4D99F01C6CC3A700E8A017 /* AppDelegateExt+initProcess.m */,
 			);
 			path = AppDelegateExt;
+			sourceTree = "<group>";
+		};
+		4E515F691C85DABE00C7BF79 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				4E2B3D191C6F75C600B460F7 /* GSGetSmsCodeTask.h */,
+				4E2B3D1A1C6F75C600B460F7 /* GSGetSmsCodeTask.m */,
+				4E2B3D1E1C6F75E600B460F7 /* GSRegisterTask.h */,
+				4E2B3D1F1C6F75E600B460F7 /* GSRegisterTask.m */,
+				4E2B3D221C6F776400B460F7 /* GSResetPassworkTask.h */,
+				4E2B3D231C6F776400B460F7 /* GSResetPassworkTask.m */,
+				4E4E4C7F1C7DDDA50081D7A2 /* GSLoginTask.h */,
+				4E4E4C801C7DDDA50081D7A2 /* GSLoginTask.m */,
+				4E2B3D261C6F777800B460F7 /* GSUpdateUserProfileTask.h */,
+				4E2B3D271C6F777800B460F7 /* GSUpdateUserProfileTask.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		4E515F6A1C85DAD200C7BF79 /* Gas Station */ = {
+			isa = PBXGroup;
+			children = (
+				4E4E4C831C7DE1790081D7A2 /* GSFetchCityGasStationTask.h */,
+				4E4E4C841C7DE1790081D7A2 /* GSFetchCityGasStationTask.m */,
+				4E4E4C871C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.h */,
+				4E4E4C881C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m */,
+				4E515F6B1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.h */,
+				4E515F6C1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m */,
+			);
+			name = "Gas Station";
+			sourceTree = "<group>";
+		};
+		4E515F731C85DE9400C7BF79 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				4E515F6F1C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.h */,
+				4E515F701C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
+		4E515F881C85E9AB00C7BF79 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				4E515F741C85DF0E00C7BF79 /* GSConsumeTicketTask.h */,
+				4E515F751C85DF0E00C7BF79 /* GSConsumeTicketTask.m */,
+				4E515F7C1C85E5CB00C7BF79 /* GSFetchCardListTask.h */,
+				4E515F7D1C85E5CB00C7BF79 /* GSFetchCardListTask.m */,
+				4E515F801C85E7CD00C7BF79 /* GSGetCardDetailTask.h */,
+				4E515F811C85E7CD00C7BF79 /* GSGetCardDetailTask.m */,
+				4E515F841C85E8FB00C7BF79 /* GSGetMyCardsTask.h */,
+				4E515F851C85E8FB00C7BF79 /* GSGetMyCardsTask.m */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
+		4E515F891C85E9B600C7BF79 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				4EA671151C74BAC5004A5163 /* GSNetworkStatusCode.h */,
+				4EFDD46C1C7D870C000AAE9D /* GSBaseRequestMockProtocol.h */,
+				4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */,
+				4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */,
+				4E2B3D151C6F617900B460F7 /* GSRequestTaskProtocol.h */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 		4E5D8CE11C83D58F00A46D27 /* HyphenateSDK */ = {
@@ -1754,6 +1837,10 @@
 				4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */,
 				4E4E4C8B1C7DE3B80081D7A2 /* GSFetchCityGasStationData.h */,
 				4E4E4C8C1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m */,
+				4E515F661C85D77100C7BF79 /* GSFetchCoordinateGasStationData.h */,
+				4E515F671C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m */,
+				4E515F781C85E18300C7BF79 /* GSConsumeTicketData.h */,
+				4E515F791C85E18300C7BF79 /* GSConsumeTicketData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2467,6 +2554,7 @@
 				4EFDD4381C7C58DB000AAE9D /* JSQMessagesCollectionViewCellIncoming.m in Sources */,
 				4E4383611C5FA48800885A33 /* GSMapManager.m in Sources */,
 				4E1711BF1C75F811006CA3E5 /* GSPrensentViewControllerTransition.m in Sources */,
+				4E515F761C85DF0E00C7BF79 /* GSConsumeTicketTask.m in Sources */,
 				4ED0F34A1C6CDEDE00C290FF /* GSMapBottomBar.m in Sources */,
 				4EFDD3FE1C7C58DB000AAE9D /* NSString+JSQMessages.m in Sources */,
 				4EFDD40A1C7C58DB000AAE9D /* JSQMessagesViewController.m in Sources */,
@@ -2477,6 +2565,7 @@
 				4EFDD4141C7C58DB000AAE9D /* JSQMessagesTimestampFormatter.m in Sources */,
 				4E2B3D461C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4EFD22971C7623CF00F053A0 /* GSQRGenerator.m in Sources */,
+				4E515F681C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m in Sources */,
 				4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */,
 				4EFDD44C1C7C58DB000AAE9D /* JSQMessagesToolbarContentView.m in Sources */,
 				4E05E0EF1C78892A0038CA5D /* GSBottomBarButton.m in Sources */,
@@ -2485,6 +2574,7 @@
 				4E3E67A21C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,
 				4EFDD4421C7C58DB000AAE9D /* JSQMessagesInputToolbar.m in Sources */,
 				4E9D1AE51C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
+				4E515F7A1C85E18300C7BF79 /* GSConsumeTicketData.m in Sources */,
 				4E2B3D521C72071400B460F7 /* GSEditUserProfileViewController.m in Sources */,
 				4EA671131C74BA02004A5163 /* GSUserRegisetResponseData.m in Sources */,
 				4EFDD42E1C7C58DB000AAE9D /* JSQPhotoMediaItem.m in Sources */,
@@ -2493,6 +2583,7 @@
 				4E43836E1C5FB14F00885A33 /* GSMapPOISearchTask.m in Sources */,
 				4EFDD4441C7C58DB000AAE9D /* JSQMessagesLabel.m in Sources */,
 				4EA671211C74C062004A5163 /* GSUserProfileData.m in Sources */,
+				4E515F6D1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m in Sources */,
 				4EFDD4001C7C58DB000AAE9D /* UIColor+JSQMessages.m in Sources */,
 				4E2B3D3B1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4EFDD4221C7C58DB000AAE9D /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,
@@ -2511,6 +2602,7 @@
 				4E4D99ED1C6CC38A00E8A017 /* AppDelegateExt.m in Sources */,
 				4E2BC8B31C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
 				4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */,
+				4E515F861C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */,
 				4E2B3CC21C6E31D800B460F7 /* GSSearchRCTableViewCell.m in Sources */,
 				4EFDD4301C7C58DB000AAE9D /* JSQVideoMediaItem.m in Sources */,
 				4EFDD5471C7EB074000AAE9D /* SDCollectionViewCell.m in Sources */,
@@ -2523,8 +2615,10 @@
 				4E4CD6AB1C7B5C9600DDED4D /* GSCardsSelectView.m in Sources */,
 				4EFDD3FC1C7C58DB000AAE9D /* NSBundle+JSQMessages.m in Sources */,
 				4E2B3CC71C6E33C800B460F7 /* GSSearchLocationTableViewCell.m in Sources */,
+				4E515F7E1C85E5CB00C7BF79 /* GSFetchCardListTask.m in Sources */,
 				4E3E675A1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
 				4E2BC8EC1C81EC9D002FD232 /* GSRuleViewController.m in Sources */,
+				4E515F711C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m in Sources */,
 				4E2B3CF51C6ECAE900B460F7 /* GSCommentTypeTableViewCell.m in Sources */,
 				4E05E0F31C78967F0038CA5D /* GSCouponViewController.m in Sources */,
 				4E2B3CDB1C6EB8AD00B460F7 /* GSSubstractCouponTableViewCell.m in Sources */,
@@ -2545,6 +2639,7 @@
 				4E43832C1C5F9ED600885A33 /* main.m in Sources */,
 				4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */,
 				4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,
+				4E515F821C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */,
 				4EFDD4121C7C58DB000AAE9D /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				4E2B3D321C6F7B0C00B460F7 /* GSUserManagerRequester.m in Sources */,
 				4E4CD6AE1C7B5C9600DDED4D /* GSCardsSelectViewItemInfo.m in Sources */,
@@ -2576,9 +2671,12 @@
 				4EFDD42B1C7C58DB000AAE9D /* JSQMessagesAvatarImage.m in Sources */,
 				4E2BC8DF1C81E8CC002FD232 /* GSCardTableViewCell.m in Sources */,
 				4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */,
+				4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */,
 				4E05E1021C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E3E67A31C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,
 				4EFDD4031C7C58DB000AAE9D /* UIDevice+JSQMessages.m in Sources */,
+				4E515F831C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */,
+				4E515F721C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m in Sources */,
 				4EFDD4411C7C58DB000AAE9D /* JSQMessagesComposerTextView.m in Sources */,
 				4E3E675B1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
 				4E2BC8C21C7F42D9002FD232 /* GSRenameViewController.m in Sources */,
@@ -2597,6 +2695,7 @@
 				4E4D99F21C6CC3A700E8A017 /* AppDelegateExt+initProcess.m in Sources */,
 				4E4E4C821C7DDDA50081D7A2 /* GSLoginTask.m in Sources */,
 				4E9D1AD81C735E960048869E /* GSMyCardsViewController.m in Sources */,
+				4E515F771C85DF0E00C7BF79 /* GSConsumeTicketTask.m in Sources */,
 				4EFDD4151C7C58DB000AAE9D /* JSQMessagesTimestampFormatter.m in Sources */,
 				4EFDD41F1C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				4EFDD4471C7C58DB000AAE9D /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
@@ -2617,6 +2716,7 @@
 				4EA671221C74C062004A5163 /* GSUserProfileData.m in Sources */,
 				4EFDD4331C7C58DB000AAE9D /* JSQMessagesCellTextView.m in Sources */,
 				4E2BC8B41C7E0B36002FD232 /* EPImagePickerHelper.m in Sources */,
+				4E515F6E1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m in Sources */,
 				4EFDD41D1C7C58DB000AAE9D /* JSQMessagesBubblesSizeCalculator.m in Sources */,
 				4E2B3D471C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */,
@@ -2629,6 +2729,7 @@
 				4EFDD4451C7C58DB000AAE9D /* JSQMessagesLabel.m in Sources */,
 				4EFDD4111C7C58DB000AAE9D /* JSQMessagesBubbleImageFactory.m in Sources */,
 				4EFDD4251C7C58DB000AAE9D /* JSQLocationMediaItem.m in Sources */,
+				4E515F7F1C85E5CB00C7BF79 /* GSFetchCardListTask.m in Sources */,
 				4EFDD4431C7C58DB000AAE9D /* JSQMessagesInputToolbar.m in Sources */,
 				4EFDD4091C7C58DB000AAE9D /* JSQMessagesKeyboardController.m in Sources */,
 				4E3E67421C78DC6B005CA5A2 /* GSActionSheet.m in Sources */,
@@ -2645,6 +2746,7 @@
 				4EFDD43D1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				4E2BC8CD1C7F500F002FD232 /* GSUserInfoRecord.m in Sources */,
 				4E2B3D331C6F7B0C00B460F7 /* GSUserManagerRequester.m in Sources */,
+				4E515F7B1C85E18300C7BF79 /* GSConsumeTicketData.m in Sources */,
 				4E4D99E91C6C981A00E8A017 /* main.m in Sources */,
 				4E2B3D531C72071400B460F7 /* GSEditUserProfileViewController.m in Sources */,
 				4EFDD4231C7C58DB000AAE9D /* JSQMessagesCollectionViewLayoutAttributes.m in Sources */,

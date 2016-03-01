@@ -7,7 +7,10 @@
 //
 
 #import "GSBaseRequest.h"
+#import "GSFetchCoordinateGasStationData.h"
 
 @interface GSFetchCoordinateGasStationTask : GSBaseRequest
+
+- (instancetype)initWithFetchData:(GSFetchCoordinateGasStationData *)fetchData;
 
 @end

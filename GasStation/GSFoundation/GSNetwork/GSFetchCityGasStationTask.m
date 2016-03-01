@@ -26,18 +26,19 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/oil/api/station/city";
+    return @"/api/station/city";
 }
 
 - (YTKRequestMethod)requestMethod {
-    return YTKRequestMethodPost;
+    return YTKRequestMethodGet;
 }
 
 - (id)requestArgument {
     return @{
              @"region": self.fetchData.region,
              @"token": self.fetchData.token,
-             @"query":self.fetchData.keyword,
+             @"q":self.fetchData.q,
+             @"sortby":self.fetchData.sortBy,//distance:1 降序 distance:0 升序
              @"pageIndex":self.fetchData.pageIndex,
              @"pageSize":self.fetchData.pageSize,
              };
@@ -47,7 +48,7 @@
 
 - (id)mockData
 {
-    return @{@"statusCode":@(200)};
+    return @{@"statusCode":@(10000)};
 }
 
 @end

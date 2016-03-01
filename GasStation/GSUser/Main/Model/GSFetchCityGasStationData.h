@@ -11,8 +11,11 @@
 @interface GSFetchCityGasStationData : NSObject
 @property (nonatomic,strong) NSString *region;
 @property (nonatomic,strong) NSString *token;
-@property (nonatomic,strong) NSString *keyword;
-@property (nonatomic,strong) NSNumber *pageIndex;
-@property (nonatomic,strong) NSNumber *pageSize;
+@property (nonatomic,strong) NSString *q;
+@property (nonatomic,strong) NSString *sortBy;
+@property (nonatomic,strong) NSString *pageIndex;
+@property (nonatomic,strong) NSString *pageSize;
+
+- (instancetype)initWithRegion:(NSString *)region token:(NSString *)token sortBy:(NSString *)soryBy keyword:(NSString *)keyword pageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize;
 
 @end
