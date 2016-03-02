@@ -13,14 +13,14 @@
 #import "GSStaionDetailViewController.h"
 #import "GSSearchResultMacro.h"
 #import "CRNavigationController.h"
+#import "BlocksKit+UIKit.h"
 
 static NSString *rcCellIdentifier = @"rcCellIdentifier";
 static NSString *locationCellIdentifier = @"locationCellIdentifier";
 
 @interface GSSearchViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
-@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (strong, nonatomic) UISearchBar *searchBar;
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
-@property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (nonatomic,strong) UIView *maskView;
 @end
 
@@ -36,6 +36,16 @@ static NSString *locationCellIdentifier = @"locationCellIdentifier";
     UINib *locationCell = [UINib nibWithNibName:@"GSSearchLocationTableViewCell" bundle:nil];
     [self.contentTable registerNib:locationCell forCellReuseIdentifier:locationCellIdentifier];
     
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithImage:[UIImage imageNamed:@"icon_back"] style:UIBarButtonItemStylePlain handler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] bk_initWithTitle:@"取消" style:UIBarButtonItemStylePlain handler:^(id sender) {
+//        
+//        
+//    }];
+    self.navigationItem.titleView = self.searchBar;
     // Do any additional setup after loading the view from its nib.
 }
 
@@ -171,6 +181,15 @@ static NSString *locationCellIdentifier = @"locationCellIdentifier";
 
     }
     return _maskView;
+}
+
+- (UISearchBar *)searchBar
+{
+    if (!_searchBar)
+    {
+        _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 40)];
+    }
+    return _searchBar;
 }
 
 @end

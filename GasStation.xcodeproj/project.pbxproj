@@ -208,6 +208,10 @@
 		4E515F911C85F1B100C7BF79 /* GSGetMyCardDetailTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F8F1C85F1B100C7BF79 /* GSGetMyCardDetailTask.m */; };
 		4E515F971C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */; };
 		4E515F981C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */; };
+		4E515F9C1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */; };
+		4E515F9D1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */; };
+		4E515F9E1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */; };
+		4E515F9F1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
@@ -706,6 +710,9 @@
 		4E515F921C85F4D000C7BF79 /* GSNetwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSNetwork.h; sourceTree = "<group>"; };
 		4E515F951C85F78600C7BF79 /* GSRecordIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSRecordIndicatorView.h; sourceTree = "<group>"; };
 		4E515F961C85F78600C7BF79 /* GSRecordIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSRecordIndicatorView.m; sourceTree = "<group>"; };
+		4E515F991C87393500C7BF79 /* GSQueryBreakRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQueryBreakRuleViewController.h; sourceTree = "<group>"; };
+		4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQueryBreakRuleViewController.m; sourceTree = "<group>"; };
+		4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSQueryBreakRuleViewController.xib; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1138,6 +1145,9 @@
 				4E2BC8E91C81EC9D002FD232 /* GSRuleViewController.h */,
 				4E2BC8EA1C81EC9D002FD232 /* GSRuleViewController.m */,
 				4E2BC8EB1C81EC9D002FD232 /* GSRuleViewController.xib */,
+				4E515F991C87393500C7BF79 /* GSQueryBreakRuleViewController.h */,
+				4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */,
+				4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2285,6 +2295,7 @@
 				4EA672161C74C5DF004A5163 /* UMSLoginViewController.xib in Resources */,
 				4EA6721A1C74C5DF004A5163 /* UMShareEditViewController.xib in Resources */,
 				4E2B3CD71C6EB7C300B460F7 /* GSGasPriceTableViewCell.xib in Resources */,
+				4E515F9E1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */,
 				4E4D99CD1C6C87D000E8A017 /* Info.plist in Resources */,
 				4EA672121C74C5DF004A5163 /* UMSCommentInputController.xib in Resources */,
 				4EFDD4521C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.xib in Resources */,
@@ -2390,6 +2401,7 @@
 				4EA6723F1C74C5E0004A5163 /* ios-social-sdk-like.html in Resources */,
 				4EFDD4491C7C58DB000AAE9D /* JSQMessagesLoadEarlierHeaderView.xib in Resources */,
 				4E3E67391C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.xib in Resources */,
+				4E515F9F1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */,
 				4EA672431C74C5E0004A5163 /* ios-social-sdk-login-quick.html in Resources */,
 				4EA6724D1C74C5E0004A5163 /* markdown.css in Resources */,
 				4EA6724B1C74C5E0004A5163 /* ios-social-sdk-socialbar.html in Resources */,
@@ -2669,6 +2681,7 @@
 				4E43832C1C5F9ED600885A33 /* main.m in Sources */,
 				4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */,
 				4E515F971C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */,
+				4E515F9C1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */,
 				4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,
 				4E515F821C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */,
 				4EFDD4121C7C58DB000AAE9D /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
@@ -2759,6 +2772,7 @@
 				4E1711C01C75F811006CA3E5 /* GSPrensentViewControllerTransition.m in Sources */,
 				4E2B3D291C6F777800B460F7 /* GSUpdateUserProfileTask.m in Sources */,
 				4E2B3D251C6F776400B460F7 /* GSResetPassworkTask.m in Sources */,
+				4E515F9D1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */,
 				4EFDD4451C7C58DB000AAE9D /* JSQMessagesLabel.m in Sources */,
 				4EFDD4111C7C58DB000AAE9D /* JSQMessagesBubbleImageFactory.m in Sources */,
 				4EFDD4251C7C58DB000AAE9D /* JSQLocationMediaItem.m in Sources */,

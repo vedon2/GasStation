@@ -6,6 +6,9 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
+#define kButtonPadding 5
+#define kFirstButtonPadding 6
+
 #import "GSMapBottomBar.h"
 #import "PureLayout.h"
 #import "GSBottomBarButton.h"
@@ -37,18 +40,19 @@
     [self setNeedsLayout];
     [self layoutIfNeeded];
     
+    [self addSubview:self.bgView];
+    [self.bgView autoPinEdgesToSuperviewEdges];
+    
+    
+    CGFloat width = (self.frame.size.width - (2 * kFirstButtonPadding))/self.buttons.count;
     [self.buttons enumerateObjectsUsingBlock:^(GSBottomButtonInfo * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         
         GSBottomBarButton *button = [[GSBottomBarButton alloc] initWithImage:obj.image title:obj.title delegate:weakSelf];
-        [button autoSetDimensionsToSize:CGSizeMake(weakSelf.frame.size.width/weakSelf.buttons.count, weakSelf.frame.size.height)];
-        button.tag = idx;
         [weakSelf addSubview:button];
-        [button autoMatchDimension:ALDimensionHeight toDimension:ALDimensionHeight ofView:self];
-        [button autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:weakSelf];
-        if ((weakSelf.buttons.count - 1) == idx)
-        {
-            [button autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:weakSelf];
-        }
+        
+        [button autoSetDimensionsToSize:CGSizeMake(width, weakSelf.frame.size.height - 2 * kButtonPadding)];
+        [button autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:weakSelf withOffset:kButtonPadding];
+        button.tag = idx;
         
         if (tempButton)
         {
@@ -56,11 +60,13 @@
         }
         else
         {
-            [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:weakSelf];
+            [button autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:weakSelf withOffset:kFirstButtonPadding];
         }
         tempButton = button;
         
     }];
+    
+    
 }
 
 #pragma mark - GSBottomBarButtonDelegate
@@ -79,8 +85,12 @@
 {
     if (!_bgView)
     {
-        _bgView = [[UIImageView alloc] init];
-        _bgView.backgroundColor = [UIColor lightGrayColor];
+        _bgView = [[UIImageView alloc] initForAutoLayout];
+        
+        UIImage *strechImage = [[UIImage imageNamed:@"nav_home_bg"] resizableImageWithCapInsets:UIEdgeInsetsMake(10, 10, 10, 10)];
+        
+        _bgView.backgroundColor = [UIColor clearColor];
+        _bgView.image = strechImage;
     }
     return _bgView;
 }

@@ -53,6 +53,8 @@
     [[CRNavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName ,nil]];
     [[CRNavigationBar appearance] setTintColor:[UIColor whiteColor]];
     [[CRNavigationBar appearance] setBarTintColor:[GSColor mainColor]];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

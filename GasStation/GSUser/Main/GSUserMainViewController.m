@@ -10,6 +10,10 @@
 #define kMapViewContentXPadding 15
 #define kMapViewContentYPadding 10
 #define kAdViewHeight 117
+#define kSearchBtnSize 50
+#define kTopbarHeight 64
+#define kSearchButtonEdgeInsets UIEdgeInsetsMake(21, 26, 13, 5)
+#define kBottomBarHeight 48
 
 #import "GSUserMainViewController.h"
 #import "PureLayout.h"
@@ -25,6 +29,7 @@
 #import "GSUserManager.h"
 #import "GSPrensentViewControllerTransition.h"
 #import "CRNavigationController.h"
+#import "GSQueryBreakRuleViewController.h"
 
 #import "GSEditUserProfileViewController.h"
 #import "SDCycleScrollView.h"
@@ -37,6 +42,7 @@
 @property (nonatomic,strong) GSMapSearchBtn *searchBtn;
 @property (nonatomic,strong) UIView *topBarContainerView;
 @property (nonatomic,strong) SDCycleScrollView *adView;
+@property (nonatomic,strong) UILabel *titleLabel;
 @end
 
 @implementation GSUserMainViewController
@@ -51,30 +57,33 @@
     [self.bottomBar autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:self.mapView withOffset:-10];
     [self.bottomBar autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.mapView withOffset:kMapViewContentXPadding];
     [self.bottomBar autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.mapView withOffset:-kMapViewContentXPadding];
-    [self.bottomBar autoSetDimension:ALDimensionHeight toSize:40];
+    [self.bottomBar autoSetDimension:ALDimensionHeight toSize:kBottomBarHeight];
     [self.bottomBar initialize];
     
     [self.mapView addSubview:self.topBarContainerView];
-    [self.topBarContainerView autoSetDimension:ALDimensionHeight toSize:(64+kAdViewHeight)];
+    [self.topBarContainerView autoSetDimension:ALDimensionHeight toSize:(kTopbarHeight+kAdViewHeight)];
     [self.topBarContainerView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.mapView];
     [self.topBarContainerView autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.mapView];
     [self.topBarContainerView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.mapView];
     
     
+    [self.topBarContainerView addSubview:self.titleLabel];
+    [self.titleLabel autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.topBarContainerView withOffset:20];
+    [self.titleLabel autoAlignAxisToSuperviewAxis:ALAxisVertical];
+    [self.titleLabel autoSetDimensionsToSize:CGSizeMake(100, 40)];
+    
     [self.topBarContainerView addSubview:self.searchBtn];
-    [self.searchBtn autoSetDimensionsToSize:CGSizeMake(50, 50)];
+    [self.searchBtn autoSetDimensionsToSize:CGSizeMake(kSearchBtnSize, kSearchBtnSize)];
     [self.searchBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.topBarContainerView withOffset:-kMapViewContentXPadding];
-    [self.searchBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.topBarContainerView withOffset:kMapViewContentYPadding];
+    [self.searchBtn autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.titleLabel withOffset:(-kSearchButtonEdgeInsets.top)/2];
     
     
     [self.topBarContainerView addSubview:self.adView];
     
-    
-    
     [self.mapView addSubview:self.navView];
     [self.navView autoSetDimensionsToSize:CGSizeMake([GSMapNavView buttinSize], 3*[GSMapNavView buttinSize]+10)];
     [self.navView autoPinEdge:ALEdgeBottom toEdge:ALEdgeTop ofView:self.bottomBar withOffset:-20];
-    [self.navView autoPinEdge:ALEdgeLeft toEdge:ALEdgeLeft ofView:self.bottomBar];
+    [self.navView autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self.bottomBar];
     
     
     [[GSMapManager shareManager] addObserver:self];
@@ -163,25 +172,23 @@
         }
         case 1:
         {
-            //优惠
+            //礼品
             viewControllerName = @"GSCouponViewController";
             break;
         }
         case 2:
         {
-            //加油卡
-            if ([[GSUserManager shareManager] isLogin])
-            {
-                viewControllerName = @"GSCardViewController";
-            }
-            else
-            {
-                [GSUserRegisterViewController presentRegisterView];
-                return;
-            }
+            //查违章
+            viewControllerName = @"GSQueryBreakRuleViewController";
             break;
         }
         case 3:
+        {
+            //油价排行
+            
+            break;
+        }
+        case 4:
         {
             //我
             if ([[GSUserManager shareManager] isLogin])
@@ -191,14 +198,11 @@
             }
             else
             {
-//                viewControllerName = @"GSEditUserProfileViewController";
-                
                 [GSUserRegisterViewController presentRegisterView];
                 return;
             }
             break;
         }
-            
         default:
             break;
     }
@@ -250,7 +254,9 @@
 - (void)didTapSearchBtn
 {
     GSSearchViewController *vc = [[GSSearchViewController alloc] initWithNibName:nil bundle:nil];
-    [self presentViewController:vc animated:YES completion:nil];
+    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+    nav = nil;
     vc = nil;
 }
 
@@ -286,13 +292,19 @@
     if (!_bottomBar)
     {
         NSMutableArray *buttonsInfos = [NSMutableArray array];
-        for (int i = 0; i < 4; i++)
+        NSArray *images = @[@"icon_home_gas-station",@"icon_home_discount",@"icon_home_query",@"icon_home_my",@"icon_home_my"];
+        
+        NSArray *titles = @[@"我要加油",@"礼品街",@"查违章",@"油价排行",@"我"];
+        for (int i = 0; i < 5; i++)
         {
-            GSBottomButtonInfo *info = [[GSBottomButtonInfo alloc] initWithTitle:[NSString stringWithFormat:@"按钮%d",i] image:[UIImage imageNamed:@"first_selected"]];
+            NSString *imageName = [images objectAtIndex:i];
+            NSString *title = [titles objectAtIndex:i];
+            
+            GSBottomButtonInfo *info = [[GSBottomButtonInfo alloc] initWithTitle:title image:[UIImage imageNamed:imageName]];
             [buttonsInfos addObject:info];
         }
         self.bottomBar = [[GSMapBottomBar alloc] initWithButtons:buttonsInfos delegate:self];
-        self.bottomBar.backgroundColor = [UIColor redColor];
+
     }
     return _bottomBar;
 }
@@ -310,7 +322,7 @@
 {
     if (!_searchBtn)
     {
-        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self image:[UIImage imageNamed:@"icon_home_search"] edgeInset:UIEdgeInsetsMake(10, 10, 10, 10)];
+        _searchBtn = [[GSMapSearchBtn alloc] initWithDelegate:self image:[UIImage imageNamed:@"icon_home_search"] edgeInset:kSearchButtonEdgeInsets];
     }
     return _searchBtn;
 }
@@ -342,4 +354,18 @@
     }
     return _adView;
 }
+
+- (UILabel *)titleLabel
+{
+    if (!_titleLabel)
+    {
+        _titleLabel = [[UILabel alloc] initForAutoLayout];
+        _titleLabel.text = @"快快加油";
+        _titleLabel.textColor = [UIColor whiteColor];
+        _titleLabel.font = [UIFont systemFontOfSize:17];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    return _titleLabel;
+}
+
 @end

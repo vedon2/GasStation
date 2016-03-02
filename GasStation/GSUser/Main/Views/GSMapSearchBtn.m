@@ -23,10 +23,13 @@
         self.delegate = delegate;
         self.searchBtn.image = image;
         [self addSubview:self.searchBtn];
-        [self.searchBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self];
-        [self.searchBtn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
         
-        [self.searchBtn autoSetDimensionsToSize:CGSizeMake(20, 20)];
+        [self.searchBtn autoPinEdgesToSuperviewEdgesWithInsets:inset];
+        
+//        [self.searchBtn autoPinEdge:ALEdgeRight toEdge:ALEdgeRight ofView:self];
+//        [self.searchBtn autoAlignAxisToSuperviewAxis:ALAxisHorizontal];
+//        
+//        [self.searchBtn autoSetDimensionsToSize:CGSizeMake(20, 20)];
         
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapSearchBtn)];
         [self addGestureRecognizer:tap];
