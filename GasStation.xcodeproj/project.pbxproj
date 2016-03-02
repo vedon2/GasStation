@@ -212,6 +212,14 @@
 		4E515F9D1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */; };
 		4E515F9E1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */; };
 		4E515F9F1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */; };
+		4E515FA31C8741FB00C7BF79 /* GSGasPriceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FA11C8741FB00C7BF79 /* GSGasPriceOrderViewController.m */; };
+		4E515FA41C8741FB00C7BF79 /* GSGasPriceOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FA11C8741FB00C7BF79 /* GSGasPriceOrderViewController.m */; };
+		4E515FA51C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA21C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib */; };
+		4E515FA61C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA21C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib */; };
+		4E515FAA1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */; };
+		4E515FAB1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */; };
+		4E515FAC1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */; };
+		4E515FAD1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
@@ -713,6 +721,12 @@
 		4E515F991C87393500C7BF79 /* GSQueryBreakRuleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQueryBreakRuleViewController.h; sourceTree = "<group>"; };
 		4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSQueryBreakRuleViewController.m; sourceTree = "<group>"; };
 		4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSQueryBreakRuleViewController.xib; sourceTree = "<group>"; };
+		4E515FA01C8741FB00C7BF79 /* GSGasPriceOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGasPriceOrderViewController.h; sourceTree = "<group>"; };
+		4E515FA11C8741FB00C7BF79 /* GSGasPriceOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasPriceOrderViewController.m; sourceTree = "<group>"; };
+		4E515FA21C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSGasPriceOrderViewController.xib; sourceTree = "<group>"; };
+		4E515FA71C87429C00C7BF79 /* GSPriceOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPriceOrderTableViewCell.h; sourceTree = "<group>"; };
+		4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPriceOrderTableViewCell.m; sourceTree = "<group>"; };
+		4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSPriceOrderTableViewCell.xib; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1148,6 +1162,9 @@
 				4E515F991C87393500C7BF79 /* GSQueryBreakRuleViewController.h */,
 				4E515F9A1C87393500C7BF79 /* GSQueryBreakRuleViewController.m */,
 				4E515F9B1C87393500C7BF79 /* GSQueryBreakRuleViewController.xib */,
+				4E515FA01C8741FB00C7BF79 /* GSGasPriceOrderViewController.h */,
+				4E515FA11C8741FB00C7BF79 /* GSGasPriceOrderViewController.m */,
+				4E515FA21C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1864,6 +1881,9 @@
 				4E2BC8DB1C81E8CC002FD232 /* GSCardTableViewCell.h */,
 				4E2BC8DC1C81E8CC002FD232 /* GSCardTableViewCell.m */,
 				4E2BC8DD1C81E8CC002FD232 /* GSCardTableViewCell.xib */,
+				4E515FA71C87429C00C7BF79 /* GSPriceOrderTableViewCell.h */,
+				4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */,
+				4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2335,11 +2355,13 @@
 				4E2BC8EE1C81EC9D002FD232 /* GSRuleViewController.xib in Resources */,
 				4E3E67311C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib in Resources */,
 				4EA6724C1C74C5E0004A5163 /* markdown.css in Resources */,
+				4E515FAC1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */,
 				4EA671C91C74C41D004A5163 /* SMS_SDKLocalizable.strings in Resources */,
 				4E3E67381C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.xib in Resources */,
 				4E2B3CCD1C6E36B500B460F7 /* GSStaionDetailViewController.xib in Resources */,
 				4EA6723E1C74C5E0004A5163 /* ios-social-sdk-like.html in Resources */,
 				4EA672201C74C5DF004A5163 /* UMSocialSDKResourcesNew.bundle in Resources */,
+				4E515FA51C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib in Resources */,
 				4EA672481C74C5E0004A5163 /* ios-social-sdk-share-quick.html in Resources */,
 				4EA672381C74C5E0004A5163 /* iOS-social-releasenote.html in Resources */,
 				4E2B3CDC1C6EB8AD00B460F7 /* GSSubstractCouponTableViewCell.xib in Resources */,
@@ -2391,6 +2413,7 @@
 				4E4D99CF1C6C87DB00E8A017 /* Info.plist in Resources */,
 				4E2BC8E11C81E8CC002FD232 /* GSCardTableViewCell.xib in Resources */,
 				4EA6723B1C74C5E0004A5163 /* ios-social-sdk-comment-detail.html in Resources */,
+				4E515FAD1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */,
 				4EFDD43B1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
 				4EA671CA1C74C41D004A5163 /* SMS_SDKLocalizable.strings in Resources */,
 				4EA672191C74C5DF004A5163 /* UMSShareListController.xib in Resources */,
@@ -2422,6 +2445,7 @@
 				4EFDD43F1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.xib in Resources */,
 				4E9D1AE81C735F6D0048869E /* GSFeedbackViewController.xib in Resources */,
 				4EA672411C74C5E0004A5163 /* ios-social-sdk-login-detail.html in Resources */,
+				4E515FA61C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib in Resources */,
 				4E2B3D5C1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */,
 				4E3E67A51C79FD71005CA5A2 /* GSMyCardTableViewCell.xib in Resources */,
 			);
@@ -2563,6 +2587,7 @@
 				4EFD22931C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */,
 				4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */,
+				4E515FAA1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */,
 				4EFDD40E1C7C58DB000AAE9D /* JSQMessagesAvatarImageFactory.m in Sources */,
 				4E2B3D591C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
 				4EFDD4341C7C58DB000AAE9D /* JSQMessagesCollectionView.m in Sources */,
@@ -2631,6 +2656,7 @@
 				4E2B3CEC1C6EC18500B460F7 /* GSStationShortCommentsView.m in Sources */,
 				4E2B3D281C6F777800B460F7 /* GSUpdateUserProfileTask.m in Sources */,
 				4E43832F1C5F9ED600885A33 /* AppDelegate.m in Sources */,
+				4E515FA31C8741FB00C7BF79 /* GSGasPriceOrderViewController.m in Sources */,
 				4E2B3CFD1C6F044B00B460F7 /* GSCommentsListViewController.m in Sources */,
 				4E2B3D241C6F776400B460F7 /* GSResetPassworkTask.m in Sources */,
 				4EFDD4061C7C58DB000AAE9D /* UIView+JSQMessages.m in Sources */,
@@ -2730,6 +2756,7 @@
 				4E4D99E31C6C939500E8A017 /* GSMapBaseTask.m in Sources */,
 				4EA671141C74BA02004A5163 /* GSUserRegisetResponseData.m in Sources */,
 				4E1711C81C75FFB4006CA3E5 /* GSPrensentViewControllerToBar.m in Sources */,
+				4E515FA41C8741FB00C7BF79 /* GSGasPriceOrderViewController.m in Sources */,
 				4E2B3D5A1C721F6300B460F7 /* GSUserCenterViewController.m in Sources */,
 				4E2B3D2D1C6F782500B460F7 /* GSUserManager.m in Sources */,
 				4E4D99E41C6C939500E8A017 /* GSMapPOISearchTask.m in Sources */,
@@ -2815,6 +2842,7 @@
 				4EFDD4371C7C58DB000AAE9D /* JSQMessagesCollectionViewCell.m in Sources */,
 				4E3E67551C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
 				4EFDD4051C7C58DB000AAE9D /* UIImage+JSQMessages.m in Sources */,
+				4E515FAB1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */,
 				4EFDD41B1C7C58DB000AAE9D /* GSMessageCollectionViewCell.m in Sources */,
 				4E3E67571C79C4AF005CA5A2 /* CRNavigationController.m in Sources */,
 				4E1711E71C7605DA006CA3E5 /* GSManagerAccountViewController.m in Sources */,
@@ -2982,6 +3010,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GasStation/ThirdParty/umeng_ios_social_sdk_5.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -3018,6 +3047,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GasStation/ThirdParty/umeng_ios_social_sdk_5.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -3096,6 +3126,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GasStation/ThirdParty/umeng_ios_social_sdk_5.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
@@ -3131,6 +3162,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GasStation/ThirdParty/umeng_ios_social_sdk_5.0_arm64_custom/UMSocial_Sdk_Extra_Frameworks/TencentOpenAPI",
