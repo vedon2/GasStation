@@ -9,5 +9,5 @@
 #import "GSBaseRequest.h"
 
 @interface GSGetMyCardDetailTask : GSBaseRequest
-
+- (instancetype)initWithCardId:(NSString *)cardId;
 @end

@@ -59,6 +59,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-GasStationTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PureLayout.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -188,6 +193,11 @@
 			<true/>
 		</dict>
 		<key>EF1DDF204C3545207333EAEAE2D1F097</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD045A2563111ED3E7BAD697CC546B9B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

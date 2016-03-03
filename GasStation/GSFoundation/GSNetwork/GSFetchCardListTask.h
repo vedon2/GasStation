@@ -9,5 +9,5 @@
 #import "GSBaseRequest.h"
 
 @interface GSFetchCardListTask : GSBaseRequest
-
+- (instancetype)initWithPageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize;
 @end

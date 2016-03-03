@@ -10,4 +10,6 @@
 
 @interface GSGetMyCardsTask : GSBaseRequest
 
+- (instancetype)initWithUserId:(NSString *)userId pageIndex:(NSString *)pageIndex pageSize:(NSString *)pageSize;
+
 @end

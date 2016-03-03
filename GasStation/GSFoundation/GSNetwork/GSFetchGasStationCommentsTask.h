@@ -10,4 +10,6 @@
 
 @interface GSFetchGasStationCommentsTask : GSBaseRequest
 
+- (instancetype)initWithStationId:(NSString *)stationId pageSize:(NSString *)pageSize pageIndex:(NSString *)pageIndex;
+
 @end

@@ -222,6 +222,7 @@
 		4E515FAD1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
+		4E5D8F601C87C4DE00A46D27 /* GSNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */; };
 		4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */; };
 		4E9D1ACC1C7352630048869E /* GSUserCenterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E9D1ACA1C7352630048869E /* GSUserCenterCollectionViewCell.xib */; };
 		4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E9D1ACE1C735BBF0048869E /* GSChangePasswordViewController.m */; };
@@ -449,6 +450,7 @@
 		4EFDD5491C7EB074000AAE9D /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFDD5421C7EB074000AAE9D /* UIView+SDExtension.m */; };
 		65A4A4171B36FE79DA50CF5B /* libPods-GasStation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59BC93DF7534D982860FCBBE /* libPods-GasStation.a */; };
 		7C27FE0625419F7D8AE90E60 /* libPods-GasStationManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */; };
+		AE98FB840A99A8E2DACB6A0E /* libPods-GasStationTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D52607862704E2F5893258EA /* libPods-GasStationTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -758,6 +760,7 @@
 		4E5D8CFF1C83D58F00A46D27 /* IEMContactManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMContactManager.h; sourceTree = "<group>"; };
 		4E5D8D001C83D58F00A46D27 /* IEMGroupManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IEMGroupManager.h; sourceTree = "<group>"; };
 		4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libHyphenateSDK.a; sourceTree = "<group>"; };
+		4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSNetworkTests.m; sourceTree = "<group>"; };
 		4E9D1AC81C7352630048869E /* GSUserCenterCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSUserCenterCollectionViewCell.h; sourceTree = "<group>"; };
 		4E9D1AC91C7352630048869E /* GSUserCenterCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSUserCenterCollectionViewCell.m; sourceTree = "<group>"; };
 		4E9D1ACA1C7352630048869E /* GSUserCenterCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSUserCenterCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -981,8 +984,11 @@
 		4EFDD5411C7EB074000AAE9D /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
 		4EFDD5421C7EB074000AAE9D /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
 		59BC93DF7534D982860FCBBE /* libPods-GasStation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B5A547AC0F578A9723B4909 /* Pods-GasStationTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasStationTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasStationTests/Pods-GasStationTests.release.xcconfig"; sourceTree = "<group>"; };
 		AF53ACF7324FA101F2648CD1 /* Pods-GasStation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasStation.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasStation/Pods-GasStation.release.xcconfig"; sourceTree = "<group>"; };
 		C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStationManager.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D52607862704E2F5893258EA /* libPods-GasStationTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GasStationTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E15CBB7A50B6A7F79E20DF02 /* Pods-GasStationTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasStationTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasStationTests/Pods-GasStationTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1023,6 +1029,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE98FB840A99A8E2DACB6A0E /* libPods-GasStationTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1448,6 +1455,7 @@
 			children = (
 				4E4383441C5F9ED600885A33 /* GasStationTests.m */,
 				4E4383461C5F9ED600885A33 /* Info.plist */,
+				4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */,
 			);
 			path = GasStationTests;
 			sourceTree = "<group>";
@@ -2109,6 +2117,7 @@
 				4EA671051C736C9B004A5163 /* SystemConfiguration.framework */,
 				C61A8F00A6D8DFB4147EF15F /* libPods-GasStationManager.a */,
 				59BC93DF7534D982860FCBBE /* libPods-GasStation.a */,
+				D52607862704E2F5893258EA /* libPods-GasStationTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -2120,6 +2129,8 @@
 				AF53ACF7324FA101F2648CD1 /* Pods-GasStation.release.xcconfig */,
 				358C9E0EC3AD0BAE0B9B58B4 /* Pods-GasStationManager.debug.xcconfig */,
 				1C50600E8E6F93FD9242C611 /* Pods-GasStationManager.release.xcconfig */,
+				E15CBB7A50B6A7F79E20DF02 /* Pods-GasStationTests.debug.xcconfig */,
+				5B5A547AC0F578A9723B4909 /* Pods-GasStationTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -2151,9 +2162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E4383571C5F9ED600885A33 /* Build configuration list for PBXNativeTarget "GasStationTests" */;
 			buildPhases = (
+				FB334B6A6CE4335D946D3669 /* Check Pods Manifest.lock */,
 				4E43833C1C5F9ED600885A33 /* Sources */,
 				4E43833D1C5F9ED600885A33 /* Frameworks */,
 				4E43833E1C5F9ED600885A33 /* Resources */,
+				9EB5A74658C51C7D33C9F4EA /* Embed Pods Frameworks */,
+				955C930F651E2430BC761731 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2513,6 +2527,36 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStation/Pods-GasStation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		955C930F651E2430BC761731 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStationTests/Pods-GasStationTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9EB5A74658C51C7D33C9F4EA /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStationTests/Pods-GasStationTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C55F8A89F1498D79DE571774 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2556,6 +2600,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasStationManager/Pods-GasStationManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB334B6A6CE4335D946D3669 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -2720,6 +2779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E5D8F601C87C4DE00A46D27 /* GSNetworkTests.m in Sources */,
 				4E4383451C5F9ED600885A33 /* GasStationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3074,6 +3134,7 @@
 		};
 		4E4383581C5F9ED600885A33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E15CBB7A50B6A7F79E20DF02 /* Pods-GasStationTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GasStationTests/Info.plist;
@@ -3086,6 +3147,7 @@
 		};
 		4E4383591C5F9ED600885A33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B5A547AC0F578A9723B4909 /* Pods-GasStationTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = GasStationTests/Info.plist;
