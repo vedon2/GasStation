@@ -13,6 +13,7 @@
 
 #ifdef DEBUG
 #define kEnableMock 1
+#define kEnableLog 1
 #endif
 
 #define kResponseSuccessStatusCode 200
@@ -55,10 +56,11 @@
 #pragma mark - Override
 - (void)start
 {
+#ifdef kEnableLog
+    NSLog(@"Request URL: \n %@\nRequest header: \n  %@\nRequest Params: \n  %@",self.requestUrl,self.requestHeaderFieldValueDictionary,self.requestArgument);
+#endif
     if ([self enableMock])
     {
-        NSLog(@"%@",self.requestArgument);
-        
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(kRequestDelayTime * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             if (self.delegate)
             {
@@ -81,15 +83,18 @@
     }
     else
     {
+
         [super start];
     }
 }
 
 - (void)startWithCompletionBlockWithSuccess:(YTKRequestCompletionBlock)success failure:(YTKRequestCompletionBlock)failure
 {
+#ifdef kEnableLog
+    NSLog(@"Request URL: \n  %@ Request header: \n  %@ \n Request Params: \n  %@",self.requestUrl,self.requestHeaderFieldValueDictionary,self.requestArgument);
+#endif
     if ([self enableMock])
     {
-         NSLog(@"%@",self.requestArgument);
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             
             if ([self responseStatusCode] == kResponseSuccessStatusCode)
@@ -111,7 +116,9 @@
     }
     else
     {
+
         [super startWithCompletionBlockWithSuccess:success failure:failure];
+        
     }
 }
 
@@ -123,6 +130,9 @@
     }
     else
     {
+#ifdef kEnableLog
+        NSLog(@"%@",[super responseJSONObject]);
+#endif
        return [super responseJSONObject];
     }
 }
