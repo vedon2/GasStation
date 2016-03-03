@@ -222,6 +222,12 @@
 		4E515FAB1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */; };
 		4E515FAC1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */; };
 		4E515FAD1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */; };
+		4E515FB01C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FAF1C88815500C7BF79 /* GSMapAnonotationFactory.m */; };
+		4E515FB11C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FAF1C88815500C7BF79 /* GSMapAnonotationFactory.m */; };
+		4E515FB41C888C9B00C7BF79 /* GSGasStationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */; };
+		4E515FB51C888C9B00C7BF79 /* GSGasStationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */; };
+		4E515FB81C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */; };
+		4E515FB91C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8F601C87C4DE00A46D27 /* GSNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */; };
@@ -710,6 +716,12 @@
 		4E515FA71C87429C00C7BF79 /* GSPriceOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSPriceOrderTableViewCell.h; sourceTree = "<group>"; };
 		4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSPriceOrderTableViewCell.m; sourceTree = "<group>"; };
 		4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSPriceOrderTableViewCell.xib; sourceTree = "<group>"; };
+		4E515FAE1C88815500C7BF79 /* GSMapAnonotationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapAnonotationFactory.h; sourceTree = "<group>"; };
+		4E515FAF1C88815500C7BF79 /* GSMapAnonotationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapAnonotationFactory.m; sourceTree = "<group>"; };
+		4E515FB21C888C9B00C7BF79 /* GSGasStationAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGasStationAnnotationView.h; sourceTree = "<group>"; };
+		4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasStationAnnotationView.m; sourceTree = "<group>"; };
+		4E515FB61C888D3F00C7BF79 /* GSGasStationAnnotationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGasStationAnnotationData.h; sourceTree = "<group>"; };
+		4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasStationAnnotationData.m; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1852,6 +1864,8 @@
 				4E515FA71C87429C00C7BF79 /* GSPriceOrderTableViewCell.h */,
 				4E515FA81C87429C00C7BF79 /* GSPriceOrderTableViewCell.m */,
 				4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */,
+				4E515FB21C888C9B00C7BF79 /* GSGasStationAnnotationView.h */,
+				4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1867,6 +1881,10 @@
 				4E515F671C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m */,
 				4E515F781C85E18300C7BF79 /* GSConsumeTicketData.h */,
 				4E515F791C85E18300C7BF79 /* GSConsumeTicketData.m */,
+				4E515FAE1C88815500C7BF79 /* GSMapAnonotationFactory.h */,
+				4E515FAF1C88815500C7BF79 /* GSMapAnonotationFactory.m */,
+				4E515FB61C888D3F00C7BF79 /* GSGasStationAnnotationData.h */,
+				4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -2500,6 +2518,7 @@
 				4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */,
 				4EFDD42C1C7C58DB000AAE9D /* JSQMessagesBubbleImage.m in Sources */,
 				4EFDD42A1C7C58DB000AAE9D /* JSQMessagesAvatarImage.m in Sources */,
+				4E515FB01C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */,
 				4EFDD41A1C7C58DB000AAE9D /* GSMessageCollectionViewCell.m in Sources */,
 				4E3E67561C79C4AF005CA5A2 /* CRNavigationController.m in Sources */,
 				4EFDD5451C7EB074000AAE9D /* TADotView.m in Sources */,
@@ -2569,6 +2588,7 @@
 				4EFDD43C1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
 				4E3E67A21C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,
 				4EFDD4421C7C58DB000AAE9D /* JSQMessagesInputToolbar.m in Sources */,
+				4E515FB41C888C9B00C7BF79 /* GSGasStationAnnotationView.m in Sources */,
 				4E9D1AE51C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
 				4E515F7A1C85E18300C7BF79 /* GSConsumeTicketData.m in Sources */,
 				4E2B3D521C72071400B460F7 /* GSEditUserProfileViewController.m in Sources */,
@@ -2638,6 +2658,7 @@
 				4E43832C1C5F9ED600885A33 /* main.m in Sources */,
 				4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */,
 				4E515F971C85F78600C7BF79 /* GSRecordIndicatorView.m in Sources */,
+				4E515FB81C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */,
 				4E515F9C1C87393500C7BF79 /* GSQueryBreakRuleViewController.m in Sources */,
 				4E9D1AD01C735BBF0048869E /* GSChangePasswordViewController.m in Sources */,
 				4E515F821C85E7CD00C7BF79 /* GSGetCardDetailTask.m in Sources */,
@@ -2666,6 +2687,7 @@
 				4E2BC8DF1C81E8CC002FD232 /* GSCardTableViewCell.m in Sources */,
 				4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */,
+				4E515FB11C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */,
 				4E05E1021C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E3E67A31C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,
 				4EFDD4031C7C58DB000AAE9D /* UIDevice+JSQMessages.m in Sources */,
@@ -2718,6 +2740,7 @@
 				4E2B3D471C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4E3E67301C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.m in Sources */,
 				4EFDD40B1C7C58DB000AAE9D /* JSQMessagesViewController.m in Sources */,
+				4E515FB51C888C9B00C7BF79 /* GSGasStationAnnotationView.m in Sources */,
 				4E515F8D1C85EA0300C7BF79 /* GSStartUpTask.m in Sources */,
 				4EFDD4511C7C58DB000AAE9D /* JSQMessagesTypingIndicatorFooterView.m in Sources */,
 				4E4D99E51C6C939500E8A017 /* GSMapManager.m in Sources */,
@@ -2765,6 +2788,7 @@
 				4E2B3D3C1C70CCA700B460F7 /* GSUserLoginViewController.m in Sources */,
 				4E9D1AE61C735F6D0048869E /* GSFeedbackViewController.m in Sources */,
 				4EFDD4371C7C58DB000AAE9D /* JSQMessagesCollectionViewCell.m in Sources */,
+				4E515FB91C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */,
 				4E3E67551C79C4AF005CA5A2 /* CRNavigationBar.m in Sources */,
 				4EFDD4051C7C58DB000AAE9D /* UIImage+JSQMessages.m in Sources */,
 				4E515FAB1C87429C00C7BF79 /* GSPriceOrderTableViewCell.m in Sources */,

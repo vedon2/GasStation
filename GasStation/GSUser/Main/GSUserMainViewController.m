@@ -34,6 +34,8 @@
 #import "GSEditUserProfileViewController.h"
 #import "SDCycleScrollView.h"
 #import "GSColor.h"
+#import "GSGasStationAnnotationView.h"
+#import "GSGasStationAnnotationData.h"
 
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate,SDCycleScrollViewDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
@@ -43,6 +45,8 @@
 @property (nonatomic,strong) UIView *topBarContainerView;
 @property (nonatomic,strong) SDCycleScrollView *adView;
 @property (nonatomic,strong) UILabel *titleLabel;
+@property (nonatomic,strong) BMKUserLocation *currentUserLocation;
+@property (nonatomic,strong) NSMutableArray<GSGasStationAnnotationData *> *annotationDataContainer;
 @end
 
 @implementation GSUserMainViewController
@@ -87,6 +91,12 @@
     
     
     [[GSMapManager shareManager] addObserver:self];
+    
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [self getAnnotationsForSearchResult];
+    });
+    
 }
 
 - (void)viewDidLayoutSubviews
@@ -112,22 +122,71 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Private
+
+- (void)getAnnotationsForSearchResult
+{
+    for (int i =0; i<10; i++)
+    {
+        
+        CGFloat randomNumberX = (arc4random() % 10)  * 0.004;
+        CGFloat randomNumberY = (arc4random() % 20)  * 0.01;
+        
+        GSGasStationAnnotationData *annotationData = [[GSGasStationAnnotationData alloc] init];
+
+        BMKPointAnnotation *pointAnnotation = [[BMKPointAnnotation alloc]init];
+        CLLocationCoordinate2D coor;
+        coor.latitude = self.currentUserLocation.location.coordinate.latitude + randomNumberX;
+        coor.longitude = self.currentUserLocation.location.coordinate.longitude + randomNumberY;
+        pointAnnotation.coordinate = coor;
+        pointAnnotation.title = @"test";
+        pointAnnotation.subtitle = @"此Annotation可拖拽!";
+        
+        annotationData.annotation = pointAnnotation;
+        annotationData.isCooperation = YES;
+        annotationData.reuseIdentifier = kAnnotationIdentifier;
+        annotationData.annotationSize = CGSizeMake(20, 20);
+        
+        [self.annotationDataContainer addObject:annotationData];
+        [self.mapView addAnnotation:pointAnnotation];
+    }
+}
+
+- (GSGasStationAnnotationData *)annotationDataForAnnotation:(BMKPointAnnotation *)annotation
+{
+    assert(annotation);
+    
+    
+    __block GSGasStationAnnotationData *data = nil;
+    [self.annotationDataContainer enumerateObjectsUsingBlock:^(GSGasStationAnnotationData * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       
+       if ([annotation isEqual:obj.annotation])
+       {
+           data = obj;
+           *stop = YES;
+       }
+    }];
+    
+    assert(data);
+    return data;
+    
+}
+
+
 #pragma mark - BMKMapViewDelegate
 
 - (BMKAnnotationView *)mapView:(BMKMapView *)view viewForAnnotation:(id <BMKAnnotation>)annotation
 {
-    NSString *AnnotationViewID = kAnnotationIdentifier;
-    BMKAnnotationView* annotationView = [view dequeueReusableAnnotationViewWithIdentifier:AnnotationViewID];
-    
+    GSGasStationAnnotationView* annotationView = (GSGasStationAnnotationView *)[view dequeueReusableAnnotationViewWithIdentifier:kAnnotationIdentifier];
+    GSGasStationAnnotationData *data = [self annotationDataForAnnotation:annotation];
     if (annotationView == nil) {
-        annotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
-        ((BMKPinAnnotationView*)annotationView).pinColor = BMKPinAnnotationColorRed;
-        // 设置重天上掉下的效果(annotation)
-        ((BMKPinAnnotationView*)annotationView).animatesDrop = YES;
+        annotationView = [[GSGasStationAnnotationView alloc] initWithAnnotationData:data];
+    }
+    else
+    {
+        [annotationView configureWithData:data];
     }
     
-    annotationView.centerOffset = CGPointMake(0, -(annotationView.frame.size.height * 0.5));
-    annotationView.annotation = annotation;
     annotationView.canShowCallout = YES;
     annotationView.draggable = NO;
     
@@ -149,6 +208,7 @@
 
 - (void)didGetUserCurrentLocation:(BMKUserLocation *)location
 {
+    self.currentUserLocation = location;
     [self.mapView updateLocationData:location];
 }
 
@@ -370,6 +430,15 @@
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;
+}
+
+- (NSMutableArray *)annotationDataContainer
+{
+    if (!_annotationDataContainer)
+    {
+        _annotationDataContainer = [[NSMutableArray alloc] init];
+    }
+    return _annotationDataContainer;
 }
 
 @end
