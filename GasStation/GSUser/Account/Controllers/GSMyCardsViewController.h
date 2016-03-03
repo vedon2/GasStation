@@ -10,4 +10,6 @@
 
 @interface GSMyCardsViewController : GSBaseViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isAlreadyUser:(BOOL)isUse;
+
 @end

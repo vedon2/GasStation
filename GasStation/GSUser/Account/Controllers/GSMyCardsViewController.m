@@ -9,15 +9,28 @@
 #import "GSMyCardsViewController.h"
 #import "BlocksKit+UIKit.h"
 #import "GSMyCardTableViewCell.h"
+#import "GSMyCardDataProtocol.h"
+#import "GSMyCardData.h"
 
 static NSString *cellIdentifier = @"cell";
 
 @interface GSMyCardsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
-
+@property (strong, nonatomic) NSMutableArray *dataSource;
+@property (assign, nonatomic) BOOL isUse;
 @end
 
 @implementation GSMyCardsViewController
+
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil isAlreadyUser:(BOOL)isUse
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        self.isUse = isUse;
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,7 +40,14 @@ static NSString *cellIdentifier = @"cell";
     
     UINib *nib = [UINib nibWithNibName:@"GSMyCardTableViewCell" bundle:nil];
     [self.contentTable registerNib:nib forCellReuseIdentifier:cellIdentifier];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.dataSource = [NSMutableArray array];
+    for (int i = 0; i<10; i++)
+    {
+        GSMyCardData *data = [[GSMyCardData alloc] init];
+        data.isUse = self.isUse;
+        [self.dataSource addObject:data];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -52,13 +72,14 @@ static NSString *cellIdentifier = @"cell";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return self.dataSource.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     GSMyCardTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+    GSMyCardData *data = [self.dataSource objectAtIndex:indexPath.row];
+    [cell configureWithData:data];
     return cell;
 }
 

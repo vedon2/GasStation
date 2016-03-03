@@ -13,6 +13,9 @@
 #import "UIImage+YYAdd.h"
 #import "PureLayout.h"
 #import "BlocksKit+UIKit.h"
+#import "GSToast.h"
+#import "GSStringValidator.h"
+#import "GSResetPassworkTask.h"
 
 static NSString *changePwdCellIdentifier = @"changePwdCellIdentifier";
 
@@ -69,6 +72,34 @@ static NSString *changePwdCellIdentifier = @"changePwdCellIdentifier";
 
 - (IBAction)confirmAction:(id)sender
 {
+    NSString *originalPwd = self.originalPwdTextField.textField.text;
+    NSString *resetPwd = self.resetPwdTextField.textField.text;
+    
+    if (originalPwd.length == 0)
+    {
+        [GSToast showToastWithText:@"原密码不能为空" inView:self.view];
+        return;
+    }
+    
+    if (resetPwd.length == 0)
+    {
+        [GSToast showToastWithText:@"新密码不能为空" inView:self.view];
+        return;
+    }
+    
+    if ([originalPwd isEqualToString:resetPwd])
+    {
+        [GSToast showToastWithText:@"新旧密码不能一样" inView:self.view];
+        return;
+    }
+    
+    if (![GSStringValidator checkPassword:resetPwd])
+    {
+        [GSToast showToastWithText:@"密码为6-15数字或者字母组合" inView:self.view];
+        return;
+    }
+    
+//    [GSResetPassworkTask alloc] initWithNewPassword:originalPwd oldPassword:resetPwd veriCode:<#(NSString *)#> phone:<#(NSString *)#>
     
 }
 

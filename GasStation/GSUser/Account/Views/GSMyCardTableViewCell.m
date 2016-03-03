@@ -8,6 +8,8 @@
 
 #import "GSMyCardTableViewCell.h"
 #import "GSColor.h"
+#import "GSMyCardDataProtocol.h"
+
 @interface GSMyCardTableViewCell ()
 
 @property (weak, nonatomic) IBOutlet UILabel *cartTitle;
@@ -37,8 +39,7 @@
     self.useButton.layer.borderColor = [GSColor cardDetailSubTitleColor].CGColor;
     self.useButton.layer.borderWidth = 1.0;
     [self.useButton setTitleColor:[GSColor cardDetailSubTitleColor] forState:UIControlStateNormal];
-    self.cardPrice.attributedText = [self attributeTextForPrice:@"122" oldPrice:@"222"];
-    self.cartTitle.attributedText = [self attributeTextForCardTitle:@"122"];
+   
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -102,7 +103,21 @@
     return attribute;
 }
 
+#pragma mark - Public
 
+- (void)configureWithData:(id<GSMyCardDataProtocol>)data
+{
+    if ([data conformsToProtocol:@protocol(GSMyCardDataProtocol)])
+    {
+
+        NSString *imageName = [data isUse]?@"coupon_used":@"coupon_unused";
+        self.cardStatusImage.image = [UIImage imageNamed:imageName];
+        
+        self.cardPrice.attributedText = [self attributeTextForPrice:@"122" oldPrice:@"222"];
+        self.cartTitle.attributedText = [self attributeTextForCardTitle:@"122"];
+    }
+
+}
 
 #pragma mark - Action
 

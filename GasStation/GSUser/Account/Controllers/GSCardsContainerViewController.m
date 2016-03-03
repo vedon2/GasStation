@@ -99,7 +99,7 @@
         NSInteger numberOfController = 2;
         for (int i = 0; i <numberOfController; i++)
         {
-            GSMyCardsViewController *vc = [[GSMyCardsViewController alloc] initWithNibName:@"GSMyCardsViewController" bundle:nil];
+            GSMyCardsViewController *vc = [[GSMyCardsViewController alloc] initWithNibName:@"GSMyCardsViewController" bundle:nil isAlreadyUser:(i != 0)];
             [self.contentContainerView addSubview:vc.view];
             [vc.view autoPinEdge:ALEdgeLeft toEdge:(tempVc != nil?ALEdgeRight:ALEdgeLeft) ofView:(tempVc != nil?tempVc.view:self.contentContainerView)];
             [vc.view autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:self.contentContainerView];

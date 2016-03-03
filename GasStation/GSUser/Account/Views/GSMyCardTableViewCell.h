@@ -10,4 +10,6 @@
 
 @interface GSMyCardTableViewCell : UITableViewCell
 
+- (void)configureWithData:(id)data;
+
 @end

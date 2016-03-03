@@ -32,6 +32,9 @@
 		4E1711E81C7605DA006CA3E5 /* GSManagerAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711E61C7605DA006CA3E5 /* GSManagerAccountViewController.xib */; };
 		4E1711ED1C7608F4006CA3E5 /* GSSanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1711EB1C7608F4006CA3E5 /* GSSanViewController.m */; };
 		4E1711EE1C7608F4006CA3E5 /* GSSanViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E1711EC1C7608F4006CA3E5 /* GSSanViewController.xib */; };
+		4E2408611C885A140040A2C1 /* GSMyCardData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2408601C885A140040A2C1 /* GSMyCardData.m */; };
+		4E2408651C885D9B0040A2C1 /* GSStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2408641C885D9B0040A2C1 /* GSStringValidator.m */; };
+		4E2408661C885D9B0040A2C1 /* GSStringValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2408641C885D9B0040A2C1 /* GSStringValidator.m */; };
 		4E2B3CAA1C6DD22100B460F7 /* GSMapNavView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CA91C6DD22100B460F7 /* GSMapNavView.m */; };
 		4E2B3CAD1C6DEA7D00B460F7 /* GSMapSearchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CAC1C6DEA7D00B460F7 /* GSMapSearchBtn.m */; };
 		4E2B3CB51C6E02F700B460F7 /* GSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2B3CB31C6E02F700B460F7 /* GSSearchViewController.m */; };
@@ -495,6 +498,11 @@
 		4E1711EA1C7608F4006CA3E5 /* GSSanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSanViewController.h; sourceTree = "<group>"; };
 		4E1711EB1C7608F4006CA3E5 /* GSSanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSSanViewController.m; sourceTree = "<group>"; };
 		4E1711EC1C7608F4006CA3E5 /* GSSanViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSSanViewController.xib; sourceTree = "<group>"; };
+		4E24085E1C8859CF0040A2C1 /* GSMyCardDataProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSMyCardDataProtocol.h; sourceTree = "<group>"; };
+		4E24085F1C885A140040A2C1 /* GSMyCardData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMyCardData.h; sourceTree = "<group>"; };
+		4E2408601C885A140040A2C1 /* GSMyCardData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMyCardData.m; sourceTree = "<group>"; };
+		4E2408631C885D9B0040A2C1 /* GSStringValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSStringValidator.h; sourceTree = "<group>"; };
+		4E2408641C885D9B0040A2C1 /* GSStringValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSStringValidator.m; sourceTree = "<group>"; };
 		4E2B3CA81C6DD22100B460F7 /* GSMapNavView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapNavView.h; sourceTree = "<group>"; };
 		4E2B3CA91C6DD22100B460F7 /* GSMapNavView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapNavView.m; sourceTree = "<group>"; };
 		4E2B3CAB1C6DEA7D00B460F7 /* GSMapSearchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapSearchBtn.h; sourceTree = "<group>"; };
@@ -1094,6 +1102,15 @@
 			path = GSQRScan;
 			sourceTree = "<group>";
 		};
+		4E2408621C885D830040A2C1 /* GSStringValidator */ = {
+			isa = PBXGroup;
+			children = (
+				4E2408631C885D9B0040A2C1 /* GSStringValidator.h */,
+				4E2408641C885D9B0040A2C1 /* GSStringValidator.m */,
+			);
+			path = GSStringValidator;
+			sourceTree = "<group>";
+		};
 		4E2B3CAE1C6E01E500B460F7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1266,6 +1283,9 @@
 				4EA671201C74C062004A5163 /* GSUserProfileData.m */,
 				4E3E67581C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.h */,
 				4E3E67591C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m */,
+				4E24085E1C8859CF0040A2C1 /* GSMyCardDataProtocol.h */,
+				4E24085F1C885A140040A2C1 /* GSMyCardData.h */,
+				4E2408601C885A140040A2C1 /* GSMyCardData.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1273,6 +1293,7 @@
 		4E2B3D131C6F611D00B460F7 /* GSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4E2408621C885D830040A2C1 /* GSStringValidator */,
 				4E2BC8C51C7F4F9C002FD232 /* GSPersistance */,
 				4E2BC8B01C7E0B24002FD232 /* GSImagePicker */,
 				4E1711BC1C75F811006CA3E5 /* GSTransition */,
@@ -2492,6 +2513,7 @@
 				4E1711C31C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
 				4E05E0FD1C78AE640038CA5D /* GSCounterButton.m in Sources */,
 				4E3E67451C799234005CA5A2 /* GSKeyBoardManger.m in Sources */,
+				4E2408651C885D9B0040A2C1 /* GSStringValidator.m in Sources */,
 				4EFD22931C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */,
 				4E9D1ACB1C7352630048869E /* GSUserCenterCollectionViewCell.m in Sources */,
@@ -2609,6 +2631,7 @@
 				4E2BC8C81C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */,
 				4E2B3CE51C6EB8DE00B460F7 /* GSStationShortCommentsTableViewCell.m in Sources */,
 				4E2B3D201C6F75E600B460F7 /* GSRegisterTask.m in Sources */,
+				4E2408611C885A140040A2C1 /* GSMyCardData.m in Sources */,
 				4E1711DA1C760524006CA3E5 /* GSManagerUserViewController.m in Sources */,
 				4EFDD4181C7C58DB000AAE9D /* GSMessageBubbleStatusView.m in Sources */,
 				4EFDD4201C7C58DB000AAE9D /* JSQMessagesCollectionViewFlowLayoutInvalidationContext.m in Sources */,
@@ -2651,6 +2674,7 @@
 				4EFDD4411C7C58DB000AAE9D /* JSQMessagesComposerTextView.m in Sources */,
 				4E3E675B1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
 				4E2BC8C21C7F42D9002FD232 /* GSRenameViewController.m in Sources */,
+				4E2408661C885D9B0040A2C1 /* GSStringValidator.m in Sources */,
 				4EFDD4191C7C58DB000AAE9D /* GSMessageBubbleStatusView.m in Sources */,
 				4E2B3D451C71FDF000B460F7 /* ObserverContainer.m in Sources */,
 				4EFDD4291C7C58DB000AAE9D /* JSQMessage.m in Sources */,
