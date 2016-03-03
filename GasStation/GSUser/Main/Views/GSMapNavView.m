@@ -87,7 +87,7 @@
     if (!_containerView)
     {
         _containerView = [[UIView alloc] initForAutoLayout];
-        _containerView.backgroundColor = [UIColor lightGrayColor];
+        _containerView.backgroundColor = [UIColor clearColor];
     }
     return _containerView;
 }
@@ -97,7 +97,8 @@
     if (!_zoomInBtn)
     {
         _zoomInBtn = [[UIButton alloc] initForAutoLayout];
-        _zoomInBtn.backgroundColor = [UIColor yellowColor];
+        _zoomInBtn.backgroundColor = [UIColor clearColor];
+        [_zoomInBtn setImage:[UIImage imageNamed:@"icon_map_enlarge"] forState:UIControlStateNormal];
         [_zoomInBtn addTarget:self action:@selector(zoomInAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _zoomInBtn;
@@ -108,7 +109,8 @@
     if (!_zoomOutBtn)
     {
         _zoomOutBtn = [[UIButton alloc] initForAutoLayout];
-        _zoomOutBtn.backgroundColor = [UIColor greenColor];
+        _zoomOutBtn.backgroundColor = [UIColor clearColor];
+        [_zoomOutBtn setImage:[UIImage imageNamed:@"icon_map_narrow"] forState:UIControlStateNormal];
         [_zoomOutBtn addTarget:self action:@selector(zoomOutAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _zoomOutBtn;
@@ -119,7 +121,8 @@
     if (!_navBtn)
     {
         _navBtn = [[UIButton alloc] initForAutoLayout];
-        _navBtn.backgroundColor = [UIColor redColor];
+        _navBtn.backgroundColor = [UIColor clearColor];
+        [_navBtn setImage:[UIImage imageNamed:@"icon_map_location"] forState:UIControlStateNormal];
         [_navBtn addTarget:self action:@selector(navAction) forControlEvents:UIControlEventTouchUpInside];}
     return _navBtn;
 }

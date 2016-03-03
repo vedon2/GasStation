@@ -281,7 +281,11 @@
         _mapView.userTrackingMode = BMKUserTrackingModeFollow;
         _mapView.showsUserLocation = YES;
         _mapView.delegate = self;
-        
+        _mapView.logoPosition = BMKLogoPositionLeftTop;
+
+        BMKLocationViewDisplayParam *param = [[BMKLocationViewDisplayParam alloc] init];
+        param.locationViewImgName = @"icon_home_location3";
+        [_mapView updateLocationViewWithParam:param];
     }
     
     return _mapView;
@@ -292,7 +296,7 @@
     if (!_bottomBar)
     {
         NSMutableArray *buttonsInfos = [NSMutableArray array];
-        NSArray *images = @[@"icon_home_gas-station",@"icon_home_discount",@"icon_home_query",@"icon_home_my",@"icon_home_my"];
+        NSArray *images = @[@"icon_home_gas-station",@"icon_home_discount",@"icon_home_query",@"icon_home_ranking",@"icon_home_my"];
         
         NSArray *titles = @[@"我要加油",@"礼品街",@"查违章",@"油价排行",@"我"];
         for (int i = 0; i < 5; i++)
