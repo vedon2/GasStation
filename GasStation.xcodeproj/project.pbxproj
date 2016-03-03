@@ -151,7 +151,6 @@
 		4E43832F1C5F9ED600885A33 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43832E1C5F9ED600885A33 /* AppDelegate.m */; };
 		4E4383371C5F9ED600885A33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E4383361C5F9ED600885A33 /* Assets.xcassets */; };
 		4E4383451C5F9ED600885A33 /* GasStationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4383441C5F9ED600885A33 /* GasStationTests.m */; };
-		4E4383501C5F9ED600885A33 /* GasStationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43834F1C5F9ED600885A33 /* GasStationUITests.m */; };
 		4E4383611C5FA48800885A33 /* GSMapManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E4383601C5FA48800885A33 /* GSMapManager.m */; };
 		4E43836B1C5FB13A00885A33 /* GSMapBaseTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43836A1C5FB13A00885A33 /* GSMapBaseTask.m */; };
 		4E43836E1C5FB14F00885A33 /* GSMapPOISearchTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E43836D1C5FB14F00885A33 /* GSMapPOISearchTask.m */; };
@@ -461,27 +460,6 @@
 			remoteGlobalIDString = 4E4383261C5F9ED600885A33;
 			remoteInfo = GasStation;
 		};
-		4E43834C1C5F9ED600885A33 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E43831F1C5F9ED600885A33 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E4383261C5F9ED600885A33;
-			remoteInfo = GasStation;
-		};
-		4E4D99A81C6C7E4C00E8A017 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E43831F1C5F9ED600885A33 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E4D998E1C6C7E4C00E8A017;
-			remoteInfo = GasStationManager;
-		};
-		4E4D99B31C6C7E4C00E8A017 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4E43831F1C5F9ED600885A33 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4E4D998E1C6C7E4C00E8A017;
-			remoteInfo = GasStationManager;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -657,9 +635,6 @@
 		4E4383401C5F9ED600885A33 /* GasStationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4383441C5F9ED600885A33 /* GasStationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GasStationTests.m; sourceTree = "<group>"; };
 		4E4383461C5F9ED600885A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4E43834B1C5F9ED600885A33 /* GasStationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E43834F1C5F9ED600885A33 /* GasStationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GasStationUITests.m; sourceTree = "<group>"; };
-		4E4383511C5F9ED600885A33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E43835F1C5FA48800885A33 /* GSMapManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapManager.h; sourceTree = "<group>"; };
 		4E4383601C5FA48800885A33 /* GSMapManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSMapManager.m; sourceTree = "<group>"; };
 		4E4383691C5FB13A00885A33 /* GSMapBaseTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSMapBaseTask.h; sourceTree = "<group>"; };
@@ -671,8 +646,6 @@
 		4E4CD6AC1C7B5C9600DDED4D /* GSCardsSelectViewItemInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCardsSelectViewItemInfo.h; sourceTree = "<group>"; };
 		4E4CD6AD1C7B5C9600DDED4D /* GSCardsSelectViewItemInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCardsSelectViewItemInfo.m; sourceTree = "<group>"; };
 		4E4D998F1C6C7E4C00E8A017 /* GasStationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasStationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4D99A71C6C7E4C00E8A017 /* GasStationManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E4D99B21C6C7E4C00E8A017 /* GasStationManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasStationManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E4D99C71C6C85E700E8A017 /* GSUserScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSUserScreen.storyboard; sourceTree = "<group>"; };
 		4E4D99CA1C6C862B00E8A017 /* GSManagerScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GSManagerScreen.storyboard; sourceTree = "<group>"; };
 		4E4D99CC1C6C87D000E8A017 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -1033,13 +1006,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E4383481C5F9ED600885A33 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4E4D998C1C6C7E4C00E8A017 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -1070,20 +1036,6 @@
 				7C27FE0625419F7D8AE90E60 /* libPods-GasStationManager.a in Frameworks */,
 				4EA672331C74C5E0004A5163 /* libSocialWechat.a in Frameworks */,
 				4EA672291C74C5E0004A5163 /* libSocialSinaSSO.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E4D99A41C6C7E4C00E8A017 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E4D99AF1C6C7E4C00E8A017 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1405,7 +1357,6 @@
 				4E43835D1C5FA46B00885A33 /* ThirdParty */,
 				4E4383291C5F9ED600885A33 /* GasStation */,
 				4E4383431C5F9ED600885A33 /* GasStationTests */,
-				4E43834E1C5F9ED600885A33 /* GasStationUITests */,
 				4E4383281C5F9ED600885A33 /* Products */,
 				E66B5BCFAAABD62EFDB54125 /* Pods */,
 				CE46C63558572A25E886FEF4 /* Frameworks */,
@@ -1417,10 +1368,7 @@
 			children = (
 				4E4383271C5F9ED600885A33 /* GasStation.app */,
 				4E4383401C5F9ED600885A33 /* GasStationTests.xctest */,
-				4E43834B1C5F9ED600885A33 /* GasStationUITests.xctest */,
 				4E4D998F1C6C7E4C00E8A017 /* GasStationManager.app */,
-				4E4D99A71C6C7E4C00E8A017 /* GasStationManagerTests.xctest */,
-				4E4D99B21C6C7E4C00E8A017 /* GasStationManagerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1458,15 +1406,6 @@
 				4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */,
 			);
 			path = GasStationTests;
-			sourceTree = "<group>";
-		};
-		4E43834E1C5F9ED600885A33 /* GasStationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				4E43834F1C5F9ED600885A33 /* GasStationUITests.m */,
-				4E4383511C5F9ED600885A33 /* Info.plist */,
-			);
-			path = GasStationUITests;
 			sourceTree = "<group>";
 		};
 		4E43835D1C5FA46B00885A33 /* ThirdParty */ = {
@@ -2179,24 +2118,6 @@
 			productReference = 4E4383401C5F9ED600885A33 /* GasStationTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		4E43834A1C5F9ED600885A33 /* GasStationUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E43835A1C5F9ED600885A33 /* Build configuration list for PBXNativeTarget "GasStationUITests" */;
-			buildPhases = (
-				4E4383471C5F9ED600885A33 /* Sources */,
-				4E4383481C5F9ED600885A33 /* Frameworks */,
-				4E4383491C5F9ED600885A33 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E43834D1C5F9ED600885A33 /* PBXTargetDependency */,
-			);
-			name = GasStationUITests;
-			productName = GasStationUITests;
-			productReference = 4E43834B1C5F9ED600885A33 /* GasStationUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 		4E4D998E1C6C7E4C00E8A017 /* GasStationManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4E4D99B91C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManager" */;
@@ -2217,42 +2138,6 @@
 			productReference = 4E4D998F1C6C7E4C00E8A017 /* GasStationManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E4D99A61C6C7E4C00E8A017 /* GasStationManagerTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E4D99BC1C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManagerTests" */;
-			buildPhases = (
-				4E4D99A31C6C7E4C00E8A017 /* Sources */,
-				4E4D99A41C6C7E4C00E8A017 /* Frameworks */,
-				4E4D99A51C6C7E4C00E8A017 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E4D99A91C6C7E4C00E8A017 /* PBXTargetDependency */,
-			);
-			name = GasStationManagerTests;
-			productName = GasStationManagerTests;
-			productReference = 4E4D99A71C6C7E4C00E8A017 /* GasStationManagerTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4E4D99B11C6C7E4C00E8A017 /* GasStationManagerUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4E4D99BF1C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManagerUITests" */;
-			buildPhases = (
-				4E4D99AE1C6C7E4C00E8A017 /* Sources */,
-				4E4D99AF1C6C7E4C00E8A017 /* Frameworks */,
-				4E4D99B01C6C7E4C00E8A017 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4E4D99B41C6C7E4C00E8A017 /* PBXTargetDependency */,
-			);
-			name = GasStationManagerUITests;
-			productName = GasStationManagerUITests;
-			productReference = 4E4D99B21C6C7E4C00E8A017 /* GasStationManagerUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -2269,20 +2154,8 @@
 						CreatedOnToolsVersion = 7.2;
 						TestTargetID = 4E4383261C5F9ED600885A33;
 					};
-					4E43834A1C5F9ED600885A33 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 4E4383261C5F9ED600885A33;
-					};
 					4E4D998E1C6C7E4C00E8A017 = {
 						CreatedOnToolsVersion = 7.2;
-					};
-					4E4D99A61C6C7E4C00E8A017 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 4E4D998E1C6C7E4C00E8A017;
-					};
-					4E4D99B11C6C7E4C00E8A017 = {
-						CreatedOnToolsVersion = 7.2;
-						TestTargetID = 4E4D998E1C6C7E4C00E8A017;
 					};
 				};
 			};
@@ -2302,10 +2175,7 @@
 			targets = (
 				4E4383261C5F9ED600885A33 /* GasStation */,
 				4E43833F1C5F9ED600885A33 /* GasStationTests */,
-				4E43834A1C5F9ED600885A33 /* GasStationUITests */,
 				4E4D998E1C6C7E4C00E8A017 /* GasStationManager */,
-				4E4D99A61C6C7E4C00E8A017 /* GasStationManagerTests */,
-				4E4D99B11C6C7E4C00E8A017 /* GasStationManagerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -2396,13 +2266,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E4383491C5F9ED600885A33 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4E4D998D1C6C7E4C00E8A017 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2462,20 +2325,6 @@
 				4E515FA61C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib in Resources */,
 				4E2B3D5C1C721F6300B460F7 /* GSUserCenterViewController.xib in Resources */,
 				4E3E67A51C79FD71005CA5A2 /* GSMyCardTableViewCell.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E4D99A51C6C7E4C00E8A017 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E4D99B01C6C7E4C00E8A017 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2784,14 +2633,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E4383471C5F9ED600885A33 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4E4383501C5F9ED600885A33 /* GasStationUITests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4E4D998B1C6C7E4C00E8A017 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2913,20 +2754,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4E4D99A31C6C7E4C00E8A017 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4E4D99AE1C6C7E4C00E8A017 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -2934,21 +2761,6 @@
 			isa = PBXTargetDependency;
 			target = 4E4383261C5F9ED600885A33 /* GasStation */;
 			targetProxy = 4E4383411C5F9ED600885A33 /* PBXContainerItemProxy */;
-		};
-		4E43834D1C5F9ED600885A33 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E4383261C5F9ED600885A33 /* GasStation */;
-			targetProxy = 4E43834C1C5F9ED600885A33 /* PBXContainerItemProxy */;
-		};
-		4E4D99A91C6C7E4C00E8A017 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E4D998E1C6C7E4C00E8A017 /* GasStationManager */;
-			targetProxy = 4E4D99A81C6C7E4C00E8A017 /* PBXContainerItemProxy */;
-		};
-		4E4D99B41C6C7E4C00E8A017 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4E4D998E1C6C7E4C00E8A017 /* GasStationManager */;
-			targetProxy = 4E4D99B31C6C7E4C00E8A017 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -3158,30 +2970,6 @@
 			};
 			name = Release;
 		};
-		4E43835B1C5F9ED600885A33 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GasStationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GasStation;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		4E43835C1C5F9ED600885A33 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GasStationUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GasStation;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 		4E4D99BA1C6C7E4C00E8A017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 358C9E0EC3AD0BAE0B9B58B4 /* Pods-GasStationManager.debug.xcconfig */;
@@ -3249,54 +3037,6 @@
 			};
 			name = Release;
 		};
-		4E4D99BD1C6C7E4C00E8A017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GasStationManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasStationManager.app/GasStationManager";
-			};
-			name = Debug;
-		};
-		4E4D99BE1C6C7E4C00E8A017 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				INFOPLIST_FILE = GasStationManagerTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationManagerTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasStationManager.app/GasStationManager";
-			};
-			name = Release;
-		};
-		4E4D99C01C6C7E4C00E8A017 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GasStationManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GasStationManager;
-				USES_XCTRUNNER = YES;
-			};
-			name = Debug;
-		};
-		4E4D99C11C6C7E4C00E8A017 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				INFOPLIST_FILE = GasStationManagerUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = vedon.GasStationManagerUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_TARGET_NAME = GasStationManager;
-				USES_XCTRUNNER = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3327,38 +3067,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E43835A1C5F9ED600885A33 /* Build configuration list for PBXNativeTarget "GasStationUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E43835B1C5F9ED600885A33 /* Debug */,
-				4E43835C1C5F9ED600885A33 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4E4D99B91C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E4D99BA1C6C7E4C00E8A017 /* Debug */,
 				4E4D99BB1C6C7E4C00E8A017 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E4D99BC1C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManagerTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E4D99BD1C6C7E4C00E8A017 /* Debug */,
-				4E4D99BE1C6C7E4C00E8A017 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4E4D99BF1C6C7E4C00E8A017 /* Build configuration list for PBXNativeTarget "GasStationManagerUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4E4D99C01C6C7E4C00E8A017 /* Debug */,
-				4E4D99C11C6C7E4C00E8A017 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
