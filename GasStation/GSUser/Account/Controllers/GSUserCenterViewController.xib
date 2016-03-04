@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSUserCenterViewController">
             <connections>
                 <outlet property="collectionView" destination="VBJ-0v-JEl" id="i2Q-P3-82P"/>
+                <outlet property="registerOrLoginButton" destination="Yq0-Pe-WVe" id="ADc-W0-Xp1"/>
                 <outlet property="userAvatarBgImageView" destination="dIH-Z1-YBX" id="9KG-Pi-yeF"/>
                 <outlet property="userAvatarImageView" destination="c1y-bq-XgQ" id="IOO-ur-vcX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -60,7 +61,7 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C19-qh-0g1">
-                            <rect key="frame" x="18" y="25" width="22" height="28"/>
+                            <rect key="frame" x="14" y="24" width="22" height="28"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="28" id="DmL-ks-meD"/>
                                 <constraint firstAttribute="width" constant="22" id="vLK-8C-qWW"/>
@@ -70,18 +71,33 @@
                                 <action selector="backAction:" destination="-1" eventType="touchUpInside" id="j6H-pT-08b"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq0-Pe-WVe">
+                            <rect key="frame" x="68" y="152" width="183" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="nDr-wh-uXZ"/>
+                                <constraint firstAttribute="width" constant="183" id="uP2-vq-xRx"/>
+                            </constraints>
+                            <state key="normal" title="点击登陆/注册">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="registerOrLoginAction:" destination="-1" eventType="touchUpInside" id="YId-Aa-xrO"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="203" id="3l5-JG-aTr"/>
+                        <constraint firstItem="Yq0-Pe-WVe" firstAttribute="centerX" secondItem="dIH-Z1-YBX" secondAttribute="centerX" id="BgG-7S-5vw"/>
+                        <constraint firstItem="Yq0-Pe-WVe" firstAttribute="top" secondItem="c1y-bq-XgQ" secondAttribute="bottom" constant="2" id="Cwo-bJ-Hc6"/>
                         <constraint firstItem="dIH-Z1-YBX" firstAttribute="leading" secondItem="cLh-h7-fx6" secondAttribute="leading" id="NKP-us-MN1"/>
                         <constraint firstAttribute="trailing" secondItem="dIH-Z1-YBX" secondAttribute="trailing" id="Np9-bv-c2a"/>
                         <constraint firstItem="c1y-bq-XgQ" firstAttribute="centerX" secondItem="cLh-h7-fx6" secondAttribute="centerX" id="PDN-0Z-zZn"/>
                         <constraint firstItem="dIH-Z1-YBX" firstAttribute="top" secondItem="cLh-h7-fx6" secondAttribute="top" id="XwQ-eb-84x"/>
                         <constraint firstItem="c1y-bq-XgQ" firstAttribute="centerY" secondItem="cLh-h7-fx6" secondAttribute="centerY" id="d5Q-F3-kSh"/>
-                        <constraint firstItem="C19-qh-0g1" firstAttribute="leading" secondItem="cLh-h7-fx6" secondAttribute="leading" constant="18" id="eeT-r0-LAk"/>
+                        <constraint firstItem="C19-qh-0g1" firstAttribute="leading" secondItem="cLh-h7-fx6" secondAttribute="leading" constant="14" id="eeT-r0-LAk"/>
                         <constraint firstAttribute="bottom" secondItem="dIH-Z1-YBX" secondAttribute="bottom" id="s9G-2j-a3Y"/>
-                        <constraint firstItem="C19-qh-0g1" firstAttribute="top" secondItem="cLh-h7-fx6" secondAttribute="top" constant="25" id="tWw-lQ-8R0"/>
+                        <constraint firstItem="C19-qh-0g1" firstAttribute="top" secondItem="cLh-h7-fx6" secondAttribute="top" constant="24" id="tWw-lQ-8R0"/>
                     </constraints>
                 </view>
             </subviews>

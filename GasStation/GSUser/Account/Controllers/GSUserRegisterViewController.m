@@ -117,23 +117,22 @@
     NSString *veriCode = self.smsCodeTextField.textField.text;
     
     
+    if (phone.length == 0)
+    {
+        [GSToast showToastWithText:@"手机号码不能为空" inView:self.view];
+        return;
+    }
+    if (veriCode.length == 0)
+    {
+        [GSToast showToastWithText:@"验证码不能为空" inView:self.view];
+        return;
+    }
     if (pwd.length == 0)
     {
         [GSToast showToastWithText:@"密码不能为空" inView:self.view];
         return;
     }
     
-    if (phone.length == 0)
-    {
-        [GSToast showToastWithText:@"手机号码不能为空" inView:self.view];
-        return;
-    }
-    
-    if (veriCode.length == 0)
-    {
-        [GSToast showToastWithText:@"验证码不能为空" inView:self.view];
-        return;
-    }
     [GSToast showProgressToastInView:self.view];
     [[GSUserManager shareManager] registerWithPhone:phone password:pwd veriCode:veriCode];
 }
@@ -155,14 +154,14 @@
 {
     [GSToast hideProgressToastInView:self.view];
     
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
     
     //注册成功后打开编辑个人信息界面
-    GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
-    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
-    nav = nil;
-    vc = nil;
+//    GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
+//    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+//    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:nav animated:YES completion:nil];
+//    nav = nil;
+//    vc = nil;
 }
 
 - (void)userRegisterFail

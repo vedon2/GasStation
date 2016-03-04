@@ -15,12 +15,15 @@
 #import "GSActionSheet.h"
 #import "EPImagePickerHelper.h"
 #import "GSRenameViewController.h"
+#import "GSColor.h"
+#import "GSUserManager.h"
 
 static NSString *userAvatarCellIdentifier = @"userAvatarCellIdentifier";
 static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
 
 @interface GSEditUserProfileViewController ()<UITableViewDataSource,UITableViewDelegate,UIActionSheetDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *contentTable;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButton;
 @property (strong,nonatomic) NSArray *dataSource;
 
 @end
@@ -44,8 +47,14 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
     self.dataSource = @[@"昵称",@"性别"];
     self.contentTable.scrollEnabled = NO;
 
+    UIView *tableViewFooterView = [[UIView alloc] initWithFrame:self.view.bounds];
+    tableViewFooterView.backgroundColor = [GSColor userCenterBackgroundColor];
+    self.contentTable.tableFooterView = tableViewFooterView;
+    self.contentTable.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
-    // Do any additional setup after loading the view from its nib.
+    self.logoutButton.layer.cornerRadius = 2.0;
+    self.logoutButton.layer.masksToBounds = YES;
+    self.logoutButton.backgroundColor = [GSColor mainColor];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -55,8 +64,19 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
 
 - (NSString *)title
 {
-    return @"创建资料";
+    return @"个人信息";
 }
+
+#pragma mark - Action
+
+- (IBAction)logoutAction:(id)sender
+{
+    [[GSUserManager shareManager] logout];
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -109,6 +129,8 @@ static NSString *editUserNameCellIdentifier = @"editUserNameCellIdentifier";
             break;
     }
     
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.accessoryView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"icon_go"]];
     if ([cell respondsToSelector:@selector(setSeparatorInset:)]) {
         [cell setSeparatorInset:UIEdgeInsetsZero];
     }

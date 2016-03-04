@@ -228,6 +228,8 @@
 		4E515FB51C888C9B00C7BF79 /* GSGasStationAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */; };
 		4E515FB81C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */; };
 		4E515FB91C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */; };
+		4E515FBC1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */; };
+		4E515FBD1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8F601C87C4DE00A46D27 /* GSNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */; };
@@ -722,6 +724,8 @@
 		4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasStationAnnotationView.m; sourceTree = "<group>"; };
 		4E515FB61C888D3F00C7BF79 /* GSGasStationAnnotationData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSGasStationAnnotationData.h; sourceTree = "<group>"; };
 		4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasStationAnnotationData.m; sourceTree = "<group>"; };
+		4E515FBA1C889D6100C7BF79 /* GSUserMainViewController+Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GSUserMainViewController+Map.h"; sourceTree = "<group>"; };
+		4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GSUserMainViewController+Map.m"; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1527,6 +1531,8 @@
 				4ED0F3471C6CDEA400C290FF /* Views */,
 				4E4D99D81C6C8CA200E8A017 /* GSUserMainViewController.h */,
 				4E4D99D91C6C8CA200E8A017 /* GSUserMainViewController.m */,
+				4E515FBA1C889D6100C7BF79 /* GSUserMainViewController+Map.h */,
+				4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -2581,6 +2587,7 @@
 				4E2B3D461C71FDF000B460F7 /* ObserverItem.m in Sources */,
 				4EFD22971C7623CF00F053A0 /* GSQRGenerator.m in Sources */,
 				4E515F681C85D77100C7BF79 /* GSFetchCoordinateGasStationData.m in Sources */,
+				4E515FBC1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */,
 				4E4E4C8D1C7DE3B80081D7A2 /* GSFetchCityGasStationData.m in Sources */,
 				4EFDD44C1C7C58DB000AAE9D /* JSQMessagesToolbarContentView.m in Sources */,
 				4E05E0EF1C78892A0038CA5D /* GSBottomBarButton.m in Sources */,
@@ -2687,6 +2694,7 @@
 				4E2BC8DF1C81E8CC002FD232 /* GSCardTableViewCell.m in Sources */,
 				4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */,
+				4E515FBD1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */,
 				4E515FB11C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */,
 				4E05E1021C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E3E67A31C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,

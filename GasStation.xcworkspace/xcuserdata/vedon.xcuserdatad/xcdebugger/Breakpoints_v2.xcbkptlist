@@ -132,12 +132,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "GasStation/GSUser/Main/GSUserMainViewController.m"
-            timestampString = "478715032.234215"
+            timestampString = "478714627.597388"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "226"
-            endingLineNumber = "226"
-            landmarkName = "-didSelectButtonIndex:"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "-mapView:viewForAnnotation:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -147,13 +147,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "GasStation/GSUser/Main/GSUserMainViewController.m"
-            timestampString = "478714627.597388"
+            filePath = "GasStation/GSUser/Account/Controllers/GSUserCenterViewController.m"
+            timestampString = "478788332.607968"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "-mapView:viewForAnnotation:"
+            startingLineNumber = "95"
+            endingLineNumber = "95"
+            landmarkName = "-userLogout"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -18,16 +18,19 @@
 #import "CRNavigationController.h"
 #import "GSColor.h"
 #import "GSUserCenterCollectionItemInfo.h"
-
+#import "GSUserManager.h"
+#import "GSEditUserProfileViewController.h"
+#import "GSUserRegisterViewController.h"
 
 static NSString *cellIdentifier = @"Cell";
 
-@interface GSUserCenterViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
+@interface GSUserCenterViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,GSUserManagerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIImageView *userAvatarImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *userAvatarBgImageView;
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 @property (strong,nonatomic) NSMutableArray *collectionItems;
+@property (weak, nonatomic) IBOutlet UIButton *registerOrLoginButton;
 @property (assign,nonatomic) CGFloat collectionCellPadding;
 
 @end
@@ -48,6 +51,10 @@ static NSString *cellIdentifier = @"Cell";
     
     self.userAvatarBgImageView.image = [UIImage imageNamed:@"userCenterDefaultBgImage"];
     self.userAvatarImageView.image = [UIImage imageNamed:@"my_def_head_man"];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapAvatarImageView)];
+    self.userAvatarImageView.userInteractionEnabled = YES;
+    [self.userAvatarImageView addGestureRecognizer:tap];
+    tap = nil;
     
     self.collectionItems = [NSMutableArray array];
     NSArray *itemsImageNames = @[@"icon_my_card",@"icon_key",@"icon_my_feedback",@"icon_my_we"];
@@ -60,10 +67,14 @@ static NSString *cellIdentifier = @"Cell";
         
         [self.collectionItems addObject:info];
     }
+    
+    [[GSUserManager shareManager] addObserver:self];
+    self.registerOrLoginButton.hidden = [[GSUserManager shareManager] isLogin];
 }
 
 - (void)dealloc
 {
+    [[GSUserManager shareManager] removeObserver:self];
     NSLog(@"Dealloc");
 }
 
@@ -72,14 +83,51 @@ static NSString *cellIdentifier = @"Cell";
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - GSUserManagerDelegate
+
+- (void)userLoginOk
+{
+    self.registerOrLoginButton.hidden = YES;
+}
+
+- (void)userLogout
+{
+    self.registerOrLoginButton.hidden = NO;
+}
+
 #pragma mark - Action
 
 - (IBAction)backAction:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)registerOrLoginAction:(id)sender
+{
+    GSUserRegisterViewController *vc = [[GSUserRegisterViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
+    vc = nil;
+}
 
+- (void)didTapAvatarImageView
+{
+    if ([[GSUserManager shareManager] isLogin])
+    {
+        GSEditUserProfileViewController *vc = [[GSEditUserProfileViewController alloc] initWithNibName:@"GSEditUserProfileViewController" bundle:nil];
+        CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+        [self presentViewController:nav animated:YES completion:nil];
+        
+        nav = nil;
+        vc = nil;
+    }
+    else
+    {
+        GSUserRegisterViewController *vc = [[GSUserRegisterViewController alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+        vc = nil;
+    }
+}
 
+#pragma mark - CollectionView
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {

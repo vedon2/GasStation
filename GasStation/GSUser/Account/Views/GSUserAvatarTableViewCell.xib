@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -21,28 +22,19 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyO-71-yUk">
-                        <rect key="frame" x="233" y="13" width="50" height="50"/>
+                        <rect key="frame" x="261" y="13" width="50" height="50"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="0aW-F3-c4Z"/>
                             <constraint firstAttribute="height" constant="50" id="AfH-Dg-2Zr"/>
                         </constraints>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fx6-39-z5V">
-                        <rect key="frame" x="284" y="22" width="28" height="28"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="28" id="CtL-ww-HbD"/>
-                            <constraint firstAttribute="height" constant="28" id="h56-6H-Yv1"/>
-                        </constraints>
-                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Fx6-39-z5V" firstAttribute="leading" secondItem="ZyO-71-yUk" secondAttribute="trailing" constant="1" id="8My-uH-RzF"/>
                     <constraint firstItem="ZyO-71-yUk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="13" id="OAl-fr-VIG"/>
-                    <constraint firstAttribute="trailing" secondItem="Fx6-39-z5V" secondAttribute="trailing" constant="8" id="Vbl-tO-7NW"/>
                     <constraint firstItem="JEX-K9-I1L" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="Zo9-3k-y2a"/>
-                    <constraint firstItem="Fx6-39-z5V" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="gOa-uV-e1s"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ZyO-71-yUk" secondAttribute="trailing" constant="1" id="e1n-w8-APA"/>
                     <constraint firstItem="JEX-K9-I1L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="o5H-7s-nVf"/>
-                    <constraint firstItem="ZyO-71-yUk" firstAttribute="leading" secondItem="JEX-K9-I1L" secondAttribute="trailing" constant="45" id="p64-rf-epI"/>
+                    <constraint firstItem="ZyO-71-yUk" firstAttribute="leading" secondItem="JEX-K9-I1L" secondAttribute="trailing" constant="73" id="p64-rf-epI"/>
                     <constraint firstAttribute="bottom" secondItem="JEX-K9-I1L" secondAttribute="bottom" constant="26" id="pYQ-P6-fW0"/>
                 </constraints>
             </tableViewCellContentView>

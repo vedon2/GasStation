@@ -92,8 +92,16 @@
     assert(queryError == nil);
     [self.userInfoTable deleteRecord:existUserRecord error:&queryError];
     assert(queryError == nil);
-
     self.currentUserInfo = nil;
+    
+    
+    [self.observers enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        if ([obj respondsToSelector:@selector(userLogout)])
+        {
+            [obj userLogout];
+        }
+    }];
+    
 }
 
 #pragma mark - Private
@@ -191,6 +199,11 @@
                 if ([obj respondsToSelector:@selector(userRegisterSuccess)])
                 {
                     [obj userRegisterSuccess];
+                }
+                
+                if ([obj respondsToSelector:@selector(userLoginOk)])
+                {
+                    [obj userLoginOk];
                 }
             }];
             [self saveUserInfo:responseObject];

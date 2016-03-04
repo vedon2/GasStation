@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GSEditUserProfileViewController">
             <connections>
                 <outlet property="contentTable" destination="Dnc-bQ-D9D" id="O2e-LH-3UJ"/>
+                <outlet property="logoutButton" destination="tOs-9X-1pf" id="uES-rc-hfh"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,18 +18,46 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dnc-bQ-D9D">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="523"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="HDb-5D-5Fr"/>
                         <outlet property="delegate" destination="-1" id="qdD-t3-fAG"/>
                     </connections>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U6m-iA-gMl">
+                    <rect key="frame" x="0.0" y="524" width="320" height="44"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOs-9X-1pf">
+                            <rect key="frame" x="25" y="7" width="270" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="mme-i0-B6Q"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <state key="normal" title="退出当前账号">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="logoutAction:" destination="-1" eventType="touchUpInside" id="cBR-6T-eCH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="3Sf-DG-9cW"/>
+                        <constraint firstAttribute="bottom" secondItem="tOs-9X-1pf" secondAttribute="bottom" constant="7" id="5be-tL-cia"/>
+                        <constraint firstItem="tOs-9X-1pf" firstAttribute="leading" secondItem="U6m-iA-gMl" secondAttribute="leading" constant="25" id="GRG-Ri-P1t"/>
+                        <constraint firstAttribute="trailing" secondItem="tOs-9X-1pf" secondAttribute="trailing" constant="25" id="x43-HU-URN"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="Dnc-bQ-D9D" secondAttribute="bottom" id="0Ku-Nw-OvS"/>
+                <constraint firstItem="U6m-iA-gMl" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4CY-FD-zMD"/>
                 <constraint firstAttribute="trailing" secondItem="Dnc-bQ-D9D" secondAttribute="trailing" id="OH3-Rc-qXB"/>
+                <constraint firstAttribute="trailing" secondItem="U6m-iA-gMl" secondAttribute="trailing" id="WGd-HH-1p3"/>
+                <constraint firstItem="U6m-iA-gMl" firstAttribute="top" secondItem="Dnc-bQ-D9D" secondAttribute="bottom" constant="1" id="XpI-Xo-idL"/>
+                <constraint firstAttribute="bottom" secondItem="U6m-iA-gMl" secondAttribute="bottom" id="j81-fM-oUS"/>
                 <constraint firstItem="Dnc-bQ-D9D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qtF-PU-cX8"/>
                 <constraint firstItem="Dnc-bQ-D9D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="sJo-kL-0g5"/>
             </constraints>

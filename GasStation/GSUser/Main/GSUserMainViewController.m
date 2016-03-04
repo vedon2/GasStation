@@ -251,16 +251,8 @@
         case 4:
         {
             //我
-            if ([[GSUserManager shareManager] isLogin])
-            {
-                viewControllerName = @"GSUserCenterViewController";
-                isPresent = YES;
-            }
-            else
-            {
-                [GSUserRegisterViewController presentRegisterView];
-                return;
-            }
+            viewControllerName = @"GSUserCenterViewController";
+            isPresent = YES;
             break;
         }
         default:
