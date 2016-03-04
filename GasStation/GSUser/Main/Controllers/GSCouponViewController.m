@@ -8,6 +8,7 @@
 
 #import "GSCouponViewController.h"
 #import "BlocksKit+UIKit.h"
+#import "GSCouponTableViewCell.h"
 
 static NSString *cellIdentifier = @"Cell";
 
@@ -24,6 +25,9 @@ static NSString *cellIdentifier = @"Cell";
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
+    
+    UINib *nib = [UINib nibWithNibName:@"GSCouponTableViewCell" bundle:nil];
+    [self.contentTable registerNib:nib forCellReuseIdentifier:cellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,7 +45,7 @@ static NSString *cellIdentifier = @"Cell";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 2;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -51,11 +55,7 @@ static NSString *cellIdentifier = @"Cell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    if (!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
-    }
+    GSCouponTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     return cell;
 }
@@ -64,7 +64,7 @@ static NSString *cellIdentifier = @"Cell";
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 105;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

@@ -24,6 +24,7 @@
 #import <UIKit/UIKit.h>
 
 #import "EMSDK.h"
+#import "UIImage+YYAdd.h"
 
 @implementation AppDelegateExt (initProcess)
 
@@ -49,11 +50,13 @@
     UIImage *image = [[UIImage imageNamed:@"icon_back"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
     [[UIBarButtonItem appearance]setBackButtonBackgroundImage:image forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];
     
-    [[CRNavigationBar appearance]setBarTintColor:[GSColor mainColor]];
     [[CRNavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName ,nil]];
     [[CRNavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[CRNavigationBar appearance] setBarTintColor:[GSColor mainColor]];
+
     
+    UIImage *tempImage = [UIImage imageWithColor:[GSColor mainColor] size:CGSizeMake(20, 64)];
+    UIImage *strechImage = [tempImage resizableImageWithCapInsets:UIEdgeInsetsMake(2, 2, 2, 2)];
+    [[CRNavigationBar appearance] setBackgroundImage:strechImage forBarMetrics:UIBarMetricsDefault];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 

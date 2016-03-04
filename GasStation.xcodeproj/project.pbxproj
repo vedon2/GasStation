@@ -230,6 +230,14 @@
 		4E515FB91C888D3F00C7BF79 /* GSGasStationAnnotationData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */; };
 		4E515FBC1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */; };
 		4E515FBD1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */; };
+		4E515FC11C89D76B00C7BF79 /* GSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBF1C89D76B00C7BF79 /* GSWebViewController.m */; };
+		4E515FC21C89D76B00C7BF79 /* GSWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FBF1C89D76B00C7BF79 /* GSWebViewController.m */; };
+		4E515FC31C89D76B00C7BF79 /* GSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FC01C89D76B00C7BF79 /* GSWebViewController.xib */; };
+		4E515FC41C89D76B00C7BF79 /* GSWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FC01C89D76B00C7BF79 /* GSWebViewController.xib */; };
+		4E515FC81C89DFA100C7BF79 /* GSCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FC61C89DFA100C7BF79 /* GSCouponTableViewCell.m */; };
+		4E515FC91C89DFA100C7BF79 /* GSCouponTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E515FC61C89DFA100C7BF79 /* GSCouponTableViewCell.m */; };
+		4E515FCA1C89DFA100C7BF79 /* GSCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FC71C89DFA100C7BF79 /* GSCouponTableViewCell.xib */; };
+		4E515FCB1C89DFA100C7BF79 /* GSCouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E515FC71C89DFA100C7BF79 /* GSCouponTableViewCell.xib */; };
 		4E5D8D031C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8D041C83D58F00A46D27 /* libHyphenateSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5D8D021C83D58F00A46D27 /* libHyphenateSDK.a */; };
 		4E5D8F601C87C4DE00A46D27 /* GSNetworkTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5D8F5F1C87C4DE00A46D27 /* GSNetworkTests.m */; };
@@ -726,6 +734,12 @@
 		4E515FB71C888D3F00C7BF79 /* GSGasStationAnnotationData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSGasStationAnnotationData.m; sourceTree = "<group>"; };
 		4E515FBA1C889D6100C7BF79 /* GSUserMainViewController+Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GSUserMainViewController+Map.h"; sourceTree = "<group>"; };
 		4E515FBB1C889D6100C7BF79 /* GSUserMainViewController+Map.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "GSUserMainViewController+Map.m"; sourceTree = "<group>"; };
+		4E515FBE1C89D76B00C7BF79 /* GSWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSWebViewController.h; sourceTree = "<group>"; };
+		4E515FBF1C89D76B00C7BF79 /* GSWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSWebViewController.m; sourceTree = "<group>"; };
+		4E515FC01C89D76B00C7BF79 /* GSWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSWebViewController.xib; sourceTree = "<group>"; };
+		4E515FC51C89DFA100C7BF79 /* GSCouponTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCouponTableViewCell.h; sourceTree = "<group>"; };
+		4E515FC61C89DFA100C7BF79 /* GSCouponTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCouponTableViewCell.m; sourceTree = "<group>"; };
+		4E515FC71C89DFA100C7BF79 /* GSCouponTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GSCouponTableViewCell.xib; sourceTree = "<group>"; };
 		4E5D8CE31C83D58F00A46D27 /* EMChatManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatManagerDelegate.h; sourceTree = "<group>"; };
 		4E5D8CE41C83D58F00A46D27 /* EMChatroom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroom.h; sourceTree = "<group>"; };
 		4E5D8CE51C83D58F00A46D27 /* EMChatroomManagerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EMChatroomManagerDelegate.h; sourceTree = "<group>"; };
@@ -1157,6 +1171,9 @@
 				4E515FA01C8741FB00C7BF79 /* GSGasPriceOrderViewController.h */,
 				4E515FA11C8741FB00C7BF79 /* GSGasPriceOrderViewController.m */,
 				4E515FA21C8741FB00C7BF79 /* GSGasPriceOrderViewController.xib */,
+				4E515FBE1C89D76B00C7BF79 /* GSWebViewController.h */,
+				4E515FBF1C89D76B00C7BF79 /* GSWebViewController.m */,
+				4E515FC01C89D76B00C7BF79 /* GSWebViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -1872,6 +1889,9 @@
 				4E515FA91C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib */,
 				4E515FB21C888C9B00C7BF79 /* GSGasStationAnnotationView.h */,
 				4E515FB31C888C9B00C7BF79 /* GSGasStationAnnotationView.m */,
+				4E515FC51C89DFA100C7BF79 /* GSCouponTableViewCell.h */,
+				4E515FC61C89DFA100C7BF79 /* GSCouponTableViewCell.m */,
+				4E515FC71C89DFA100C7BF79 /* GSCouponTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2252,6 +2272,7 @@
 				4E2B3CFE1C6F044B00B460F7 /* GSCommentsListViewController.xib in Resources */,
 				4E3E67AA1C7A28E9005CA5A2 /* GSCardsContainerViewController.xib in Resources */,
 				4E2B3CE11C6EB8C200B460F7 /* GSGiftCouponTableViewCell.xib in Resources */,
+				4E515FCA1C89DFA100C7BF79 /* GSCouponTableViewCell.xib in Resources */,
 				4E2B3CB61C6E02F700B460F7 /* GSSearchViewController.xib in Resources */,
 				4E9D1AD21C735BBF0048869E /* GSChangePasswordViewController.xib in Resources */,
 				4EFDD43A1C7C58DB000AAE9D /* JSQMessagesCollectionViewCellIncoming.xib in Resources */,
@@ -2285,6 +2306,7 @@
 				4E3E67311C78CD0F005CA5A2 /* GSUserAvatarTableViewCell.xib in Resources */,
 				4EA6724C1C74C5E0004A5163 /* markdown.css in Resources */,
 				4E515FAC1C87429C00C7BF79 /* GSPriceOrderTableViewCell.xib in Resources */,
+				4E515FC31C89D76B00C7BF79 /* GSWebViewController.xib in Resources */,
 				4EA671C91C74C41D004A5163 /* SMS_SDKLocalizable.strings in Resources */,
 				4E3E67381C78CE4B005CA5A2 /* GSEditUserNameTableViewCell.xib in Resources */,
 				4E2B3CCD1C6E36B500B460F7 /* GSStaionDetailViewController.xib in Resources */,
@@ -2322,6 +2344,7 @@
 				4EA672131C74C5DF004A5163 /* UMSCommentInputController.xib in Resources */,
 				4E2B3D4E1C7206C800B460F7 /* GSForgetPwdViewController.xib in Resources */,
 				4E9D1AE11C735F060048869E /* GSAbouViewController.xib in Resources */,
+				4E515FC41C89D76B00C7BF79 /* GSWebViewController.xib in Resources */,
 				4EA672491C74C5E0004A5163 /* ios-social-sdk-share-quick.html in Resources */,
 				4EA672151C74C5DF004A5163 /* UMSCommentInputControlleriPad.xib in Resources */,
 				4E2BC8C41C7F42D9002FD232 /* GSRenameViewController.xib in Resources */,
@@ -2360,6 +2383,7 @@
 				4EFDD3F91C7C58DA000AAE9D /* JSQMessagesAssets.bundle in Resources */,
 				4E2B3D3E1C70CCA700B460F7 /* GSUserLoginViewController.xib in Resources */,
 				4EA6721D1C74C5DF004A5163 /* UMShareEditViewControlleriPad.xib in Resources */,
+				4E515FCB1C89DFA100C7BF79 /* GSCouponTableViewCell.xib in Resources */,
 				4EA6721B1C74C5DF004A5163 /* UMShareEditViewController.xib in Resources */,
 				4EA672371C74C5E0004A5163 /* iOS-social-analytics-releasenote.html in Resources */,
 				4E2B3D551C72071400B460F7 /* GSEditUserProfileViewController.xib in Resources */,
@@ -2605,6 +2629,7 @@
 				4E4E4C891C7DE22A0081D7A2 /* GSFetchCoordinateGasStationTask.m in Sources */,
 				4E43836E1C5FB14F00885A33 /* GSMapPOISearchTask.m in Sources */,
 				4EFDD4441C7C58DB000AAE9D /* JSQMessagesLabel.m in Sources */,
+				4E515FC81C89DFA100C7BF79 /* GSCouponTableViewCell.m in Sources */,
 				4EA671211C74C062004A5163 /* GSUserProfileData.m in Sources */,
 				4E515F6D1C85DB5300C7BF79 /* GSFetchGasStationDetailInfoTask.m in Sources */,
 				4EFDD4001C7C58DB000AAE9D /* UIColor+JSQMessages.m in Sources */,
@@ -2655,6 +2680,7 @@
 				4EFDD44A1C7C58DB000AAE9D /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				4E2B3CE01C6EB8C200B460F7 /* GSGiftCouponTableViewCell.m in Sources */,
 				4E3E67411C78DC6B005CA5A2 /* GSActionSheet.m in Sources */,
+				4E515FC11C89D76B00C7BF79 /* GSWebViewController.m in Sources */,
 				4E2BC8C81C7F4FAE002FD232 /* GSPersistanceConfig.m in Sources */,
 				4E2B3CE51C6EB8DE00B460F7 /* GSStationShortCommentsTableViewCell.m in Sources */,
 				4E2B3D201C6F75E600B460F7 /* GSRegisterTask.m in Sources */,
@@ -2695,6 +2721,7 @@
 				4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */,
 				4E515F871C85E8FB00C7BF79 /* GSGetMyCardsTask.m in Sources */,
 				4E515FBD1C889D6100C7BF79 /* GSUserMainViewController+Map.m in Sources */,
+				4E515FC21C89D76B00C7BF79 /* GSWebViewController.m in Sources */,
 				4E515FB11C88815500C7BF79 /* GSMapAnonotationFactory.m in Sources */,
 				4E05E1021C78B5600038CA5D /* GSTextField.m in Sources */,
 				4E3E67A31C79FD71005CA5A2 /* GSMyCardTableViewCell.m in Sources */,
@@ -2736,6 +2763,7 @@
 				4E1711C41C75F836006CA3E5 /* GSBaseViewController.m in Sources */,
 				4EFDD4011C7C58DB000AAE9D /* UIColor+JSQMessages.m in Sources */,
 				4E05E0FE1C78AE680038CA5D /* GSCounterButton.m in Sources */,
+				4E515FC91C89DFA100C7BF79 /* GSCouponTableViewCell.m in Sources */,
 				4EFDD4351C7C58DB000AAE9D /* JSQMessagesCollectionView.m in Sources */,
 				4E9D1ADF1C735F060048869E /* GSAbouViewController.m in Sources */,
 				4EFDD4171C7C58DB000AAE9D /* JSQMessagesToolbarButtonFactory.m in Sources */,

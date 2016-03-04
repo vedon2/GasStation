@@ -36,6 +36,7 @@
 #import "GSColor.h"
 #import "GSGasStationAnnotationView.h"
 #import "GSGasStationAnnotationData.h"
+#import "GSWebViewController.h"
 
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate,SDCycleScrollViewDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
@@ -91,11 +92,6 @@
     
     
     [[GSMapManager shareManager] addObserver:self];
-    
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self getAnnotationsForSearchResult];
-    });
     
 }
 
@@ -227,6 +223,9 @@
         case 0:
         {
             //我要加油
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [self getAnnotationsForSearchResult];
+            });
             return;
             break;
         }
@@ -316,7 +315,11 @@
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    
+    GSWebViewController *vc = [[GSWebViewController alloc] initWithTitle:@"广告" requestUrl:@"http://www.baidu.com"];
+    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+    [self presentViewController:nav animated:YES completion:nil];
+    nav = nil;
+    vc = nil;
 }
 
 #pragma mark - Getter && Setter

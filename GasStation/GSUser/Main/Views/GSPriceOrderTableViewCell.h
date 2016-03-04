@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface GSPriceOrderTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *cellTitleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *cellPriceLabel;
+@property (weak, nonatomic) IBOutlet UIView *bottomContainer;
+
+- (void)configureWithData:(id)data;
 
 @end

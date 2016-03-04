@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="GSPriceOrderTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="75" id="KGk-i7-Jjw" customClass="GSPriceOrderTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_details_gas-station" translatesAutoresizingMaskIntoConstraints="NO" id="I7G-gE-YB6">
+                        <rect key="frame" x="15" y="9" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="B59-vB-sTB"/>
+                            <constraint firstAttribute="height" constant="60" id="CFp-j9-cMF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-Cl-8Ct">
+                        <rect key="frame" x="83" y="14" width="122" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SH-PR-otq">
+                        <rect key="frame" x="224" y="14" width="83" height="21"/>
+                        <color key="backgroundColor" red="0.60392156860000001" green="0.60392156860000001" blue="0.60392156860000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="CFM-BY-O5L"/>
+                            <constraint firstAttribute="width" constant="83" id="nyk-AF-Ks2"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntw-kK-BfD">
+                        <rect key="frame" x="83" y="38" width="224" height="26"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="26" id="eAy-Ey-AAr"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Qxb-Cl-8Ct" firstAttribute="leading" secondItem="I7G-gE-YB6" secondAttribute="trailing" constant="8" id="5eU-d4-hgc"/>
+                    <constraint firstItem="I7G-gE-YB6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="6bS-gY-rbD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="3SH-PR-otq" secondAttribute="trailing" constant="5" id="D4F-hJ-hoB"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ntw-kK-BfD" secondAttribute="trailing" constant="5" id="Dio-l2-vVB"/>
+                    <constraint firstItem="3SH-PR-otq" firstAttribute="leading" secondItem="Qxb-Cl-8Ct" secondAttribute="trailing" constant="19" id="h5r-2s-LL4"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="ntw-kK-BfD" secondAttribute="bottom" constant="7" id="iGi-BW-ZRT"/>
+                    <constraint firstItem="Qxb-Cl-8Ct" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="p6x-Ir-dPS"/>
+                    <constraint firstItem="ntw-kK-BfD" firstAttribute="leading" secondItem="I7G-gE-YB6" secondAttribute="trailing" constant="8" id="qiV-iT-rGz"/>
+                    <constraint firstItem="I7G-gE-YB6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="uyy-s8-zap"/>
+                    <constraint firstItem="3SH-PR-otq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="6" id="xzZ-HK-mth"/>
+                </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomContainer" destination="ntw-kK-BfD" id="NAk-J1-tv7"/>
+                <outlet property="cellPriceLabel" destination="3SH-PR-otq" id="YbK-Pv-imH"/>
+                <outlet property="cellTitleLabel" destination="Qxb-Cl-8Ct" id="G26-hT-Aw5"/>
+            </connections>
+            <point key="canvasLocation" x="242" y="324"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icon_details_gas-station" width="50" height="50"/>
+    </resources>
 </document>

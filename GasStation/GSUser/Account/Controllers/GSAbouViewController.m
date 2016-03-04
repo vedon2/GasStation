@@ -9,6 +9,7 @@
 #import "GSAbouViewController.h"
 #import "BlocksKit+UIKit.h"
 @interface GSAbouViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *contentTextView;
 
 @end
 
@@ -20,6 +21,7 @@
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
 
+    self.contentTextView.text = @"We are the best !";
     // Do any additional setup after loading the view from its nib.
 }
 
