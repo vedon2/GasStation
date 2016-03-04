@@ -88,7 +88,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dw8-Sx-4V2">
-                            <rect key="frame" x="25" y="71" width="185" height="30"/>
+                            <rect key="frame" x="95" y="70" width="185" height="30"/>
                             <state key="normal" title="快速登录"/>
                             <connections>
                                 <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="4Ky-vn-nId"/>
