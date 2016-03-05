@@ -19,4 +19,6 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application;
 
+- (void)pingppJandleOpenUrl:(NSURL *)url;
+
 @end

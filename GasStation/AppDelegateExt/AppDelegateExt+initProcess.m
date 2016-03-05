@@ -26,10 +26,7 @@
 #import "EMSDK.h"
 #import "UIImage+YYAdd.h"
 #import "YTKNetworkConfig.h"
-
-
-#import "GSGetSmsCodeTask.h"
-#import "GSRegisterTask.h"
+#import "Pingpp.h"
 
 @implementation AppDelegateExt (initProcess)
 
@@ -47,23 +44,12 @@
 //    }];
     
     
-//    GSGetSmsCodeTask *task = [[GSGetSmsCodeTask alloc] initWithPhone:@"15018492358"];
-//    [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
-//        ;
-//    } failure:^(__kindof YTKBaseRequest *request) {
-//        ;
-//    }];
-    
     YTKNetworkConfig *config = [YTKNetworkConfig sharedInstance];
     config.baseUrl = @"http://192.168.1.102:8888/oil/api";
     
-//    GSRegisterTask *task = [[GSRegisterTask alloc] initWithPhone:@"15018492358" password:@"123456" veriCode:@"7437"];
-//    [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
-//        ;
-//    } failure:^(__kindof YTKBaseRequest *request) {
-//        ;
-//    }];
 
+    
+    [Pingpp setDebugMode:YES];
     
     
     EMOptions *options = [EMOptions optionsWithAppkey:EMKey];
@@ -97,5 +83,14 @@
 {
     [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
+
+- (void)pingppJandleOpenUrl:(NSURL *)url
+{
+    if (url)
+    {
+        [Pingpp handleOpenURL:url withCompletion:nil];
+    }
+}
+
 
 @end

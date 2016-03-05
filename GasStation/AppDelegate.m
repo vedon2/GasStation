@@ -15,6 +15,7 @@
 #import "GSUserMainViewController.h"
 #import "GSManagerMainViewController.h"
 
+
 @interface AppDelegate ()
 @property (nonatomic,strong) AppDelegateExt *appDelegateExt;
 @property (nonatomic,strong) UIViewController *rootVc;
@@ -69,6 +70,24 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    
+    [self.appDelegateExt pingppJandleOpenUrl:url];
+    return YES;
+}
+
+
+- (BOOL)application:(UIApplication *)app
+            openURL:(NSURL *)url
+            options:(NSDictionary *)options {
+
+        [self.appDelegateExt pingppJandleOpenUrl:url];
+    return YES;
 }
 
 @end
