@@ -37,9 +37,9 @@
     return @{
              @"location": self.fetchData.location,
              @"radius": self.fetchData.radius,
-             @"q":self.fetchData.q,
+             @"query":self.fetchData.q,
              @"sortby":self.fetchData.sortby,//distance:1 降序 distance:0 升序
-             @"pageIndex":self.fetchData.page_index,
+             @"page":self.fetchData.page_index,
              @"pageSize":self.fetchData.page_size,
              };
 }

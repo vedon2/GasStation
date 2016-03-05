@@ -36,11 +36,10 @@
 - (id)requestArgument {
     return @{
              @"region": self.fetchData.region,
-             @"token": self.fetchData.token,
-             @"q":self.fetchData.q,
+             @"query":self.fetchData.q,
              @"sortby":self.fetchData.sortBy,//distance:1 降序 distance:0 升序
-             @"pageIndex":self.fetchData.pageIndex,
              @"pageSize":self.fetchData.pageSize,
+             @"page":self.fetchData.pageIndex,
              };
 }
 

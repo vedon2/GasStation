@@ -72,6 +72,19 @@
     UIImage *strechImage = [tempImage resizableImageWithCapInsets:UIEdgeInsetsMake(2, 2, 2, 2)];
     [[CRNavigationBar appearance] setBackgroundImage:strechImage forBarMetrics:UIBarMetricsDefault];
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
+    
+    
+//    [Pingpp createPayment:charge
+//           viewController:viewController
+//             appURLScheme:kUrlScheme
+//           withCompletion:^(NSString *result, PingppError *error) {
+//               if ([result isEqualToString:@"success"]) {
+//                   // 支付成功
+//               } else {
+//                   // 支付失败或取消
+//                   NSLog(@"Error: code=%lu msg=%@", error.code, [error getMsg]);
+//               }
+//           }];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application

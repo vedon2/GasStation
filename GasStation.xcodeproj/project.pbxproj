@@ -373,6 +373,7 @@
 		4ED0F34E1C6CE00400C290FF /* GSBottomButtonInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED0F34D1C6CE00400C290FF /* GSBottomButtonInfo.m */; };
 		4ED31A4C1C76E9A000747467 /* GSBaseRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */; };
 		4ED31A4D1C76E9A000747467 /* GSBaseRequest.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */; };
+		4EF927721C8B3E5B0011B147 /* GSCreateChargeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EF927711C8B3E5B0011B147 /* GSCreateChargeTask.m */; };
 		4EFD22931C7623BD00F053A0 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22921C7623BD00F053A0 /* GSScanner.m */; };
 		4EFD22941C7623BD00F053A0 /* GSScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22921C7623BD00F053A0 /* GSScanner.m */; };
 		4EFD22971C7623CF00F053A0 /* GSQRGenerator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EFD22961C7623CF00F053A0 /* GSQRGenerator.m */; };
@@ -904,6 +905,8 @@
 		4ED31A4A1C76E9A000747467 /* GSBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSBaseRequest.h; sourceTree = "<group>"; };
 		4ED31A4B1C76E9A000747467 /* GSBaseRequest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = GSBaseRequest.mm; sourceTree = "<group>"; };
 		4EEDFB551C81987E00FADC91 /* GSUserInfoProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSUserInfoProtocol.h; sourceTree = "<group>"; };
+		4EF927701C8B3E5B0011B147 /* GSCreateChargeTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSCreateChargeTask.h; sourceTree = "<group>"; };
+		4EF927711C8B3E5B0011B147 /* GSCreateChargeTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSCreateChargeTask.m; sourceTree = "<group>"; };
 		4EFD22911C7623BD00F053A0 /* GSScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSScanner.h; sourceTree = "<group>"; };
 		4EFD22921C7623BD00F053A0 /* GSScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSScanner.m; sourceTree = "<group>"; };
 		4EFD22951C7623CF00F053A0 /* GSQRGenerator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSQRGenerator.h; sourceTree = "<group>"; };
@@ -1356,6 +1359,7 @@
 		4E2B3D131C6F611D00B460F7 /* GSFoundation */ = {
 			isa = PBXGroup;
 			children = (
+				4EBA2CF41C8B3CB000B64B0D /* Category */,
 				4E2408621C885D830040A2C1 /* GSStringValidator */,
 				4E2BC8C51C7F4F9C002FD232 /* GSPersistance */,
 				4E2BC8B01C7E0B24002FD232 /* GSImagePicker */,
@@ -1376,6 +1380,8 @@
 				4E515F881C85E9AB00C7BF79 /* Cards */,
 				4E515F931C85F69200C7BF79 /* StartUp */,
 				4E515F921C85F4D000C7BF79 /* GSNetwork.h */,
+				4EF927701C8B3E5B0011B147 /* GSCreateChargeTask.h */,
+				4EF927711C8B3E5B0011B147 /* GSCreateChargeTask.m */,
 			);
 			path = GSNetwork;
 			sourceTree = "<group>";
@@ -1949,6 +1955,13 @@
 				4EBA2CE91C8B38D500B64B0D /* libpingpp+one.a */,
 			);
 			path = One;
+			sourceTree = "<group>";
+		};
+		4EBA2CF41C8B3CB000B64B0D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		4ED0F3471C6CDEA400C290FF /* Views */ = {
@@ -2759,6 +2772,7 @@
 				4E2B3CC71C6E33C800B460F7 /* GSSearchLocationTableViewCell.m in Sources */,
 				4E515F7E1C85E5CB00C7BF79 /* GSFetchCardListTask.m in Sources */,
 				4E3E675A1C79E5C7005CA5A2 /* GSUserCenterCollectionItemInfo.m in Sources */,
+				4EF927721C8B3E5B0011B147 /* GSCreateChargeTask.m in Sources */,
 				4E2BC8EC1C81EC9D002FD232 /* GSRuleViewController.m in Sources */,
 				4E515F711C85DC9C00C7BF79 /* GSFetchGasStationCommentsTask.m in Sources */,
 				4E2B3CF51C6ECAE900B460F7 /* GSCommentTypeTableViewCell.m in Sources */,

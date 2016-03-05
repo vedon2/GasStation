@@ -19,7 +19,7 @@
         self.token = token;
         self.sortBy = soryBy;
         self.q = keyword;
-        self.pageIndex = self.pageIndex;
+        self.pageIndex = pageIndex;
         self.pageSize = pageSize;
     }
     return self;

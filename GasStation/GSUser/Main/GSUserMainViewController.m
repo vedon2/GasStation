@@ -38,6 +38,9 @@
 #import "GSGasStationAnnotationData.h"
 #import "GSWebViewController.h"
 
+#import "Pingpp.h"
+#import "GSCreateChargeTask.h"
+
 @interface GSUserMainViewController ()<BMKMapViewDelegate,GSMapManagerProtocol,GSMapBottomBarDelegate,GSMapNavViewDelegate,GSMapSearchBtnDelegate,SDCycleScrollViewDelegate>
 @property (nonatomic,strong) BMKMapView *mapView;
 @property (nonatomic,strong) GSMapBottomBar *bottomBar;
@@ -315,11 +318,58 @@
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index
 {
-    GSWebViewController *vc = [[GSWebViewController alloc] initWithTitle:@"广告" requestUrl:@"http://www.baidu.com"];
-    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
-    [self presentViewController:nav animated:YES completion:nil];
-    nav = nil;
-    vc = nil;
+//    GSWebViewController *vc = [[GSWebViewController alloc] initWithTitle:@"广告" requestUrl:@"http://www.baidu.com"];
+//    CRNavigationController *nav = [[CRNavigationController alloc] initWithRootViewController:vc];
+//    [self presentViewController:nav animated:YES completion:nil];
+//    nav = nil;
+//    vc = nil;
+    
+    
+    GSCreateChargeTask *task = [[GSCreateChargeTask alloc] initWithTargetId:@"2"];
+    [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+        
+        NSDictionary *dataInfo = [request.responseJSONObject objectForKey:@"data"];
+        if (dataInfo)
+        {
+            
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dataInfo
+                                                               options:NSJSONWritingPrettyPrinted // Pass 0 if you don't
+                                                                 error:nil];
+
+            
+            if (jsonData)
+            {
+                NSString* charge = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+                [Pingpp createPayment:charge
+                       viewController:self
+                         appURLScheme:@"www.baidu.com"
+                       withCompletion:^(NSString *result, PingppError *error) {
+                           if ([result isEqualToString:@"success"]) {
+                               // 支付成功
+                           } else {
+                               // 支付失败或取消
+                               NSLog(@"Error: code=%lu msg=%@", error.code, [error getMsg]);
+                           }
+                       }];
+                
+            }
+
+            
+        }
+        
+        
+        
+        
+    } failure:^(__kindof YTKBaseRequest *request) {
+        
+    
+        
+    }];
+    
+    
+
+    
+    
 }
 
 #pragma mark - Getter && Setter
