@@ -141,7 +141,7 @@
 {
     //("Cookie", "JSESSIONID=" + token + ";");
     return @{@"version":@"1.0",
-             @"Cookie":@"JSESSIONID=0faada13-42ed-4e6b-843b-3e03428be91c;"};
+             @"Cookie":@"JSESSIONID=0faada13-42ed-4e6b-843b-3e03428be91c"};
 }
 
 @end

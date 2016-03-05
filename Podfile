@@ -3,8 +3,7 @@
 # platform :ios, '6.0'
 
 target 'GasStation' do
-#pod 'EaseMobSDK'
-
+pod 'Pingpp/Alipay', '~> 2.1.0'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'NJKWebViewProgress'
@@ -23,7 +22,7 @@ pod 'BaiduMapKit' #百度地图SDK
 end
 
 target 'GasStationManager' do
-#    pod 'EaseMobSDK
+pod 'Pingpp/Alipay', '~> 2.1.0'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'NJKWebViewProgress'
@@ -43,6 +42,7 @@ pod 'BaiduMapKit' #百度地图SDK
 end
 
 target 'GasStationTests' do
+pod 'Pingpp/Alipay', '~> 2.1.0'
 pod 'MBProgressHUD', '~> 0.9.2'
 pod 'SDWebImage', '~> 3.7.5'
 pod 'NJKWebViewProgress'
