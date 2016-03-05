@@ -61,7 +61,5 @@ pod 'PureLayout'
 pod 'BaiduMapKit' #百度地图SDK
 end
 
-target 'GasStationUITests' do
 
-end
 
