@@ -12,7 +12,7 @@
  **/
 
 #ifdef DEBUG
-#define kEnableMock 1
+//#define kEnableMock 1
 #define kEnableLog 1
 #endif
 

@@ -29,7 +29,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/comment/list";
+    return @"/comment/list";
 }
 
 - (YTKRequestMethod)requestMethod {

@@ -6,19 +6,23 @@
 //  Copyright © 2016 vedon. All rights reserved.
 //
 
+#define kTimeOut 10
+
+
 #import <XCTest/XCTest.h>
 #import "GSNetwork.h"
 #import "GSUserProfileData.h"
 #import "GSConsumeTicketData.h"
 
 @interface GSNetworkTests : XCTestCase
-
+@property (strong,nonatomic) XCTestExpectation *expectation;
 @end
 
 @implementation GSNetworkTests
 
 - (void)setUp {
     [super setUp];
+    self.expectation = [self expectationWithDescription:@"CoursesViewModel"];
     // Put setup code here. This method is called before the invocation of each test method in the class.
 }
 
@@ -41,13 +45,26 @@
 
 - (void)testRegister
 {
-    GSRegisterTask *task = [[GSRegisterTask alloc] initWithPhone:@"123" password:@"123" veriCode:@"123"];
+    GSRegisterTask *task = [[GSRegisterTask alloc] initWithPhone:@"15018492358" password:@"123456" veriCode:@"3885"];
     [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
-        ;
+        
+        [self.expectation fulfill];
+        
+        
     } failure:^(__kindof YTKBaseRequest *request) {
-        ;
+        [self.expectation fulfill];
+    }];
+    
+    
+    [self waitForExpectationsWithTimeout:kTimeOut handler:^(NSError *error) {
+        if(error)
+        {
+            XCTFail(@"Expectation Failed with error: %@", error);
+        }
     }];
 }
+
+
 
 - (void)testLogin
 {
@@ -61,11 +78,20 @@
 
 - (void)testGetSmsCode
 {
-    GSGetSmsCodeTask *task = [[GSGetSmsCodeTask alloc] initWithPhone:@"123"];
+    
+    GSGetSmsCodeTask *task = [[GSGetSmsCodeTask alloc] initWithPhone:@"15018492358"];
     [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
-        ;
+        
+        [self.expectation fulfill];
     } failure:^(__kindof YTKBaseRequest *request) {
-        ;
+        [self.expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:kTimeOut handler:^(NSError *error) {
+        if(error)
+        {
+            XCTFail(@"Expectation Failed with error: %@", error);
+        }
     }];
 }
 

@@ -25,6 +25,11 @@
 
 #import "EMSDK.h"
 #import "UIImage+YYAdd.h"
+#import "YTKNetworkConfig.h"
+
+
+#import "GSGetSmsCodeTask.h"
+#import "GSRegisterTask.h"
 
 @implementation AppDelegateExt (initProcess)
 
@@ -34,18 +39,41 @@
     [[GSMapManager shareManager] initialize];
     [UMSocialData setAppKey:kUmengkey];
     
-//    [SMSSDK registerApp:kSmsKey
-//             withSecret:kSmsSecret];
+    [SMSSDK registerApp:kSmsKey
+             withSecret:kSmsSecret];
     
 //    [MQManager initWithAppkey:kMeiQiaKey completion:^(NSString *clientId, NSError *error) {
 //        assert(error == nil);
 //    }];
     
     
+//    GSGetSmsCodeTask *task = [[GSGetSmsCodeTask alloc] initWithPhone:@"15018492358"];
+//    [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+//        ;
+//    } failure:^(__kindof YTKBaseRequest *request) {
+//        ;
+//    }];
+    
+    YTKNetworkConfig *config = [YTKNetworkConfig sharedInstance];
+    config.baseUrl = @"http://192.168.1.102:8888/oil/api";
+    
+//    GSRegisterTask *task = [[GSRegisterTask alloc] initWithPhone:@"15018492358" password:@"123456" veriCode:@"7437"];
+//    [task startWithCompletionBlockWithSuccess:^(__kindof YTKBaseRequest *request) {
+//        ;
+//    } failure:^(__kindof YTKBaseRequest *request) {
+//        ;
+//    }];
+
+    
+    
     EMOptions *options = [EMOptions optionsWithAppkey:EMKey];
 //    options.apnsCertName = @"istore_dev";
     [[EMClient sharedClient] initializeSDKWithOptions:options];
+ 
     
+    
+    
+
     
     UIImage *image = [[UIImage imageNamed:@"icon_back"]resizableImageWithCapInsets:UIEdgeInsetsMake(0, 20, 0, 0)];
     [[UIBarButtonItem appearance]setBackButtonBackgroundImage:image forState:UIControlStateNormal barMetrics:UIBarMetricsDefault];

@@ -26,7 +26,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/station/location";
+    return @"/station/location";
 }
 
 - (YTKRequestMethod)requestMethod {

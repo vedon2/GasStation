@@ -26,7 +26,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/tickets/spend";
+    return @"/tickets/spend";
 }
 
 - (YTKRequestMethod)requestMethod {

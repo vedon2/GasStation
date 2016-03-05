@@ -31,7 +31,7 @@
 
 
 - (NSString *)requestUrl {
-    return @"/api/users/login";
+    return @"/users/login";
 }
 
 - (YTKRequestMethod)requestMethod {
